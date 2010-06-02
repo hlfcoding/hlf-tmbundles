@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>name</key>
+        <string>VBStyle CSS Section</string>
+        <key>uuid</key>
+        <string>E99B3190-1B4E-497D-B8DD-04090FE097F1</string>
+        <key>content</key>
+        <string>/** START   $1 */
+
+$2
+
+/* END      $1 **/</string>
+        <key>scope</key>
+        <string>*.css</string>
+        <key>keyEquivalent</key>
+        <string>^W</string>
+    </dict>
+</plist>
