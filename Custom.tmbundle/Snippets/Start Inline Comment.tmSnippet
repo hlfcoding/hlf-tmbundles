@@ -11,6 +11,6 @@
         <key>content</key>
         <string>/* $1 */</string>
         <key>scope</key>
-        <string></string>
+        <string>source.css, source.html</string>
     </dict>
 </plist>

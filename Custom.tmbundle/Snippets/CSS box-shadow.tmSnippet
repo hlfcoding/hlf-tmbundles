@@ -9,7 +9,7 @@
         <key>content</key>
         <string>box-shadow: ${1:${6:inset |}${2:px} ${3:px} ${4:px} ${5:#|rgba(,,, )}}; -moz-box-shadow: ${1:${6:inset |}${2:px} ${3:px} ${4:px} ${5:#|rgba(,,, )}}; -webkit-box-shadow: ${1:${6:inset |}${2:px} ${3:px} ${4:px} ${5:#|rgba(,,, )}};</string>
         <key>scope</key>
-        <string></string>
+        <string>source.css</string>
         <key>tabTrigger</key>
         <string>box-shadow</string>
     </dict>

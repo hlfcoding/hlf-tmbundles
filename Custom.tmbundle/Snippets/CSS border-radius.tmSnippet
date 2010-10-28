@@ -9,7 +9,7 @@
         <key>content</key>
         <string>border${1:}${2:}-radius: $3px; -moz-border-radius-${4:${1:}${2:}}: $3px; -webkit-border${1:}${2:}-radius: $3px;${5}</string>
         <key>scope</key>
-        <string>*.css, *.html</string>
+        <string>source.css</string>
         <key>tabTrigger</key>
         <string>border-radius</string>
     </dict>

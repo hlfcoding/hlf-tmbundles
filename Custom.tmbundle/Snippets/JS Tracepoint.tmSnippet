@@ -11,6 +11,6 @@
         <key>content</key>
         <string>console.log("works up to this point");</string>
         <key>scope</key>
-        <string>*.js, *.html</string>
+        <string>source.js</string>
     </dict>
 </plist>
