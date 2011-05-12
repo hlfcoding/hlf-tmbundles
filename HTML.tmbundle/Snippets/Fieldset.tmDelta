@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>changed</key>
+	<dict>
+		<key>content</key>
+		<string>&lt;fieldset id="${1/[[:alpha:]]+|( )/(?1:_:\L$0)/g}" ${2:class="${3:}"}&gt;
+	&lt;legend&gt;${1}&lt;/legend&gt;
+	&lt;div&gt;
+		${4:Height &lt;input type="text" size="3" /&gt;}
+		${5:Weight &lt;input type="text" size="3" /&gt;}
+	&lt;/div&gt;
+&lt;/fieldset&gt;${6}</string>
+	</dict>
+	<key>deleted</key>
+	<array>
+		<string>scope</string>
+	</array>
+	<key>isDelta</key>
+	<true/>
+	<key>uuid</key>
+	<string>9BD2BE01-A854-4D55-B584-725D04C075C0</string>
+</dict>
+</plist>

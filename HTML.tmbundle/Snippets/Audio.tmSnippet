@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;audio src="${1:title.mp3}" autoplay="${2:false}" controls="${3:true}" playcount="${4:1}" end="${5:100}"&gt;
+	${6:Your browser does not support the audio element.}
+&lt;/audio&gt;${7}</string>
+	<key>name</key>
+	<string>Audio</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>audio</string>
+	<key>uuid</key>
+	<string>5919B74E-9EC5-47EF-9178-6B2A2DC00346</string>
+</dict>
+</plist>

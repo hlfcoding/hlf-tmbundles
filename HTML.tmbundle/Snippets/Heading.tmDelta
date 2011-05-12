@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>changed</key>
+	<dict>
+		<key>content</key>
+		<string>&lt;h${2:1} id="${1/[[:alpha:]]+|( )/(?1:_:\L$0)/g}"&gt;${1:$TM_SELECTED_TEXT}&lt;/h${2:1}&gt;</string>
+		<key>tabTrigger</key>
+		<string>h</string>
+	</dict>
+	<key>deleted</key>
+	<array/>
+	<key>isDelta</key>
+	<true/>
+	<key>uuid</key>
+	<string>65BA66DC-A07F-11D9-A5A2-000D93C8BE28</string>
+</dict>
+</plist>

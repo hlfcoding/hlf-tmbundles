@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;nav&gt;
+	&lt;a href="/${1/[[:alpha:]]+|( )/(?1:_:\L$0)/g}"&gt;${1}&lt;/a&gt;
+	&lt;a href="/${2/[[:alpha:]]+|( )/(?1:_:\L$0)/g}"&gt;${2}&lt;/a&gt;
+	&lt;a href="/${3/[[:alpha:]]+|( )/(?1:_:\L$0)/g}"&gt;${3}&lt;/a&gt;{$4}
+&lt;/nav&gt;${5}</string>
+	<key>name</key>
+	<string>Nav</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>nav</string>
+	<key>uuid</key>
+	<string>089D7F9B-2FDB-4B35-934E-38A399060F02</string>
+</dict>
+</plist>

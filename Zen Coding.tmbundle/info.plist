@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>changed</key>
+	<dict>
+		<key>deleted</key>
+		<array>
+			<string>zen-balance-outward-2</string>
+			<string>zen-remove-tag-3</string>
+			<string>zen-wrap-abbr-3</string>
+			<string>zen-image-size-3</string>
+			<string>zen-split-join-tag-3</string>
+			<string>zen-toggle-comment-3</string>
+		</array>
+	</dict>
+	<key>deleted</key>
+	<array/>
+	<key>isDelta</key>
+	<true/>
+	<key>uuid</key>
+	<string>B2B32343-BDBC-45A3-8E73-E55E9FAE380F</string>
+</dict>
+</plist>

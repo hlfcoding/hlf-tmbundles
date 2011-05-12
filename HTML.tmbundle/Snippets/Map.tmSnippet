@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;p&gt;${1:Copy for map:}&lt;/p&gt;
+&lt;img src="${2:path_here}"
+width="${3:0}" height="${4:0}"
+alt="${5:title}"
+usemap="#${6:mapname}" /&gt;
+&lt;map id="${6:mapname}"&gt;
+	${7:(areas go here)}
+&lt;/map&gt;${8}</string>
+	<key>name</key>
+	<string>Map</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>map</string>
+	<key>uuid</key>
+	<string>635AAF07-3A54-4DD4-A9AD-77A84D6A3F35</string>
+</dict>
+</plist>
