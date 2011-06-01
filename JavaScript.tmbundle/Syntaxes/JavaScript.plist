@@ -42,39 +42,6 @@
                 <string>'</string>
             </dict>
             <dict>
-                <key>begin</key>
-                <string>"</string>
-                <key>endCaptures</key>
-                <dict>
-                    <key>0</key>
-                    <dict>
-                        <key>name</key>
-                        <string>punctuation.definition.string.end.js</string>
-                    </dict>
-                </dict>
-                <key>beginCaptures</key>
-                <dict>
-                    <key>0</key>
-                    <dict>
-                        <key>name</key>
-                        <string>punctuation.definition.string.begin.js</string>
-                    </dict>
-                </dict>
-                <key>name</key>
-                <string>string.quoted.double.js</string>
-                <key>patterns</key>
-                <array>
-                    <dict>
-                        <key>name</key>
-                        <string>constant.character.escape.js</string>
-                        <key>match</key>
-                        <string>\\(x\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]|37[0-7]?|[4-7][0-7]?|.)</string>
-                    </dict>
-                </array>
-                <key>end</key>
-                <string>"</string>
-            </dict>
-            <dict>
                 <key>name</key>
                 <string>keyword.control.js</string>
                 <key>match</key>
