@@ -139,7 +139,7 @@
                     <key>1</key>
                     <dict>
                         <key>name</key>
-                        <string>entity.name.property.js</string>
+                        <string>entity.name.property.declared.js</string>
                     </dict>
                 </dict>
                 <key>name</key>
