@@ -178,7 +178,7 @@
 					</dict>
 				</dict>
 				<key>match</key>
-				<string>(?&lt;!\?|\/|\')[^?/{'"]*\b(\$*[a-z0-9_][a-zA-Z0-9_]*)\s*(:)</string>
+				<string>(?&lt;!\?|\/|'|")[^?/{'"]*\b(\$*[a-z0-9_][a-zA-Z0-9_]*)\s*(:)</string>
 				<key>name</key>
 				<string>meta.entity.name.property.declaration.js</string>
 			</dict>
