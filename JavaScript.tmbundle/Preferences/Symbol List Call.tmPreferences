@@ -10,7 +10,7 @@
         <dict>
             <key>symbolTransformation</key>
             <string>
-      s/^/[call] /g;
+      s/^/\t\t[call] /g;
    </string>
             <key>showInSymbolList</key>
             <string>1</string>
