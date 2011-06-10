@@ -338,7 +338,7 @@
                 <key>name</key>
                 <string>storage.class.js</string>
                 <key>match</key>
-                <string>\b(this|super)\b</string>
+                <string>\b(this_?|super)\b</string>
             </dict>
             <dict>
                 <key>name</key>
@@ -555,6 +555,6 @@
         <key>comment</key>
         <string>JavaScript Syntax: version 2.0</string>
         <key>foldingStartMarker</key>
-        <string>\*\*(?!\*)|\{\s*($|/\*(?!.*?\*/.*\S))</string>
+        <string>\*\*(?!\*) [A-Z]|\{\s*($|/\*(?!.*?\*/.*\S))</string>
     </dict>
 </plist>
