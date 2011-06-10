@@ -9,7 +9,7 @@
   display: none;
 }
 #todo_list {
-  margin-top:0;
+  margin-top:-60px;
 }
 #todo_list table {
   clear: both;
@@ -46,14 +46,12 @@
 }
 
 #todo_list .counters {
-  padding: 0;
-  padding-bottom: 3em;
+  padding: 0 0 1em 0;
 }
 
 #todo_list .counters li {
   display: block;
-  float: left;
-  padding: 1ex 4ex 1ex 0;
+  padding: 0 4ex 1ex 0;
   border-collapse: collapse;
   min-width: 6em;
   text-align: left;
