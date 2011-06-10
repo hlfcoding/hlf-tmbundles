@@ -13,7 +13,7 @@ $2
 
 /* END      $1 **/</string>
         <key>scope</key>
-        <string>source.css</string>
+        <string>source.css, source.js</string>
         <key>keyEquivalent</key>
         <string>^W</string>
     </dict>
