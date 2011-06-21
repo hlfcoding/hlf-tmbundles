@@ -555,6 +555,6 @@
         <key>comment</key>
         <string>JavaScript Syntax: version 2.0</string>
         <key>foldingStartMarker</key>
-        <string>\*\*(?!\*) [A-Z]|\{\s*($|/\*(?!.*?\*/.*\S))</string>
+        <string>\*\*(?!\*) [A-Z]{2,}|\{\s*($|/\*(?!.*?\*/.*\S))</string>
     </dict>
 </plist>
