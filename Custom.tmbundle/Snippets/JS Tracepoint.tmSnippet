@@ -7,7 +7,7 @@
         <key>uuid</key>
         <string>615291A5-503E-4FD2-8F4C-EB67B4CDA8B3</string>
         <key>content</key>
-        <string>console.log('${0:$TM_SELECTED_TEXT|works up to this point}');</string>
+        <string>console.log(${0:$TM_SELECTED_TEXT|'works up to this point'});</string>
         <key>scope</key>
         <string>source.js</string>
         <key>keyEquivalent</key>
