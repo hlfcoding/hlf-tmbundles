@@ -3,11 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>   -moz-border-radius: ${1:12px}; /* FF1+ */
--webkit-border-radius: ${1:12px}; /* Saf3+, Chrome */
-        border-radius: ${1:12px}; /* Opera 10.5, IE 9 */</string>
+	<string>   -moz-border-radius${2}: ${1:12px}; /* FF1+ */
+-webkit-border${2}-radius: ${1:12px}; /* Saf3+, Chrome */
+        border${2}-radius: ${1:12px}; /* Opera 10.5, IE 9 */</string>
 	<key>name</key>
 	<string>border-radius</string>
+	<key>scope</key>
+	<string>source.css</string>
 	<key>tabTrigger</key>
 	<string>border-radius</string>
 	<key>uuid</key>

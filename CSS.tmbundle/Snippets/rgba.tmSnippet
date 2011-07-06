@@ -9,6 +9,8 @@ background-color: rgba(${2:0}, ${3:0}, ${4:0}, ${5:1});  /* FF3+, Saf3+, Opera 1
       -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#99${1:000000}',endColorStr='#99${1:000000}')"; /* IE8 */</string>
 	<key>name</key>
 	<string>rgba</string>
+	<key>scope</key>
+	<string>source.css</string>
 	<key>tabTrigger</key>
 	<string>rgba</string>
 	<key>uuid</key>

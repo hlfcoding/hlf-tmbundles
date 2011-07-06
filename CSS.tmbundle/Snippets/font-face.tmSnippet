@@ -12,6 +12,8 @@
 }$0</string>
 	<key>name</key>
 	<string>font-face</string>
+	<key>scope</key>
+	<string>source.css</string>
 	<key>tabTrigger</key>
 	<string>font-face</string>
 	<key>uuid</key>
