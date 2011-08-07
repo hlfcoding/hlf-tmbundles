@@ -184,7 +184,7 @@
 			</dict>
 			<dict>
 				<key>begin</key>
-				<string>(?:(\$*[a-z0-9_][a-zA-Z0-9_]*)\s*=\s*)?\b(function)\b\s*(\$*[a-z0-9_][a-zA-Z0-9_]*)?\b</string>
+				<string>(?:(\$*[a-z0-9_][a-zA-Z0-9_]*)\s*(=)\s*)?\b(function)\b\s*(\$*[a-z0-9_][a-zA-Z0-9_]*)?\b</string>
 				<key>beginCaptures</key>
 				<dict>
 					<key>1</key>
@@ -195,9 +195,14 @@
 					<key>2</key>
 					<dict>
 						<key>name</key>
-						<string>storage.type.function.js</string>
+						<string>keyword.operator.js</string>
 					</dict>
 					<key>3</key>
+					<dict>
+						<key>name</key>
+						<string>storage.type.function.js</string>
+					</dict>
+					<key>4</key>
 					<dict>
 						<key>name</key>
 						<string>entity.name.function.js</string>
