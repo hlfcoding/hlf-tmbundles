@@ -10,9 +10,16 @@ var env = process.env || process.ENV,
     jshint = require(env.TM_BUNDLE_SUPPORT + '/jshint-tm');
 
 jshint({
+    maxerr: 9999,
+    asi: false,
     es5: true,
     browser: true,
     jquery: true,
+    couch: true,
+    mootools: true,
+    node: true,
+    prototypejs: true,
+    rhino: true,
     development: true,
     bitwise: true,
     curly: true,
@@ -21,14 +28,8 @@ jshint({
     evil: true,
     forin: false,
     laxbreak: true,
-    maxerr: 9999,
     sub: true,
-    predef: [
-        // CommonJS
-        "exports",
-        "require",
-        "module",
-    ]
+    predef: ['_', 'ox3']
 });</string>
 		<key>keyEquivalent</key>
 		<string>@S</string>
