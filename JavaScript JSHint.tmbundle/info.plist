@@ -3,7 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>changed</key>
-	<dict/>
+	<dict>
+		<key>deleted</key>
+		<array>
+			<string>7D2559CA-2963-4C26-B054-B32C0A6F4554</string>
+		</array>
+	</dict>
 	<key>deleted</key>
 	<array/>
 	<key>isDelta</key>

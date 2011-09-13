@@ -5,7 +5,7 @@
 	<key>changed</key>
 	<dict>
 		<key>keyEquivalent</key>
-		<string>^~@s</string>
+		<string>^@S</string>
 	</dict>
 	<key>deleted</key>
 	<array/>

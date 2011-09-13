@@ -5,7 +5,7 @@
 	<key>changed</key>
 	<dict>
 		<key>foldingStartMarker</key>
-		<string>/\*\*(?!\*) [A-Z]|\{\s*($|/\*(?!.*?\*/.*\S)</string>
+		<string>/\*\*(?!\*) [A-Z]|\{\s*($|/\*(?!.*?\*/.*\S))</string>
 		<key>foldingStopMarker</key>
 		<string>(?&lt;!\*)\*\*/|^\s*\}</string>
 		<key>patterns</key>
