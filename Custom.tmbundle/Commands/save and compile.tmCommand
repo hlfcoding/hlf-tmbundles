@@ -8,16 +8,16 @@
 	<string>#!/bin/bash
 
 cd "$TM_DIRECTORY"
-docco *.js *.coffee</string>
+coffee -c .</string>
 	<key>input</key>
 	<string>none</string>
 	<key>name</key>
-	<string>save and doc</string>
+	<string>save and compile</string>
 	<key>output</key>
 	<string>showAsTooltip</string>
 	<key>scope</key>
-	<string>source.js, source.coffee</string>
+	<string>source.coffee</string>
 	<key>uuid</key>
-	<string>DA447AF1-4B30-4C8D-B06C-F62265EE734A</string>
+	<string>5E115FB7-7D5E-493F-9DF5-E1586AFC9197</string>
 </dict>
 </plist>

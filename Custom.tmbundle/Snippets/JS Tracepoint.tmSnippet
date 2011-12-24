@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>console.log(${1:${TM_SELECTED_TEXT:'debug'}}${0:, '$TM_SELECTED_TEXT'});</string>
+	<string>dprint('${TM_FILENAME/(^.*)\..+$/$1/}:${1:debug}:${2:$TM_SELECTED_TEXT}', $TM_SELECTED_TEXT);</string>
 	<key>keyEquivalent</key>
 	<string>^@L</string>
 	<key>name</key>
