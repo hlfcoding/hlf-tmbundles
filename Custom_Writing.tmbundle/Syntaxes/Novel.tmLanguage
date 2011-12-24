@@ -7,6 +7,10 @@
 		<string>txt.ch</string>
 		<string>txt.ol</string>
 	</array>
+	<key>foldingStartMarker</key>
+	<string>^\{</string>
+	<key>foldingStopMarker</key>
+	<string>^\}</string>
 	<key>keyEquivalent</key>
 	<string>^~N</string>
 	<key>name</key>
@@ -57,6 +61,18 @@
 			<string>^\.{3,}</string>
 			<key>name</key>
 			<string>comment.prose.break</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>^\{#.*$</string>
+			<key>name</key>
+			<string>comment.prose.section.start</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>^\}$</string>
+			<key>name</key>
+			<string>comment.prose.section.end</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
