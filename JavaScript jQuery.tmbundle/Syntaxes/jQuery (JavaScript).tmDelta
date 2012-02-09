@@ -69,9 +69,7 @@
 		<array/>
 	</dict>
 	<key>deleted</key>
-	<array>
-		<string>keyEquivalent</string>
-	</array>
+	<array/>
 	<key>isDelta</key>
 	<true/>
 	<key>uuid</key>

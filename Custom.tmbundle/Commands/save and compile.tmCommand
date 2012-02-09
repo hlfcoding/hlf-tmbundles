@@ -11,6 +11,8 @@ cd "$TM_DIRECTORY"
 coffee -c .</string>
 	<key>input</key>
 	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>@S</string>
 	<key>name</key>
 	<string>save and compile</string>
 	<key>output</key>

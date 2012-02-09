@@ -31,11 +31,11 @@ jshint({
     sub: true,
     predef: ['_', 'ox3']
 });</string>
-		<key>keyEquivalent</key>
-		<string>@S</string>
 	</dict>
 	<key>deleted</key>
-	<array/>
+	<array>
+		<string>keyEquivalent</string>
+	</array>
 	<key>isDelta</key>
 	<true/>
 	<key>uuid</key>
