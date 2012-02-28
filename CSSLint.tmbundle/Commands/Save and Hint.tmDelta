@@ -3,12 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>changed</key>
-	<dict>
-		<key>keyEquivalent</key>
-		<string>@S</string>
-	</dict>
+	<dict/>
 	<key>deleted</key>
-	<array/>
+	<array>
+		<string>keyEquivalent</string>
+	</array>
 	<key>isDelta</key>
 	<true/>
 	<key>uuid</key>
