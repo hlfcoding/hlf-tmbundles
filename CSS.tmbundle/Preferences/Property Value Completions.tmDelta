@@ -6,11 +6,11 @@
 	<dict/>
 	<key>deleted</key>
 	<array>
-		<string>keyEquivalent</string>
+		<string>scope</string>
 	</array>
 	<key>isDelta</key>
 	<true/>
 	<key>uuid</key>
-	<string>7DEE5D9A-86F4-4F1C-933A-7CC7207BBF1E</string>
+	<string>1E4F54FD-1940-42E0-9D0A-0EC11D81E446</string>
 </dict>
 </plist>

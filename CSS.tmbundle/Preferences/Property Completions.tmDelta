@@ -147,7 +147,9 @@
 		</array>
 	</dict>
 	<key>deleted</key>
-	<array/>
+	<array>
+		<string>scope</string>
+	</array>
 	<key>isDelta</key>
 	<true/>
 	<key>uuid</key>
