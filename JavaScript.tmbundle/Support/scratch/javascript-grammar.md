@@ -59,8 +59,15 @@ keywords.
 - Grammar
   - webkit stuff
   - node/commonjs
+  - trailing space include
+  - update autocomplete
+  - match a full func call, with params
 - Reset and deactivate jQuery grammar
 - Command
   - integrate with DocHub
+  - CoffeeScript style
+- Snippets
+  - CoffeeScript macros
 - Symbol list
   - log statements
+  - split up declaration pref into each type, for better perf

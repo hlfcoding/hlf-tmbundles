@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Declarations</string>
 	<key>scope</key>
-	<string>source.js meta.declaration -source.js.embedded</string>
+	<string>source.js meta.declaration -source.js.embedded -meta.declaration.variables.undefined</string>
 	<key>settings</key>
 	<dict>
 		<key>showInSymbolList</key>
@@ -18,16 +18,19 @@
 		s/^\s*//; s/\s*$//; # trim
          
 		# Functions
-		s/^.*\(function\s*/ closure /g; # rename
-		s/(function)?\s?\(\)\s?\{.*/ -&gt;/; # rename
 		s/=//g; # strip
-		s/:\sfunction/ =&gt;/; # rename
-		s/(=&gt;)\s?(\(.*\))/$2 $1/;
-         
+		s/(:\s*|\.(\w+)\s*)function/$2 =&gt;/; # rename for methods
+		s/\s(function)\s?\(\s*\)\s?\{?.*/ -&gt;/; # rename for generic
+		s/(=&gt;)\s?(\(.*\))/$2 $1/; # format for methods
+
 		# Punctuation
          s/^(.*):$/- $1/g # label
          s/["'{]|:\s//g; # strip
-		
+
+		# Functions2
+		s/^.*\(function\s*/ closure: /; # label for enclosures
+		s/^.*,\s*function\s*/lamda: $0/; # label for lamdas
+         
 		# Format.
 		s/([,()])(\S)/$1 $2/g; s/(\S)([()])/$1 $2/g; # spacing params
 		s/function//g # strip in case
@@ -37,7 +40,7 @@
 		s/^\s*//; s/\s*$//;
 		
 		# Label (for alphabetize).
-		s/^(?!closure)/def: /g;
+		s/^(?!closure|lamda)/def: /g;
 		
 	</string>
 	</dict>
