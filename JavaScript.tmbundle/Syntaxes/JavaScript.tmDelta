@@ -4,16 +4,83 @@
 <dict>
 	<key>changed</key>
 	<dict>
+		<key>comment</key>
+		<string>
+
+	JavaScript Syntax: version 2.0
+
+	- More up to date support.
+	- Accounts for JS boilerplate language.
+	- Imputes for highlighting; more highlighted.
+	- Assumes you are experienced with JS and are looking for a bundle that makes
+	  it less painful to write all day, in lieu of CoffeeScript.
+
+	</string>
 		<key>fileTypes</key>
 		<array>
 			<string>js</string>
 		</array>
 		<key>foldingStartMarker</key>
-		<string>/\*\*(?!\*) [A-Z]|\{\s*($|/\*(?!.*?\*/.*\S))</string>
+		<string>/\*\*(?!\*) [A-Z]|\{\s*($|/\*(?!.*\*/.*\S))</string>
 		<key>foldingStopMarker</key>
 		<string>(?&lt;!\*)\*\*/|^\s*\}</string>
 		<key>patterns</key>
 		<array>
+			<dict>
+				<key>begin</key>
+				<string>(['"]?\$*[a-z0-9_][a-zA-Z0-9_:]*\w['"]?)?\s*([=:,])?\s*(\()?\b(function)\b\s*(\$*[a-z0-9_]\w*)?\b(?=\()</string>
+				<key>beginCaptures</key>
+				<dict>
+					<key>1</key>
+					<dict>
+						<key>name</key>
+						<string>entity.name.declaration.function.js</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>name</key>
+						<string>keyword.operator.js</string>
+					</dict>
+					<key>3</key>
+					<dict>
+						<key>name</key>
+						<string>meta.brace.round.js</string>
+					</dict>
+					<key>4</key>
+					<dict>
+						<key>name</key>
+						<string>storage.type.js</string>
+					</dict>
+					<key>5</key>
+					<dict>
+						<key>name</key>
+						<string>entity.name.declaration.function.js</string>
+					</dict>
+				</dict>
+				<key>comment</key>
+				<string>
+			[CONFLICTED] Matches `foo: function` or `foo: function ([params]) {` or `function foo ([params]) {` or `[call] "some:event", function...`.
+			</string>
+				<key>end</key>
+				<string>({)</string>
+				<key>endCaptures</key>
+				<dict>
+					<key>1</key>
+					<dict>
+						<key>name</key>
+						<string>meta.brace.curly.js</string>
+					</dict>
+				</dict>
+				<key>name</key>
+				<string>meta.declaration.function.js</string>
+				<key>patterns</key>
+				<array>
+					<dict>
+						<key>include</key>
+						<string>#parameters</string>
+					</dict>
+				</array>
+			</dict>
 			<dict>
 				<key>comment</key>
 				<string>Since this needs to override string, this needs to go before it.</string>
@@ -43,9 +110,9 @@
 				</dict>
 				<key>comment</key>
 				<string>
-              [CONFLICT] Only highlight the start and end markers. 
-              For CDATA? Make sure to include in your theme!
-              </string>
+			[CONFLICT] Only highlight the start and end markers.
+			For CDATA? Make sure to include in your theme!
+			</string>
 				<key>end</key>
 				<string>--&gt;</string>
 				<key>endCaptures</key>
@@ -68,10 +135,12 @@
 				<string>keyword.operator.js</string>
 			</dict>
 			<dict>
+				<key>comment</key>
+				<string>These are technically variables, but they are more magical.</string>
 				<key>match</key>
-				<string>\b(this|super)\b</string>
+				<string>\b(this|super|arguments|(?&lt;=\.)(prototype|constructor|caller))\b</string>
 				<key>name</key>
-				<string>keyword.other.class.js</string>
+				<string>variable.language.js</string>
 			</dict>
 			<dict>
 				<key>match</key>
@@ -201,7 +270,7 @@
 				<key>match</key>
 				<string>\.</string>
 				<key>name</key>
-				<string>meta.delimiter.method.period.js</string>
+				<string>meta.delimiter.period.js</string>
 			</dict>
 			<dict>
 				<key>comment</key>
@@ -209,7 +278,7 @@
 				<key>match</key>
 				<string>,[ |\t]*</string>
 				<key>name</key>
-				<string>meta.delimiter.object.comma.js</string>
+				<string>meta.delimiter.comma.js</string>
 			</dict>
 			<dict>
 				<key>comment</key>
@@ -232,8 +301,8 @@
 				</dict>
 				<key>comment</key>
 				<string>
-              [CONFLICT] Only match if preceded by certain things. Follows linting advice and 
-              wraps an optional `()`.</string>
+			[CONFLICT] Only match if preceded by certain things. Follows linting
+			advice and wraps an optional `()`.</string>
 				<key>end</key>
 				<string>(/)[igm]*\)?</string>
 				<key>endCaptures</key>
@@ -283,9 +352,9 @@
 				</dict>
 				<key>comment</key>
 				<string>
-              Simple range search. Tokenize the quotes. Add complex regex for utf 
-              escape. Placed at the head to give priority.
-              </string>
+			Simple range search. Tokenize the quotes. Add complex regex for utf
+			escape. Placed at the head to give priority.
+			</string>
 				<key>end</key>
 				<string>"</string>
 				<key>endCaptures</key>
@@ -319,9 +388,9 @@
 				</dict>
 				<key>comment</key>
 				<string>
-              Simple range search. Tokenize the quotes. Add complex regex for utf
-              escape. Placed at the head to give priority.
-              </string>
+			Simple range search. Tokenize the quotes. Add complex regex for utf
+			escape. Placed at the head to give priority.
+			</string>
 				<key>end</key>
 				<string>'</string>
 				<key>endCaptures</key>
@@ -346,7 +415,7 @@
 				<key>comment</key>
 				<string>Language globals. Basic</string>
 				<key>match</key>
-				<string>\b(JSON|Math)\b</string>
+				<string>\b(JSON|Math|console)\b</string>
 				<key>name</key>
 				<string>support.global.language.js</string>
 			</dict>
@@ -360,17 +429,25 @@
 			</dict>
 			<dict>
 				<key>comment</key>
-				<string>Language non-constructor functions only. Basic</string>
+				<string>Language non-constructor functions only. Includes Date instances. Includes Harmony features and base function methods. Basic.</string>
 				<key>match</key>
-				<string>\b(decodeURI|decodeURIComponent|encodeURI|encodeURIComponent|eval|isFinite|isNaN|parseFloat|parseInt|uneval)\b</string>
+				<string>\b(((de|en)codeURI(Component)?)|(un)?eval|is(Finite|NaN)|parse(Float|Int)|(?&lt;=\.|\.prototype\.)((to(Locale)?String)|(value|isPrototype)Of|hasOwnProperty|propertyIsEnumerable|bind|call|apply)|Date\.UTC|(?&lt;=Date\.prototype\.|date\.)((g|s)et(Date|Day|FullYear|Hours|Milliseconds|Minutes|Month|Seconds|Time|TimezoneOffset|UTC(Date|Day|FullYear|Hours|Milliseconds|Minutes|Month|Seconds)|Year)|now|parse|to((Date|GMT|ISO|Locale(Date|Time)|Time|UTC)String|LocaleFormat|Source|JSON)))\b</string>
 				<key>name</key>
 				<string>support.function.language.js</string>
 			</dict>
 			<dict>
 				<key>comment</key>
+				<string>Language properties only. Includes Date instances. Includes Harmony features and base function methods. Basic.</string>
+				<key>match</key>
+				<string>\b(?&lt;=\.|\.prototype\.)(name|length)\b</string>
+				<key>name</key>
+				<string>support.variable.language.js</string>
+			</dict>
+			<dict>
+				<key>comment</key>
 				<string>Language constructors only. Basic.</string>
 				<key>match</key>
-				<string>\b(Array|Boolean|Date|Function|Iterator|Number|Object|RegExp|String|ArrayBuffer|Float32Array|Float64Array|Int16Array|Int32Array|Int8Array|Uint16Array|Uint32Array|Uint8Array|Uint8ClampedArray|Error|EvalError|InternalError|RangeError|ReferenceError|StopIteration|SyntaxError|TypeError|URIError)\b</string>
+				<string>\b(Array|Boolean|Date|Function|Iterator|Number|Object|RegExp|String|ArrayBuffer|Float32Array|Float64Array|Int16Array|Int32Array|Int8Array|Uint16Array|Uint32Array|Uint8Array|Uint8ClampedArray|Error|EvalError|InternalError|RangeError|ReferenceError|StopIteration|SyntaxError|TypeError|URIError|DataView)\b</string>
 				<key>name</key>
 				<string>support.type.class.language.js</string>
 			</dict>
@@ -378,25 +455,87 @@
 				<key>comment</key>
 				<string>DOM constructors only. Includes all dom, HTML, SVG, etc. Basic.</string>
 				<key>match</key>
-				<string>\b(Attr|CDATASection|CharacterData|Comment|DocumentFragment|DocumentType|DomConfiguration|DOM(Error|ErrorHandler|Exception|Implementation|ImplementationList|ImplementationRegistry|ImplementationSource|Locator|Object|String|StringList|TimeStamp|UserData|TokenList|SettableTokenList|StringMap)|Entity|EntityReference|MediaQueryList|MediaQueryListListener|NameList|NamedNodeMap|Node|NodeFilter|NodeIterator|NodeList|Notation|Plugin|PluginArray|ProcessingInstruction|SharedWorker|Text|TimeRanges|Treewalker|TypeInfo|UserDataHandler|Worker|WorkerGlobalScope|HTML(Document|Element|(Anchor|Applet|Audio|Area|Base|BaseFont|Body|BR|Button|Canvas|Directory|Div|DList|Embed|FieldSet|Font|Form|Frame|FrameSet|Head|Heading|Html|HR|IFrame|Image|Input|Keygen|Label|LI|Link|Map|Menu|Meta|Mod|Object|OList|OptGroup|Option|Output|Paragraph|Param|Pre|Quote|Script|Select|Source|Span|Style|Table|TableCaption|TableCell|TableDataCell|TableHeaderCell|TableCol|TableRow|TableSection|TextArea|Time|Title|Track|UList|Unknown|Video)Element|Collection|(All|FormControls|Options|Properties)Collection)|ElementTimeControl|TimeEvent|Canvas(RenderingContext2D|Gradient|Pattern|PixelArray)|TextMetrics|ImageData|NotifyAudioAvailableEvent|RadioNodeList|SVG(Document|Element|(A|AltGlyph|AltGlyphDef|AltGlyphItem|Animation|Animate|AnimateColor|AnimateMotion|AnimateTransform|Set|Circle|ClipPath|ColorProfile|Cursor|Defs|Desc|Ellipse|Filter|FEBlend|FEColorMatrix|FEComponentTransfer|FEComposite|FEConvolveMatrix|FEDiffuseLighting|FEDisplacementMap|FEDistantLight|FEFlood|FEGaussianBlur|FEImage|FEMerge|FEMergeNode|FEMorphology|FEOffset|FEPointLight|FESpecularLighting|FESpotLight|FETile|FETurbulence|ComponentTransferFunction|FEFuncR|FEFuncG|FEFuncB|FEFuncA|Font|FontFace|FontFaceFormat|FontFaceName|FontFaceSrc|FontFaceUri|ForeignObject|G|Glyph|GlyphRef|Gradient|LinearGradient|RadialGradient|HKern|Image|Line|Marker|Mask|Metadata|MissingGlyph|MPath|Path|Pattern|Polyline|Polygon|Rect|Script|Stop|Style|Switch|Symbol|Text|TextPath|Title|TRef|TSpan|Use|View|VKern)Element|Angle|Color|ICCColor|ElementInstance|ElementInstanceList|Length|LengthList|Matrix|Number|NumberList|Paint|Point|PointList|PreserveAspectRatio|Rect|StringList|Transform|TransformList|Animated(Angle|Boolean|Enumeration|Integer|Length|LengthList|Number|NumberList|PreserveAspectRatio|Rect|String|TransformList)|Path(SegList|Seg|Seg(ArcAbs|ArcRel|ClosePath|Curve(toCubicAbs|toCubicRel|toCubicSmoothAbs|toCubicSmoothRel|toQuadraticAbs|toQuadraticRel|toQuadraticSmoothAbs|toQuadraticSmoothRel)|Line(toAbs|toHorizontalAbs|toHorizontalRel|toRel|toVerticalAbs|toVerticalRel)|MovetoAbs|MovetoRel))|FilterPrimitiveStandardAttributes|AnimatedPathData))\b</string>
+				<string>\b(Attr|Audio(ProcessingEvent)?|BeforeLoadEvent|Blob|CDATASection|CharacterData|Comment|Document(Fragment|Type)|DomConfiguration|DOM(Error|ErrorHandler|Exception|Implementation(List|Registry|Source)?|Locator|Object|String(List)?|TimeStamp|UserData|(Settable)?TokenList|StringMap)|Entity(Reference)?|MediaQueryList(Listener)?|NameList|NamedNodeMap|Node(Filter|Iterator|List)?|Notation|Plugin(Array)?|ProcessingInstruction|SharedWorker|Text|TimeRanges|Treewalker|TypeInfo|UserDataHandler|Worker(GlobalScope)?|HTML(Document|Element|(Anchor|Applet|Audio|Area|Base|BaseFont|Body|BR|Button|Canvas|Directory|Div|DList|Embed|FieldSet|Font|Form|Frame|FrameSet|Head|Heading|Html|HR|IFrame|Image|Input|Keygen|Label|LI|Link|Map|Menu|Meta|Mod|Object|OList|OptGroup|Option|Output|Paragraph|Param|Pre|Quote|Script|Select|Source|Span|Style|Table(Caption|(Data|Header)?Cell|Col|Row|Section)?|TextArea|Time|Title|Track|UList|Unknown|Video)Element|(All|FormControls|Options|Properties)?Collection)|ElementTimeControl|TimeEvent|Canvas(RenderingContext2D|Gradient|Pattern|PixelArray)|TextMetrics|ImageData|NotifyAudioAvailableEvent|RadioNodeList|SVG(Document|Element|(A|AltGlyph(Def|Item)?|Animation|Animate(Color|Motion|Transform)?|Set|Circle|ClipPath|ColorProfile|Cursor|Defs|Desc|Ellipse|Filter|FE(Blend|ColorMatrix|ComponentTransfer|Composite|ConvolveMatrix|DiffuseLighting|DisplacementMap|DistantLight|Flood|GaussianBlur|Image|Merge(Node)?|Morphology|Offset|(Point|Spot)Light|SpecularLighting|Tile|Turbulence|Func(R|G|B|A))|ComponentTransferFunction|Font(Face(Format|Name|Src|Uri)?)?|ForeignObject|G|Glyph|GlyphRef|(Linear|Radial)?Gradient|HKern|Image|Line|Marker|Mask|Metadata|MissingGlyph|(M|)Path|Pattern|Polyline|Polygon|Rect|Script|Stop|Style|Switch|Symbol|Text|TextPath|Title|TRef|TSpan|Use|View|VKern)Element|Angle|Color|ICCColor|Element(Instance(List)?)|Length(List)?|Matrix|Number(List)?|Paint|Point(List)?|PreserveAspectRatio|Rect|StringList|Transform(List)?|Animated(Angle|Boolean|Enumeration|Integer|Length(List)?|Number(List)?|PreserveAspectRatio|Rect|String|TransformList)|Path(Seg(List|ArcAbs|ArcRel|ClosePath|Curve(to(Cubic((Smooth)?(Abs|Rel))|Quadratic((Smooth)?(Abs|Rel))))|Line(to((Horizontal|Vertical)?(Abs|Rel)))|Moveto(Abs|Rel))?)|FilterPrimitiveStandardAttributes|AnimatedPathData)|CSS((Charset|FontFace|Import|Media|Page)Rule|PrimitiveValue|Rule(List)?|Style(Declaration|Rule|Sheet))|DOM(Parser|DateInput)|Document|Element|(Error)?Event|Event(Exception|Source)?|File(Error|List|Reader)?|FormData|HashChangeEvent|Image|Intent|KeyboardEvent|Media(Controller|Error|List|StreamEvent)|Message(Channel|Event|Port)|MimeType(Array)?|(Mouse|Mutation|OfflineAudioCompletion|Overflow|PageTransition|PopState|Progress|Text|Touch|UI|Wheel)Event|Option|RGBColor|Range(Exception)?|Rect|SQLException|SVG(ZoomEvent|UnitTypes)|WebSocket|WebGL(ActiveInfo|Buffer|ContextEvent|FrameBuffer|Program|Render(Buffer|ingContext)|Shader|Texture|UniformLocation)|WebKit(AnimationEvent|BlobBuilder|CSS((Filter|Transform)Value|(Keyframes?|Region)Rule|Matrix)|Mutation(Observer|Point|TransitionEvent))|XMLHTTPRequest|Device(Mo|Orienta)tionEvent)\b</string>
 				<key>name</key>
 				<string>support.type.class.dom.js</string>
 			</dict>
 			<dict>
 				<key>comment</key>
-				<string>Matches `THIS_CONSTANT`.</string>
+				<string>Basic.</string>
 				<key>match</key>
-				<string>\b[A-Z_]{2,}\b</string>
+				<string>\b(ELEMENT_NODE|ATTRIBUTE_NODE|TEXT_NODE|CDATA_SECTION_NODE|ENTITY_REFERENCE_NODE|ENTITY_NODE|PROCESSING_INSTRUCTION_NODE|COMMENT_NODE|DOCUMENT_NODE|DOCUMENT_TYPE_NODE|DOCUMENT_FRAGMENT_NODE|NOTATION_NODE|INDEX_SIZE_ERR|DOMSTRING_SIZE_ERR|HIERARCHY_REQUEST_ERR|WRONG_DOCUMENT_ERR|INVALID_CHARACTER_ERR|NO_DATA_ALLOWED_ERR|NO_MODIFICATION_ALLOWED_ERR|NOT_FOUND_ERR|NOT_SUPPORTED_ERR|INUSE_ATTRIBUTE_ERR)\b</string>
 				<key>name</key>
-				<string>constant.other.application.js</string>
+				<string>support.constant.dom.js</string>
 			</dict>
 			<dict>
 				<key>comment</key>
-				<string>Dirty.</string>
+				<string>The console object is not standard. Should this be declaration match?</string>
+				<key>match</key>
+				<string>\b(?&lt;=console\.)(warn|info|log|error|time|timeEnd|assert|dir(xml)?|group(Collapsed|End)?|markTimeline|memory|profile(End|s)?|time(End|Stamp)?|trace)\b</string>
+				<key>name</key>
+				<string>support.function.debug.js</string>
+			</dict>
+			<dict>
+				<key>comment</key>
+				<string>
+			`window.[prop]` or `[prop]`.
+			Includes navigator, screen, URL, bars.</string>
+				<key>match</key>
+				<string>\b(?&lt;=window\.|^|[^.])(applicationCache|controllers|crypto|defaultStatus|dialogArguments|closed|content|directories|document|frame(Element|s)|fullScreen|history|inner(Height|Width)|length|location(bar)?(\.visible)?|menubar(\.visible)?|messageManager|mozAnimationStartTime|moz(InnerScreen(X|Y)|PaintCount)|navigator|opener|outer(Height|Width)|parent|personalbar|pkcs11|(screen|scroll)(X|Y)|top|toolbar(\.visible)?|status(bar)?|sidebar|scrollbars|self|scrollMax(X|Y)|URL|window|page(X|Y)Offset|offscreenBuffering|localStorage)|(?&lt;=navigator\.)((app(CodeName|Name|Version)|buildID|(cookie|java)Enabled|language|mimeTypes|mozIsLocallyAvailable|onLine|oscpu|platform|plugins|product(Sub)?)|registerContentHandler|userAgent|vendor(Sub)?|geolocation)|(?&lt;=screen\.)(avail(Height|Left|Top|Width)|colorDepth|height|left|pixelDepth|top|width)\b</string>
+				<key>name</key>
+				<string>support.variable.global.dom.js</string>
+			</dict>
+			<dict>
+				<key>comment</key>
+				<string>
+			`window.[fn]()` or `[fn]()`.
+			Includes URL, location, localStorage, document, navigator.history, geolocation, crypto
+			</string>
+				<key>match</key>
+				<string>\b(?&lt;=window\.|^|[^.])(alert|atob|back|blur|btoa|clear(Immediate|Interval|Timeout)|close|confirm|dump|escape|find|focus|forward|get(Attention|ComputedStyle|Selection)|home|matchMedia|move(By|To)|open(Dialog)?|postMessage|print|prompt|requestAnimationFrame|resize(By|To)|scroll(By(Lines|Pages)?|To)?|set(Cursor|Immediate|Interval|Timeout)|showModalDialog|sizeToContent|stop|unescape|updateCommands)|(?&lt;=URL\.)((create|revoke)ObjectURL)|(?&lt;=localStorage\.)(clear|(get|set|remove)Item|key)|(?&lt;=location\.|document\.location\.)(assign|hash|host(name)?|href|origin|pathname|port|protocol|search|reload|replace)|(?&lt;=navigator\.geolocation\.)((getCurrent|watch)Position)|(?&lt;=history\.)(back|forward|go|(push|replace)State)|(?&lt;=crypto\.)(getRandomValues)|(?&lt;=doc\.|document\.)(URL|activeElement|adoptNode|alinkColor|anchors|applets|async|baseURIObject|bgColor|body|characterSet|clear|close|compatMode|contentType|cookie|create(Attribute|CDATASection|Comment|DocumentFragment|Element|ElementNS|EntityReference|Event|Expression|NSResolver|ProcessingInstruction|Range|TextNode|TreeWalker)|currentScript|defaultView|doctype|document(Element|URI(Object)?)|domain|elementFromPoint|embeds|enableStyleSheetsForSet|evaluate|fgColor|forms|get(BoxObjectFor|Elements?By(Id|ClassName|Name|TagName(NS)?))|hasFocus|height|images|implementation|importNode|inputEncoding|last(Modified|StyleSheetSet)|link(Color|s)|load(Overlay)?|location|moz(CancelFullScreen|FullScreen(Element|Enabled)?|SetImageElement|SyntheticDocument)|onreadystatechange|open|plugins|popupNode|preferredStyleSheetSet|query(CommandSupported|Selector(All)?)|readyState|referrer|releaseCapture|scripts|selectedStyleSheetSet|styleSheet(Set)?s|title|tooltipNode|vlinkColor|width|write(ln)?|xmlVersion)\b</string>
+				<key>name</key>
+				<string>support.function.global.dom.js</string>
+			</dict>
+			<dict>
+				<key>comment</key>
+				<string>
+			Assumes the var is named a certain way. This includes functions and variables.
+			Includes element, event, form, range, table, document, worker.
+			</string>
+				<key>match</key>
+				<string>\b(?&lt;=el\.|elem\.|element\.)(addEventListener|baseURIObject|blur|childElementCount|children|class(List|Name)|click|client(Height|Left|Top|Width)|(c|isC)ontentEditable|dataset|dir|dispatchEvent|firstElementChild|focus|get(Attribute(NS|Node(NS)?)?|BoundingClientRect|ClientRects|ElementsByTagName(NS)?)|hasAttribute(NS)?|id|(inner|insertAdjacent)HTML|item|lang|lastElementChild|moz(MatchesSelector|RequestFullScreen)|name|nextElementSibling|offset(Height|Left|Parent|Top|Width)|on((after|before)scriptexecute|blur|change|click|copy|cut|dblclick|focus|key(down|press|up)|mouse(down|move|out|over|up)|paste|resize|scroll)|outerHTML|previousElementSibling|querySelector(All)?|remove(Attribute(NS|Node)?|EventListener)|scroll(Height|IntoView|Left|Top|Width)|set(Attribute(NS|Node(NS)?)?|Capture)|style|tabIndex|tagName|title)|(?&lt;=worker\.)(postMessage|terminate)|(?&lt;=e\.|evt\.|event\.)(cancel(Bubble|able)|client(X|Y)|ctrlKey|currentTarget|defaultPrevented|detail|eventPhase|explicitOriginalTarget|init(Key|Mouse|UI)?Event|metaKey|mozInputSource|originalTarget|preventDefault|relatedTarget|screen(X|Y)|shiftKey|stop(Immediate)?Propagation|target|timeStamp|type|view|acceleration(IncludingGravity)?|interval|rotationRate|absolute|alpha|beta|gamma)|(?&lt;=frm\.|form\.)(acceptCharset|action|elements|enctype|length|method|name|reset|submit|target)|(?&lt;=range\.)(clone(Contents|Range)|collapsed?|commonAncestorContainer|compare(BoundaryPoints|Node|Point)|createContextualFragment|deleteContents|detach|end(Container|Offset)|extractContents|get(Bounding)?ClientRects?|(insert|intersects)Node|isPointInRange|selectNode(Contents)?|set(End(After|Before)?|Start(After|Before)?)|start(Container|Offset)|surroundContents)|(?&lt;=tbl\.|table\.)(align|bgColor|border|caption|cell(Padding|Spacing)|create(Caption|TFoot|THead)|delete(Caption|Row|TFoot|THead)|frame|insertRow|rows|rules|summary|tBodies|tFoot|tHead|width)\b</string>
+				<key>name</key>
+				<string>support.function.instance.dom.js</string>
+			</dict>
+			<dict>
+				<key>comment</key>
+				<string>
+			Assumes the var is named a certain way. 
+			Includes element, event, form, range, table, document, worker.
+			</string>
+				<key>match</key>
+				<string>\b(el(em(ent)?)?|e(v(en)?t)?|fo?rm|range|ta?ble?|doc(ument)?|worker|date)\b</string>
+				<key>name</key>
+				<string>support.variable.instance.dom.js</string>
+			</dict>
+			<dict>
+				<key>comment</key>
+				<string>
+			Matches either `window.on[foo]` or `on[foo]` or `"onfoo"`.
+			Case insensitive.
+			</string>
+				<key>match</key>
+				<string>\b(?&lt;=window\.|^|[^.])(on(?i:r(ow(s(inserted|delete)|e(nter|xit))|e(s(ize(start|end)?|et)|adystatechange))|mouse(o(ut|ver)|down|up|move)|b(efore(cut|deactivate|u(nload|pdate)|p(aste|rint)|editfocus|activate)|lur)|s(croll|top|ubmit|elect(start|ionchange)?)|h(ashchange|over|elp)|c(hange|ont(extmenu|rolselect)|ut|ellchange|l(ick|ose))|d(evice((mo|orienta)tion)|eactivate|ata(setc(hanged|omplete)|available)|r(op|ag(start|over|drop|en(ter|d)|leave)?)|blclick)|unload|(mozbefore)?paint|p(opstate|aste|ropertychange)|error(update)?|key(down|up|press)|focus|load|a(ctivate|fter(update|print)|bort)))\b</string>
+				<key>name</key>
+				<string>support.function.event-handler.js</string>
+			</dict>
+			<dict>
+				<key>comment</key>
+				<string>Various common aliases.</string>
 				<key>match</key>
 				<string>\$</string>
 				<key>name</key>
-				<string>support.global.query.js</string>
+				<string>support.global.alias.js</string>
 			</dict>
 			<dict>
 				<key>captures</key>
@@ -404,7 +543,7 @@
 					<key>1</key>
 					<dict>
 						<key>name</key>
-						<string>entity.name.class.declaration.js</string>
+						<string>entity.name.application.class.js</string>
 					</dict>
 					<key>2</key>
 					<dict>
@@ -413,27 +552,14 @@
 					</dict>
 				</dict>
 				<key>comment</key>
-				<string>Dirty.</string>
+				<string>
+			Matches `Foo.Bar = [...]`.
+			TODO - Not showing on symbol list.
+			</string>
 				<key>match</key>
-				<string>\b([A-Z][a-z][a-zA-Z0-9_]*)\s*(=)</string>
+				<string>^\s*(_*[A-Z][^\w]*)\s*(=)\.*$</string>
 				<key>name</key>
-				<string>meta.entity.name.class.js</string>
-			</dict>
-			<dict>
-				<key>captures</key>
-				<dict>
-					<key>1</key>
-					<dict>
-						<key>name</key>
-						<string>entity.name.class.js</string>
-					</dict>
-				</dict>
-				<key>comment</key>
-				<string>Dirty.</string>
-				<key>match</key>
-				<string>\b([A-Z][a-z][a-zA-Z0-9_]*)\b</string>
-				<key>name</key>
-				<string>meta.entity.name.class.js</string>
+				<string>meta.declaration.class.js</string>
 			</dict>
 			<dict>
 				<key>captures</key>
@@ -450,162 +576,22 @@
 					</dict>
 				</dict>
 				<key>comment</key>
-				<string>Dirty.</string>
+				<string>
+			[HACK] Accounts for ternaries, regex, selectors, other weirdness.
+			String keys also count.
+			</string>
 				<key>match</key>
-				<string>(?&lt;!\?|\/|'|")[^?/{'"]*\b(\$*[a-z0-9_][a-zA-Z0-9_]*)(:)</string>
+				<string>[^?/{'"$,]*\b(['"]?\$*[a-z0-9_]\w*['"]?)(:)</string>
 				<key>name</key>
-				<string>meta.entity.name.property.declaration.js</string>
-			</dict>
-			<dict>
-				<key>begin</key>
-				<string>(?:(\$*[a-z0-9_][a-zA-Z0-9_]*)\s*(=)\s*)?\b(function)\b\s*(\$*[a-z0-9_][a-zA-Z0-9_]*)?\b</string>
-				<key>beginCaptures</key>
-				<dict>
-					<key>1</key>
-					<dict>
-						<key>name</key>
-						<string>entity.name.function.js</string>
-					</dict>
-					<key>2</key>
-					<dict>
-						<key>name</key>
-						<string>keyword.operator.js</string>
-					</dict>
-					<key>3</key>
-					<dict>
-						<key>name</key>
-						<string>storage.type.js</string>
-					</dict>
-					<key>4</key>
-					<dict>
-						<key>name</key>
-						<string>entity.name.function.js</string>
-					</dict>
-				</dict>
-				<key>comment</key>
-				<string>Dirty.</string>
-				<key>end</key>
-				<string>({)</string>
-				<key>endCaptures</key>
-				<dict>
-					<key>1</key>
-					<dict>
-						<key>name</key>
-						<string>meta.brace.curly.js</string>
-					</dict>
-				</dict>
-				<key>name</key>
-				<string>meta.entity.name.function.declaration.js</string>
-				<key>patterns</key>
-				<array>
-					<dict>
-						<key>captures</key>
-						<dict>
-							<key>1</key>
-							<dict>
-								<key>name</key>
-								<string>variable.parameter.js</string>
-							</dict>
-							<key>2</key>
-							<dict>
-								<key>name</key>
-								<string>meta.delimiter.object.comma.js</string>
-							</dict>
-						</dict>
-						<key>match</key>
-						<string>(\$|\$*[a-zA-Z0-9_]+)(,)?\)?</string>
-						<key>name</key>
-						<string>meta.variable.parameter.js</string>
-					</dict>
-				</array>
+				<string>meta.declaration.property.js</string>
 			</dict>
 			<dict>
 				<key>comment</key>
-				<string>Dirty.</string>
+				<string>Easy on the eyes. Basic.</string>
 				<key>match</key>
-				<string>\b(ELEMENT_NODE|ATTRIBUTE_NODE|TEXT_NODE|CDATA_SECTION_NODE|ENTITY_REFERENCE_NODE|ENTITY_NODE|PROCESSING_INSTRUCTION_NODE|COMMENT_NODE|DOCUMENT_NODE|DOCUMENT_TYPE_NODE|DOCUMENT_FRAGMENT_NODE|NOTATION_NODE|INDEX_SIZE_ERR|DOMSTRING_SIZE_ERR|HIERARCHY_REQUEST_ERR|WRONG_DOCUMENT_ERR|INVALID_CHARACTER_ERR|NO_DATA_ALLOWED_ERR|NO_MODIFICATION_ALLOWED_ERR|NOT_FOUND_ERR|NOT_SUPPORTED_ERR|INUSE_ATTRIBUTE_ERR)\b</string>
+				<string>(?&lt;=var)[\b\w\s,]+;$</string>
 				<key>name</key>
-				<string>support.constant.dom.js</string>
-			</dict>
-			<dict>
-				<key>comment</key>
-				<string>Dirty.</string>
-				<key>match</key>
-				<string>\b(console)\b</string>
-				<key>name</key>
-				<string>entity.name.type.object.js.debug</string>
-			</dict>
-			<dict>
-				<key>captures</key>
-				<dict>
-					<key>0</key>
-					<dict>
-						<key>name</key>
-						<string>meta.delimiter.method.period.js</string>
-					</dict>
-				</dict>
-				<key>comment</key>
-				<string>Dirty.</string>
-				<key>match</key>
-				<string>\bconsole(\.)(?:warn|info|log|error|time|timeEnd|assert)\b</string>
-				<key>name</key>
-				<string>support.function.js.debug</string>
-			</dict>
-			<dict>
-				<key>comment</key>
-				<string>Dirty.</string>
-				<key>match</key>
-				<string>\b(extend|arguments|hasOwnProperty)\b</string>
-				<key>name</key>
-				<string>support.function.dom.js</string>
-			</dict>
-			<dict>
-				<key>comment</key>
-				<string>Dirty.</string>
-				<key>match</key>
-				<string>\b(_this|Self|base|console)\b</string>
-				<key>name</key>
-				<string>support.object.js</string>
-			</dict>
-			<dict>
-				<key>comment</key>
-				<string>Dirty.</string>
-				<key>match</key>
-				<string>\b(s(h(ift|ow(Mod(elessDialog|alDialog)|Help))|croll(X|By(Pages|Lines)?|Y|To)?|t(op|rike)|i(n|zeToContent|debar|gnText)|ort|u(p|b(str(ing)?)?)|pli(ce|t)|e(nd|t(Re(sizable|questHeader)|M(i(nutes|lliseconds)|onth)|Seconds|Ho(tKeys|urs)|Year|Cursor|Time(out)?|Interval|ZOptions|Date|UTC(M(i(nutes|lliseconds)|onth)|Seconds|Hours|Date|FullYear)|FullYear|Active)|arch)|qrt|lice|avePreferences|mall)|h(ome|andleEvent)|navigate|c(har(CodeAt|At)|o(s|n(cat|textual|firm)|mpile)|eil|lear(Timeout|Interval)?|a(ptureEvents|ll)|reate(StyleSheet|Popup|EventObject))|t(o(GMTString|S(tring|ource)|U(TCString|pperCase)|Lo(caleString|werCase))|est|a(n|int(Enabled)?))|i(s(NaN|Finite)|ndexOf|talics)|d(isableExternalCapture|ump|etachEvent)|u(n(shift|taint|escape|watch)|pdateCommands)|j(oin|avaEnabled)|p(o(p|w)|ush|lugins.refresh|a(ddings|rse(Int|Float)?)|r(int|ompt|eference))|e(scape|nableExternalCapture|val|lementFromPoint|x(p|ec(Script|Command)?))|valueOf|UTC|queryCommand(State|Indeterm|Enabled|Value)|f(i(nd|le(ModifiedDate|Size|CreatedDate|UpdatedDate)|xed)|o(nt(size|color)|rward)|loor|romCharCode)|watch|l(ink|o(ad|g)|astIndexOf)|a(sin|nchor|cos|t(tachEvent|ob|an(2)?)|pply|lert|b(s|ort))|r(ou(nd|teEvents)|e(size(By|To)|calc|turnValue|place|verse|l(oad|ease(Capture|Events)))|andom)|g(o|et(ResponseHeader|M(i(nutes|lliseconds)|onth)|Se(conds|lection)|Hours|Year|Time(zoneOffset)?|Da(y|te)|UTC(M(i(nutes|lliseconds)|onth)|Seconds|Hours|Da(y|te)|FullYear)|FullYear|A(ttention|llResponseHeaders)))|m(in|ove(B(y|elow)|To(Absolute)?|Above)|ergeAttributes|a(tch|rgins|x))|b(toa|ig|o(ld|rderWidths)|link|ack)|constructor)\b(?=\()</string>
-				<key>name</key>
-				<string>support.function.js</string>
-			</dict>
-			<dict>
-				<key>comment</key>
-				<string>Dirty.</string>
-				<key>match</key>
-				<string>\b(s(ub(stringData|mit)|plitText|e(t(NamedItem|Attribute(Node)?)|lect))|has(ChildNodes|Feature)|namedItem|c(l(ick|o(se|neNode))|reate(C(omment|DATASection|aption)|T(Head|extNode|Foot)|DocumentFragment|ProcessingInstruction|E(ntityReference|lement)|Attribute))|tabIndex|i(nsert(Row|Before|Cell|Data)|tem)|open|delete(Row|C(ell|aption)|T(Head|Foot)|Data)|focus|write(ln)?|a(dd|ppend(Child|Data))|re(set|place(Child|Data)|move(NamedItem|Child|Attribute(Node)?)?)|get(NamedItem|Element(sBy(Name|TagName)|ById)|Attribute(Node)?)|blur)\b(?=\()</string>
-				<key>name</key>
-				<string>support.function.dom.js</string>
-			</dict>
-			<dict>
-				<key>comment</key>
-				<string>Dirty.</string>
-				<key>match</key>
-				<string>(?&lt;=\.)(s(ystemLanguage|cr(ipts|ollbars|een(X|Y|Top|Left))|t(yle(Sheets)?|atus(Text|bar)?)|ibling(Below|Above)|ource|uffixes|e(curity(Policy)?|l(ection|f)))|h(istory|ost(name)?|as(h|Focus))|y|X(MLDocument|SLDocument)|n(ext|ame(space(s|URI)|Prop))|M(IN_VALUE|AX_VALUE)|c(haracterSet|o(n(structor|trollers)|okieEnabled|lorDepth|mp(onents|lete))|urrent|puClass|l(i(p(boardData)?|entInformation)|osed|asses)|alle(e|r)|rypto)|t(o(olbar|p)|ext(Transform|Indent|Decoration|Align)|ags)|SQRT(1_2|2)|i(n(ner(Height|Width)|put)|ds|gnoreCase)|zIndex|o(scpu|n(readystatechange|Line)|uter(Height|Width)|p(sProfile|ener)|ffscreenBuffering)|NEGATIVE_INFINITY|d(i(splay|alog(Height|Top|Width|Left|Arguments)|rectories)|e(scription|fault(Status|Ch(ecked|arset)|View)))|u(ser(Profile|Language|Agent)|n(iqueID|defined)|pdateInterval)|_content|p(ixelDepth|ort|ersonalbar|kcs11|l(ugins|atform)|a(thname|dding(Right|Bottom|Top|Left)|rent(Window|Layer)?|ge(X(Offset)?|Y(Offset)?))|r(o(to(col|type)|duct(Sub)?|mpter)|e(vious|fix)))|e(n(coding|abledPlugin)|x(ternal|pando)|mbeds)|v(isibility|endor(Sub)?|Linkcolor)|URLUnencoded|P(I|OSITIVE_INFINITY)|f(ilename|o(nt(Size|Family|Weight)|rmName)|rame(s|Element)|gColor)|E|whiteSpace|l(i(stStyleType|n(eHeight|kColor))|o(ca(tion(bar)?|lName)|wsrc)|e(ngth|ft(Context)?)|a(st(M(odified|atch)|Index|Paren)|yer(s|X)|nguage))|a(pp(MinorVersion|Name|Co(deName|re)|Version)|vail(Height|Top|Width|Left)|ll|r(ity|guments)|Linkcolor|bove)|r(ight(Context)?|e(sponse(XML|Text)|adyState))|global|x|m(imeTypes|ultiline|enubar|argin(Right|Bottom|Top|Left))|L(N(10|2)|OG(10E|2E))|b(o(ttom|rder(Width|RightWidth|BottomWidth|Style|Color|TopWidth|LeftWidth))|ufferDepth|elow|ackground(Color|Image)))\b</string>
-				<key>name</key>
-				<string>support.constant.js</string>
-			</dict>
-			<dict>
-				<key>comment</key>
-				<string>Dirty.</string>
-				<key>match</key>
-				<string>(?&lt;=\.)(s(hape|ystemId|c(heme|ope|rolling)|ta(ndby|rt)|ize|ummary|pecified|e(ctionRowIndex|lected(Index)?)|rc)|h(space|t(tpEquiv|mlFor)|e(ight|aders)|ref(lang)?)|n(o(Resize|tation(s|Name)|Shade|Href|de(Name|Type|Value)|Wrap)|extSibling|ame)|c(h(ildNodes|Off|ecked|arset)?|ite|o(ntent|o(kie|rds)|de(Base|Type)?|l(s|Span|or)|mpact)|ell(s|Spacing|Padding)|l(ear|assName)|aption)|t(ype|Bodies|itle|Head|ext|a(rget|gName)|Foot)|i(sMap|ndex|d|m(plementation|ages))|o(ptions|wnerDocument|bject)|d(i(sabled|r)|o(c(type|umentElement)|main)|e(clare|f(er|ault(Selected|Checked|Value)))|at(eTime|a))|useMap|p(ublicId|arentNode|r(o(file|mpt)|eviousSibling))|e(n(ctype|tities)|vent|lements)|v(space|ersion|alue(Type)?|Link|Align)|URL|f(irstChild|orm(s)?|ace|rame(Border)?)|width|l(ink(s)?|o(ngDesc|wSrc)|a(stChild|ng|bel))|a(nchors|c(ce(ssKey|pt(Charset)?)|tion)|ttributes|pplets|l(t|ign)|r(chive|eas)|xis|Link|bbr)|r(ow(s|Span|Index)|ules|e(v|ferrer|l|adOnly))|m(ultiple|e(thod|dia)|a(rgin(Height|Width)|xLength))|b(o(dy|rder)|ackground|gColor))\b</string>
-				<key>name</key>
-				<string>support.constant.dom.js</string>
-			</dict>
-			<dict>
-				<key>comment</key>
-				<string>Dirty.</string>
-				<key>match</key>
-				<string>\bon(R(ow(s(inserted|delete)|e(nter|xit))|e(s(ize(start|end)?|et)|adystatechange))|Mouse(o(ut|ver)|down|up|move)|B(efore(cut|deactivate|u(nload|pdate)|p(aste|rint)|editfocus|activate)|lur)|S(croll|top|ubmit|elect(start|ionchange)?)|H(over|elp)|C(hange|ont(extmenu|rolselect)|ut|ellchange|l(ick|ose))|D(eactivate|ata(setc(hanged|omplete)|available)|r(op|ag(start|over|drop|en(ter|d)|leave)?)|blclick)|Unload|P(aste|ropertychange)|Error(update)?|Key(down|up|press)|Focus|Load|A(ctivate|fter(update|print)|bort))\b</string>
-				<key>name</key>
-				<string>support.function.event-handler.js</string>
+				<string>meta.declaration.variables.undefined.js</string>
 			</dict>
 			<dict>
 				<key>captures</key>
@@ -613,7 +599,7 @@
 					<key>1</key>
 					<dict>
 						<key>name</key>
-						<string>support.app.function.js</string>
+						<string>support.other.application.function.js</string>
 					</dict>
 					<key>2</key>
 					<dict>
@@ -622,11 +608,19 @@
 					</dict>
 				</dict>
 				<key>comment</key>
-				<string>Dirty.</string>
+				<string>Matches `$fooBar(`. Basic.</string>
 				<key>match</key>
-				<string>\b(\$*[a-z0-9_][a-zA-Z0-9_]*)(\()</string>
+				<string>\b(\$*[a-z0-9_]\w*)(\()</string>
 				<key>name</key>
 				<string>meta.function.call.js</string>
+			</dict>
+			<dict>
+				<key>comment</key>
+				<string>[CONVENTION] Matches `THIS_CONSTANT`.</string>
+				<key>match</key>
+				<string>\b(_*([A-Z]{2,}|[A-Z][0-9A-Z_]{2,}))\b</string>
+				<key>name</key>
+				<string>constant.other.application.js</string>
 			</dict>
 			<dict>
 				<key>captures</key>
@@ -634,12 +628,12 @@
 					<key>1</key>
 					<dict>
 						<key>name</key>
-						<string>support.global.query.js</string>
+						<string>entity.other.application.property.js</string>
 					</dict>
 					<key>2</key>
 					<dict>
 						<key>name</key>
-						<string>entity.app.property.js</string>
+						<string>support.global.query.js</string>
 					</dict>
 					<key>3</key>
 					<dict>
@@ -648,19 +642,69 @@
 					</dict>
 				</dict>
 				<key>comment</key>
-				<string>Dirty.</string>
+				<string>[CONFLICTED] String keys also account.</string>
 				<key>match</key>
-				<string>(?&lt;=\.)(\$)?([a-z0-9_][a-zA-Z0-9_]*)(\.)?</string>
+				<string>(?&lt;=\.)(['"]?(\$?)[a-z0-9_]\w*['"]?)(\.)?</string>
 				<key>name</key>
 				<string>meta.property.js</string>
+			</dict>
+			<dict>
+				<key>include</key>
+				<string>#class-name</string>
 			</dict>
 		</array>
 		<key>repository</key>
 		<dict>
+			<key>class-name</key>
+			<dict>
+				<key>comment</key>
+				<string>[CONVENTION] Matches `ClassFoo...`.</string>
+				<key>match</key>
+				<string>\b(_*[A-Z]\w*)\b</string>
+				<key>name</key>
+				<string>entity.name.application.class.js</string>
+			</dict>
 			<key>escaped-char</key>
 			<dict>
 				<key>match</key>
 				<string>\\(x\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)</string>
+				<key>name</key>
+				<string>constant.character.escape.js</string>
+			</dict>
+			<key>parameters</key>
+			<dict>
+				<key>captures</key>
+				<dict>
+					<key>1</key>
+					<dict>
+						<key>name</key>
+						<string>meta.brace.round.js</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>name</key>
+						<string>variable.parameter.js</string>
+					</dict>
+					<key>3</key>
+					<dict>
+						<key>name</key>
+						<string>meta.delimiter.comma.js</string>
+					</dict>
+					<key>4</key>
+					<dict>
+						<key>name</key>
+						<string>meta.brace.round.js</string>
+					</dict>
+				</dict>
+				<key>match</key>
+				<string>(\()?(\$*\w+)?\s*(,)?(\))?</string>
+				<key>name</key>
+				<string>entity.name.declaration.parameter.js</string>
+			</dict>
+			<key>simple-escaped-char</key>
+			<dict>
+				<key>match</key>
+				<string>\\.</string>
 				<key>name</key>
 				<string>constant.character.escape.js</string>
 			</dict>
