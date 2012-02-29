@@ -3,13 +3,39 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Symbol List Class</string>
+	<string>Declarations</string>
 	<key>scope</key>
-	<string>source.js entity.name.class.declaration.js -source.js.embedded</string>
+	<string>source.js meta.declaration -source.js.embedded</string>
 	<key>settings</key>
 	<dict>
 		<key>showInSymbolList</key>
 		<integer>1</integer>
+		<key>symbolTransformation</key>
+		<string>
+
+		# Whitespace.
+		s/\s{2,}/ /g; # strip extra
+		s/^\s*//; s/\s*$//; # trim
+         
+		# Lamdas
+		s/function\s?\(\)\s?\{.*/()/; # rename
+         
+		# Punctuation
+         s/^(.*):$/- $1/g # label
+         s/["'{=:]//g; # strip
+		
+		# Format.
+		s/([,()])(\S)/$1 $2/g; s/(\S)([()])/$1 $2/g;  # spacing params
+		s/function//g # strip
+
+		# Re-whitespace.
+		s/\s{2,}/ /g;
+		s/^\s*//; s/\s*$//;
+		
+		# Label.
+		s/^/def: /g;
+		
+	</string>
 	</dict>
 	<key>uuid</key>
 	<string>56A3E552-1A16-4C5A-AC3D-362B9D737654</string>
