@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Symbol List Group</string>
+	<string>Section</string>
 	<key>scope</key>
 	<string>source.js comment.block.documentation.js -source.js.embedded</string>
 	<key>settings</key>
@@ -11,7 +11,20 @@
 		<key>showInSymbolList</key>
 		<string>1</string>
 		<key>symbolTransformation</key>
-		<string>s/\/\*\*\s*([A-Z]+\s+)(.*?)\s*\*\//-- $2 /; s/\/\*.*?\*\*\//./; s/\/\*[^\*].*?[^\*]\*\///</string>
+		<string>
+		
+		# Cleanup.
+		s/^[\/*\s]*([A-Z]{2,})?\s*//; 
+		s/[\/*\s]*$//;
+		s/\s\*\s//g;
+		
+		# Truncate.
+		s/\s*(\.|@).*$//;
+		
+		# Label.
+		s/^\s*/# /;
+		
+	</string>
 	</dict>
 	<key>uuid</key>
 	<string>E8857C1A-37DB-4DDD-B129-165FB8C2606A</string>

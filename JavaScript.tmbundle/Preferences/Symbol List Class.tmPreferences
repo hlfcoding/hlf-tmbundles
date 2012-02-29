@@ -17,23 +17,27 @@
 		s/\s{2,}/ /g; # strip extra
 		s/^\s*//; s/\s*$//; # trim
          
-		# Lamdas
-		s/function\s?\(\)\s?\{.*/()/; # rename
+		# Functions
+		s/^.*\(function\s*/ closure /g; # rename
+		s/(function)?\s?\(\)\s?\{.*/ -&gt;/; # rename
+		s/=//g; # strip
+		s/:\sfunction/ =&gt;/; # rename
+		s/(=&gt;)\s?(\(.*\))/$2 $1/;
          
 		# Punctuation
          s/^(.*):$/- $1/g # label
-         s/["'{=:]//g; # strip
+         s/["'{]|:\s//g; # strip
 		
 		# Format.
-		s/([,()])(\S)/$1 $2/g; s/(\S)([()])/$1 $2/g;  # spacing params
-		s/function//g # strip
+		s/([,()])(\S)/$1 $2/g; s/(\S)([()])/$1 $2/g; # spacing params
+		s/function//g # strip in case
 
 		# Re-whitespace.
 		s/\s{2,}/ /g;
 		s/^\s*//; s/\s*$//;
 		
-		# Label.
-		s/^/def: /g;
+		# Label (for alphabetize).
+		s/^(?!closure)/def: /g;
 		
 	</string>
 	</dict>
