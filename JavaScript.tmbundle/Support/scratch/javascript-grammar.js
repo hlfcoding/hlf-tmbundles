@@ -1,3 +1,4 @@
+
 // Unit Tests
 // ==========
 // Also, check the symbol list.
@@ -563,3 +564,5 @@ $, $($($())); $foo
 "<?= Model.Foo %>"
 
 case 'integer': return ox3.util.toInt(Math.random() * Math.pow(10, 12)); // TODO
+
+var ox3 = (function($) { // TODO
