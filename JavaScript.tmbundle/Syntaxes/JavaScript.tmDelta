@@ -11,9 +11,15 @@
 
 	- More up to date support.
 	- Accounts for JS boilerplate language.
-	- Imputes for highlighting; more highlighted.
-	- Assumes you are experienced with JS and are looking for a bundle that makes
-	  it less painful to write all day, in lieu of CoffeeScript.
+	- Imputes for more highlighted, including better DOM coverage:
+	  - Assumes your code is 99% functions and that is mostly what you are working in
+	    and care about.
+	  - Assumes you are experienced with JS and are looking for a bundle that makes
+	    it less painful to write all day, in lieu of CoffeeScript.
+	  - Assumes you follow conventions with naming instances: 
+	    `date` `my_date` `element` `elem` `el`
+	  - Assumes you care about at least viewing the DOM api with proper highlighting
+	- Uses more of TextMate, including updated doc views, symbol list, autocomplete.
 
 	</string>
 		<key>fileTypes</key>
@@ -429,25 +435,17 @@
 			</dict>
 			<dict>
 				<key>comment</key>
-				<string>Language globals. Basic</string>
+				<string>Language constructors only. Basic.</string>
 				<key>match</key>
-				<string>\b(JSON|Math|console)\b</string>
+				<string>\b(Array|Boolean|Date|Function|Iterator|Number|Object|RegExp|String|ArrayBuffer|Float32Array|Float64Array|Int16Array|Int32Array|Int8Array|Uint16Array|Uint32Array|Uint8Array|Uint8ClampedArray|Error|EvalError|InternalError|RangeError|ReferenceError|StopIteration|SyntaxError|TypeError|URIError|DataView)\b</string>
 				<key>name</key>
-				<string>support.global.language.js</string>
-			</dict>
-			<dict>
-				<key>comment</key>
-				<string>Language globals. Basic</string>
-				<key>match</key>
-				<string>\b(document|event|window|screen|netscape)\b</string>
-				<key>name</key>
-				<string>support.global.dom.js</string>
+				<string>support.type.class.language.js</string>
 			</dict>
 			<dict>
 				<key>comment</key>
 				<string>Language non-constructor functions only. Includes Date instances. Includes Harmony features and base function methods. Basic.</string>
 				<key>match</key>
-				<string>\b(((de|en)codeURI(Component)?)|(un)?eval|is(Finite|NaN)|parse(Float|Int)|(?&lt;=\.|\.prototype\.)((to(Locale)?String)|(value|isPrototype)Of|hasOwnProperty|propertyIsEnumerable|bind|call|apply)|Date\.UTC|(?&lt;=Date\.prototype\.|date\.)((g|s)et(Date|Day|FullYear|Hours|Milliseconds|Minutes|Month|Seconds|Time|TimezoneOffset|UTC(Date|Day|FullYear|Hours|Milliseconds|Minutes|Month|Seconds)|Year)|now|parse|to((Date|GMT|ISO|Locale(Date|Time)|Time|UTC)String|LocaleFormat|Source|JSON)))\b</string>
+				<string>\b(((de|en)codeURI(Component)?)|(un)?eval|is(Finite|NaN)|parse(Float|Int)|(?&lt;=\.|\.prototype\.)((to((Locale)?String|Source))|(value|isPrototype)Of|hasOwnProperty|propertyIsEnumerable|bind|call|apply|reduce(Right)?|concat|every|filter|forEach|indexOf|join|lastIndexOf|map|pop|push|reverse|(un)?shift|slice|some|sort|splice|trim(Left|Right)?|anchor|big|blink|bold|char(Code)?At|concat|fixed|font(color|size)|fromCharCode|italics|link|localeCompare|match|quote|replace|search|small|split|strike|sub|substr(ing)?|sup|to(Locale)?(Lower|Upper)Case)|(?&lt;=Date\.)UTC|(?&lt;=Date\.prototype\.|date\.)((g|s)et(Date|Day|FullYear|Hours|Milliseconds|Minutes|Month|Seconds|Time|TimezoneOffset|UTC(Date|Day|FullYear|Hours|Milliseconds|Minutes|Month|Seconds)|Year)|now|parse|to((Date|GMT|ISO|Locale(Date|Time)|Time|UTC)String|LocaleFormat|JSON)))\b</string>
 				<key>name</key>
 				<string>support.function.language.js</string>
 			</dict>
@@ -458,14 +456,6 @@
 				<string>\b(?&lt;=\.|\.prototype\.)(name|length)\b</string>
 				<key>name</key>
 				<string>support.variable.language.js</string>
-			</dict>
-			<dict>
-				<key>comment</key>
-				<string>Language constructors only. Basic.</string>
-				<key>match</key>
-				<string>\b(Array|Boolean|Date|Function|Iterator|Number|Object|RegExp|String|ArrayBuffer|Float32Array|Float64Array|Int16Array|Int32Array|Int8Array|Uint16Array|Uint32Array|Uint8Array|Uint8ClampedArray|Error|EvalError|InternalError|RangeError|ReferenceError|StopIteration|SyntaxError|TypeError|URIError|DataView)\b</string>
-				<key>name</key>
-				<string>support.type.class.language.js</string>
 			</dict>
 			<dict>
 				<key>comment</key>
@@ -497,7 +487,7 @@
 			`window.[prop]` or `[prop]`.
 			Includes navigator, screen, URL, bars.</string>
 				<key>match</key>
-				<string>\b(?&lt;=window\.|^|[^.])(applicationCache|controllers|crypto|defaultStatus|dialogArguments|closed|content|directories|document|frame(Element|s)|fullScreen|history|inner(Height|Width)|length|location(bar)?(\.visible)?|menubar(\.visible)?|messageManager|mozAnimationStartTime|moz(InnerScreen(X|Y)|PaintCount)|navigator|opener|outer(Height|Width)|parent|personalbar|pkcs11|(screen|scroll)(X|Y)|top|toolbar(\.visible)?|status(bar)?|sidebar|scrollbars|self|scrollMax(X|Y)|URL|window|page(X|Y)Offset|offscreenBuffering|localStorage)\b|(?&lt;=navigator\.)((app(CodeName|Name|Version)|buildID|(cookie|java)Enabled|language|mimeTypes|mozIsLocallyAvailable|onLine|oscpu|platform|plugins|product(Sub)?)|registerContentHandler|userAgent|vendor(Sub)?|geolocation)\b|(?&lt;=screen\.)(avail(Height|Left|Top|Width)|colorDepth|height|left|pixelDepth|top|width)\b</string>
+				<string>\b(?&lt;=window\.|^|[^.])(document|event|screen|netscape|JSON|Math|console|applicationCache|controllers|crypto|defaultStatus|dialogArguments|closed|content|directories|document|frame(Element|s)|fullScreen|history|inner(Height|Width)|length|location(bar)?(\.visible)?|menubar(\.visible)?|messageManager|mozAnimationStartTime|moz(InnerScreen(X|Y)|PaintCount)|navigator|opener|outer(Height|Width)|parent|personalbar|pkcs11|(screen|scroll)(X|Y)|top|toolbar(\.visible)?|status(bar)?|sidebar|scrollbars|self|scrollMax(X|Y)|URL|window|page(X|Y)Offset|offscreenBuffering|localStorage)\b|(?&lt;=navigator\.)((app(CodeName|Name|Version)|buildID|(cookie|java)Enabled|language|mimeTypes|mozIsLocallyAvailable|onLine|oscpu|platform|plugins|product(Sub)?)|registerContentHandler|userAgent|vendor(Sub)?|geolocation)\b|(?&lt;=screen\.)(avail(Height|Left|Top|Width)|colorDepth|height|left|pixelDepth|top|width)\b</string>
 				<key>name</key>
 				<string>support.variable.global.dom.js</string>
 			</dict>
@@ -736,9 +726,7 @@
 		</dict>
 	</dict>
 	<key>deleted</key>
-	<array>
-		<string>keyEquivalent</string>
-	</array>
+	<array/>
 	<key>isDelta</key>
 	<true/>
 	<key>uuid</key>

@@ -13,34 +13,33 @@
 		<key>symbolTransformation</key>
 		<string>
 
-		# Whitespace.
+		# Clean
+		s/["']|default://g; # strip
 		s/\s{2,}/ /g; # strip extra
 		s/^\s*//; s/\s*$//; # trim
          
 		# Functions
 		s/=//g; # strip
 		s/(:\s*|\.(\w+)\s*)function/$2 =&gt;/; # rename for methods
-		s/\s(function)\s?\(\s*\)\s?\{?.*/ -&gt;/; # rename for generic
-		s/(=&gt;)\s?(\(.*\))/$2 $1/; # format for methods
+		s/\s?(function)\s?\(\s*\)\s?\{?.*/ -&gt;/; # rename for generic
+		s/([=-]&gt;)\s?(\(.*\))/$2 $1/; # format for methods
 
-		# Punctuation
+		# Clean2
          s/^(.*):$/- $1/g # label
-         s/["'{]|:\s//g; # strip
+         s/[{:]//g; # strip
 
 		# Functions2
 		s/^.*\(function\s*/ closure: /; # label for enclosures
 		s/^.*,\s*function\s*/lamda: $0/; # label for lamdas
-         
-		# Format.
-		s/([,()])(\S)/$1 $2/g; s/(\S)([()])/$1 $2/g; # spacing params
-		s/function//g # strip in case
+		s/function(\s+([\w]+))?/$2 / # strip in case
+		s/^\(\)|-&gt;/lamda/ # last call
 
-		# Re-whitespace.
-		s/\s{2,}/ /g;
-		s/^\s*//; s/\s*$//;
-		
+		# Clean3
+		s/\s{2,}/ /g; # strip extra
+		s/^\s*//; s/\s*$//; # trim
+
 		# Label (for alphabetize).
-		s/^(?!closure|lamda)/def: /g;
+		s/^(?!closure|lamda)(.)/def: $1/g;
 		
 	</string>
 	</dict>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>js</string>
+	</array>
+	<key>foldingStartMarker</key>
+	<string></string>
+	<key>foldingStopMarker</key>
+	<string></string>
+	<key>name</key>
+	<string>JavaScript Underscore</string>
+	<key>patterns</key>
+	<array/>
+	<key>scopeName</key>
+	<string>source.js.underscore</string>
+	<key>uuid</key>
+	<string>D5904015-C13F-4C7E-B0A9-C48DF76E2009</string>
+</dict>
+</plist>

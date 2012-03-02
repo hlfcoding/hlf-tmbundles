@@ -116,11 +116,8 @@ foo.bar
 // Support
 // -------
 
-// globals
-JSON Math 
 // dom
-window window.URL URL URL.createObjectURL() URL.revokeObjectURL()
-window.URL.createObjectURL() window.URL.revokeObjectURL() applicationCache
+JSON Math window.JSON window.Math window window.URL URL applicationCache
 window.applicationCache controllers window.controllers crypto window.crypto
 defaultStatus window.defaultStatus dialogArguments window.dialogArguments closed
 window.closed content window.content directories window.directories document
@@ -130,21 +127,37 @@ innerWidth window.innerWidth length window.length location window.location
 locationbar window.locationbar menubar window.menubar messageManager
 window.messageManager mozAnimationStartTime window.mozAnimationStartTime
 mozInnerScreenX window.mozInnerScreenX mozInnerScreenY window.mozInnerScreenY
-mozPaintCount window.mozPaintCount navigator navigator.appCodeName
-navigator.appName navigator.appVersion navigator.buildID navigator.cookieEnabled
-navigator.javaEnabled navigator.language navigator.mimeTypes
-navigator.mozIsLocallyAvailable navigator.onLine navigator.oscpu
-navigator.platform navigator.plugins navigator.product navigator.productSub
-navigator.registerContentHandler navigator.userAgent navigator.vendor
-navigator.vendorSub window.navigator window.navigator.appCodeName
-navigator.geolocation window.navigator.geolocation
+mozPaintCount window.mozPaintCount navigator window.navigator window.screen
+screen window.screenX window.screenY window.opener window.outerHeight
+window.outerWidth window.parent window.personalbar window.scrollMaxX
+window.scrollMaxY window.scrollX window.scrollY window.scrollbars window.self
+window.sidebar window.status window.statusbar window.toolbar window.top
+window.window window.pageXOffset window.pageYOffset screenX screenY opener
+outerHeight outerWidth parent personalbar scrollMaxX scrollMaxY scrollX scrollY
+scrollbars self sidebar status statusbar toolbar top pageXOffset pageYOffset
+offscreenBuffering window.offscreenBuffering window.localStorage localStorage
+
+navigator.appCodeName navigator.appName navigator.appVersion navigator.buildID
+navigator.cookieEnabled navigator.javaEnabled navigator.language
+navigator.mimeTypes navigator.mozIsLocallyAvailable navigator.onLine
+navigator.oscpu navigator.platform navigator.plugins navigator.product
+navigator.productSub navigator.registerContentHandler navigator.userAgent
+navigator.vendor navigator.vendorSub navigator.geolocation
 navigator.geolocation.getCurrentPosition navigator.geolocation.watchPosition
-history.back
-history.forward
-history.go
-history.pushState
-history.replaceState
-crypto.getRandomValues
+history.back history.forward history.go history.pushState history.replaceState
+crypto.getRandomValues screen.availHeight screen.availLeft screen.availTop
+screen.availWidth screen.colorDepth screen.height screen.left screen.pixelDepth
+screen.top screen.width localStorage.clear localStorage.getItem localStorage.key
+localStorage.removeItem localStorage.setItem location.assign location.hash
+location.host location.hostname location.href location.origin location.pathname
+location.port location.protocol location.search location.reload location.replace
+URL.createObjectURL URL.revokeObjectURL menubar.visible locationbar.visible
+toolbar.visible
+
+window.screen.availHeight window.screen.availLeft window.screen.availTop
+window.screen.availWidth window.screen.colorDepth window.screen.height
+window.screen.left window.screen.pixelDepth window.screen.top
+window.screen.width window.navigator.geolocation window.navigator.appCodeName
 window.navigator.appName window.navigator.appVersion window.navigator.buildID
 window.navigator.cookieEnabled window.navigator.javaEnabled
 window.navigator.language window.navigator.mimeTypes
@@ -152,38 +165,8 @@ window.navigator.mozIsLocallyAvailable window.navigator.onLine
 window.navigator.oscpu window.navigator.platform window.navigator.plugins
 window.navigator.product window.navigator.productSub
 window.navigator.registerContentHandler window.navigator.userAgent
-window.navigator.vendor window.navigator.vendorSub window.screen
-window.screen.availHeight window.screen.availLeft window.screen.availTop
-window.screen.availWidth window.screen.colorDepth window.screen.height
-window.screen.left window.screen.pixelDepth window.screen.top
-window.screen.width window.screenX window.screenY window.opener
-window.outerHeight window.outerWidth window.parent window.personalbar
-window.scrollMaxX window.scrollMaxY window.scrollX window.scrollY
-window.scrollbars window.self window.sidebar window.status window.statusbar
-window.toolbar window.top window.window screen screen.availHeight
-screen.availLeft screen.availTop screen.availWidth screen.colorDepth
-screen.height screen.left screen.pixelDepth screen.top screen.width screenX
-screenY opener outerHeight outerWidth parent personalbar scrollMaxX scrollMaxY
-scrollX scrollY scrollbars self sidebar status statusbar toolbar top
-pageXOffset pageYOffset window.pageXOffset window.pageYOffset
-offscreenBuffering window.offscreenBuffering
-menubar.visible locationbar.visible toolbar.visible
-localStorage localStorage.clear localStorage.getItem localStorage.key
-localStorage.removeItem localStorage.setItem
-location.assign
-location.hash
-location.host
-location.hostname
-location.href
-location.origin
-location.pathname
-location.port
-location.protocol
-location.search
-
-location.reload
-location.replace
-
+window.navigator.vendor window.navigator.vendorSub window.URL.createObjectURL
+window.URL.revokeObjectURL
 
 // objects
 console console.log console.warn console.info console.error console.time
@@ -194,14 +177,40 @@ console.timeStamp console.trace
 
 // functions, properties
 // language
-decodeURI() decodeURIComponent() encodeURI() encodeURIComponent() eval()
-isFinite() isNaN() parseFloat() parseInt() uneval()
+decodeURI decodeURIComponent encodeURI encodeURIComponent eval
+isFinite isNaN parseFloat parseInt uneval
+
 {}.hasOwnProperty {}.isPrototypeOf {}.propertyIsEnumerable {}.toLocaleString
-{}.toString {}.valueOf {}.call {}.apply {}.bind {}.name {}.length
+{}.toString {}.valueOf {}.call {}.apply {}.bind {}.name {}.length {}.reduce
+{}.reduceRight {}.concat {}.every {}.filter {}.forEach {}.indexOf {}.join
+{}.lastIndexOf {}.map {}.pop {}.push {}.reverse {}.shift {}.slice {}.some
+{}.sort {}.splice {}.toSource {}.unshift {}.trim {}.trimLeft {}.trimRight
+{}.anchor {}.big {}.blink {}.bold {}.charAt {}.charCodeAt {}.concat {}.fixed
+{}.fontcolor {}.fontsize {}.fromCharCode {}.indexOf {}.italics {}.lastIndexOf
+{}.link {}.localeCompare {}.match {}.quote {}.replace {}.search {}.small
+{}.split {}.strike {}.sub {}.substr {}.substring {}.sup {}.toLocaleLowerCase
+{}.toLocaleUpperCase {}.toLowerCase {}.toSource {}.toUpperCase
 {}.prototype.hasOwnProperty {}.prototype.isPrototypeOf
 {}.prototype.propertyIsEnumerable {}.prototype.toLocaleString
 {}.prototype.toString {}.prototype.valueOf {}.prototype.call {}.prototype.apply
-{}.prototype.bind {}.prototype.name {}.prototype.length
+{}.prototype.bind {}.prototype.name {}.prototype.length {}.prototype.reduce
+{}.prototype.reduceRight {}.prototype.concat {}.prototype.every
+{}.prototype.filter {}.prototype.forEach {}.prototype.indexOf {}.prototype.join
+{}.prototype.lastIndexOf {}.prototype.map {}.prototype.pop {}.prototype.push
+{}.prototype.reverse {}.prototype.shift {}.prototype.slice {}.prototype.some
+{}.prototype.sort {}.prototype.splice {}.prototype.toSource {}.prototype.unshift
+{}.prototype.trim {}.prototype.trimLeft {}.prototype.trimRight
+{}.prototype.anchor {}.prototype.big {}.prototype.blink {}.prototype.bold
+{}.prototype.charAt {}.prototype.charCodeAt {}.prototype.concat
+{}.prototype.fixed {}.prototype.fontcolor {}.prototype.fontsize
+{}.prototype.fromCharCode {}.prototype.indexOf {}.prototype.italics
+{}.prototype.lastIndexOf {}.prototype.link {}.prototype.localeCompare
+{}.prototype.match {}.prototype.quote {}.prototype.replace {}.prototype.search
+{}.prototype.small {}.prototype.split {}.prototype.strike {}.prototype.sub
+{}.prototype.substr {}.prototype.substring {}.prototype.sup
+{}.prototype.toLocaleLowerCase {}.prototype.toLocaleUpperCase
+{}.prototype.toLowerCase {}.prototype.toSource {}.prototype.toUpperCase
+
 Date.UTC Date.prototype.getDate Date.prototype.getDay Date.prototype.getFullYear
 Date.prototype.getHours Date.prototype.getMilliseconds Date.prototype.getMinutes
 Date.prototype.getMonth Date.prototype.getSeconds Date.prototype.getTime
@@ -237,6 +246,7 @@ date.toLocaleString date.toLocaleTimeString date.toSource date.toTimeString
 date.toUTCString date.valueOf
 
 // dom
+
 atob back blur btoa clearImmediate clearInterval clearTimeout close
 confirm dump escape find focus forward getAttention getComputedStyle
 getSelection home matchMedia moveBy moveTo open openDialog postMessage print
@@ -354,7 +364,6 @@ onkeypress onfocus onload onactivate onafterupdate onafterprint onabort
 ondevicemotion ondeviceorientation onhashchange onmozbeforepaint onpaint 
 onpopstate
 
-
 // types
 // language
 Array Boolean Date Function Iterator Number Object RegExp String ArrayBuffer
@@ -443,119 +452,95 @@ SVGPathSegLinetoVerticalAbs SVGPathSegLinetoVerticalRel SVGPathSegMovetoAbs
 SVGPathSegMovetoRel SVGAnimatedPathData ElementTimeControl TimeEvent
 XMLHttpRequest DeviceMotionEvent DeviceOrientationEvent
 
-
-
 // constants
-// dom
+
+ELEMENT_NODE ATTRIBUTE_NODE TEXT_NODE CDATA_SECTION_NODE ENTITY_REFERENCE_NODE
+ENTITY_NODE PROCESSING_INSTRUCTION_NODE COMMENT_NODE DOCUMENT_NODE
+DOCUMENT_TYPE_NODE DOCUMENT_FRAGMENT_NODE NOTATION_NODE INDEX_SIZE_ERR
+DOMSTRING_SIZE_ERR HIERARCHY_REQUEST_ERR WRONG_DOCUMENT_ERR
+INVALID_CHARACTER_ERR NO_DATA_ALLOWED_ERR NO_MODIFICATION_ALLOWED_ERR
+NOT_FOUND_ERR NOT_SUPPORTED_ERR INUSE_ATTRIBUTE_ERR
 
 
 // Examples
 // ========
 
+// closure
 (function($, window){
   
 })(jQuery, window);
+
 // code folding
 /** Block */
+/* **/
 
 // class 
-/**
- * Descibe this class
- * @author 
- * @version $Rev$
- * @requires OtherClassName
- */
-My.Awesome.Awesome.Awesome = Base.Awesome.extend({
-  foo: new My.Awesome()
+$.ns.MyClass = $.ns.Base.extend({
+  var my_instance = new MyClass();
 });
-// support constants
-ELEMENT_NODE
-ATTRIBUTE_NODE
-// constants
-My.Awesome.CONSTANT = 0;
-My.Awesome._C_O_N_S = 1;
-My.Awesome.CONSTANT2 = 2; // TODO
-// classes and properties
-My.Awesome.prototype
-My.Awesome.prototype.$doStuff 
-My.Awesome.prototype.doStuff = '';
-My.Awesome.prototype.doStuff = doStuff || function(){}; // TODO
-My.Awesome.prototype.doStuff = function(foo,bar,baz, parent){ // parameters
+
+// constant
+ns.CONSTANT = 0;
+ns._A_CONSTANT = 1;
+ns.___CONSTANT = 2;
+
+// trailing whitespace
+// has it here  
+foo  
+foo();  
+var foo;  
+
+// class properties
+MyClass.prototype.$doStuff = '';
+MyClass.prototype.doStuff = doStuff || function(){};
+MyClass.prototype.doStuff = function(foo,bar,baz, parent){ // with params
   var _this = this;
-  _this.prototype = {};
-  _this.prototype.doStuff.otherStuff = somethingElse.call(this, foo, bar, baz);
+  
+  // calls
+  somethingElse.call(this, foo, bar, baz);
   parent.doStuff.apply(this, arguments);
+  
+  // objects
   this.foo = {
-    // nested properties, methods
-    property: '',
+    // nested properties
+    property: {
+      property: {}
+    },
+    // methods
     property: function(){
-      bar = 2;
+      this.bar = 2;
+      return bar;
     },
     // string variations
     'property': '',
     'property': function(){
-      (/^\w[]{}$/).test() ? foo() : bar(); // regex;
+      // ternary
+      (/^\w[]{}$/).test() ? this.foo() : this.bar();
     },
     "property": '',
-    "property": function(){
-      
-    }
+    "property": function(){}
   };
 }
-(function(){
-  
-}())
-// functions
-function awesome(){
-  var foo = function(){
-    awesome();
-  };
-}
-// variable declaration;
+
+// variable declaration, with assignments
 var str = "!@#$%^&*()_+-=`~;:'",
-  obj = {
-    // meta.property.declaration
-    property: My.Awesome.classProperty,
-    property: function(foo,bar,baz){},
-    "property": function(foo,bar,baz){ oneLiner(); }, 
-    $elem: $('body')
-  };
-  var po = { 
-    top: 0, 
-    left: 0 
-  };
-  doThis(withThis, andThis);
-};
-// var declaration
+    // inline comment
+    obj = {
+      property: MyClass.classProperty,
+      "property": function(foo,bar,baz){ oneLiner(); }, 
+      $elem: $('body')
+    };
+var foo = { top: 0, left: 0 };
+var bar = function(){};
+// undefined
 var foo, bar, baz;
 
-var bar = function(){};
-var foo = '',
-    // inline comment
-    $baz = x || function(){ // TODO
-      var foo = '',
-          bar = {
-            x: My.Awesome.prototype,
-            
-          }, baz = 0;
-      
-    };
-var inline = function(){ 
-  a:b, c:d, f:g 
-};
-foo.bar = 1;
-foo.$bar = $('a:eq(0)');   
+// jQuery
+foo.$bar = $('a:eq(0)');
 // double quotes
-foo.$bar = $("a:eq(0)");   
-// nesting
-var foo = bar ? bar : baz; // TODO
-Foo.bar(Foo.baz()) // TODO
-/* /Block **/
-// meta.property
-$jQueryObject;
-
-// support.global.jquery
-$, $($($())); $foo
+foo.$bar = $("a:eq(0)");
+$jqueryObject;
+$($($()));
 
 // templating
 '<%= Model.Foo %>'
@@ -563,6 +548,5 @@ $, $($($())); $foo
 "<%= Model.Foo %>"
 "<?= Model.Foo %>"
 
-case 'integer': return ox3.util.toInt(Math.random() * Math.pow(10, 12)); // TODO
-
-var ox3 = (function($) { // TODO
+// long one-liner
+case 'integer': return ox3.util.toInt(Math.random() * Math.pow(10, 12));
