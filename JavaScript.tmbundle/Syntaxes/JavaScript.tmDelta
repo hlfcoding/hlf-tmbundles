@@ -613,10 +613,23 @@
 				<string>meta.declaration.property.js</string>
 			</dict>
 			<dict>
+				<key>captures</key>
+				<dict>
+					<key>1</key>
+					<dict>
+						<key>name</key>
+						<string>comment.block.documentation.js</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>name</key>
+						<string>storage.type.js</string>
+					</dict>
+				</dict>
 				<key>comment</key>
 				<string>Easy on the eyes. Basic.</string>
 				<key>match</key>
-				<string>(?&lt;=var)(\s*\w+\s*,?)*;\s*$</string>
+				<string>^([/*\w\s]*)(var)\s+[^=]+;\s*$</string>
 				<key>name</key>
 				<string>meta.declaration.variables.undefined.js</string>
 			</dict>
