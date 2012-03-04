@@ -38,7 +38,50 @@
 			</dict>
 			<dict>
 				<key>begin</key>
-				<string>(\.)?(['"]?\$*[a-z0-9_][a-zA-Z0-9_:]*\w['"]?)?\s*([=:,])?\s*(\s+\()?\b(function)\b\s*(\$*[a-z0-9_]\w*)?\b(?=\()</string>
+				<string>^[\s\t]*(var)</string>
+				<key>beginCaptures</key>
+				<dict>
+					<key>1</key>
+					<dict>
+						<key>name</key>
+						<string>storage.type.js</string>
+					</dict>
+				</dict>
+				<key>comment</key>
+				<string>[CONFLICTED] Easy on the eyes. Basic.</string>
+				<key>end</key>
+				<string>(;)\s*$</string>
+				<key>endCaptures</key>
+				<dict>
+					<key>1</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.terminator.statement.js</string>
+					</dict>
+				</dict>
+				<key>name</key>
+				<string>meta.declaration.variables.js</string>
+				<key>patterns</key>
+				<array>
+					<dict>
+						<key>match</key>
+						<string>(?&lt;=,\s|var)[^=!#%^&amp;*()+"',:?]+(?=,|;)</string>
+						<key>name</key>
+						<string>meta.declaration.variables.undefined.js</string>
+					</dict>
+					<dict>
+						<key>include</key>
+						<string>#comma</string>
+					</dict>
+					<dict>
+						<key>include</key>
+						<string>$self</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>begin</key>
+				<string>(\.)?(['"]?\$*[a-z0-9_][a-zA-Z0-9_:]*\w['"]?)?\s*([=:,])?\s*(\s+\()?\b(function)\b\s*(\$*[a-z0-9_]\w*)?\b\s*(?=\()</string>
 				<key>beginCaptures</key>
 				<dict>
 					<key>1</key>
@@ -279,12 +322,8 @@
 				<string>constant.numeric.js</string>
 			</dict>
 			<dict>
-				<key>comment</key>
-				<string>Basic.</string>
-				<key>match</key>
-				<string>\;</string>
-				<key>name</key>
-				<string>punctuation.terminator.statement.js</string>
+				<key>include</key>
+				<string>#semicolon</string>
 			</dict>
 			<dict>
 				<key>comment</key>
@@ -295,12 +334,8 @@
 				<string>meta.delimiter.period.js</string>
 			</dict>
 			<dict>
-				<key>comment</key>
-				<string>Liberally allows trailing whitespace.</string>
-				<key>match</key>
-				<string>,[ |\t]*</string>
-				<key>name</key>
-				<string>meta.delimiter.comma.js</string>
+				<key>include</key>
+				<string>#comma</string>
 			</dict>
 			<dict>
 				<key>comment</key>
@@ -608,7 +643,7 @@
 			String keys also count.
 			</string>
 				<key>match</key>
-				<string>[^?/{'"$,]*(?&lt;!case\s)\b(['"]?\$*[a-z0-9_]\w*['"]?)(:)</string>
+				<string>[^?/{'"$,]*(?&lt;!case\s)\b(['"]?\$*[a-z0-9_]\w*['"]?\s*)(:)</string>
 				<key>name</key>
 				<string>meta.declaration.property.js</string>
 			</dict>
@@ -626,14 +661,6 @@
 						<string>storage.type.js</string>
 					</dict>
 				</dict>
-				<key>comment</key>
-				<string>Easy on the eyes. Basic.</string>
-				<key>match</key>
-				<string>^([/*\w\s]*)(var)\s+[^=]+;\s*$</string>
-				<key>name</key>
-				<string>meta.declaration.variables.undefined.js</string>
-			</dict>
-			<dict>
 				<key>comment</key>
 				<string>[CONVENTION] Matches `THIS_CONSTANT`.</string>
 				<key>match</key>
@@ -683,6 +710,15 @@
 				<key>name</key>
 				<string>entity.name.application.class.js</string>
 			</dict>
+			<key>comma</key>
+			<dict>
+				<key>comment</key>
+				<string>Liberally allows trailing whitespace.</string>
+				<key>match</key>
+				<string>,[ |\t]*</string>
+				<key>name</key>
+				<string>meta.delimiter.comma.js</string>
+			</dict>
 			<key>escaped-char</key>
 			<dict>
 				<key>match</key>
@@ -719,6 +755,15 @@
 				<string>(\()?(\$|\$*\w+)?\s*(,)?(\))?</string>
 				<key>name</key>
 				<string>entity.name.declaration.parameter.js</string>
+			</dict>
+			<key>semicolon</key>
+			<dict>
+				<key>comment</key>
+				<string>Basic.</string>
+				<key>match</key>
+				<string>\;</string>
+				<key>name</key>
+				<string>punctuation.terminator.statement.js</string>
 			</dict>
 			<key>simple-escaped-char</key>
 			<dict>

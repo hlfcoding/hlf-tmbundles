@@ -1,9 +1,7 @@
 # Bundle Deltas
 
 These changesets improve upon existing functionality. I use and improve them myself every
-day. The changesets on master are for E-TextEditor; and to install, drop them into
-`[User]/Application Data/e/Bundles/`. There is the `textmate` branch for TextMate deltas. 
-Note that a lot of bundle changesets are for (re)setting triggers.
+day. 
 
 ## HTML Bundle
 * ASP-MVC syntax support
@@ -11,19 +9,23 @@ Note that a lot of bundle changesets are for (re)setting triggers.
 
 ## CSS Bundle
 * CSS3 syntax highlighting
-* CSS3 snippets
 
 ## JavaScript Bundle
 
-### Language
-* Improved syntax highlight, with support for new entity types. 
-* Support for code foldings via comments.
+- More up to date support.
+- Accounts for JS boilerplate language.
+- Imputes for more highlighted, including better DOM coverage:
+  - Assumes your code is 99% functions and that is mostly what you are working in
+    and care about.
+  - Assumes you are experienced with JS and are looking for a bundle that makes
+    it less painful to write all day, in lieu of CoffeeScript.
+  - Assumes you follow conventions with naming instances: 
+    `date` `my_date` `element` `elem` `el`
+  - Assumes you care about at least viewing the DOM api with proper highlighting
+- Uses more of TextMate, including updated doc views, symbol list, autocomplete.
 
-### Symbol List
-* A more useful symbol list, with listings of calls, declarations, sections etc.
-
-## Custom Bundle
+## HLFCoding Bundle
 * Useful macros for documenting and developing.
 
-## CustomWriting Bundle
+## HLFCrafting Bundle
 * A bundle I created for writing prose, inspired by screenwriting conventions for dialogue.

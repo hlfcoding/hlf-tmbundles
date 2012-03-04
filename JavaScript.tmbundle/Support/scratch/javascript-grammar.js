@@ -511,6 +511,11 @@ MyClass.prototype.doStuff = function(foo,bar,baz, parent){ // with params
       this.bar = 2;
       return bar;
     },
+    // spacing test
+    property : function () {
+      
+    },
+    property : '',
     // string variations
     'property': '',
     'property': function(){
