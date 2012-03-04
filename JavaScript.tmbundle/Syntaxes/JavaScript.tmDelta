@@ -81,7 +81,7 @@
 			</dict>
 			<dict>
 				<key>begin</key>
-				<string>(\.)?(['"]?\$*[a-z0-9_][a-zA-Z0-9_:]*\w['"]?)?\s*([=:,])?\s*(\s+\()?\b(function)\b\s*(\$*[a-z0-9_]\w*)?\b(?=\()</string>
+				<string>(\.)?(['"]?\$*[a-z0-9_][a-zA-Z0-9_:]*\w['"]?)?\s*([=:,])?\s*(\s+\()?\b(function)\b\s*(\$*[a-z0-9_]\w*)?\b\s*(?=\()</string>
 				<key>beginCaptures</key>
 				<dict>
 					<key>1</key>
@@ -643,7 +643,7 @@
 			String keys also count.
 			</string>
 				<key>match</key>
-				<string>[^?/{'"$,]*(?&lt;!case\s)\b(['"]?\$*[a-z0-9_]\w*['"]?)(:)</string>
+				<string>[^?/{'"$,]*(?&lt;!case\s)\b(['"]?\$*[a-z0-9_]\w*['"]?\s*)(:)</string>
 				<key>name</key>
 				<string>meta.declaration.property.js</string>
 			</dict>
