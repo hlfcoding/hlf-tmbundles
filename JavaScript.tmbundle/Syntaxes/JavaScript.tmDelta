@@ -65,7 +65,7 @@
 				<array>
 					<dict>
 						<key>match</key>
-						<string>(?&lt;=,\s|var)[^=!#%^&amp;*()+"',:?]+(?=,|;)</string>
+						<string>(?&lt;=,\s|\s\s|var)[^=!#%^&amp;*()+"',:?]+(?=,|;)</string>
 						<key>name</key>
 						<string>meta.declaration.variables.undefined.js</string>
 					</dict>
