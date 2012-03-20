@@ -39,11 +39,11 @@ ps -xc|grep -sq Safari &amp;&amp; osascript -e 'tell app "Safari"' -e 'activate'
 # Check if Chrome is running, if so refresh 
 #ps -xc|grep -sq Chrome &amp;&amp; osascript -e 'tell app "Google #Chrome"' -e 'activate' -e 'tell app "System Events" to #keystroke "r" using {command down}' -e 'end tell'
 </string>
-		<key>keyEquivalent</key>
-		<string>@R</string>
 	</dict>
 	<key>deleted</key>
-	<array/>
+	<array>
+		<string>keyEquivalent</string>
+	</array>
 	<key>isDelta</key>
 	<true/>
 	<key>uuid</key>
