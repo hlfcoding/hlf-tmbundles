@@ -354,7 +354,7 @@ end
 	<key>keyEquivalent</key>
 	<string>^Q</string>
 	<key>name</key>
-	<string>Reformat Doc Block copy</string>
+	<string>Reformat Doc Block</string>
 	<key>scope</key>
 	<string>source.js, source.scss, source.shell</string>
 	<key>uuid</key>
