@@ -30,16 +30,16 @@
 
 		# Functions2
 		s/^.*\(function\s*/ closure: /; # label for enclosures
-		s/^.*,\s*function\s*/lamda: $0/; # label for lamdas
+		s/^.*,\s*function\s*/lambda: $0/; # label for lamdas
 		s/function(\s+([\w]+))?/$2 / # strip in case
-		s/^\(\)|-&gt;/lamda/ # last call
+		s/^\(\)|-&gt;/lambda/ # last call
 
 		# Clean3
 		s/\s{2,}/ /g; # strip extra
 		s/^\s*//; s/\s*$//; # trim
 
 		# Label (for alphabetize).
-		s/^(?!closure|lamda)(.)/def: $1/g;
+		s/^(?!closure|lambda)(.)/def: $1/g;
 		
 	</string>
 	</dict>

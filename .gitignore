@@ -2,6 +2,7 @@ OpenX*
 Ant.tmbundle
 Android.tmbundle
 C.tmbundle
+CSSLint.tmbundle
 GetBundles.tmbundle
 iPhone.tmbundle
 Java.tmbundle
@@ -13,3 +14,4 @@ Source.tmbundle
 Subversion.tmbundle
 Text.tmbundle
 TextMate.tmbundle
+Xcode.tmbundle

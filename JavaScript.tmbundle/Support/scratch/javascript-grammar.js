@@ -555,3 +555,10 @@ $($($()));
 
 // long one-liner
 case 'integer': return ox3.util.toInt(Math.random() * Math.pow(10, 12));
+
+var _isDefaultFilterValue = function(val){
+  if (ox3.isNull(val)) {
+    return true;
+  }
+  // ...
+};
