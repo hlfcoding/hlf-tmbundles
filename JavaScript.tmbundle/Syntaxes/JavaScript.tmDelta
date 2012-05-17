@@ -198,7 +198,7 @@
 				<key>match</key>
 				<string>\b(this|super|arguments|(?&lt;=\.)(prototype|constructor|caller))\b</string>
 				<key>name</key>
-				<string>variable.language.js</string>
+				<string>variable.language.common.js</string>
 			</dict>
 			<dict>
 				<key>match</key>
