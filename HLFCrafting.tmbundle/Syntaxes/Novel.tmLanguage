@@ -4,8 +4,8 @@
 <dict>
 	<key>fileTypes</key>
 	<array>
-		<string>txt.ch</string>
-		<string>txt.ol</string>
+		<string>ch.txt</string>
+		<string>ol.txt</string>
 	</array>
 	<key>foldingStartMarker</key>
 	<string>^\{</string>
