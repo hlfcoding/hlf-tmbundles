@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>${1:.box_animation:hover} {
+  -webkit-animation: ${2:myanim} ${3:5s} ${4:infinite};
+     -moz-animation: ${2:myanim} ${3:5s} ${4:infinite};
+       -o-animation: ${2:myanim} ${3:5s} ${4:infinite};
+          animation: ${2:myanim} ${3:5s} ${4:infinite};
+}
+
+@-webkit-keyframes ${2:myanim} {
+  ${6:0}%   { ${5:opacity}: ${9:0.0}; }
+  ${7:50}%  { ${5:opacity}: ${10:0.5}; }
+  ${8:100}% { ${5:opacity}: ${11:1.0}; }
+}
+@-moz-keyframes ${2:myanim} {
+  ${6:0}%   { ${5:opacity}: ${9:0.0}; }
+  ${7:50}%  { ${5:opacity}: ${10:0.5}; }
+  ${8:100}% { ${5:opacity}: ${11:1.0}; }
+}
+@-o-keyframes ${2:myanim} {
+  ${6:0}%   { ${5:opacity}: ${9:0.0}; }
+  ${7:50}%  { ${5:opacity}: ${10:0.5}; }
+  ${8:100}% { ${5:opacity}: ${11:1.0}; }
+}
+@keyframes ${2:myanim} {
+  ${6:0}%   { ${5:opacity}: ${9:0.0}; }
+  ${7:50}%  { ${5:opacity}: ${10:0.5}; }
+  ${8:100}% { ${5:opacity}: ${11:1.0}; }
+}
+</string>
+	<key>name</key>
+	<string>keyframe-animation</string>
+	<key>scope</key>
+	<string>source.css</string>
+	<key>tabTrigger</key>
+	<string>keyframe</string>
+	<key>uuid</key>
+	<string>525812EC-1ED5-4325-9602-2DC5C06CD8AA</string>
+</dict>
+</plist>

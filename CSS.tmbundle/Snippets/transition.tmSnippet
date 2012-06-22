@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>   -moz-transition: ${1:all} ${2:0.3}s ${3:ease-out};  /* FF4+ */
-     -o-transition: ${1:all} ${2:0.3}s ${3:ease-out};  /* Opera 10.5+ */
--webkit-transition: ${1:all} ${2:0.3}s ${3:ease-out};  /* Saf3.2+, Chrome */
-    -ms-transition: ${1:all} ${2:0.3}s ${3:ease-out};  /* IE10? */
-        transition: ${1:all} ${2:0.3}s ${3:ease-out};  </string>
+	<string>-webkit-transition: ${1:all} ${2:0.3}s ${3:ease-out};
+   -moz-transition: ${1:all} ${2:0.3}s ${3:ease-out};
+     -o-transition: ${1:all} ${2:0.3}s ${3:ease-out};
+        transition: ${1:all} ${2:0.3}s ${3:ease-out};
+</string>
 	<key>name</key>
 	<string>transition</string>
 	<key>scope</key>

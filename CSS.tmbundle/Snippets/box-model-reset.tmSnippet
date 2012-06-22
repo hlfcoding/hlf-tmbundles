@@ -3,16 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>-webkit-box-shadow: ${5:inset }${1:0}px ${2:0}px ${3:0}px ${4:#000000};
-        box-shadow: ${5:inset }${1:0}px ${2:0}px ${3:0}px ${4:#000000};
+	<string>-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
 </string>
 	<key>name</key>
-	<string>box-shadow</string>
+	<string>box-model-reset</string>
 	<key>scope</key>
 	<string>source.css</string>
 	<key>tabTrigger</key>
-	<string>box-shadow</string>
+	<string>box-model-reset</string>
 	<key>uuid</key>
-	<string>2C514849-B38C-4FED-975F-903DBD00BD3A</string>
+	<string>C7355618-A10E-49A8-9716-8861BB6A725E</string>
 </dict>
 </plist>
