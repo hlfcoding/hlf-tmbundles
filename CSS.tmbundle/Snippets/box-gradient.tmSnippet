@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>background-color: ${5:#444444};
-background-image: -webkit-gradient(linear, ${2:left} ${1:top}, ${4:left} ${3:bottom}, from(${5:#444444}), to(${6:#999999}));
-background-image: -webkit-linear-gradient(${1:top}, ${5:#444444}, ${6:#999999});
-background-image:    -moz-linear-gradient(${1:top}, ${5:#444444}, ${6:#999999});
-background-image:      -o-linear-gradient(${1:top}, ${5:#444444}, ${6:#999999});
-background-image:         linear-gradient(${1:top}, ${5:#444444}, ${6:#999999});
+	<string>background-color: ${2:#444444};
+background-image: -webkit-gradient(linear, ${1:top left, top bottom}, from(${2:#444444}), to(${3:#999999}));
+background-image: -webkit-linear-gradient(${1:top}, ${2:#444444}, ${3:#999999});
+background-image:    -moz-linear-gradient(${1:top}, ${2:#444444}, ${3:#999999});
+background-image:      -o-linear-gradient(${1:top}, ${2:#444444}, ${3:#999999});
+background-image:         linear-gradient(${1:top}, ${2:#444444}, ${3:#999999});
 </string>
 	<key>name</key>
 	<string>box-gradient</string>
