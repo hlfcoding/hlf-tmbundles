@@ -529,11 +529,16 @@ MyClass.prototype.doStuff = function(foo,bar,baz, parent){ // with params
 
 // variable declaration, with assignments
 var str = "!@#$%^&*()_+-=`~;:'",
-    // inline comment
+    // inline comment, with commas
     obj = {
       property: MyClass.classProperty,
       "property": function(foo,bar,baz){ oneLiner(); }, 
       $elem: $('body')
+    },
+    func = function(){
+      var foo, bar,
+          // inline comment, with commas
+          baz = 'bar';
     };
 var foo = { top: 0, left: 0 };
 var bar = function(){};
