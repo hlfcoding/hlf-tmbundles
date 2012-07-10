@@ -3,8 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>-webkit-transition: ${1:all} ${2:0.3}s ${3:ease-out};
-        transition: ${1:all} ${2:0.3}s ${3:ease-out};
+	<string>-webkit-transition: ${1:all} ${2:0.3}s ${3:ease-in-out};
+        transition: ${1:all} ${2:0.3}s ${3:ease-in-out};
 </string>
 	<key>name</key>
 	<string>transition-mean</string>
