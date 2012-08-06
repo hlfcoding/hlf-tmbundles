@@ -356,7 +356,7 @@ end
 	<key>name</key>
 	<string>Reformat Doc Block</string>
 	<key>scope</key>
-	<string>source.js, source.scss, source.shell</string>
+	<string>source.js, source.coffee, source.scss, source.shell</string>
 	<key>uuid</key>
 	<string>17620AFC-3260-486B-B6F3-ADF871C83980</string>
 </dict>
