@@ -6,6 +6,8 @@
 	<dict>
 		<key>keyEquivalent</key>
 		<string>^@e</string>
+		<key>scope</key>
+		<string>text.html</string>
 	</dict>
 	<key>deleted</key>
 	<array/>
