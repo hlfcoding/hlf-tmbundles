@@ -2,3 +2,4 @@ alt/
 User/
 reviews.txt
 PHP/
+*.cache
