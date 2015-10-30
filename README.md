@@ -21,3 +21,20 @@ day.
 
 - Uses more of TextMate, including updated doc views, symbol list, autocomplete.
 
+## Development
+
+### Sample ST2 Project File
+
+```json
+{
+  "folders":
+  [
+    {
+      "path": "/Users/destrado/Dropbox/Port/_home/st2-packages",
+      "file_exclude_patterns": [
+        "*.cache"
+      ]
+    }
+  ]
+}
+```
