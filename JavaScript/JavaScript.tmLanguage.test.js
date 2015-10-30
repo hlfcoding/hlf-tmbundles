@@ -47,8 +47,13 @@ _.extend(Model.prototype, {
 
 // Constant
 Model.BASE_URL = 'http://my-app.com/post/';
+Model.VARIANT_A = 1;
+Model.VARIANT_B = 2;
 
-model = new Model({ id: 1 });
+model = new Model({
+  id: 1,
+  variant: Model.VARIANT_A
+});
 model.fetch();
 
 // Loops
