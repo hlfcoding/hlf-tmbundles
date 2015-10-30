@@ -58,6 +58,9 @@ model = new Model({
 model.fetch();
 
 // Loops
-for (var i = 0, l = items.length; i < l; i++) {}
+// for (…) {…} (Reverse Native For-Loop)
+for (var i = items.length - 1; i >= 0; i--) {}
+// for (…) {…} (Native For-Loop)
+for (var i2 = 0, l2 = items.length; i2 < l2; i2++) {}
 
 }());
