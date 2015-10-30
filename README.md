@@ -30,7 +30,7 @@ day.
   "folders":
   [
     {
-      "path": "/Users/destrado/Dropbox/Port/_home/st2-packages",
+      "path": "hlf-tmbundles",
       "file_exclude_patterns": [
         "*.cache"
       ]
