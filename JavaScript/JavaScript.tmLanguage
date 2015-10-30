@@ -68,6 +68,12 @@
 			<key>patterns</key>
 			<array>
 				<dict>
+					<key>comment</key>
+					<string>
+						[INSANE]
+						This matches var declaration statements, most commonly to visually
+						mute them.
+					</string>
 					<key>match</key>
 					<string>(?&lt;=,\s|\s\s|var\s)[^=\s!#%^&amp;*()+"',:?]+(?=,|;)</string>
 					<key>name</key>

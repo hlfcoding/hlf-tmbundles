@@ -12,6 +12,7 @@
 // Var declarations
 var bar, baz, regexp, $node, items;
 var foo = function foo() { return 'foo'; };
+var foo2 = { bar: 'baz' };
 var bar2 = 'bar',
     baz2 = 'baz';
 
