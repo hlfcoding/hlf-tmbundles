@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Declarations</string>
+	<key>scope</key>
+	<string>source.js meta.declaration -source.js.embedded -meta.declaration.variables</string>
+	<key>settings</key>
+	<dict>
+		<key>showInSymbolList</key>
+		<integer>1</integer>
+		<key>symbolTransformation</key>
+		<string>
+
+		# Clean
+		s/["']|default://g; # strip
+		s/\s{2,}/ /g; # strip extra
+		s/^\s*//; s/\s*$//; # trim
+         
+		# Functions
+		s/=//g; # strip
+		s/(:\s*|\.(\w+)\s*)function/$2 =&gt;/; # rename for methods
+		s/\s?(function)\s?\(\s*\)\s?\{?.*/ -&gt;/; # rename for generic
+		s/([=-]&gt;)\s?(\(.*\))/$2 $1/; # format for methods
+
+		# Clean2
+         s/^(.*):$/- $1/g # label
+         s/[{:]//g; # strip
+
+		# Functions2
+		s/^.*\(function\s*/ closure: /; # label for enclosures
+		s/^.*,\s*function\s*/lambda: $0/; # label for lamdas
+		s/function(\s+([\w]+))?/$2 / # strip in case
+		s/^\(\)|-&gt;/lambda/ # last call
+
+		# Clean3
+		s/\s{2,}/ /g; # strip extra
+		s/^\s*//; s/\s*$//; # trim
+
+		# Label (for alphabetize).
+		s/^(?!closure|lambda)(.)/def: $1/g;
+		
+	</string>
+	</dict>
+	<key>uuid</key>
+	<string>56A3E552-1A16-4C5A-AC3D-362B9D737654</string>
+</dict>
+</plist>
