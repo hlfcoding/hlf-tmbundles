@@ -52,7 +52,9 @@
 				</dict>
 			</dict>
 			<key>comment</key>
-			<string>[CONFLICTED] Easy on the eyes. Basic.</string>
+			<string>
+				[CONFLICTED] Easy on the eyes.
+			</string>
 			<key>end</key>
 			<string>(;)\s*$</string>
 			<key>endCaptures</key>
@@ -127,7 +129,11 @@
 			</dict>
 			<key>comment</key>
 			<string>
-			[CONFLICTED] Matches `foo: function` or `foo: function ([params]) {` or `function foo ([params]) {` or `[call] "some:event", function...`.
+				[CONFLICT]
+				Matches: `foo: function`
+				or `foo: function ([params]) {`
+				or `function foo ([params]) {`
+				or `[call] "some:event", function...`.
 			</string>
 			<key>end</key>
 			<string>({)</string>
@@ -151,7 +157,10 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Added `let` from Harmony.</string>
+			<string>
+				[ADDITIONS]
+				- `let`
+			</string>
 			<key>match</key>
 			<string>\b(break|case|catch|continue|default|do|else|finally|for|goto|if|import|let|package|return|switch|throw|try|while)\b</string>
 			<key>name</key>
@@ -159,7 +168,9 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Since this needs to override string, this needs to go before it.</string>
+			<string>
+				Since this needs to override string, this needs to go before it.
+			</string>
 			<key>match</key>
 			<string>^\s*"use strict"\s*$</string>
 			<key>name</key>
@@ -178,8 +189,9 @@
 			</dict>
 			<key>comment</key>
 			<string>
-			[CONFLICT] Only highlight the start and end markers.
-			For CDATA? Make sure to include in your theme!
+				[CONFLICT]
+				Only highlight the start and end markers.
+				For CDATA? Make sure to include in your theme!
 			</string>
 			<key>end</key>
 			<string>--&gt;</string>
@@ -196,7 +208,9 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Note each match is exact. A better way?</string>
+			<string>
+				Note each match is exact. A better way?
+			</string>
 			<key>match</key>
 			<string>\b(delete|in|instanceof|new|typeof|with)\b|!|%|&amp;|\*|\-\-|\-|\+\+|\+|~|===|==|=|!=|!==|&lt;=|&gt;=|&lt;&lt;=|&gt;&gt;=|&gt;&gt;&gt;=|&lt;&gt;|&lt;|&gt;|&amp;&amp;|\|\||\?\:|\?|\:|\*=|(?&lt;!\()/=|%=|\+=|\-=|&amp;=|\^=</string>
 			<key>name</key>
@@ -204,7 +218,9 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>These are technically variables, but they are more magical.</string>
+			<string>
+				These are technically variables, but they are more magical.
+			</string>
 			<key>match</key>
 			<string>\b(this|super|arguments|(?&lt;=\.)(prototype|constructor|caller))\b</string>
 			<key>name</key>
@@ -228,7 +244,10 @@
 				</dict>
 			</dict>
 			<key>comment</key>
-			<string>Simple ranged search, where `/**/` is exempt.</string>
+			<string>
+				[CORE]
+				Simple ranged search, where `/**/` is exempt.
+			</string>
 			<key>end</key>
 			<string>\*/</string>
 			<key>name</key>
@@ -246,7 +265,9 @@
 				</dict>
 			</dict>
 			<key>comment</key>
-			<string>Simple ranged search.</string>
+			<string>
+				[CORE]
+			</string>
 			<key>end</key>
 			<string>\*/</string>
 			<key>name</key>
@@ -265,7 +286,9 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Basic.</string>
+			<string>
+				[CORE]
+			</string>
 			<key>match</key>
 			<string>\b(boolean|byte|char|class|double|enum|float|function|int|interface|long|short|var|void)\b</string>
 			<key>name</key>
@@ -273,7 +296,9 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Basic.</string>
+			<string>
+				[CORE]
+			</string>
 			<key>match</key>
 			<string>\b(const|export|extends|final|implements|native|private|protected|public|static|synchronized|throws|transient|volatile)\b</string>
 			<key>name</key>
@@ -281,7 +306,9 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Basic.</string>
+			<string>
+				[CORE]
+			</string>
 			<key>match</key>
 			<string>\btrue\b</string>
 			<key>name</key>
@@ -289,7 +316,9 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Basic.</string>
+			<string>
+				[CORE]
+			</string>
 			<key>match</key>
 			<string>\bfalse\b</string>
 			<key>name</key>
@@ -297,7 +326,9 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Basic.</string>
+			<string>
+				[CORE]
+			</string>
 			<key>match</key>
 			<string>\bnull\b</string>
 			<key>name</key>
@@ -305,7 +336,9 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Basic.</string>
+			<string>
+				[CORE]
+			</string>
 			<key>match</key>
 			<string>\b(Infinity|NaN|undefined)\b</string>
 			<key>name</key>
@@ -313,7 +346,9 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Basic.</string>
+			<string>
+				[CORE]
+			</string>
 			<key>match</key>
 			<string>\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\.[0-9]+)?))\b</string>
 			<key>name</key>
@@ -325,7 +360,9 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Basic.</string>
+			<string>
+				[CORE]
+			</string>
 			<key>match</key>
 			<string>\.</string>
 			<key>name</key>
@@ -337,7 +374,9 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Basic.</string>
+			<string>
+				[CORE]
+			</string>
 			<key>match</key>
 			<string>\{|\}</string>
 			<key>name</key>
@@ -356,8 +395,10 @@
 			</dict>
 			<key>comment</key>
 			<string>
-			[CONFLICT] Only match if preceded by certain things. Follows linting
-			advice and wraps an optional `()`.</string>
+				[CONFLICT]
+				Only match if preceded by certain things. Follows linting
+				advice and wraps an optional `()`.
+			</string>
 			<key>end</key>
 			<string>(/)[igm]*\)?</string>
 			<key>endCaptures</key>
@@ -380,7 +421,9 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Basic.</string>
+			<string>
+				[CORE]
+			</string>
 			<key>match</key>
 			<string>\(|\)</string>
 			<key>name</key>
@@ -388,7 +431,9 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Basic.</string>
+			<string>
+				[CORE]
+			</string>
 			<key>match</key>
 			<string>\[|\]</string>
 			<key>name</key>
@@ -407,8 +452,9 @@
 			</dict>
 			<key>comment</key>
 			<string>
-			Simple range search. Tokenize the quotes. Add complex regex for utf
-			escape. Placed at the head to give priority.
+				[CORE]
+				Simple range search. Tokenize the quotes. Add complex regex for utf
+				escape. Placed at the head to give priority.
 			</string>
 			<key>end</key>
 			<string>"</string>
@@ -443,8 +489,9 @@
 			</dict>
 			<key>comment</key>
 			<string>
-			Simple range search. Tokenize the quotes. Add complex regex for utf
-			escape. Placed at the head to give priority.
+				[CORE]
+				Simple range search. Tokenize the quotes. Add complex regex for utf
+				escape. Placed at the head to give priority.
 			</string>
 			<key>end</key>
 			<string>'</string>
@@ -468,7 +515,10 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Language constructors only. Basic.</string>
+			<string>
+				[LIST]
+				Language constructors only.
+			</string>
 			<key>match</key>
 			<string>\b(Array|Boolean|Date|Function|Iterator|Number|Object|RegExp|String|ArrayBuffer|Float32Array|Float64Array|Int16Array|Int32Array|Int8Array|Uint16Array|Uint32Array|Uint8Array|Uint8ClampedArray|Error|EvalError|InternalError|RangeError|ReferenceError|StopIteration|SyntaxError|TypeError|URIError|DataView)\b</string>
 			<key>name</key>
@@ -476,7 +526,9 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Language non-constructor functions only. Includes Date instances. Includes Harmony features and base function methods. Basic.</string>
+			<string>
+				[LIST]
+				Language non-constructor functions only. Includes Date instances. Includes Harmony features and base function methods.</string>
 			<key>match</key>
 			<string>\b(((de|en)codeURI(Component)?)|(un)?eval|is(Finite|NaN)|parse(Float|Int)|(?&lt;=\.|\.prototype\.)((to((Locale)?String|Source))|(value|isPrototype)Of|hasOwnProperty|propertyIsEnumerable|bind|call|apply|reduce(Right)?|concat|every|filter|forEach|indexOf|join|lastIndexOf|map|pop|push|reverse|(un)?shift|slice|some|sort|splice|trim(Left|Right)?|anchor|big|blink|bold|char(Code)?At|concat|fixed|font(color|size)|fromCharCode|italics|link|localeCompare|match|quote|replace|search|small|split|strike|sub|substr(ing)?|sup|to(Locale)?(Lower|Upper)Case)|(?&lt;=Date\.)UTC|(?&lt;=Date\.prototype\.|date\.)((g|s)et(Date|Day|FullYear|Hours|Milliseconds|Minutes|Month|Seconds|Time|TimezoneOffset|UTC(Date|Day|FullYear|Hours|Milliseconds|Minutes|Month|Seconds)|Year)|now|parse|to((Date|GMT|ISO|Locale(Date|Time)|Time|UTC)String|LocaleFormat|JSON)))\b</string>
 			<key>name</key>
@@ -484,7 +536,7 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Language properties only. Includes Date instances. Includes Harmony features and base function methods. Basic.</string>
+			<string>Language properties only. Includes Date instances. Includes Harmony features and base function methods.</string>
 			<key>match</key>
 			<string>\b(?&lt;=\.|\.prototype\.)(name|length)\b</string>
 			<key>name</key>
@@ -492,7 +544,7 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>DOM constructors only. Includes all dom, HTML, SVG, etc. Basic.</string>
+			<string>DOM constructors only. Includes all dom, HTML, SVG, etc.</string>
 			<key>match</key>
 			<string>\b(Attr|Audio(ProcessingEvent)?|BeforeLoadEvent|Blob|CDATASection|CharacterData|Comment|Document(Fragment|Type)|DomConfiguration|DOM(Error|ErrorHandler|Exception|Implementation(List|Registry|Source)?|Locator|Object|String(List)?|TimeStamp|UserData|(Settable)?TokenList|StringMap)|Entity(Reference)?|MediaQueryList(Listener)?|NameList|NamedNodeMap|Node(Filter|Iterator|List)?|Notation|Plugin(Array)?|ProcessingInstruction|SharedWorker|Text|TimeRanges|Treewalker|TypeInfo|UserDataHandler|Worker(GlobalScope)?|HTML(Document|Element|(Anchor|Applet|Audio|Area|Base|BaseFont|Body|BR|Button|Canvas|Directory|Div|DList|Embed|FieldSet|Font|Form|Frame|FrameSet|Head|Heading|Html|HR|IFrame|Image|Input|Keygen|Label|LI|Link|Map|Menu|Meta|Mod|Object|OList|OptGroup|Option|Output|Paragraph|Param|Pre|Quote|Script|Select|Source|Span|Style|Table(Caption|(Data|Header)?Cell|Col|Row|Section)?|TextArea|Time|Title|Track|UList|Unknown|Video)Element|(All|FormControls|Options|Properties)?Collection)|ElementTimeControl|TimeEvent|Canvas(RenderingContext2D|Gradient|Pattern|PixelArray)|TextMetrics|ImageData|NotifyAudioAvailableEvent|RadioNodeList|SVG(Document|Element|(A|AltGlyph(Def|Item)?|Animation|Animate(Color|Motion|Transform)?|Set|Circle|ClipPath|ColorProfile|Cursor|Defs|Desc|Ellipse|Filter|FE(Blend|ColorMatrix|ComponentTransfer|Composite|ConvolveMatrix|DiffuseLighting|DisplacementMap|DistantLight|Flood|GaussianBlur|Image|Merge(Node)?|Morphology|Offset|(Point|Spot)Light|SpecularLighting|Tile|Turbulence|Func(R|G|B|A))|ComponentTransferFunction|Font(Face(Format|Name|Src|Uri)?)?|ForeignObject|G|Glyph|GlyphRef|(Linear|Radial)?Gradient|HKern|Image|Line|Marker|Mask|Metadata|MissingGlyph|(M|)Path|Pattern|Polyline|Polygon|Rect|Script|Stop|Style|Switch|Symbol|Text|TextPath|Title|TRef|TSpan|Use|View|VKern)Element|Angle|Color|ICCColor|Element(Instance(List)?)|Length(List)?|Matrix|Number(List)?|Paint|Point(List)?|PreserveAspectRatio|Rect|StringList|Transform(List)?|Animated(Angle|Boolean|Enumeration|Integer|Length(List)?|Number(List)?|PreserveAspectRatio|Rect|String|TransformList)|Path(Seg(List|ArcAbs|ArcRel|ClosePath|Curve(to(Cubic((Smooth)?(Abs|Rel))|Quadratic((Smooth)?(Abs|Rel))))|Line(to((Horizontal|Vertical)?(Abs|Rel)))|Moveto(Abs|Rel))?)|FilterPrimitiveStandardAttributes|AnimatedPathData)|CSS((Charset|FontFace|Import|Media|Page)Rule|PrimitiveValue|Rule(List)?|Style(Declaration|Rule|Sheet))|DOM(Parser|DateInput)|Document|Element|(Error)?Event|Event(Exception|Source)?|File(Error|List|Reader)?|FormData|HashChangeEvent|Image|Intent|KeyboardEvent|Media(Controller|Error|List|StreamEvent)|Message(Channel|Event|Port)|MimeType(Array)?|(Mouse|Mutation|OfflineAudioCompletion|Overflow|PageTransition|PopState|Progress|Text|Touch|UI|Wheel)Event|Option|RGBColor|Range(Exception)?|Rect|SQLException|SVG(ZoomEvent|UnitTypes)|WebSocket|WebGL(ActiveInfo|Buffer|ContextEvent|FrameBuffer|Program|Render(Buffer|ingContext)|Shader|Texture|UniformLocation)|WebKit(AnimationEvent|BlobBuilder|CSS((Filter|Transform)Value|(Keyframes?|Region)Rule|Matrix)|Mutation(Observer|Point|TransitionEvent))|XMLHttpRequest|ActiveXObject|Device(Mo|Orienta)tionEvent)\b</string>
 			<key>name</key>
@@ -500,7 +552,9 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Basic.</string>
+			<string>
+				[LIST]
+			</string>
 			<key>match</key>
 			<string>\b(ELEMENT_NODE|ATTRIBUTE_NODE|TEXT_NODE|CDATA_SECTION_NODE|ENTITY_REFERENCE_NODE|ENTITY_NODE|PROCESSING_INSTRUCTION_NODE|COMMENT_NODE|DOCUMENT_NODE|DOCUMENT_TYPE_NODE|DOCUMENT_FRAGMENT_NODE|NOTATION_NODE|INDEX_SIZE_ERR|DOMSTRING_SIZE_ERR|HIERARCHY_REQUEST_ERR|WRONG_DOCUMENT_ERR|INVALID_CHARACTER_ERR|NO_DATA_ALLOWED_ERR|NO_MODIFICATION_ALLOWED_ERR|NOT_FOUND_ERR|NOT_SUPPORTED_ERR|INUSE_ATTRIBUTE_ERR)\b</string>
 			<key>name</key>
@@ -508,7 +562,10 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>The console object is not standard. Should this be declaration match?</string>
+			<string>
+				[LIST]
+				The console object is not standard. Should this be declaration match?
+			</string>
 			<key>match</key>
 			<string>\b(?&lt;=console\.)(warn|info|log|error|time|timeEnd|assert|dir(xml)?|group(Collapsed|End)?|markTimeline|memory|profile(End|s)?|time(End|Stamp)?|trace)\b</string>
 			<key>name</key>
@@ -517,8 +574,10 @@
 		<dict>
 			<key>comment</key>
 			<string>
-			`window.[prop]` or `[prop]`.
-			Includes navigator, screen, URL, bars.</string>
+				[LIST]
+				`window.[prop]` or `[prop]`.
+				Includes navigator, screen, URL, bars.
+			</string>
 			<key>match</key>
 			<string>\b(?&lt;=window\.|^|[^.])(document|event|screen|netscape|JSON|Math|console|applicationCache|controllers|crypto|defaultStatus|dialogArguments|closed|content|directories|document|frame(Element|s)|fullScreen|history|inner(Height|Width)|length|location(bar)?(\.visible)?|menubar(\.visible)?|messageManager|mozAnimationStartTime|moz(InnerScreen(X|Y)|PaintCount)|navigator|opener|outer(Height|Width)|parent|personalbar|pkcs11|(screen|scroll)(X|Y)|top|toolbar(\.visible)?|status(bar)?|sidebar|scrollbars|self|scrollMax(X|Y)|URL|window|page(X|Y)Offset|offscreenBuffering|localStorage)\b|(?&lt;=navigator\.)((app(CodeName|Name|Version)|buildID|(cookie|java)Enabled|language|mimeTypes|mozIsLocallyAvailable|onLine|oscpu|platform|plugins|product(Sub)?)|registerContentHandler|userAgent|vendor(Sub)?|geolocation)\b|(?&lt;=screen\.)(avail(Height|Left|Top|Width)|colorDepth|height|left|pixelDepth|top|width)\b</string>
 			<key>name</key>
@@ -527,8 +586,9 @@
 		<dict>
 			<key>comment</key>
 			<string>
-			`window.[fn]()` or `[fn]()`.
-			Includes URL, location, localStorage, document, navigator.history, geolocation, crypto
+				[LIST]
+				`window.[fn]()` or `[fn]()`.
+				Includes URL, location, localStorage, document, navigator.history, geolocation, crypto
 			</string>
 			<key>match</key>
 			<string>\b(?&lt;=window\.|^|[^.])(alert|atob|back|blur|btoa|clear(Immediate|Interval|Timeout)|close|confirm|dump|escape|find|focus|forward|get(Attention|ComputedStyle|Selection)|home|matchMedia|move(By|To)|open(Dialog)?|postMessage|print|prompt|requestAnimationFrame|resize(By|To)|scroll(By(Lines|Pages)?|To)?|set(Cursor|Immediate|Interval|Timeout)|showModalDialog|sizeToContent|stop|unescape|updateCommands)\b|(?&lt;=URL\.)((create|revoke)ObjectURL)\b|(?&lt;=localStorage\.)(clear|(get|set|remove)Item|key)\b|(?&lt;=location\.|document\.location\.)(assign|hash|host(name)?|href|origin|pathname|port|protocol|search|reload|replace)\b|(?&lt;=navigator\.geolocation\.)((getCurrent|watch)Position)\b|(?&lt;=history\.)(back|forward|go|(push|replace)State)\b|(?&lt;=crypto\.)(getRandomValues)\b|(?&lt;=doc\.|document\.)(URL|activeElement|adoptNode|alinkColor|anchors|applets|async|baseURIObject|bgColor|body|characterSet|clear|close|compatMode|contentType|cookie|create(Attribute|CDATASection|Comment|DocumentFragment|Element|ElementNS|EntityReference|Event|Expression|NSResolver|ProcessingInstruction|Range|TextNode|TreeWalker)|currentScript|defaultView|doctype|document(Element|URI(Object)?)|domain|elementFromPoint|embeds|enableStyleSheetsForSet|evaluate|fgColor|forms|get(BoxObjectFor|Elements?By(Id|ClassName|Name|TagName(NS)?))|hasFocus|height|images|implementation|importNode|inputEncoding|last(Modified|StyleSheetSet)|link(Color|s)|load(Overlay)?|location|moz(CancelFullScreen|FullScreen(Element|Enabled)?|SetImageElement|SyntheticDocument)|onreadystatechange|open|plugins|popupNode|preferredStyleSheetSet|query(CommandSupported|Selector(All)?)|readyState|referrer|releaseCapture|scripts|selectedStyleSheetSet|styleSheet(Set)?s|title|tooltipNode|vlinkColor|width|write(ln)?|xmlVersion)\b</string>
@@ -538,8 +598,9 @@
 		<dict>
 			<key>comment</key>
 			<string>
-			Assumes the var is named a certain way. This includes functions and variables.
-			Includes element, event, form, range, table, document, worker.
+				[LIST]
+				Assumes the var is named a certain way. This includes functions and variables.
+				Includes element, event, form, range, table, document, worker.
 			</string>
 			<key>match</key>
 			<string>\b(?&lt;=el\.|elem\.|element\.)(addEventListener|baseURIObject|blur|childElementCount|children|class(List|Name)|click|client(Height|Left|Top|Width)|(c|isC)ontentEditable|dataset|dir|dispatchEvent|firstElementChild|focus|get(Attribute(NS|Node(NS)?)?|BoundingClientRect|ClientRects|ElementsByTagName(NS)?)|hasAttribute(NS)?|id|(inner|insertAdjacent)HTML|item|lang|lastElementChild|moz(MatchesSelector|RequestFullScreen)|name|nextElementSibling|offset(Height|Left|Parent|Top|Width)|on((after|before)scriptexecute|blur|change|click|copy|cut|dblclick|focus|key(down|press|up)|mouse(down|move|out|over|up)|paste|resize|scroll)|outerHTML|previousElementSibling|querySelector(All)?|remove(Attribute(NS|Node)?|EventListener)|scroll(Height|IntoView|Left|Top|Width)|set(Attribute(NS|Node(NS)?)?|Capture)|style|tabIndex|tagName|title)\b|(?&lt;=worker\.)(postMessage|terminate)\b|(?&lt;=e\.|evt\.|event\.)(cancel(Bubble|able)|client(X|Y)|ctrlKey|currentTarget|defaultPrevented|detail|eventPhase|explicitOriginalTarget|init(Key|Mouse|UI)?Event|metaKey|mozInputSource|originalTarget|preventDefault|relatedTarget|screen(X|Y)|shiftKey|stop(Immediate)?Propagation|target|timeStamp|type|view|acceleration(IncludingGravity)?|interval|rotationRate|absolute|alpha|beta|gamma)\b|(?&lt;=frm\.|form\.)(acceptCharset|action|elements|enctype|length|method|name|reset|submit|target)\b|(?&lt;=range\.)(clone(Contents|Range)|collapsed?|commonAncestorContainer|compare(BoundaryPoints|Node|Point)|createContextualFragment|deleteContents|detach|end(Container|Offset)|extractContents|get(Bounding)?ClientRects?|(insert|intersects)Node|isPointInRange|selectNode(Contents)?|set(End(After|Before)?|Start(After|Before)?)|start(Container|Offset)|surroundContents)\b|(?&lt;=tbl\.|table\.)(align|bgColor|border|caption|cell(Padding|Spacing)|create(Caption|TFoot|THead)|delete(Caption|Row|TFoot|THead)|frame|insertRow|rows|rules|summary|tBodies|tFoot|tHead|width)\b</string>
@@ -549,8 +610,9 @@
 		<dict>
 			<key>comment</key>
 			<string>
-			Assumes the var is named a certain way.
-			Includes element, event, form, range, table, document, worker.
+				[LIST]
+				Assumes the var is named a certain way.
+				Includes element, event, form, range, table, document, worker.
 			</string>
 			<key>match</key>
 			<string>\b(el(em(ent)?)?|e(v(en)?t)?|fo?rm|range|ta?ble?|doc(ument)?|worker|date)\b</string>
@@ -560,8 +622,9 @@
 		<dict>
 			<key>comment</key>
 			<string>
-			Matches either `window.on[foo]` or `on[foo]` or `"onfoo"`.
-			Case insensitive.
+				[LIST]
+				Matches either `window.on[foo]` or `on[foo]` or `"onfoo"`.
+				Case insensitive.
 			</string>
 			<key>match</key>
 			<string>\b(?&lt;=window\.|^|[^.])(on(?i:r(ow(s(inserted|delete)|e(nter|xit))|e(s(ize(start|end)?|et)|adystatechange))|mouse(o(ut|ver)|down|up|move)|b(efore(cut|deactivate|u(nload|pdate)|p(aste|rint)|editfocus|activate)|lur)|s(croll|top|ubmit|elect(start|ionchange)?)|h(ashchange|over|elp)|c(hange|ont(extmenu|rolselect)|ut|ellchange|l(ick|ose))|d(evice((mo|orienta)tion)|eactivate|ata(setc(hanged|omplete)|available)|r(op|ag(start|over|drop|en(ter|d)|leave)?)|blclick)|unload|(mozbefore)?paint|p(opstate|aste|ropertychange)|error(update)?|key(down|up|press)|focus|load|a(ctivate|fter(update|print)|bort)))\b</string>
@@ -616,8 +679,8 @@
 			</dict>
 			<key>comment</key>
 			<string>
-			Matches `Foo.Bar = [...]`.
-			TODO - Not showing on symbol list.
+				Matches `Foo.Bar = [...]`.
+				TODO - Not showing on symbol list.
 			</string>
 			<key>match</key>
 			<string>^\s*(_*[A-Z][^\w]*)\s*(=)\.*$</string>
@@ -640,8 +703,9 @@
 			</dict>
 			<key>comment</key>
 			<string>
-			[HACK] Accounts for ternaries, regex, selectors, other weirdness.
-			String keys also count.
+				[HACK]
+				Accounts for ternaries, regex, selectors, other weirdness.
+				String keys also count.
 			</string>
 			<key>match</key>
 			<string>[^?/{'"$,]*(?&lt;!case\s)\b(['"]?\$*[a-z0-9_]\w*['"]?\s*)(:)</string>
@@ -650,7 +714,10 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>[CONVENTION] Matches `THIS_CONSTANT`.</string>
+			<string>
+				[CONVENTION]
+				Matches `THIS_CONSTANT`.
+			</string>
 			<key>match</key>
 			<string>\b(_*([A-Z]{2,}|[A-Z][0-9A-Z_]{2,}))\b</string>
 			<key>name</key>
@@ -676,7 +743,10 @@
 				</dict>
 			</dict>
 			<key>comment</key>
-			<string>[CONFLICTED] String keys also account.</string>
+			<string>
+				[CONFLICT]
+				String keys also account.
+			</string>
 			<key>match</key>
 			<string>(?&lt;=\.)(['"]?(\$?)[a-z0-9_]\w*['"]?)(\.)?</string>
 			<key>name</key>
@@ -692,7 +762,10 @@
 		<key>class-name</key>
 		<dict>
 			<key>comment</key>
-			<string>[CONVENTION] Matches `ClassFoo...`.</string>
+			<string>
+				[CONVENTION]
+				Matches `ClassFoo...`.
+			</string>
 			<key>match</key>
 			<string>\b(_*[A-Z]\w*)\b</string>
 			<key>name</key>
@@ -701,7 +774,9 @@
 		<key>comma</key>
 		<dict>
 			<key>comment</key>
-			<string>Liberally allows trailing whitespace.</string>
+			<string>
+				Liberally allows trailing whitespace.
+			</string>
 			<key>match</key>
 			<string>,[ |\t]*</string>
 			<key>name</key>
@@ -718,7 +793,9 @@
 				</dict>
 			</dict>
 			<key>comment</key>
-			<string>Simple search from end of line using wildcard.</string>
+			<string>
+				Simple search from end of line using wildcard.
+			</string>
 			<key>match</key>
 			<string>(//).*$\n?</string>
 			<key>name</key>
@@ -764,7 +841,9 @@
 		<key>semicolon</key>
 		<dict>
 			<key>comment</key>
-			<string>Basic.</string>
+			<string>
+				[CORE]
+			</string>
 			<key>match</key>
 			<string>\;</string>
 			<key>name</key>
@@ -780,7 +859,9 @@
 		<!-- <key>trailing-space</key>
 		<dict>
 			<key>comment</key>
-			<string>[CONFLICTED]</string>
+			<string>
+				[CONFLICT]
+			</string>
 			<key>match</key>
 			<string>(?&lt;=[\S;,{\(\[\b])\s+$</string>
 			<key>name</key>
