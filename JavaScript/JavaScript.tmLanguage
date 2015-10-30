@@ -585,11 +585,14 @@
 				</dict>
 			</dict>
 			<key>comment</key>
-			<string>Matches `$fooBar(`. Basic.</string>
+			<string>
+				Make reading long multi-line jQuery statements easier.
+				Basic implementation, just matches `$fooBar...(`.
+			</string>
 			<key>match</key>
 			<string>\b(\$*[a-z0-9_]\w*)(\()</string>
 			<key>name</key>
-			<string>meta.function.call.js</string>
+			<string>meta.jquery.function.call.js</string>
 		</dict>
 		<dict>
 			<key>captures</key>
