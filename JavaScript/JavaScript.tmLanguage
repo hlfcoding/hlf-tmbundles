@@ -53,7 +53,8 @@
 			</dict>
 			<key>comment</key>
 			<string>
-				[CONFLICTED] Easy on the eyes.
+				[CONFLICT]
+				Easy on the eyes.
 			</string>
 			<key>end</key>
 			<string>(;)\s*$</string>

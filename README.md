@@ -19,8 +19,6 @@ day.
   - Assumes you follow conventions with naming instances: `date` `my_date` `element` `elem` `el`
   - Assumes you care about at least viewing the DOM api with proper highlighting
 
-- Uses more of TextMate, including updated doc views, symbol list, autocomplete.
-
 ## Development
 
 ### Sample ST2 Project File
