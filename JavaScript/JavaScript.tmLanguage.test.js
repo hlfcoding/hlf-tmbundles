@@ -1,11 +1,17 @@
 // Single line comment
 
-/*
- Multi-line comment
+/* 
+  Multi-line
+  comment
+*/
+
+/**
+ * Doc block comment
+ * @see JSDoc
  */
 
 // IIFE
-(function() {
+(function($) {
 
 'use strict';
 
@@ -38,7 +44,7 @@ Model.prototype.fetch = function() {
     .then(this.setState.bind(this));
 };
 _.extend(Model.prototype, {
-  dataToState: function(data) {
+  dataToState: function(data /* , textStatus, jqXhr */) {
     return data.result;
   },
   setState: function(state) {
@@ -63,4 +69,4 @@ for (var i = items.length - 1; i >= 0; i--) {}
 // for (…) {…} (Native For-Loop)
 for (var i2 = 0, l2 = items.length; i2 < l2; i2++) {}
 
-}());
+}(jQuery));
