@@ -691,7 +691,7 @@
 				String keys also count.
 			</string>
 			<key>match</key>
-			<string>[^?/{'"$,]*(?&lt;!case\s)\b(['"]?\$*[a-z0-9_]\w*['"]?\s*)(:)</string>
+			<string>[^?/{'"$,]*(?&lt;!case\s)\b(['"]?\$*[a-z0-9_]\w*['"]?)(:)</string>
 			<key>name</key>
 			<string>meta.declaration.property.js</string>
 		</dict>
