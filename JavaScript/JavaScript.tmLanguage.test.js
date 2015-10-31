@@ -37,15 +37,19 @@ function Model(props) {
   this._state = initialState;
 }
 
-// Methods
+// Methods, properties
 Model.prototype.fetch = function() {
+  if (this.isFetching) {
+    return false;
+  }
   return $.getJSON(Model.BASE_URL + 'item/' + this.props.id)
     .then(this.dataToState.bind(this))
     .then(this.setState.bind(this));
 };
 _.extend(Model.prototype, {
+  isFetching: false,
   dataToState: function(data /* , textStatus, jqXhr */) {
-    return data.result;
+    return data.result ? data.result : data;
   },
   setState: function(state) {
     this._state = state;
@@ -53,13 +57,30 @@ _.extend(Model.prototype, {
 });
 
 // Constant
-Model.BASE_URL = 'http://my-app.com/post/';
+Model._BASE_URL = 'http://my-app.com/post/';
 Model.VARIANT_A = 1;
 Model.VARIANT_B = 2;
 
+// Ternary
+var id = true ? 1 : 2;
+
+// Switch
+var variant;
+switch(id) {
+  case 1:
+    variant = Model.VARIANT_A;
+    break;
+  case 2:
+    variant = Model.VARIANT_B;
+    break;
+  default:
+    variant = Model.VARIANT_A;
+    break;
+}
+
 model = new Model({
-  id: 1,
-  variant: Model.VARIANT_A
+  id: id,
+  variant: variant
 });
 model.fetch();
 
