@@ -77,10 +77,10 @@
 						This matches var declaration statements, most commonly to visually
 						mute them.
 					</string>
-					<key>match</key>
-					<string>(?&lt;=,\s|\s\s|var\s)[^=\s!#%^&amp;*()+"',:?]+(?=,|;)</string>
 					<key>name</key>
 					<string>meta.declaration.variables.undefined.js</string>
+					<key>match</key>
+					<string>(?&lt;=,\s|\s\s|var\s)[^=\s!#%^&amp;*()+"',:?]+(?=,|;)</string>
 				</dict>
 				<dict>
 					<key>include</key>
@@ -153,6 +153,10 @@
 				<dict>
 					<key>include</key>
 					<string>#parameters</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#block-comment</string>
 				</dict>
 			</array>
 		</dict>
@@ -234,6 +238,14 @@
 			<string>keyword.other.environmentjs</string>
 		</dict>
 		<dict>
+			<key>include</key>
+			<string>#block-comment</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#comment</string>
+		</dict>
+		<dict>
 			<key>begin</key>
 			<string>/\*\*(?!/)</string>
 			<key>captures</key>
@@ -247,43 +259,13 @@
 			<key>comment</key>
 			<string>
 				[CORE]
+				Documentation comment blocks very similar to regular ones.
 				Simple ranged search, where `/**/` is exempt.
 			</string>
 			<key>end</key>
 			<string>\*/</string>
 			<key>name</key>
 			<string>comment.block.documentation.js</string>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>/\*</string>
-			<key>captures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.comment.js</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>
-				[CORE]
-			</string>
-			<key>end</key>
-			<string>\*/</string>
-			<key>name</key>
-			<string>comment.block.js</string>
-			<key>patterns</key>
-			<array>
-				<!-- <dict>
-					<key>include</key>
-					<string>#trailing-space</string>
-				</dict> -->
-			</array>
-		</dict>
-		<dict>
-			<key>include</key>
-			<string>#comment</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -802,6 +784,34 @@
 			<key>name</key>
 			<string>comment.line.double-slash.js</string>
 		</dict>
+		<key>block-comment</key>
+		<dict>
+			<key>begin</key>
+			<string>/\*</string>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.js</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>
+				[CORE]
+			</string>
+			<key>end</key>
+			<string>\*/</string>
+			<key>name</key>
+			<string>comment.block.js</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#trailing-space</string>
+				</dict>
+			</array>
+		</dict>
 		<key>escaped-char</key>
 		<dict>
 			<key>match</key>
@@ -811,6 +821,8 @@
 		</dict>
 		<key>parameters</key>
 		<dict>
+			<key>match</key>
+			<string>(\()?(\$|\$*\w+)?\s*(,)?(\))?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -834,8 +846,6 @@
 					<string>meta.brace.js</string>
 				</dict>
 			</dict>
-			<key>match</key>
-			<string>(\()?(\$|\$*\w+)?\s*(,)?(\))?</string>
 			<key>name</key>
 			<string>entity.name.declaration.parameter.js</string>
 		</dict>
