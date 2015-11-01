@@ -1,0 +1,16 @@
+#some-id,
+.some-parent > .some-child,
+.some-class {
+
+  /* Filters */
+  filter: blur(5px);
+  filter: brightness(0.5);
+  filter: contrast(200%);
+  filter: drop-shadow(16px 16px 10px black);
+  filter: grayscale(100%);
+  filter: hue-rotate(90deg);
+  filter: invert(100%);
+  filter: opacity(50%);
+  filter: saturate(200%);
+  filter: sepia(100%);
+}
