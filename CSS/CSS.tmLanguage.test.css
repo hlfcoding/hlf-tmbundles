@@ -1,6 +1,7 @@
 #some-id,
-.some-parent > .some-child,
-.some-class {
+.some-class,
+div:first-child:not(.some-modifier),
+.some-parent > .some-child {
 
   /* Filters */
   filter: blur(5px);
