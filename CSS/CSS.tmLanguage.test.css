@@ -1,3 +1,9 @@
+@import url('will-be-slow.css') screen;
+
+@media screen, print {
+  body { font-size: 13px; }
+}
+
 #some-id,
 .some-class,
 div:first-child:not(.some-modifier),
