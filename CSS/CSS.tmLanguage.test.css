@@ -13,4 +13,12 @@
   filter: opacity(50%);
   filter: saturate(200%);
   filter: sepia(100%);
+
+  /* Flex-box */
+  flex-basis: 18em;
+  flex-flow: column-reverse wrap;
+  flex-grow: 3;
+  flex-wrap: wrap;
+  flex-shrink: 2;
+  flex-direction: column-reverse;
 }
