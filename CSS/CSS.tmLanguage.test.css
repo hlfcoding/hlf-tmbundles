@@ -8,6 +8,17 @@
 .some-class,
 div:first-child:not(.some-modifier),
 .some-parent > .some-child {
+  
+  /* Border */
+  border: 1px solid black;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 
   /* Filters */
   filter: blur(5px);
