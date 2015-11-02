@@ -39,4 +39,10 @@ div:first-child:not(.some-modifier),
   flex-wrap: wrap;
   flex-shrink: 2;
   flex-direction: column-reverse;
+
+  /* Transforms */
+  backface-visibility: hidden;
+  transform: translateX(10px) rotate(10deg) translateY(5px);
+  transform-origin: 10px;
+  transform-style: preserve-3d;
 }
