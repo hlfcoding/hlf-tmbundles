@@ -90,4 +90,27 @@ for (var i = items.length - 1; i >= 0; i--) {}
 // for (…) {…} (Native For-Loop)
 for (var i2 = 0, l2 = items.length; i2 < l2; i2++) {}
 
+// JS Native
+var timeout = setTimeout($.noop, 500);
+clearTimeout(timeout);
+
+// DOM
+function handleEvent(event) {
+  var el = event.target;
+  event.preventDefault();
+  event.stopPropagation();
+  el.setAttribute('data-name', 'value');
+}
+
+var el = document.createElement('div');
+el.addEventListener('click', handleEvent);
+el.removeEventListener('click', handleEvent);
+el.onchange = $.noop;
+
+var view = new View();
+view.setAttribute('key', 'value');
+view.addEventListener('custom', $.noop);
+view.removeEventListener('custom', $.noop);
+view.onchange = $.noop;
+
 }(jQuery));
