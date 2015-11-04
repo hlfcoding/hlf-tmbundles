@@ -21,6 +21,13 @@ var foo = function foo() { return 'foo'; };
 var foo2 = { bar: 'baz' };
 var bar2 = 'bar',
     baz2 = 'baz';
+var module = (function() {
+  var foo;
+  return {
+    getFoo: function() { return foo; },
+    setFoo: function(newValue) { foo = newValue; }
+  };
+}());
 
 // RegExp
 regexp = (/^.*$/g);
