@@ -120,4 +120,35 @@ view.addEventListener('custom', $.noop);
 view.removeEventListener('custom', $.noop);
 view.onchange = $.noop;
 
+// ES6
+var odds = evens.map(v => v + 1);
+var nums = evens.map((v, i) => v + i);
+nums.forEach(v => {
+  if (v % 5 === 0) { fives.push(v); }
+});
+
+class SkinnedMesh extends THREE.Mesh {
+  constructor(geometry, materials) {
+    super(geometry, materials);
+
+    this.idMatrix = SkinnedMesh.defaultMatrix();
+    this.bones = [];
+    this.boneMatrices = [];
+    //...
+  }
+  update(camera) {
+    //...
+    super.update();
+  }
+  get boneCount() {
+    return this.bones.length;
+  }
+  set matrixType(matrixType) {
+    this.idMatrix = SkinnedMesh[matrixType]();
+  }
+  static defaultMatrix() {
+    return new THREE.Matrix4();
+  }
+}
+
 }(jQuery));
