@@ -18,7 +18,15 @@
 // Var declarations
 var bar, baz, regexp, $node, items;
 var foo = function foo() { return 'foo'; };
-var foo2 = { bar: 'baz' };
+var foo2 = {
+  bar: 'bar',
+  baz: [1, 2, 3],
+  nums: { 1: 1, 2: 2 },
+  classes: [
+    Object,
+    String
+  ]
+};
 var bar2 = 'bar',
     baz2 = 'baz';
 var module = (function() {
