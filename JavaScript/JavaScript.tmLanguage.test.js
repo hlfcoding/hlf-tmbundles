@@ -17,10 +17,10 @@
 
 // Var declarations
 var bar, baz, regexp, $node, items;
-var foo = function foo() { return 'foo'; };
+var foo = function foo() { return bar ? 'foo' : null; };
 var foo2 = {
   bar: 'bar',
-  baz: [1, 2, 3],
+  baz: [baz, 2, 3],
   nums: { 1: 1, 2: 2 },
   classes: [
     Object,
@@ -28,7 +28,8 @@ var foo2 = {
   ]
 };
 var bar2 = 'bar',
-    baz2 = 'baz';
+    baz2 = 'baz',
+    bar3, baz3;
 var module = (function() {
   var foo;
   return {
@@ -136,7 +137,7 @@ nums.forEach(v => {
 });
 
 class SkinnedMesh extends THREE.Mesh {
-  constructor(geometry, materials) {
+  constructor(geometry, materials /* , options */) {
     super(geometry, materials);
 
     this.idMatrix = SkinnedMesh.defaultMatrix();
@@ -148,8 +149,8 @@ class SkinnedMesh extends THREE.Mesh {
     //...
     super.update();
   }
-  get boneCount() {
-    return this.bones.length;
+  get matrixType() {
+    return this.idMatrix.type;
   }
   set matrixType(matrixType) {
     this.idMatrix = SkinnedMesh[matrixType]();
