@@ -161,6 +161,53 @@
 			</array>
 		</dict>
 		<dict>
+			<key>begin</key>
+			<string>^\s+(?:(get|set|static)\s+)?(\$*[a-z0-9_]\w+(?=\([^\)]*\)\s*\{))</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.modifier.class.js</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.declaration.function.js</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>
+				Matches: `([params]) {`
+				or `get ([params]) {`
+				or `set ([params]) {`
+				or `static ([params]) {`.
+			</string>
+			<key>end</key>
+			<string>(\{)</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>meta.brace.curly.js</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>meta.declaration.function.js</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#parameters</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#block-comment</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
 			<key>comment</key>
 			<string>
 				[ADDITIONS]
@@ -293,7 +340,7 @@
 				[CORE]
 			</string>
 			<key>match</key>
-			<string>\b(const|export|extends|final|implements|native|private|protected|public|static|synchronized|throws|transient|volatile)\b</string>
+			<string>\b(const|export|extends|final|get|implements|native|private|protected|public|set|static|synchronized|throws|transient|volatile)\b</string>
 			<key>name</key>
 			<string>storage.modifier.js</string>
 		</dict>
