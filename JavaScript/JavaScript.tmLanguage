@@ -270,6 +270,86 @@
 			<string>comment.block.html.js</string>
 		</dict>
 		<dict>
+			<key>begin</key>
+			<string>([a-zA-Z$_][\w$_]*)?(`)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.template.tag.name.js</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.template.begin.js</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>
+				[ES6]
+				Templates support, directly taken from JavaScriptNext.
+			</string>
+			<key>end</key>
+			<string>`</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.template.end.js</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>string.template.js</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\\\s*\n</string>
+					<key>name</key>
+					<string>constant.character.escape.newline.js</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\\(x[\da-fA-F]{2}|u[\da-fA-F]{4}|.)</string>
+					<key>name</key>
+					<string>constant.character.escape.js</string>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>\${</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.template.element.begin.js</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>}</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.template.element.end.js</string>
+						</dict>
+					</dict>
+					<key>name</key>
+					<string>entity.template.element.js</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#expression</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<dict>
 			<key>comment</key>
 			<string>
 				Note each match is exact. A better way?

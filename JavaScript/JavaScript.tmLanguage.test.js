@@ -160,4 +160,15 @@ class SkinnedMesh extends THREE.Mesh {
   }
 }
 
+// Basic literal string creation
+var string = `In JavaScript '\n' is a line-feed.`;
+
+// Multiline strings
+var multilineString = `In JavaScript this is
+not legal.`;
+
+// String interpolation
+var name = "Bob", time = "today";
+console.log(`Hello ${name}, how are you ${time}?`);
+
 }(jQuery));
