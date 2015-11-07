@@ -975,7 +975,7 @@
 		<key>parameters</key>
 		<dict>
 			<key>match</key>
-			<string>(\()?(\$|\$*\w+)?\s*(,)?(\))?</string>
+			<string>(\()?(\.{3,})?(\$|\$*\w+)?\s*(,)?(\))?</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -986,14 +986,19 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>variable.parameter.js</string>
+					<string>keyword.operator.spread.js</string>
 				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>meta.delimiter.comma.js</string>
+					<string>variable.parameter.js</string>
 				</dict>
 				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>meta.delimiter.comma.js</string>
+				</dict>
+				<key>5</key>
 				<dict>
 					<key>name</key>
 					<string>meta.brace.js</string>

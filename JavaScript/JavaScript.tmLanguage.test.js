@@ -154,7 +154,10 @@ class SkinnedMesh extends THREE.Mesh {
     this.boneMatrices = [];
     //...
   }
-  update(camera) {
+  containsBones(...bones) {
+    return _.every(bones, b => _.contains(this.bones, b));
+  }
+  update(camera = null) {
     //...
     super.update();
   }
