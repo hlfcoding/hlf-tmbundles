@@ -19,6 +19,11 @@
 	  - Assumes you care about at least viewing the DOM api with proper highlighting
 	- Uses more of TextMate, including updated doc views, symbol list, autocomplete.
 
+	## Fragments
+
+	- `(?&lt;!\$)`: negative look-behind for resolving conflict between
+		$-variables and keywords
+
 	</string>
 	<key>fileTypes</key>
 	<array>
@@ -225,7 +230,7 @@
 				- `let`
 			</string>
 			<key>match</key>
-			<string>\b(break|case|catch|continue|default|do|else|finally|for|goto|if|import|let|package|return|switch|throw|try|while)\b</string>
+			<string>(?&lt;!\$)\b(break|case|catch|continue|default|do|else|finally|for|goto|if|import|let|package|return|switch|throw|try|while)\b</string>
 			<key>name</key>
 			<string>keyword.control.js</string>
 		</dict>
@@ -355,7 +360,7 @@
 				Note each match is exact. A better way?
 			</string>
 			<key>match</key>
-			<string>\b(delete|in|instanceof|new|typeof|with)\b|!|%|&amp;|\*|\-\-|\-|\+\+|\+|~|===|==|=|!=|!==|&lt;=|&gt;=|&lt;&lt;=|&gt;&gt;=|&gt;&gt;&gt;=|&lt;&gt;|&lt;|&gt;|&amp;&amp;|\|\||\?\:|\?|\:|\*=|(?&lt;!\()/=|%=|\+=|\-=|&amp;=|\^=</string>
+			<string>(?&lt;!\$)\b(delete|in|instanceof|new|typeof|with)\b|!|%|&amp;|\*|\-\-|\-|\+\+|\+|~|===|==|=|!=|!==|&lt;=|&gt;=|&lt;&lt;=|&gt;&gt;=|&gt;&gt;&gt;=|&lt;&gt;|&lt;|&gt;|&amp;&amp;|\|\||\?\:|\?|\:|\*=|(?&lt;!\()/=|%=|\+=|\-=|&amp;=|\^=</string>
 			<key>name</key>
 			<string>keyword.operator.js</string>
 		</dict>
@@ -371,7 +376,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(debugger)\b</string>
+			<string>(?&lt;!\$)\b(debugger)\b</string>
 			<key>name</key>
 			<string>keyword.other.environmentjs</string>
 		</dict>
@@ -421,7 +426,7 @@
 				[CORE]
 			</string>
 			<key>match</key>
-			<string>\b(boolean|byte|char|class|double|enum|float|int|interface|long|short|void)\b</string>
+			<string>(?&lt;!\$)\b(boolean|byte|char|class|double|enum|float|int|interface|long|short|void)\b</string>
 			<key>name</key>
 			<string>storage.type.js</string>
 		</dict>
@@ -431,7 +436,7 @@
 				[CORE]
 			</string>
 			<key>match</key>
-			<string>\b(const|export|extends|final|get|implements|native|private|protected|public|set|static|synchronized|throws|transient|volatile)\b</string>
+			<string>(?&lt;!\$)\b(const|export|extends|final|get|implements|native|private|protected|public|set|static|synchronized|throws|transient|volatile)\b</string>
 			<key>name</key>
 			<string>storage.modifier.js</string>
 		</dict>
@@ -441,7 +446,7 @@
 				[CORE]
 			</string>
 			<key>match</key>
-			<string>\btrue\b</string>
+			<string>(?&lt;!\$)\btrue\b</string>
 			<key>name</key>
 			<string>constant.language.boolean.true.js</string>
 		</dict>
@@ -451,7 +456,7 @@
 				[CORE]
 			</string>
 			<key>match</key>
-			<string>\bfalse\b</string>
+			<string>(?&lt;!\$)\bfalse\b</string>
 			<key>name</key>
 			<string>constant.language.boolean.false.js</string>
 		</dict>

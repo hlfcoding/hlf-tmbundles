@@ -42,10 +42,19 @@ var module = (function() {
 regexp = (/^.*$/g);
 regexp = /^.*$/g;
 
-// jQuery
+// jQuery / DOM
 $el = $('#element-1');
 $elem = $('#element-2');
 $node = $('#element-3');
+$debugger = $('.debugger');
+$default = $('.default');
+$event = $('.event');
+$map = $('.map');
+$new = $('.new-item');
+$set = $('.purchase-set');
+$true = $('.choice-true');
+$false = $('.choice-false');
+$void = $('.void-payment');
 
 // Class
 function Model(props) {
@@ -148,6 +157,9 @@ class SkinnedMesh extends THREE.Mesh {
   update(camera) {
     //...
     super.update();
+  }
+  get $container() {
+    return $('.container');
   }
   get matrixType() {
     return this.idMatrix.type;
