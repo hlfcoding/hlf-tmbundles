@@ -24,6 +24,8 @@
 	- `(?&lt;!\$)`: negative look-behind for resolving conflict between
 		$-variables and keywords
 
+	- `\$*[a-z0-9_]\w+`: general camel-cased name
+
 	</string>
 	<key>fileTypes</key>
 	<array>
@@ -80,7 +82,8 @@
 					<string>
 						[INSANE]
 						This matches var declaration statements, most commonly to visually
-						mute them.
+						mute them. It's closer at the top b/c I believe order matters here
+						and the priority cascades.
 					</string>
 					<key>name</key>
 					<string>meta.declaration.variables.undefined.js</string>

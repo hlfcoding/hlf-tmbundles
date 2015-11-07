@@ -72,6 +72,9 @@ Model.prototype.fetch = function() {
     .then(this.setState.bind(this));
 };
 _.extend(Model.prototype, {
+  events: {
+    'change:state': function(changed) { console.log(changed); }
+   },
   isFetching: false,
   dataToState: function(data /* , textStatus, jqXhr */) {
     return data.result ? data.result : data;
