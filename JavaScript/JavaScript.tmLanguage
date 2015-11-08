@@ -43,6 +43,10 @@
 	<string>JavaScript</string>
 	<key>patterns</key>
 	<array>
+		<dict>
+			<key>include</key>
+			<string>#core</string>
+		</dict>
 		<!-- <dict>
 			<key>include</key>
 			<string>#trailing-space</string>
@@ -384,14 +388,6 @@
 			<string>keyword.other.environmentjs</string>
 		</dict>
 		<dict>
-			<key>include</key>
-			<string>#block-comment</string>
-		</dict>
-		<dict>
-			<key>include</key>
-			<string>#comment</string>
-		</dict>
-		<dict>
 			<key>begin</key>
 			<string>/\*\*(?!/)</string>
 			<key>captures</key>
@@ -444,84 +440,6 @@
 			<string>storage.modifier.js</string>
 		</dict>
 		<dict>
-			<key>comment</key>
-			<string>
-				[CORE]
-			</string>
-			<key>match</key>
-			<string>(?&lt;!\$)\btrue\b</string>
-			<key>name</key>
-			<string>constant.language.boolean.true.js</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>
-				[CORE]
-			</string>
-			<key>match</key>
-			<string>(?&lt;!\$)\bfalse\b</string>
-			<key>name</key>
-			<string>constant.language.boolean.false.js</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>
-				[CORE]
-			</string>
-			<key>match</key>
-			<string>\bnull\b</string>
-			<key>name</key>
-			<string>constant.language.null.js</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>
-				[CORE]
-			</string>
-			<key>match</key>
-			<string>\b(Infinity|NaN|undefined)\b</string>
-			<key>name</key>
-			<string>constant.language.js</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>
-				[CORE]
-			</string>
-			<key>match</key>
-			<string>\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\.[0-9]+)?))\b</string>
-			<key>name</key>
-			<string>constant.numeric.js</string>
-		</dict>
-		<dict>
-			<key>include</key>
-			<string>#semicolon</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>
-				[CORE]
-			</string>
-			<key>match</key>
-			<string>\.</string>
-			<key>name</key>
-			<string>meta.delimiter.period.js</string>
-		</dict>
-		<dict>
-			<key>include</key>
-			<string>#comma</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>
-				[CORE]
-			</string>
-			<key>match</key>
-			<string>\{|\}</string>
-			<key>name</key>
-			<string>meta.brace.curly.js</string>
-		</dict>
-		<dict>
 			<key>begin</key>
 			<string>(?&lt;=[=(:]|^|return|&amp;&amp;|\|\||!)\s*\(?(/)(?![/*+{}?])</string>
 			<key>beginCaptures</key>
@@ -557,26 +475,6 @@
 					<string>#simple-escaped-char</string>
 				</dict>
 			</array>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>
-				[CORE]
-			</string>
-			<key>match</key>
-			<string>\(|\)</string>
-			<key>name</key>
-			<string>meta.brace.round.js</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>
-				[CORE]
-			</string>
-			<key>match</key>
-			<string>\[|\]</string>
-			<key>name</key>
-			<string>meta.brace.square.js</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -896,8 +794,95 @@
 			<string>#class-name</string>
 		</dict>
 	</array>
+	<!-- SECTION -->
 	<key>repository</key>
 	<dict>
+		<key>core</key>
+		<dict>
+			<key>comment</key>
+			<string>
+				Pattern group for the core language constructs.
+			</string>
+			<key>patterns</key>
+			<array>
+				<dict><key>include</key><string>#comma</string></dict>
+				<dict><key>include</key><string>#period</string></dict>
+				<dict><key>include</key><string>#semicolon</string></dict>
+				<dict><key>include</key><string>#curly-braces</string></dict>
+				<dict><key>include</key><string>#round-braces</string></dict>
+				<dict><key>include</key><string>#square-braces</string></dict>
+				<dict><key>include</key><string>#boolean-constants</string></dict>
+				<dict><key>include</key><string>#null-constants</string></dict>
+				<dict><key>include</key><string>#numeric-constants</string></dict>
+				<dict><key>include</key><string>#other-constants</string></dict>
+				<dict><key>include</key><string>#block-comment</string></dict>
+				<dict><key>include</key><string>#comment</string></dict>
+			</array>
+		</dict>
+		<key>comma</key>
+		<dict>
+			<key>comment</key><string>[CORE] Allows trailing whitespace.</string>
+			<key>match</key><string>,[ |\t]*</string>
+			<key>name</key><string>meta.delimiter.comma.js</string>
+		</dict>
+		<key>period</key>
+		<dict>
+			<key>comment</key><string>[CORE]</string>
+			<key>match</key><string>\.</string>
+			<key>name</key><string>meta.delimiter.period.js</string>
+		</dict>
+		<key>semicolon</key>
+		<dict>
+			<key>comment</key><string>[CORE]</string>
+			<key>match</key><string>\;</string>
+			<key>name</key><string>punctuation.terminator.statement.js</string>
+		</dict>
+		<key>curly-braces</key>
+		<dict>
+			<key>comment</key><string>[CORE][MUTED]</string>
+			<key>match</key><string>\{|\}</string>
+			<key>name</key><string>meta.brace.curly.js</string>
+		</dict>
+		<key>round-braces</key>
+		<dict>
+			<key>comment</key><string>[CORE][MUTED]</string>
+			<key>match</key><string>\(|\)</string>
+			<key>name</key><string>meta.brace.round.js</string>
+		</dict>
+		<key>square-braces</key>
+		<dict>
+			<key>comment</key><string>[CORE][MUTED]</string>
+			<key>match</key><string>\[|\]</string>
+			<key>name</key><string>meta.brace.square.js</string>
+		</dict>
+		<key>boolean-constants</key>
+		<dict>
+			<key>comment</key><string>[CORE]</string>
+			<key>match</key><string>(?&lt;!\$)\b(?:true|false)\b</string>
+			<key>name</key><string>constant.language.boolean.js</string>
+		</dict>
+		<!-- TODO: Not sure why this is separate.-->
+		<key>null-constant</key>
+		<dict>
+			<key>comment</key><string>[CORE]</string>
+			<key>match</key><string>\bnull\b</string>
+			<key>name</key><string>constant.language.null.js</string>
+		</dict>
+		<key>numeric-constants</key>
+		<dict>
+			<key>comment</key>
+			<string>[CORE] Needs to support other base numbers besides 10.</string>
+			<key>match</key>
+			<string>\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\.[0-9]+)?))\b</string>
+			<key>name</key>
+			<string>constant.numeric.js</string>
+		</dict>
+		<key>other-constants</key>
+		<dict>
+			<key>comment</key><string>[CORE]</string>
+			<key>match</key><string>\b(Infinity|NaN|undefined)\b</string>
+			<key>name</key><string>constant.language.js</string>
+		</dict>
 		<key>class-name</key>
 		<dict>
 			<key>comment</key>
@@ -909,17 +894,6 @@
 			<string>\b(_*[A-Z]\w*)\b</string>
 			<key>name</key>
 			<string>entity.name.application.class.js</string>
-		</dict>
-		<key>comma</key>
-		<dict>
-			<key>comment</key>
-			<string>
-				Liberally allows trailing whitespace.
-			</string>
-			<key>match</key>
-			<string>,[ |\t]*</string>
-			<key>name</key>
-			<string>meta.delimiter.comma.js</string>
 		</dict>
 		<key>comment</key>
 		<dict>
@@ -1019,17 +993,10 @@
 			</dict>
 			<key>name</key>
 			<string>entity.name.declaration.parameter.js</string>
-		</dict>
-		<key>semicolon</key>
-		<dict>
-			<key>comment</key>
-			<string>
-				[CORE]
-			</string>
-			<key>match</key>
-			<string>\;</string>
-			<key>name</key>
-			<string>punctuation.terminator.statement.js</string>
+			<key>patterns</key>
+			<array>
+				<dict><key>include</key><string>#core</string></dict>
+			</array>
 		</dict>
 		<key>simple-escaped-char</key>
 		<dict>
