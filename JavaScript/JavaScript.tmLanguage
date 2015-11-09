@@ -473,6 +473,26 @@
 		</dict>
 		<dict>
 			<key>comment</key>
+			<string>
+				[LIST][COMMONJS]
+				CommonJS globals
+			</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict><key>name</key><string>support.type.object.module.js</string></dict>
+				<key>2</key>
+				<dict><key>name</key><string>keyword.operator.accessor.js</string></dict>
+				<key>3</key>
+				<dict><key>name</key><string>support.type.object.module.js</string></dict>
+			</dict>
+			<key>match</key>
+			<string>(?&lt;![.$])\b(exports|module(?:(\.)(children|exports|filename|id|loaded|parent)))?\b</string>
+			<key>name</key>
+			<string>support.variable.global.common.js</string>
+		</dict>
+		<dict>
+			<key>comment</key>
 			<string>DOM constructors only. Includes all dom, HTML, SVG, etc.</string>
 			<key>match</key>
 			<string>\b(Attr|Audio(ProcessingEvent)?|BeforeLoadEvent|Blob|CDATASection|CharacterData|Comment|Document(Fragment|Type)|DomConfiguration|DOM(Error|ErrorHandler|Exception|Implementation(List|Registry|Source)?|Locator|Object|String(List)?|TimeStamp|UserData|(Settable)?TokenList|StringMap)|Entity(Reference)?|MediaQueryList(Listener)?|NameList|NamedNodeMap|Node(Filter|Iterator|List)?|Notation|Plugin(Array)?|ProcessingInstruction|SharedWorker|Text|TimeRanges|Treewalker|TypeInfo|UserDataHandler|Worker(GlobalScope)?|HTML(Document|Element|(Anchor|Applet|Audio|Area|Base|BaseFont|Body|BR|Button|Canvas|Directory|Div|DList|Embed|FieldSet|Font|Form|Frame|FrameSet|Head|Heading|Html|HR|IFrame|Image|Input|Keygen|Label|LI|Link|Map|Menu|Meta|Mod|Object|OList|OptGroup|Option|Output|Paragraph|Param|Pre|Quote|Script|Select|Source|Span|Style|Table(Caption|(Data|Header)?Cell|Col|Row|Section)?|TextArea|Time|Title|Track|UList|Unknown|Video)Element|(All|FormControls|Options|Properties)?Collection)|ElementTimeControl|TimeEvent|Canvas(RenderingContext2D|Gradient|Pattern|PixelArray)|TextMetrics|ImageData|NotifyAudioAvailableEvent|RadioNodeList|SVG(Document|Element|(A|AltGlyph(Def|Item)?|Animation|Animate(Color|Motion|Transform)?|Set|Circle|ClipPath|ColorProfile|Cursor|Defs|Desc|Ellipse|Filter|FE(Blend|ColorMatrix|ComponentTransfer|Composite|ConvolveMatrix|DiffuseLighting|DisplacementMap|DistantLight|Flood|GaussianBlur|Image|Merge(Node)?|Morphology|Offset|(Point|Spot)Light|SpecularLighting|Tile|Turbulence|Func(R|G|B|A))|ComponentTransferFunction|Font(Face(Format|Name|Src|Uri)?)?|ForeignObject|G|Glyph|GlyphRef|(Linear|Radial)?Gradient|HKern|Image|Line|Marker|Mask|Metadata|MissingGlyph|(M|)Path|Pattern|Polyline|Polygon|Rect|Script|Stop|Style|Switch|Symbol|Text|TextPath|Title|TRef|TSpan|Use|View|VKern)Element|Angle|Color|ICCColor|Element(Instance(List)?)|Length(List)?|Matrix|Number(List)?|Paint|Point(List)?|PreserveAspectRatio|Rect|StringList|Transform(List)?|Animated(Angle|Boolean|Enumeration|Integer|Length(List)?|Number(List)?|PreserveAspectRatio|Rect|String|TransformList)|Path(Seg(List|ArcAbs|ArcRel|ClosePath|Curve(to(Cubic((Smooth)?(Abs|Rel))|Quadratic((Smooth)?(Abs|Rel))))|Line(to((Horizontal|Vertical)?(Abs|Rel)))|Moveto(Abs|Rel))?)|FilterPrimitiveStandardAttributes|AnimatedPathData)|CSS((Charset|FontFace|Import|Media|Page)Rule|PrimitiveValue|Rule(List)?|Style(Declaration|Rule|Sheet))|DOM(Parser|DateInput)|Document|Element|(Error)?Event|Event(Exception|Source)?|File(Error|List|Reader)?|FormData|HashChangeEvent|Image|Intent|KeyboardEvent|Media(Controller|Error|List|StreamEvent)|Message(Channel|Event|Port)|MimeType(Array)?|(Mouse|Mutation|OfflineAudioCompletion|Overflow|PageTransition|PopState|Progress|Text|Touch|UI|Wheel)Event|Option|RGBColor|Range(Exception)?|Rect|SQLException|SVG(ZoomEvent|UnitTypes)|WebSocket|WebGL(ActiveInfo|Buffer|ContextEvent|FrameBuffer|Program|Render(Buffer|ingContext)|Shader|Texture|UniformLocation)|WebKit(AnimationEvent|BlobBuilder|CSS((Filter|Transform)Value|(Keyframes?|Region)Rule|Matrix)|Mutation(Observer|Point|TransitionEvent))|XMLHttpRequest|ActiveXObject|Device(Mo|Orienta)tionEvent)\b</string>

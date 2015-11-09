@@ -30,7 +30,7 @@ var foo2 = {
 var bar2 = 'bar',
     baz2 = 'baz',
     bar3, baz3;
-var module = (function() {
+var someModule = (function() {
   var foo;
   return {
     getFoo: function() { return foo; },
@@ -145,6 +145,13 @@ $set = $('.purchase-set');
 $true = $('.choice-true');
 $false = $('.choice-false');
 $void = $('.void-payment');
+
+// CommonJS
+module.exports = {
+  Model: Model,
+  View: View
+};
+console.log(exports);
 
 // ES6
 var odds = evens.map(v => v + 1);
