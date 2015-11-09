@@ -42,20 +42,6 @@ var module = (function() {
 regexp = (/^.*$/g);
 regexp = /^.*$/g;
 
-// jQuery / DOM
-$el = $('#element-1');
-$elem = $('#element-2');
-$node = $('#element-3');
-$debugger = $('.debugger');
-$default = $('.default');
-$event = $('.event');
-$map = $('.map');
-$new = $('.new-item');
-$set = $('.purchase-set');
-$true = $('.choice-true');
-$false = $('.choice-false');
-$void = $('.void-payment');
-
 // Class
 function Model(props) {
   this.props = props;
@@ -123,6 +109,12 @@ var timeout = setTimeout($.noop, 500);
 clearTimeout(timeout);
 
 // DOM
+var element, elem, el, event, evt, e, date, view;
+
+element = elem = el = document.createElement('div');
+event = evt = e = new CustomEvent('custom');
+date = new Date();
+
 function handleEvent(event) {
   var el = event.target;
   event.preventDefault();
@@ -130,16 +122,29 @@ function handleEvent(event) {
   el.setAttribute('data-name', 'value');
 }
 
-var el = document.createElement('div');
 el.addEventListener('click', handleEvent);
 el.removeEventListener('click', handleEvent);
 el.onchange = $.noop;
 
-var view = new View();
+view = new View();
 view.setAttribute('key', 'value');
 view.addEventListener('custom', $.noop);
 view.removeEventListener('custom', $.noop);
 view.onchange = $.noop;
+
+// jQuery
+$el = $('#element-1');
+$elem = $('#element-2');
+$node = $('#element-3');
+$debugger = $('.debugger');
+$default = $('.default');
+$event = $('.event');
+$map = $('.map');
+$new = $('.new-item');
+$set = $('.purchase-set');
+$true = $('.choice-true');
+$false = $('.choice-false');
+$void = $('.void-payment');
 
 // ES6
 var odds = evens.map(v => v + 1);
