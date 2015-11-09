@@ -47,10 +47,6 @@
 			<key>include</key>
 			<string>#core</string>
 		</dict>
-		<!-- <dict>
-			<key>include</key>
-			<string>#trailing-space</string>
-		</dict> -->
 		<dict>
 			<key>begin</key>
 			<string>^[\s\t]*(var)\s</string>
@@ -934,13 +930,6 @@
 			<string>\*/</string>
 			<key>name</key>
 			<string>comment.block.js</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#trailing-space</string>
-				</dict>
-			</array>
 		</dict>
 		<key>escaped-char</key>
 		<dict>
@@ -1005,17 +994,6 @@
 			<key>name</key>
 			<string>constant.character.escape.js</string>
 		</dict>
-		<!-- <key>trailing-space</key>
-		<dict>
-			<key>comment</key>
-			<string>
-				[CONFLICT]
-			</string>
-			<key>match</key>
-			<string>(?&lt;=[\S;,{\(\[\b])\s+$</string>
-			<key>name</key>
-			<string>invalid.illegal.js</string>
-		</dict> -->
 	</dict>
 	<key>scopeName</key>
 	<string>source.js</string>
