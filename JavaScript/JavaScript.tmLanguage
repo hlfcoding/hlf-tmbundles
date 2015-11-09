@@ -406,36 +406,6 @@
 			<string>comment.block.documentation.js</string>
 		</dict>
 		<dict>
-			<key>comment</key>
-			<string>
-				[CORE]
-			</string>
-			<key>match</key>
-			<string>\b(function|var)\b</string>
-			<key>name</key>
-			<string>storage.type.common.js</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>
-				[CORE]
-			</string>
-			<key>match</key>
-			<string>(?&lt;!\$)\b(boolean|byte|char|class|double|enum|float|int|interface|long|short|void)\b</string>
-			<key>name</key>
-			<string>storage.type.js</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>
-				[CORE]
-			</string>
-			<key>match</key>
-			<string>(?&lt;!\$)\b(const|export|extends|final|get|implements|native|private|protected|public|set|static|synchronized|throws|transient|volatile)\b</string>
-			<key>name</key>
-			<string>storage.modifier.js</string>
-		</dict>
-		<dict>
 			<key>begin</key>
 			<string>(?&lt;=[=(:]|^|return|&amp;&amp;|\|\||!)\s*\(?(/)(?![/*+{}?])</string>
 			<key>beginCaptures</key>
@@ -469,80 +439,6 @@
 				<dict>
 					<key>include</key>
 					<string>#simple-escaped-char</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>"</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.begin.js</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>
-				[CORE]
-				Simple range search. Tokenize the quotes. Add complex regex for utf
-				escape. Placed at the head to give priority.
-			</string>
-			<key>end</key>
-			<string>"</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.end.js</string>
-				</dict>
-			</dict>
-			<key>name</key>
-			<string>string.quoted.double.js</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#escaped-char</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>'</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.begin.js</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>
-				[CORE]
-				Simple range search. Tokenize the quotes. Add complex regex for utf
-				escape. Placed at the head to give priority.
-			</string>
-			<key>end</key>
-			<string>'</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.end.js</string>
-				</dict>
-			</dict>
-			<key>name</key>
-			<string>string.quoted.single.js</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#escaped-char</string>
 				</dict>
 			</array>
 		</dict>
@@ -811,8 +707,13 @@
 				<dict><key>include</key><string>#null-constants</string></dict>
 				<dict><key>include</key><string>#numeric-constants</string></dict>
 				<dict><key>include</key><string>#other-constants</string></dict>
+				<dict><key>include</key><string>#type-keywords</string></dict>
+				<dict><key>include</key><string>#common-type-keywords</string></dict>
+				<dict><key>include</key><string>#modifier-type-keywords</string></dict>
 				<dict><key>include</key><string>#block-comment</string></dict>
 				<dict><key>include</key><string>#comment</string></dict>
+				<dict><key>include</key><string>#double-quote-string</string></dict>
+				<dict><key>include</key><string>#single-quote-string</string></dict>
 			</array>
 		</dict>
 		<key>comma</key>
@@ -879,6 +780,86 @@
 			<key>match</key><string>\b(Infinity|NaN|undefined)\b</string>
 			<key>name</key><string>constant.language.js</string>
 		</dict>
+		<key>type-keywords</key>
+		<dict>
+			<key>comment</key><string>[CORE]</string>
+			<key>match</key>
+			<string>(?&lt;!\$)\b(boolean|byte|char|class|double|enum|float|int|interface|long|short|void)\b</string>
+			<key>name</key><string>storage.type.js</string>
+		</dict>
+		<key>common-type-keywords</key>
+		<dict>
+			<key>comment</key><string>[CORE]</string>
+			<key>match</key><string>\b(function|var)\b</string>
+			<key>name</key><string>storage.type.common.js</string>
+		</dict>
+		<key>modifier-type-keywords</key>
+		<dict>
+			<key>comment</key><string>[CORE]</string>
+			<key>match</key>
+			<string>(?&lt;!\$)\b(const|export|extends|final|get|implements|native|private|protected|public|set|static|synchronized|throws|transient|volatile)\b</string>
+			<key>name</key><string>storage.modifier.js</string>
+		</dict>
+		<key>comment</key>
+		<dict>
+			<key>captures</key>
+			<dict><key>1</key>
+				<dict><key>name</key><string>punctuation.definition.comment.js</string></dict>
+			</dict>
+			<key>comment</key>
+			<string>[CORE] Simple search from end of line using wildcard.</string>
+			<key>match</key><string>(//).*$\n?</string>
+			<key>name</key><string>comment.line.double-slash.js</string>
+		</dict>
+		<key>block-comment</key>
+		<dict>
+			<key>begin</key><string>/\*</string>
+			<key>captures</key>
+			<dict><key>0</key>
+				<dict><key>name</key><string>punctuation.definition.comment.js</string></dict>
+			</dict>
+			<key>comment</key><string>[CORE]</string>
+			<key>end</key><string>\*/</string>
+			<key>name</key><string>comment.block.js</string>
+		</dict>
+		<key>double-quote-string</key>
+		<dict>
+			<key>begin</key><string>"</string>
+			<key>beginCaptures</key>
+			<dict><key>0</key>
+				<dict><key>name</key><string>punctuation.definition.string.begin.js</string></dict>
+			</dict>
+			<key>comment</key><string>[CORE]</string>
+			<key>end</key><string>"</string>
+			<key>endCaptures</key>
+			<dict><key>0</key>
+				<dict><key>name</key><string>punctuation.definition.string.end.js</string></dict>
+			</dict>
+			<key>name</key><string>string.quoted.double.js</string>
+			<key>patterns</key>
+			<array>
+				<dict><key>include</key><string>#escaped-char</string></dict>
+			</array>
+		</dict>
+		<key>single-quote-string</key>
+		<dict>
+			<key>begin</key><string>'</string>
+			<key>beginCaptures</key>
+			<dict><key>0</key>
+				<dict><key>name</key><string>punctuation.definition.string.begin.js</string></dict>
+			</dict>
+			<key>comment</key><string>[CORE]</string>
+			<key>end</key><string>'</string>
+			<key>endCaptures</key>
+			<dict><key>0</key>
+				<dict><key>name</key><string>punctuation.definition.string.end.js</string></dict>
+			</dict>
+			<key>name</key><string>string.quoted.single.js</string>
+			<key>patterns</key>
+			<array>
+				<dict><key>include</key><string>#escaped-char</string></dict>
+			</array>
+		</dict>
 		<key>class-name</key>
 		<dict>
 			<key>comment</key>
@@ -891,52 +872,12 @@
 			<key>name</key>
 			<string>entity.name.application.class.js</string>
 		</dict>
-		<key>comment</key>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.comment.js</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>
-				Simple search from end of line using wildcard.
-			</string>
-			<key>match</key>
-			<string>(//).*$\n?</string>
-			<key>name</key>
-			<string>comment.line.double-slash.js</string>
-		</dict>
-		<key>block-comment</key>
-		<dict>
-			<key>begin</key>
-			<string>/\*</string>
-			<key>captures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.comment.js</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>
-				[CORE]
-			</string>
-			<key>end</key>
-			<string>\*/</string>
-			<key>name</key>
-			<string>comment.block.js</string>
-		</dict>
 		<key>escaped-char</key>
 		<dict>
+			<key>comment</key><string>Complex regex for utf escape.</string>
 			<key>match</key>
 			<string>\\(x\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)</string>
-			<key>name</key>
-			<string>constant.character.escape.js</string>
+			<key>name</key><string>constant.character.escape.js</string>
 		</dict>
 		<key>parameters</key>
 		<dict>
