@@ -33,6 +33,7 @@ var bar2 = 'bar',
 var someModule = (function() {
   var foo;
   return {
+    nums: { 1: 1, 2: 2 },
     getFoo: function() { return foo; },
     setFoo: function(newValue) { foo = newValue; }
   };

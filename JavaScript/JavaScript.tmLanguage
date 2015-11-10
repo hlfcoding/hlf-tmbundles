@@ -598,29 +598,8 @@
 			<string>meta.declaration.class.js</string>
 		</dict>
 		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.property.js</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.operator.js</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>
-				[HACK]
-				Accounts for ternaries, regex, selectors, other weirdness.
-				String keys also count.
-			</string>
-			<key>match</key>
-			<string>[^?/{'"$,]*(?&lt;!case\s)\b(['"]?\$*[a-z0-9_]\w*['"]?)(?&lt;!default)(:)</string>
-			<key>name</key>
-			<string>meta.declaration.property.js</string>
+			<key>include</key>
+			<string>#property-declaration</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -859,6 +838,26 @@
 			<array>
 				<dict><key>include</key><string>#escaped-char</string></dict>
 			</array>
+		</dict>
+		<key>property-declaration</key>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict><key>name</key><string>entity.name.property.js</string></dict>
+				<key>2</key>
+				<dict><key>name</key><string>keyword.operator.js</string></dict>
+			</dict>
+			<key>comment</key>
+			<string>
+				[HACK]
+				Accounts for ternaries, regex, selectors, other weirdness.
+				String keys also count.
+			</string>
+			<key>match</key>
+			<string>[^?/{'"$,]*(?&lt;!case\s)\b(['"]?\$*[a-z0-9_]\w*['"]?)(?&lt;!default)(:)</string>
+			<key>name</key>
+			<string>meta.declaration.property.js</string>
 		</dict>
 		<key>class-name</key>
 		<dict>
