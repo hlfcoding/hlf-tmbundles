@@ -45,7 +45,7 @@
 	<array>
 		<dict>
 			<key>begin</key>
-			<string>^[\s\t]*(var)\s</string>
+			<string>^[\s\t]*(var|let)\s</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -84,7 +84,7 @@
 					<key>name</key>
 					<string>meta.declaration.variables.undefined.js</string>
 					<key>match</key>
-					<string>(?&lt;=,\s|\s\s|var\s)[^=\s!#%^&amp;*()+"',:?]+(?=,|;)</string>
+					<string>(?&lt;=,\s|\s\s|let\s|var\s)[^=\s!#%^&amp;*()+"',:?]+(?=,|;)</string>
 				</dict>
 				<dict>
 					<key>include</key>
@@ -204,15 +204,10 @@
 			<string>#core-2</string>
 		</dict>
 		<dict>
-			<key>comment</key>
-			<string>
-				[ADDITIONS]
-				- `let`
-			</string>
+			<key>comment</key><string>[ES6]</string>
 			<key>match</key>
-			<string>(?&lt;!\$)\b(break|case|catch|continue|default|do|else|finally|for|goto|if|import|let|package|return|switch|throw|try|while)\b</string>
-			<key>name</key>
-			<string>keyword.control.js</string>
+			<string>(?&lt;!\$)\b(break|case|catch|continue|default|do|else|finally|for|goto|if|import|package|return|switch|throw|try|while)\b</string>
+			<key>name</key><string>keyword.control.js</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -798,7 +793,7 @@
 		<key>common-type-keywords</key>
 		<dict>
 			<key>comment</key><string>[CORE]</string>
-			<key>match</key><string>\b(function|var)\b</string>
+			<key>match</key><string>\b(function|let|var)\b</string>
 			<key>name</key><string>storage.type.common.js</string>
 		</dict>
 		<key>modifier-type-keywords</key>
