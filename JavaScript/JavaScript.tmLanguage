@@ -598,10 +598,6 @@
 			<string>meta.declaration.class.js</string>
 		</dict>
 		<dict>
-			<key>include</key>
-			<string>#property-declaration</string>
-		</dict>
-		<dict>
 			<key>comment</key>
 			<string>
 				[CONVENTION]
@@ -665,7 +661,6 @@
 				<dict><key>include</key><string>#square-braces</string></dict>
 				<dict><key>include</key><string>#boolean-constants</string></dict>
 				<dict><key>include</key><string>#null-constant</string></dict>
-				<dict><key>include</key><string>#numeric-constants</string></dict>
 				<dict><key>include</key><string>#other-constants</string></dict>
 			</array>
 		</dict>
@@ -682,6 +677,11 @@
 				<dict><key>include</key><string>#type-keywords</string></dict>
 				<dict><key>include</key><string>#common-type-keywords</string></dict>
 				<dict><key>include</key><string>#modifier-type-keywords</string></dict>
+				<dict>
+					<key>comment</key><string>Needs to be above #numeric-constants</string>
+					<key>include</key><string>#property-declaration</string>
+				</dict>
+				<dict><key>include</key><string>#numeric-constants</string></dict>
 				<dict><key>include</key><string>#block-comment</string></dict>
 				<dict><key>include</key><string>#comment</string></dict>
 				<dict><key>include</key><string>#double-quote-string</string></dict>
