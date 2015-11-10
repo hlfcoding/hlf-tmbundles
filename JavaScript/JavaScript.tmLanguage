@@ -173,15 +173,31 @@
 			</array>
 		</dict>
 		<dict>
+			<key>begin</key>
+			<string>(?:\([^\)]*\))\s*(\=\&gt;)\s*(?=\{?)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict><key>name</key><string>storage.type.function.arrow.js</string></dict>
+			</dict>
 			<key>comment</key>
 			<string>
-				[ES6]
-				Easier to implement if not part of previous pattern.
+				[ES6][FAILING]
+				Matches: `([params]) =&gt; {`
 			</string>
-			<key>match</key>
-			<string>\=\&gt;</string>
-			<key>name</key>
-			<string>storage.type.function.arrow.js</string>
+			<key>end</key>
+			<string>\{</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict><key>name</key><string>meta.brace.curly.js</string></dict>
+			</dict>
+			<key>name</key><string>meta.declaration.function.arrow.js</string>
+			<key>patterns</key>
+			<array>
+				<dict><key>include</key><string>#parameters</string></dict>
+				<dict><key>include</key><string>#block-comment</string></dict>
+			</array>
 		</dict>
 		<dict>
 			<key>include</key>

@@ -154,8 +154,9 @@ module.exports = {
 console.log(exports);
 
 // ES6
-var odds = evens.map(v => v + 1);
-var nums = evens.map((v, i) => v + i);
+var odds, nums, fives;
+odds = evens.map(v => v + 1);
+nums = evens.map((v, i) => { return v + i; });
 nums.forEach(v => {
   if (v % 5 === 0) { fives.push(v); }
 });
