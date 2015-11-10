@@ -839,15 +839,9 @@
 		</dict>
 		<key>class-name</key>
 		<dict>
-			<key>comment</key>
-			<string>
-				[CONVENTION]
-				Matches `ClassFoo...`.
-			</string>
-			<key>match</key>
-			<string>\b(_*[A-Z]\w*)\b</string>
-			<key>name</key>
-			<string>entity.name.application.class.js</string>
+			<key>comment</key><string>[CONVENTION] Matches `ClassFoo...`.</string>
+			<key>match</key><string>\b(_*[A-Z]\w*)\b</string>
+			<key>name</key><string>entity.name.application.class.js</string>
 		</dict>
 		<key>escaped-char</key>
 		<dict>
@@ -863,43 +857,21 @@
 			<key>captures</key>
 			<dict>
 				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>meta.brace.js</string>
-				</dict>
+				<dict><key>name</key><string>meta.brace.js</string></dict>
 				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.operator.spread.js</string>
-				</dict>
+				<dict><key>name</key><string>keyword.operator.spread.js</string></dict>
 				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>variable.parameter.js</string>
-				</dict>
+				<dict><key>name</key><string>variable.parameter.js</string></dict>
 				<key>4</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.operator.assignment.default.js</string>
-				</dict>
+				<dict><key>name</key><string>keyword.operator.assignment.default.js</string></dict>
 				<key>5</key>
-				<dict>
-					<key>name</key>
-					<string>constant.parameter-default.js</string>
-				</dict>
+				<dict><key>name</key><string>constant.parameter-default.js</string></dict>
 				<key>6</key>
-				<dict>
-					<key>name</key>
-					<string>meta.delimiter.comma.js</string>
-				</dict>
+				<dict><key>name</key><string>meta.delimiter.comma.js</string></dict>
 				<key>7</key>
-				<dict>
-					<key>name</key>
-					<string>meta.brace.js</string>
-				</dict>
+				<dict><key>name</key><string>meta.brace.js</string></dict>
 			</dict>
-			<key>name</key>
-			<string>entity.name.declaration.parameter.js</string>
+			<key>name</key><string>entity.name.declaration.parameter.js</string>
 			<key>patterns</key>
 			<array>
 				<dict><key>include</key><string>#core</string></dict>
