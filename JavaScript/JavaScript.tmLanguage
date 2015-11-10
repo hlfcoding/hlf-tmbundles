@@ -127,10 +127,10 @@
 				or `[call] "some:event", function...`.
 			</string>
 			<key>end</key>
-			<string>(\{)</string>
+			<string>\{</string>
 			<key>endCaptures</key>
 			<dict>
-				<key>1</key>
+				<key>0</key>
 				<dict><key>name</key><string>meta.brace.curly.js</string></dict>
 			</dict>
 			<key>name</key><string>meta.declaration.function.js</string>
@@ -159,10 +159,10 @@
 				or `static ([params]) {`.
 			</string>
 			<key>end</key>
-			<string>(\{)</string>
+			<string>\{</string>
 			<key>endCaptures</key>
 			<dict>
-				<key>1</key>
+				<key>0</key>
 				<dict><key>name</key><string>meta.brace.curly.js</string></dict>
 			</dict>
 			<key>name</key><string>meta.declaration.function.method.js</string>
