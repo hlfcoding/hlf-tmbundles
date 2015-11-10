@@ -73,6 +73,8 @@
 			<string>meta.declaration.variables.js</string>
 			<key>patterns</key>
 			<array>
+				<dict><key>include</key><string>#core</string></dict>
+				<dict><key>include</key><string>#core-2</string></dict>
 				<dict>
 					<key>comment</key>
 					<string>
@@ -84,16 +86,9 @@
 					<key>name</key>
 					<string>meta.declaration.variables.undefined.js</string>
 					<key>match</key>
-					<string>(?&lt;=,\s|\s\s|let\s|var\s)[^=\s!#%^&amp;*()+"',:?]+(?=,|;)</string>
+					<string>(?&lt;=,\s|\s\s|let\s|var\s)\$*[a-z0-9_]\w+(?=,|;)</string>
 				</dict>
-				<dict>
-					<key>include</key>
-					<string>#comma</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>$self</string>
-				</dict>
+				<dict><key>include</key><string>$self</string></dict>
 			</array>
 		</dict>
 		<dict>
@@ -690,7 +685,7 @@
 				<dict><key>include</key><string>#round-braces</string></dict>
 				<dict><key>include</key><string>#square-braces</string></dict>
 				<dict><key>include</key><string>#boolean-constants</string></dict>
-				<dict><key>include</key><string>#null-constants</string></dict>
+				<dict><key>include</key><string>#null-constant</string></dict>
 				<dict><key>include</key><string>#numeric-constants</string></dict>
 				<dict><key>include</key><string>#other-constants</string></dict>
 			</array>
