@@ -204,12 +204,6 @@
 			<string>#core-2</string>
 		</dict>
 		<dict>
-			<key>comment</key><string>[ES6]</string>
-			<key>match</key>
-			<string>(?&lt;!\$)\b(break|case|catch|continue|default|do|else|finally|for|goto|if|import|package|return|switch|throw|try|while)\b</string>
-			<key>name</key><string>keyword.control.js</string>
-		</dict>
-		<dict>
 			<key>comment</key>
 			<string>
 				Since this needs to override string, this needs to go before it.
@@ -710,6 +704,7 @@
 			</string>
 			<key>patterns</key>
 			<array>
+				<dict><key>include</key><string>#control-keywords</string></dict>
 				<dict><key>include</key><string>#type-keywords</string></dict>
 				<dict><key>include</key><string>#common-type-keywords</string></dict>
 				<dict><key>include</key><string>#modifier-type-keywords</string></dict>
@@ -783,22 +778,29 @@
 			<key>match</key><string>\b(Infinity|NaN|undefined)\b</string>
 			<key>name</key><string>constant.language.js</string>
 		</dict>
+		<key>control-keywords</key>
+		<dict>
+			<key>comment</key><string>[CORE][ES6]</string>
+			<key>match</key>
+			<string>(?&lt;!\$)\b(break|case|catch|continue|default|do|else|finally|for|goto|if|import|package|return|switch|throw|try|while)\b</string>
+			<key>name</key><string>keyword.control.js</string>
+		</dict>
 		<key>type-keywords</key>
 		<dict>
-			<key>comment</key><string>[CORE]</string>
+			<key>comment</key><string>[CORE][ES6]</string>
 			<key>match</key>
 			<string>(?&lt;!\$)\b(boolean|byte|char|class|double|enum|float|int|interface|long|short|void)\b</string>
 			<key>name</key><string>storage.type.js</string>
 		</dict>
 		<key>common-type-keywords</key>
 		<dict>
-			<key>comment</key><string>[CORE]</string>
+			<key>comment</key><string>[CORE][ES6]</string>
 			<key>match</key><string>\b(function|let|var)\b</string>
 			<key>name</key><string>storage.type.common.js</string>
 		</dict>
 		<key>modifier-type-keywords</key>
 		<dict>
-			<key>comment</key><string>[CORE]</string>
+			<key>comment</key><string>[CORE][ES6]</string>
 			<key>match</key>
 			<string>(?&lt;!\$)\b(const|export|extends|final|get|implements|native|private|protected|public|set|static|synchronized|throws|transient|volatile)\b</string>
 			<key>name</key><string>storage.modifier.js</string>
