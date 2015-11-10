@@ -184,6 +184,10 @@
 			<string>storage.type.function.arrow.js</string>
 		</dict>
 		<dict>
+			<key>include</key>
+			<string>#core-2</string>
+		</dict>
+		<dict>
 			<key>comment</key>
 			<string>
 				[ADDITIONS]
@@ -684,6 +688,17 @@
 				<dict><key>include</key><string>#null-constants</string></dict>
 				<dict><key>include</key><string>#numeric-constants</string></dict>
 				<dict><key>include</key><string>#other-constants</string></dict>
+			</array>
+		</dict>
+		<key>core-2</key>
+		<dict>
+			<key>comment</key>
+			<string>
+				Pattern group for the secondary core language constructs.
+				These are included after other major (and fragile) patterns.
+			</string>
+			<key>patterns</key>
+			<array>
 				<dict><key>include</key><string>#type-keywords</string></dict>
 				<dict><key>include</key><string>#common-type-keywords</string></dict>
 				<dict><key>include</key><string>#modifier-type-keywords</string></dict>
