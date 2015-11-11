@@ -108,6 +108,11 @@ for (var i2 = 0, l2 = items.length; i2 < l2; i2++) {}
 // JS Native
 var timeout = setTimeout($.noop, 500);
 clearTimeout(timeout);
+(function() {
+  setTimeout(function() {
+    console.log('Test for class method pattern regression.');
+  });
+}());
 
 // DOM
 var element, elem, el, event, evt, e, date, view;

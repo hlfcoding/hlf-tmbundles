@@ -137,7 +137,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^\s+(?:(get|set|static)\s+)?(\$*[a-z0-9_]\w+(?=\([^\)]*\)\s*\{))</string>
+			<string>^\s+(?:(get|set|static)\s+)?(\$*[a-z0-9_]\w+(?=\([^\(\)]*\)\s*\{))</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -169,7 +169,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(?:\([^\)]*\))\s*(\=\&gt;)\s*(?=\{?)</string>
+			<string>(?:\([^\(\)]*\))\s*(\=\&gt;)\s*(?=\{?)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
