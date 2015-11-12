@@ -9,6 +9,23 @@
 
 	See readme for details.
 
+	## Package-specific scope names (not in stock, Babel)
+
+	- entity.name.declaration.function.js
+	- entity.name.declaration.function.method.js
+	- meta.declaration.class.js
+	- meta.declaration.function.js
+	- meta.declaration.function.arrow.js
+	- meta.declaration.function.method.js
+	- meta.declaration.property.js
+	- storage.type.common.js
+	- support.constant.dom.js
+	- support.function.global.dom.js
+	- support.function.instance.dom.js
+	- support.type.class.dom.js
+	- support.variable.global.dom.js
+	- support.variable.instance.dom.js
+
 	## Fragments
 
 	- `(?&lt;!\$)`: negative look-behind for resolving conflict between
