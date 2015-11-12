@@ -174,6 +174,8 @@ class SkinnedMesh extends THREE.Mesh {
     this.idMatrix = SkinnedMesh.defaultMatrix();
     this.bones = [];
     this.boneMatrices = [];
+
+    this.attributes = {};
     //...
   }
   containsBones(...bones) {
@@ -182,6 +184,12 @@ class SkinnedMesh extends THREE.Mesh {
   update(camera = null) {
     //...
     super.update();
+  }
+  get(key) {
+    return this.attributes[key];
+  }
+  set(key, value) {
+    this.attributes[key] = value;
   }
   get $container() {
     return $('.container');
@@ -196,6 +204,10 @@ class SkinnedMesh extends THREE.Mesh {
     return new THREE.Matrix4();
   }
 }
+
+let mesh = new SkinnedMesh();
+mesh.get('some-key');
+mesh.set('some-key', 1);
 
 // Basic literal string creation
 var string = `In JavaScript '\n' is a line-feed.`;

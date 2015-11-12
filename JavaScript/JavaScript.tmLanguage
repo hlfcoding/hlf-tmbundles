@@ -763,7 +763,7 @@
 		<dict>
 			<key>comment</key><string>[CORE][ES6]</string>
 			<key>match</key>
-			<string>(?&lt;!\$)\b(boolean|byte|char|class|double|enum|float|int|interface|long|short|void)\b</string>
+			<string>(?&lt;!\$)\b(boolean|byte|char|class|const|double|enum|float|int|interface|long|short|void)\b</string>
 			<key>name</key><string>storage.type.js</string>
 		</dict>
 		<key>common-type-keywords</key>
@@ -776,7 +776,7 @@
 		<dict>
 			<key>comment</key><string>[CORE][ES6]</string>
 			<key>match</key>
-			<string>(?&lt;!\$)\b(const|export|extends|final|get|implements|native|private|protected|public|set|static|synchronized|throws|transient|volatile)\b</string>
+			<string>(?&lt;![.$])\b(export|extends|final|get|implements|native|private|protected|public|set|static|synchronized|throws|transient|volatile)\b</string>
 			<key>name</key><string>storage.modifier.js</string>
 		</dict>
 		<key>comment</key>
