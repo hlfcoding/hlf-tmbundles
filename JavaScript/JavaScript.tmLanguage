@@ -754,27 +754,27 @@
 		</dict>
 		<key>control-keywords</key>
 		<dict>
-			<key>comment</key><string>[CORE][ES6]</string>
+			<key>comment</key><string>[CORE][ES3][ES6]</string>
 			<key>match</key>
 			<string>(?&lt;!\$)\b(break|case|catch|continue|default|do|else|finally|for|goto|if|import|package|return|switch|throw|try|while)\b</string>
 			<key>name</key><string>keyword.control.js</string>
 		</dict>
 		<key>type-keywords</key>
 		<dict>
-			<key>comment</key><string>[CORE][ES6]</string>
+			<key>comment</key><string>[CORE][ES3][ES6]</string>
 			<key>match</key>
 			<string>(?&lt;!\$)\b(boolean|byte|char|class|const|double|enum|float|int|interface|long|short|void)\b</string>
 			<key>name</key><string>storage.type.js</string>
 		</dict>
 		<key>common-type-keywords</key>
 		<dict>
-			<key>comment</key><string>[CORE][ES6]</string>
+			<key>comment</key><string>[CORE][ES3][ES6]</string>
 			<key>match</key><string>\b(function|let|var)\b</string>
 			<key>name</key><string>storage.type.common.js</string>
 		</dict>
 		<key>modifier-type-keywords</key>
 		<dict>
-			<key>comment</key><string>[CORE][ES6]</string>
+			<key>comment</key><string>[CORE][ES3][ES6]</string>
 			<key>match</key>
 			<string>(?&lt;![.$])\b(export|extends|final|get|implements|native|private|protected|public|set|static|synchronized|throws|transient|volatile)\b</string>
 			<key>name</key><string>storage.modifier.js</string>
