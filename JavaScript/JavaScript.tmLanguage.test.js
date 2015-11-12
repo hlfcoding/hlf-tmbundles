@@ -152,7 +152,10 @@ $true = $('.choice-true');
 $false = $('.choice-false');
 $void = $('.void-payment');
 
+}(jQuery));
+
 // CommonJS
+
 module.exports = {
   Model: Model,
   View: View
@@ -160,6 +163,11 @@ module.exports = {
 console.log(exports);
 
 // ES6
+
+(function($) {
+
+'use strict';
+
 let fives;
 let odds = evens.map(v => v + 1);
 let nums = evens.map((v, i) => { return v + i; });
@@ -220,4 +228,41 @@ not legal.`;
 var name = "Bob", time = "today";
 console.log(`Hello ${name}, how are you ${time}?`);
 
-}(jQuery));
+// list matching
+let [a, , b] = [1,2,3];
+
+// object matching
+var { op: a, lhs: { op: b }, rhs: c } = getASTNode();
+
+// object matching shorthand
+// binds `op`, `lhs` and `rhs` in scope
+var {op, lhs, rhs} = getASTNode();
+
+}());
+
+// lib/math.js
+export function sum(x, y) {
+  'use strict';
+  return x + y;
+}
+export var pi = 3.141593;
+
+// app.js
+import * as math from "lib/math";
+alert("2π = " + math.sum(math.pi, math.pi));
+
+// otherApp.js
+import {sum, pi} from "lib/math";
+alert("2π = " + sum(pi, pi));
+
+// lib/mathplusplus.js
+export * from "lib/math";
+export var e = 2.71828182846;
+export default function(x) {
+  'use strict';
+  return Math.log(x);
+}
+
+// app.js
+import ln, {pi, e} from "lib/mathplusplus";
+alert("2π = " + ln(e) * pi * 2);
