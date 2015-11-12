@@ -97,7 +97,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(\.)?(['"]?\$*[a-z0-9_][a-zA-Z0-9_:]*\w['"]?)?\s*([=:,])?\s*(\s+\()?\b(function)\b\s*(\$*[a-z0-9_]\w*)?\b\s*(?=\()</string>
+			<string>(\.)?(['"]?\$*[a-z0-9_][a-zA-Z0-9_:]*\w['"]?\s*([=:]))?\s*[,]?\s*(\s+\()?\b(function)\b\s*(\$*[a-z0-9_]\w*)?\b\s*(?=\()</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>

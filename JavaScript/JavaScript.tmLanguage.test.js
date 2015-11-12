@@ -68,7 +68,7 @@ _.extend(Model.prototype, {
   },
   setState: function(state) {
     this._state = state;
-  },
+  }
 });
 
 // Constant
