@@ -30,6 +30,7 @@ var foo2 = {
 var bar2 = 'bar',
     baz2 = 'baz',
     bar3, baz3;
+var foo3 = foo(bar, baz, bar2);
 var someModule = (function() {
   var foo;
   return {
