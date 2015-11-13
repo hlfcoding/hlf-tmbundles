@@ -251,6 +251,8 @@ export var pi = 3.141593;
 import * as math from "lib/math";
 alert("2π = " + math.sum(math.pi, math.pi));
 
+transform.from({});
+
 // otherApp.js
 import {sum, pi} from "lib/math";
 alert("2π = " + sum(pi, pi));
