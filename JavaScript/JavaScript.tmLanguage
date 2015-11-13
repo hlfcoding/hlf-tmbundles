@@ -63,8 +63,9 @@
 			</dict>
 			<key>comment</key>
 			<string>
-				[CONFLICT]
-				Easy on the eyes.
+				[FRAGILE]
+				Match var statements that aren't destructuring or assignment from the
+				results of a function call.
 			</string>
 			<key>end</key>
 			<string>(;)\s*$</string>
@@ -86,9 +87,9 @@
 					<key>comment</key>
 					<string>
 						[INSANE]
-						This matches var declaration statements, most commonly to visually
-						mute them. It's closer at the top b/c I believe order matters here
-						and the priority cascades.
+						This matches undefined var declaration statements, most commonly to
+						visually mute them. It's closer at the top b/c I believe order
+						matters here and the priority cascades.
 					</string>
 					<key>name</key>
 					<string>meta.declaration.variables.undefined.js</string>
@@ -122,7 +123,7 @@
 			</dict>
 			<key>comment</key>
 			<string>
-				[CONFLICT]
+				[FRAGILE]
 				Matches: `foo: function`
 				or `foo: function ([params]) {`
 				or `function foo ([params]) {`
@@ -386,7 +387,7 @@
 			</dict>
 			<key>comment</key>
 			<string>
-				[CONFLICT]
+				[FRAGILE]
 				Only match if preceded by certain things. Follows linting
 				advice and wraps an optional `()`.
 			</string>
@@ -636,7 +637,7 @@
 			</dict>
 			<key>comment</key>
 			<string>
-				[CONFLICT]
+				[FRAGILE]
 				String keys also account.
 			</string>
 			<key>match</key>
