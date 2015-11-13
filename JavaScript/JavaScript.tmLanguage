@@ -28,7 +28,7 @@
 
 	## Fragments
 
-	- `(?&lt;!\$)`: negative look-behind for resolving conflict between
+	- `(?&lt;![.$])`: negative look-behind for resolving conflict between
 		$-variables and keywords
 
 	- `\$*[a-z0-9_]\w+`: general camel-cased name
@@ -269,20 +269,7 @@
 			</array>
 		</dict>
 		<dict>
-			<key>comment</key><string>[CORE] Note each match is exact. A better way?</string>
-			<key>match</key>
-			<string>(?&lt;!\$)\b(delete|in|instanceof|new|typeof|with)\b|!|%|&amp;|\*|\-\-|\-|\+\+|\+|~|===|==|=|!=|!==|&lt;=|&gt;=|&lt;&lt;=|&gt;&gt;=|&gt;&gt;&gt;=|&lt;&gt;|&lt;|&gt;|&amp;&amp;|\|\||\?\:|\?|\:|\*=|(?&lt;!\()/=|%=|\+=|\-=|&amp;=|\^=</string>
-			<key>name</key><string>keyword.operator.js</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>[CORE] These are technically variables, but they are more magical.</string>
-			<key>match</key>
-			<string>\b(this|super|arguments|(?&lt;=\.)(prototype|constructor|caller))\b</string>
-			<key>name</key><string>variable.language.common.js</string>
-		</dict>
-		<dict>
-			<key>match</key><string>(?&lt;!\$)\b(debugger)\b</string>
+			<key>match</key><string>(?&lt;![.$])\b(debugger)\b</string>
 			<key>name</key><string>keyword.other.environmentjs</string>
 		</dict>
 		<dict>
@@ -531,6 +518,8 @@
 				<dict><key>include</key><string>#type-keywords</string></dict>
 				<dict><key>include</key><string>#common-type-keywords</string></dict>
 				<dict><key>include</key><string>#modifier-type-keywords</string></dict>
+				<dict><key>include</key><string>#operator-keywords</string></dict>
+				<dict><key>include</key><string>#variable-keywords</string></dict>
 				<dict>
 					<key>comment</key><string>Needs to be above #numeric-constants</string>
 					<key>include</key><string>#property-declaration</string>
@@ -581,7 +570,7 @@
 		<key>boolean-constants</key>
 		<dict>
 			<key>comment</key><string>[CORE]</string>
-			<key>match</key><string>(?&lt;!\$)\b(?:true|false)\b</string>
+			<key>match</key><string>(?&lt;![.$])\b(?:true|false)\b</string>
 			<key>name</key><string>constant.language.boolean.js</string>
 		</dict>
 		<!-- TODO: Not sure why this is separate.-->
@@ -641,6 +630,21 @@
 			<key>match</key>
 			<string>(?&lt;![.$])\b(extends|final|get|implements|native|private|protected|public|set|static|synchronized|throws|transient|volatile)\b</string>
 			<key>name</key><string>storage.modifier.js</string>
+		</dict>
+		<key>operator-keywords</key>
+		<dict>
+			<key>comment</key><string>[CORE] Note each match is exact. A better way?</string>
+			<key>match</key>
+			<string>(?&lt;![.$])\b(delete|in|instanceof|new|typeof|with)\b|!|%|&amp;|\*|\-\-|\-|\+\+|\+|~|===|==|=|!=|!==|&lt;=|&gt;=|&lt;&lt;=|&gt;&gt;=|&gt;&gt;&gt;=|&lt;&gt;|&lt;|&gt;|&amp;&amp;|\|\||\?\:|\?|\:|\*=|(?&lt;!\()/=|%=|\+=|\-=|&amp;=|\^=</string>
+			<key>name</key><string>keyword.operator.js</string>
+		</dict>
+		<key>variable-keywords</key>
+		<dict>
+			<key>comment</key>
+			<string>[CORE] These are technically variables, but they are more magical.</string>
+			<key>match</key>
+			<string>(?&lt;![.$])\b(this|super|arguments|(?&lt;=\.)(prototype|constructor|caller))\b</string>
+			<key>name</key><string>variable.language.common.js</string>
 		</dict>
 		<key>comment</key>
 		<dict>
