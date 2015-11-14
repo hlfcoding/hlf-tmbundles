@@ -14,32 +14,32 @@
 		<string>
 
 		# Clean
-		s/["']|default://g; # strip
-		s/\s{2,}/ /g; # strip extra
-		s/^\s*//; s/\s*$//; # trim
+		s/["']//g; # strip quotes
+		s/\s{2,}/ /g; # strip extra whitespace
+		s/^\s+//; s/\s+$//; # trim surrounding whitespace
 
 		# Functions
-		s/=//g; # strip
+		s/=//g; # strip assignment operator
 		s/(:\s*|\.(\w+)\s*)function/$2 =&gt;/; # rename for methods
-		s/\s?(function)\s?\(\s*\)\s?\{?.*/ -&gt;/; # rename for generic
-		s/([=-]&gt;)\s?(\(.*\))/$2 $1/; # format for methods
+		s/\s?(function)\s?\(\s*\)\s?\{?.*/ -&gt;/; # rename for other fn
+		s/([=-]&gt;)\s?(\(.*\))/$2 $1/; # format after renaming
 
-		# Clean2
-		s/^(.*):$/- $1/g # label
-		s/[{:]//g; # strip
+		# Clean, pt 2
+		s/^(.*):$/- $1/g # format prop label
+		s/[{:]//g; # strip punctuation
 
-		# Functions2
-		s/^.*\(function\s*/ closure: /; # label for enclosures
-		s/^.*,\s*function\s*/lambda: $0/; # label for lamdas
-		s/function(\s+([\w]+))?/$2 / # strip in case
-		s/^\(\)|-&gt;/lambda/ # last call
+		# Functions, pt 2
+		s/^.*\(function\s*/ closure: /; # rename for closures
+		s/^.*,\s*function\s*/lambda: $0/; # rename for lamdas
+		s/function(\s+([\w]+))?/$2 / # strip remainder
+		s/^\(\)|-&gt;/lambda/ # rename for lamdas, pt 2
 
-		# Clean3
-		s/\s{2,}/ /g; # strip extra
-		s/^\s*//; s/\s*$//; # trim
+		# Clean, pt 3
+		s/\s{2,}/ /g; # strip extra whitespace
+		s/^\s+//; s/\s+$//; # trim surrounding whitespace
 
 		# Label (for alphabetize).
-		s/^(?!closure|lambda)(.)/def: $1/g;
+		s/^(?!closure|lambda)(.)/def: $1/g; # add general definition label
 		
 		</string>
 	</dict>
