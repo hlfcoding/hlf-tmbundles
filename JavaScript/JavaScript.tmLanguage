@@ -13,6 +13,7 @@
 
 	- entity.name.declaration.function.js
 	- entity.name.declaration.function.method.js
+	- entity.name.declaration.parameter.js
 	- meta.declaration.class.js
 	- meta.declaration.function.js
 	- meta.declaration.function.arrow.js
