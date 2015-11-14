@@ -241,6 +241,19 @@ var {op, lhs, rhs} = getASTNode();
 
 }());
 
+let fibonacci = {
+  [Symbol.iterator]() {
+    'use strict';
+    let pre = 0, cur = 1;
+    return {
+      next() {
+        [pre, cur] = [cur, pre + cur];
+        return { done: false, value: cur };
+      }
+    };
+  }
+};
+
 // lib/math.js
 export function sum(x, y) {
   'use strict';

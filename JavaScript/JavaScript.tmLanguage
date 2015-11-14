@@ -316,9 +316,10 @@
 			</array>
 		</dict>
 		<dict>
-			<key>comment</key><string>[LIST] Language constructors only.</string>
+			<key>comment</key>
+			<string>[LIST][ES6] Language constructors only.</string>
 			<key>match</key>
-			<string>\b(Array|Boolean|Date|Function|Iterator|Number|Object|RegExp|String|ArrayBuffer|Float32Array|Float64Array|Int16Array|Int32Array|Int8Array|Uint16Array|Uint32Array|Uint8Array|Uint8ClampedArray|Error|EvalError|InternalError|RangeError|ReferenceError|StopIteration|SyntaxError|TypeError|URIError|DataView)\b</string>
+			<string>\b(Array|Boolean|Date|Function|Iterator|Number|Object|RegExp|String|ArrayBuffer|Float32Array|Float64Array|Int16Array|Int32Array|Int8Array|Uint16Array|Uint32Array|Uint8Array|Uint8ClampedArray|Error|EvalError|InternalError|RangeError|ReferenceError|StopIteration|SyntaxError|TypeError|URIError|DataView|(Map|Promise|Proxy|Reflect|Set|Symbol|WeakMap|WeakSet))\b</string>
 			<key>name</key><string>support.type.class.language.js</string>
 		</dict>
 		<dict>
