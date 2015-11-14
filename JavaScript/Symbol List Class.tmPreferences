@@ -17,7 +17,7 @@
 		s/["']|default://g; # strip
 		s/\s{2,}/ /g; # strip extra
 		s/^\s*//; s/\s*$//; # trim
-         
+
 		# Functions
 		s/=//g; # strip
 		s/(:\s*|\.(\w+)\s*)function/$2 =&gt;/; # rename for methods
@@ -25,8 +25,8 @@
 		s/([=-]&gt;)\s?(\(.*\))/$2 $1/; # format for methods
 
 		# Clean2
-         s/^(.*):$/- $1/g # label
-         s/[{:]//g; # strip
+		s/^(.*):$/- $1/g # label
+		s/[{:]//g; # strip
 
 		# Functions2
 		s/^.*\(function\s*/ closure: /; # label for enclosures
@@ -41,7 +41,7 @@
 		# Label (for alphabetize).
 		s/^(?!closure|lambda)(.)/def: $1/g;
 		
-	</string>
+		</string>
 	</dict>
 	<key>uuid</key>
 	<string>56A3E552-1A16-4C5A-AC3D-362B9D737654</string>
