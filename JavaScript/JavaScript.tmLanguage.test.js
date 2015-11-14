@@ -176,6 +176,8 @@ nums.forEach(v => {
   if (v % 5 === 0) { fives.push(v); }
 });
 
+const THREE = 3;
+
 class SkinnedMesh extends THREE.Mesh {
   constructor(geometry, materials /* , options */) {
     super(geometry, materials);
