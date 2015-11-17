@@ -20,6 +20,18 @@ div:first-child:not(.some-modifier),
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 
+  /* Multi-Column Layout */
+  columns: 3;
+  column-count: 3;
+  column-fill: balance;
+  column-gap: 20px;
+  column-rule: 1px solid #ccc;
+  column-span: all;
+  column-width: 0.3vw;
+  column-rule-color: #ccc;
+  column-rule-style: solid;
+  column-rule-width: 1px;
+
   /* Filters */
   filter: blur(5px);
   filter: brightness(0.5);
