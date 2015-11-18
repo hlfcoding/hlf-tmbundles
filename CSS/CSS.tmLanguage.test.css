@@ -57,4 +57,10 @@ div:first-child:not(.some-modifier),
   transform: translateX(10px) rotate(10deg) translateY(5px);
   transform-origin: 10px;
   transform-style: preserve-3d;
+
+  /* Vendor Prefix */
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
