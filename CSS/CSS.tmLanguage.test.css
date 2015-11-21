@@ -52,6 +52,11 @@ div:first-child:not(.some-modifier),
   flex-shrink: 2;
   flex-direction: column-reverse;
 
+  /* Print */
+  page-break-after: auto;
+  page-break-before: auto;
+  page-break-inside: auto;
+
   /* Transforms */
   backface-visibility: hidden;
   transform: translateX(10px) rotate(10deg) translateY(5px);
