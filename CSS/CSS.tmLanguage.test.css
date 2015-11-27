@@ -8,6 +8,16 @@
 .some-class,
 div:first-child:not(.some-modifier),
 .some-parent > .some-child {
+  /* Animation */
+  animation: move_eye 4s linear 0s infinite alternate;
+  animation-delay: 3s;
+  animation-duration: 3s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: slidein;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
   
   /* Border */
   border: 1px solid black;
