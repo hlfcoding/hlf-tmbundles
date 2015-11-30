@@ -176,6 +176,10 @@
       </array>
     </dict>
     <dict>
+      <key>include</key>
+      <string>#keyframes</string>
+    </dict>
+    <dict>
       <key>begin</key>
       <string>(?=^\s*@media\s*.*?\{)</string>
       <key>end</key>
@@ -358,6 +362,78 @@
       <string>\*/</string>
       <key>name</key>
       <string>comment.block.css</string>
+    </dict>
+    <key>keyframes</key>
+    <dict>
+      <key>patterns</key>
+      <array>
+        <dict>
+          <key>begin</key>
+          <string>^\s*((@)(\-[\w\-]*\-)?keyframes\b)\s*([\w-]*)</string>
+          <key>captures</key>
+          <dict>
+            <key>1</key>
+            <dict>
+              <key>name</key>
+              <string>keyword.control.at-rule.keyframes.scss</string>
+            </dict>
+            <key>2</key>
+            <dict>
+              <key>name</key>
+              <string>punctuation.definition.keyword.scss</string>
+            </dict>
+            <key>3</key>
+            <dict>
+              <key>name</key>
+              <string>punctuation.definition.keyword.scss</string>
+            </dict>
+            <key>4</key>
+            <dict>
+              <key>name</key>
+              <string>entity.name.function.scss</string>
+            </dict>
+          </dict>
+          <key>comment</key>
+          <string>Keyframes with Attributes</string>
+          <key>end</key>
+          <string>\s*(?=\{)</string>
+          <key>name</key>
+          <string>meta.at-rule.keyframes.scss</string>
+          <key>patterns</key>
+          <array></array>
+        </dict>
+        <dict>
+          <key>captures</key>
+          <dict>
+            <key>1</key>
+            <dict>
+              <key>name</key>
+              <string>keyword.control.at-rule.keyframes.scss</string>
+            </dict>
+            <key>2</key>
+            <dict>
+              <key>name</key>
+              <string>punctuation.definition.keyword.scss</string>
+            </dict>
+            <key>3</key>
+            <dict>
+              <key>name</key>
+              <string>punctuation.definition.keyword.scss</string>
+            </dict>
+            <key>4</key>
+            <dict>
+              <key>name</key>
+              <string>entity.name.function.scss</string>
+            </dict>
+          </dict>
+          <key>comment</key>
+          <string>Simple Keyframe</string>
+          <key>match</key>
+          <string>^\s*((@)(\-[\w\-]*\-)?keyframes\b)\s*([\w-]*)</string>
+          <key>name</key>
+          <string>meta.at-rule.keyframes.scss</string>
+        </dict>
+      </array>
     </dict>
     <key>media-query</key>
     <dict>
