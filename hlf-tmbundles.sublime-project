@@ -1,0 +1,25 @@
+{
+  "folders":
+  [
+    {
+      "file_exclude_patterns":
+      [
+        "*.sublime-workspace",
+        "*.cache"
+      ],
+      "folder_exclude_patterns":
+      [
+        "User/Package Control.cache"
+      ],
+      "path": "."
+    },
+    {
+      "folder_exclude_patterns":
+      [
+        "*.sublime-workspace",
+        "User/Package Control.cache"
+      ],
+      "path": "../st3-packages"
+    }
+  ]
+}

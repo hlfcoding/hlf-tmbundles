@@ -1,5 +1,6 @@
-alt/
-User/
-reviews.txt
-PHP/
 *.cache
+*.sublime-workspace
+reviews.txt
+alt/
+PHP/
+User/

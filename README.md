@@ -56,21 +56,3 @@ el.addEventListener('click', handleEvent);
 var event = evt = e = new CustomEvent('custom');
 event.stopPropagation();
 ```
-
-## Development
-
-### Sample ST2 Project File
-
-```json
-{
-  "folders":
-  [
-    {
-      "path": "hlf-tmbundles",
-      "file_exclude_patterns": [
-        "*.cache"
-      ]
-    }
-  ]
-}
-```
