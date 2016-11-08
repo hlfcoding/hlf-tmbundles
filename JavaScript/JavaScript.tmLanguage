@@ -48,7 +48,7 @@
 	<key>foldingStopMarker</key>
 	<string>(?&lt;!\*)\*\*/|^\s*\}</string>
 	<key>name</key>
-	<string>JavaScript</string>
+	<string>JavaScript (HLF)</string>
 	<key>patterns</key>
 	<array>
 		<dict>
