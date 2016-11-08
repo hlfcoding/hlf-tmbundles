@@ -1,0 +1,5 @@
+<snippet>
+  <content><![CDATA[➜ ${1:item}]]></content>
+  <tabTrigger><![CDATA[>]]></tabTrigger>
+  <scope>text.checklist</scope>
+</snippet>

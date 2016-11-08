@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>fileTypes</key>
+  <array>
+    <string>checklist</string>
+  </array>
+  <key>name</key>
+  <string>Checklist</string>
+  <key>patterns</key>
+  <array>
+    <dict>
+      <key>include</key>
+      <string>text.plain</string>
+    </dict>
+    <dict>
+      <key>comment</key><string>completed</string>
+      <key>match</key><string>^\s*✔.*$</string>
+      <key>name</key><string>meta.success</string>
+    </dict>
+    <dict>
+      <key>comment</key><string>next</string>
+      <key>match</key><string>^\s*➜.*$</string>
+      <key>name</key><string>meta.notice</string>
+    </dict>
+    <dict>
+      <key>comment</key><string>failed</string>
+      <key>match</key><string>^\s*✘.*$</string>
+      <key>name</key><string>meta.failure</string>
+    </dict>
+  </array>
+  <key>scopeName</key>
+  <string>text.checklist</string>
+  <key>uuid</key>
+  <string>DE572AD0-0000-0000-0000-00000000001</string>
+</dict>
+</plist>
