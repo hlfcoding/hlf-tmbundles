@@ -29,6 +29,11 @@
       <key>match</key><string>^\s*✘.*$</string>
       <key>name</key><string>meta.failure</string>
     </dict>
+    <dict>
+      <key>comment</key><string>comment</string>
+      <key>match</key><string>^\s*\|.*$</string>
+      <key>name</key><string>comment</string>
+    </dict>
   </array>
   <key>scopeName</key>
   <string>text.checklist</string>

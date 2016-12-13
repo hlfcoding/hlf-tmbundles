@@ -7,9 +7,10 @@
 ➜ next item (>)
 ✘ failed item (x)
 - regular item
+  | a comment with more details
 ```
 
-![image](https://cloud.githubusercontent.com/assets/100884/20130478/e444fe48-a60b-11e6-9aa7-6aa560112242.png)
+![image](https://cloud.githubusercontent.com/assets/100884/21130584/6e045d96-c0be-11e6-8434-8e2c7e809fa2.png)
 
 Works well with Markdown Extended, just paste the below into `Markdown Extended.sublime-syntax`:
 
