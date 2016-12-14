@@ -15,6 +15,42 @@
       <string>text.plain</string>
     </dict>
     <dict>
+      <key>comment</key><string>completed multi-line</string>
+      <key>begin</key><string>^\s*✔\s\{</string>
+      <key>beginCaptures</key><dict><key>0</key>
+        <dict><key>name</key><string>meta.success</string></dict>
+      </dict>
+      <key>end</key><string>^\s*\}</string>
+      <key>endCaptures</key><dict><key>0</key>
+        <dict><key>name</key><string>meta.success</string></dict>
+      </dict>
+      <key>name</key><string>meta.success</string>
+    </dict>
+    <dict>
+      <key>comment</key><string>next multi-line</string>
+      <key>begin</key><string>^\s*➜\s\{</string>
+      <key>beginCaptures</key><dict><key>0</key>
+        <dict><key>name</key><string>meta.notice</string></dict>
+      </dict>
+      <key>end</key><string>^\s*\}</string>
+      <key>endCaptures</key><dict><key>0</key>
+        <dict><key>name</key><string>meta.notice</string></dict>
+      </dict>
+      <key>name</key><string>meta.notice</string>
+    </dict>
+    <dict>
+      <key>comment</key><string>failed multi-line</string>
+      <key>begin</key><string>^\s*✘\s\{</string>
+      <key>beginCaptures</key><dict><key>0</key>
+        <dict><key>name</key><string>meta.failure</string></dict>
+      </dict>
+      <key>end</key><string>^\s*\}</string>
+      <key>endCaptures</key><dict><key>0</key>
+        <dict><key>name</key><string>meta.failure</string></dict>
+      </dict>
+      <key>name</key><string>meta.failure</string>
+    </dict>
+    <dict>
       <key>comment</key><string>completed</string>
       <key>match</key><string>^\s*✔.*$</string>
       <key>name</key><string>meta.success</string>

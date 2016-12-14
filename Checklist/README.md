@@ -12,6 +12,23 @@
 
 ![image](https://cloud.githubusercontent.com/assets/100884/21130584/6e045d96-c0be-11e6-8434-8e2c7e809fa2.png)
 
+Also:
+
+```checklist
+✔ {
+  a completed item
+  taking up multiple lines
+}
+➜ {
+  a next item
+  taking up multiple lines
+}
+✘ {
+  a failed item
+  taking up multiple lines
+}
+```
+
 Works well with Markdown Extended, just paste the below into `Markdown Extended.sublime-syntax`:
 
 ```yaml
