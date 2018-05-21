@@ -28,7 +28,7 @@ class SkinnedMesh extends THREE.Mesh {
     super(geometry, materials);
     //...
   }
-  get type() { //... }
+  get type() { /*...*/ }
   static defaultMatrix() {
     return new THREE.Matrix4();
   }

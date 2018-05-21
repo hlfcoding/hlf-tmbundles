@@ -1,6 +1,6 @@
 // Single line comment
 
-/* 
+/*
   Multi-line
   comment
 */
@@ -219,6 +219,9 @@ class SkinnedMesh extends THREE.Mesh {
 let mesh = new SkinnedMesh();
 mesh.get('some-key');
 mesh.set('some-key', 1);
+
+let elements = document.querySelectorAll('div');
+elements = [...elements];
 
 // Basic literal string creation
 var string = `In JavaScript '\n' is a line-feed.`;

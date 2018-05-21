@@ -477,7 +477,7 @@
 				<dict><key>name</key><string>meta.delimiter.method.period.js</string></dict>
 			</dict>
 			<key>comment</key><string>[FRAGILE] String keys also account.</string>
-			<key>match</key><string>(?&lt;=\.)(['"]?(\$?)[a-z0-9_]\w*['"]?)(\.)?</string>
+			<key>match</key><string>(?&lt;=[^.]\.)(['"]?(\$?)[a-z0-9_]\w*['"]?)(\.)?</string>
 			<key>name</key><string>meta.property.js</string>
 		</dict>
 		<dict>
