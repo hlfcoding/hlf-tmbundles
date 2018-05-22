@@ -716,6 +716,18 @@
           <key>name</key>
           <string>keyword.other.important.css</string>
         </dict>
+        <dict>
+          <key>match</key>
+          <string>(?&lt;=animation:\s)[\w\-_]+</string>
+          <key>name</key>
+          <string>entity.name.animation.css</string>
+        </dict>
+        <dict>
+          <key>match</key>
+          <string>(?&lt;=animation-name:\s)[\w\-_]+</string>
+          <key>name</key>
+          <string>entity.name.animation.css</string>
+        </dict>
       </array>
     </dict>
     <key>rule-list</key>
