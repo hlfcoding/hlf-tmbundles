@@ -27,7 +27,7 @@ div:first-child:not(.some-modifier),
   animation-timing-function: ease, ease-in, ease-out, ease-in-out;
   animation-timing-function: linear, step-start, step-end, steps(4, end);
   animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
-  
+
   /* Border */
   border: 1px solid black;
   border-width: 1px;
@@ -62,6 +62,8 @@ div:first-child:not(.some-modifier),
   filter: opacity(50%);
   filter: saturate(200%);
   filter: sepia(100%);
+  mix-blend-mode: multiply;
+  mix-blend-mode: hard-light;
 
   /* Flex-box */
   flex-basis: 18em;
