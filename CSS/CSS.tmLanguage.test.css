@@ -11,10 +11,16 @@
   100% { top: 100px; left: 100%; }
 }
 
+:root {
+  --shade: #000;
+}
+
 #some-id,
 .some-class,
 div:first-child:not(.some-modifier),
 .some-parent > .some-child {
+  background: var(--shade);
+
   /* Animation */
   animation: move_eye 4s linear 0s infinite alternate;
   animation-delay: 3s;
