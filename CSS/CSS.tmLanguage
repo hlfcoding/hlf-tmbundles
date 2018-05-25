@@ -294,60 +294,6 @@
           <key>name</key>
           <string>invalid.deprecated.color.w3c-non-standard-color-name.css</string>
         </dict>
-        <dict>
-          <key>begin</key>
-          <string>(attr|counter|counters|cubic-bezier|hsl|hsla|matrix|matrix3d|rgb|rgba|rotate|rotate3d|rotateX|rotateY|rotateZ|scale|scale3d|scaleX|scaleY|scaleZ|skew|skewX|skewY|translate|translate3d|translateX|translateY|translateZ|steps|url|var)\s*(\()</string>
-          <key>beginCaptures</key>
-          <dict>
-            <key>1</key>
-            <dict>
-              <key>name</key>
-              <string>support.function.misc.css</string>
-            </dict>
-            <key>2</key>
-            <dict>
-              <key>name</key>
-              <string>punctuation.section.function.css</string>
-            </dict>
-          </dict>
-          <key>end</key>
-          <string>(\))</string>
-          <key>endCaptures</key>
-          <dict>
-            <key>1</key>
-            <dict>
-              <key>name</key>
-              <string>punctuation.section.function.css</string>
-            </dict>
-          </dict>
-          <key>patterns</key>
-          <array>
-            <dict>
-              <key>match</key>
-              <string>(?x)\b
-                (0*((1?[0-9]{1,2})|(2([0-4][0-9]|5[0-5])))\s*,\s*){2}
-                (0*((1?[0-9]{1,2})|(2([0-4][0-9]|5[0-5])))\b)
-                (\s*,\s*((0?\.[0-9]+)|[0-1]))?
-              </string>
-              <key>name</key>
-              <string>constant.other.color.rgb-value.css</string>
-            </dict>
-            <dict>
-              <key>match</key>
-              <string>\b([0-9]{1,2}|100)\s*%,\s*([0-9]{1,2}|100)\s*%,\s*([0-9]{1,2}|100)\s*%</string>
-              <key>name</key>
-              <string>constant.other.color.rgb-percentage.css</string>
-            </dict>
-            <dict>
-              <key>include</key>
-              <string>#numeric-values</string>
-            </dict>
-            <dict>
-              <key>include</key>
-              <string>#custom-property</string>
-            </dict>
-          </array>
-        </dict>
       </array>
     </dict>
     <key>comment-block</key>
@@ -373,6 +319,79 @@
       <string>--[\w\-_]+</string>
       <key>name</key>
       <string>entity.name.custom-property.css</string>
+    </dict>
+    <key>function-values</key>
+    <dict>
+      <key>begin</key>
+      <string>(attr|calc|counters?|cubic-bezier|format|hsla?|local|matrix(?:3d)?|rect|rgba?|rotate(?:3d|X|Y|Z)?|scale(?:3d|X|Y|Z)?|skew(?:X|Y)?|translate(?:3d|X|Y|Z)?|steps|url|var)\s*(\()</string>
+      <key>beginCaptures</key>
+      <dict>
+        <key>1</key>
+        <dict>
+          <key>name</key>
+          <string>support.function.misc.css</string>
+        </dict>
+        <key>2</key>
+        <dict>
+          <key>name</key>
+          <string>punctuation.section.function.css</string>
+        </dict>
+      </dict>
+      <key>end</key>
+      <string>(\))</string>
+      <key>endCaptures</key>
+      <dict>
+        <key>1</key>
+        <dict>
+          <key>name</key>
+          <string>punctuation.section.function.css</string>
+        </dict>
+      </dict>
+      <key>patterns</key>
+      <array>
+        <dict>
+          <key>match</key>
+          <string>(?x)\b
+            (0*((1?\d{1,2})|(2([0-4]\d|5[0-5])))\s*,\s*){2}
+            (0*((1?\d{1,2})|(2([0-4]\d|5[0-5])))\b)
+            (\s*,\s*((0?\.\d+)|[0-1]))?
+          </string>
+          <key>name</key>
+          <string>constant.other.color.rgb-value.css</string>
+        </dict>
+        <dict>
+          <key>match</key>
+          <string>\b(\d{1,2}|100)\s*%,\s*(\d{1,2}|100)\s*%,\s*(\d{1,2}|100)\s*%</string>
+          <key>name</key>
+          <string>constant.other.color.rgb-percentage.css</string>
+        </dict>
+        <dict>
+          <key>include</key>
+          <string>#numeric-values</string>
+        </dict>
+        <dict>
+          <key>include</key>
+          <string>#string-single</string>
+        </dict>
+        <dict>
+          <key>include</key>
+          <string>#string-double</string>
+        </dict>
+        <dict>
+          <key>include</key>
+          <string>#custom-property</string>
+        </dict>
+        <dict>
+          <key>include</key>
+          <string>#function-values</string>
+        </dict>
+        <dict>
+          <key>match</key>
+          <string>[^'")\, \t]+</string>
+          <key>name</key>
+          <string>variable.parameter.misc.css</string>
+        </dict>
+      </array>
     </dict>
     <key>keyframes</key>
     <dict>
@@ -644,82 +663,8 @@
           <string>#string-single</string>
         </dict>
         <dict>
-          <key>begin</key>
-          <string>(rect)\s*(\()</string>
-          <key>beginCaptures</key>
-          <dict>
-            <key>1</key>
-            <dict>
-              <key>name</key>
-              <string>support.function.misc.css</string>
-            </dict>
-            <key>2</key>
-            <dict>
-              <key>name</key>
-              <string>punctuation.section.function.css</string>
-            </dict>
-          </dict>
-          <key>end</key>
-          <string>(\))</string>
-          <key>endCaptures</key>
-          <dict>
-            <key>1</key>
-            <dict>
-              <key>name</key>
-              <string>punctuation.section.function.css</string>
-            </dict>
-          </dict>
-          <key>patterns</key>
-          <array>
-            <dict>
-              <key>include</key>
-              <string>#numeric-values</string>
-            </dict>
-          </array>
-        </dict>
-        <dict>
-          <key>begin</key>
-          <string>(format|local|url|attr|counter|counters)\s*(\()</string>
-          <key>beginCaptures</key>
-          <dict>
-            <key>1</key>
-            <dict>
-              <key>name</key>
-              <string>support.function.misc.css</string>
-            </dict>
-            <key>2</key>
-            <dict>
-              <key>name</key>
-              <string>punctuation.section.function.css</string>
-            </dict>
-          </dict>
-          <key>end</key>
-          <string>(\))</string>
-          <key>endCaptures</key>
-          <dict>
-            <key>1</key>
-            <dict>
-              <key>name</key>
-              <string>punctuation.section.function.css</string>
-            </dict>
-          </dict>
-          <key>patterns</key>
-          <array>
-            <dict>
-              <key>include</key>
-              <string>#string-single</string>
-            </dict>
-            <dict>
-              <key>include</key>
-              <string>#string-double</string>
-            </dict>
-            <dict>
-              <key>match</key>
-              <string>[^'") \t]+</string>
-              <key>name</key>
-              <string>variable.parameter.misc.css</string>
-            </dict>
-          </array>
+          <key>include</key>
+          <string>#function-values</string>
         </dict>
         <dict>
           <key>match</key>
