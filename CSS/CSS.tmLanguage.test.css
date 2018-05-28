@@ -17,6 +17,7 @@
   --shade: #000;
 }
 
+[data-some-attribute],
 #some-id,
 .some-class,
 div:first-child:not(.some-modifier),
@@ -97,4 +98,8 @@ div:first-child:not(.some-modifier),
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+}
+
+circle {
+  fill-opacity: 0.3;
 }
