@@ -723,7 +723,7 @@
             </dict>
             <dict>
               <key>match</key>
-              <string>\b(appearance|azimuth|zoom|z-index|y|x|wrap|word-wrap|word-spacing|word-break|word|width|widows|white-space-collapse|white-space|white|weight|volume|voice-volume|voice-stress|voice-rate|voice-pitch-range|voice-pitch|voice-family|voice-duration|voice-balance|voice|(backface-)?visibility|vertical-align|variant|user-select|up|unicode-bidi|unicode|trim|transition-timing-function|transition-property|transition-duration|transition-delay|transition|transform(-(origin|style))?|top-width|top-style|top-right-radius|top-left-radius|top-color|top|timing-function|text-wrap|text-transform|text-shadow|text-replace|text-outline|text-justify|text-indent|text-height|text-emphasis|text-decoration|text-align-last|text-align|text|target-position|target-new|target-name|target|table-layout|tab-side|style-type|style-position|style-image|style|string-set|stretch|stress|stacking-strategy|stacking-shift|stacking-ruby|stacking|speed|speech-rate|speech|speak-punctuation|speak-numeral|speak-header|speak|span|spacing|space-collapse|space|sizing|size-adjust|size|shadow|rule-width|rule-style|rule-color|rule|ruby-span|ruby-position|ruby-overhang|ruby-align|ruby|rows|rotation-point|rotation|role|right-width|right-style|right-color|right|richness|rest-before|rest-after|rest|resource|resolution|resize|reset|replace|repeat|rendering-intent|rate|radius|quotes|punctuation-trim|punctuation|property|profile|presentation-level|presentation|position|point|play-state|play-during|play-count|pitch-range|pitch|phonemes|pause-before|pause-after|pause|page-policy|page-break-(inside|before|after)|page|padding-top|padding-right|padding-left|padding-bottom|padding|pack|overhang|overflow-y|overflow-x|overflow-style|overflow|outline-width|outline-style|outline-offset|outline-color|outline|orphans|origin|orientation|orient|ordinal-group|opacity|offset)\b</string>
+              <string>\b(appearance|azimuth|zoom|z-index|y|x|wrap|word-wrap|word-spacing|word-break|word|width|widows|white-space-collapse|white-space|white|weight|volume|voice-volume|voice-stress|voice-rate|voice-pitch-range|voice-pitch|voice-family|voice-duration|voice-balance|voice|(backface-)?visibility|vertical-align|variant|user-select|up|unicode-bidi|unicode|trim|transition-timing-function|transition-property|transition-duration|transition-delay|transition|transform(-(origin|style))?|top-width|top-style|top-right-radius|top-left-radius|top-color|top|timing-function|text-wrap|text-transform|text-shadow|text-replace|text-outline|text-justify|text-indent|text-height|text-emphasis|text-decoration|text-align-last|text-align|text|target-position|target-new|target-name|target|table-layout|tab-side|style-type|style-position|style-image|style|string-set|stretch|stress|stacking-strategy|stacking-shift|stacking-ruby|stacking|speed|speech-rate|speech|speak-punctuation|speak-numeral|speak-header|speak|span|spacing|space-collapse|space|sizing|size-adjust|size)\b</string>
               <key>name</key>
               <string>support.type.property-name.css</string>
             </dict>
@@ -835,6 +835,34 @@
             </dict>
             <dict>
               <key>match</key><string>\b(mask(-(border(-(mode|outset|repeat|slice|source|width))?|clip|composite|image|mode|origin|position|repeat|size|type))?)\b</string>
+              <key>name</key><string>support.type.property-name.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(object-(fit|position)|offset(-(after|anchor|before|distance|end|path|position|rotate|start))?)\b</string>
+              <key>name</key><string>support.type.property-name.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(outline(-(color|offset|style|width))?|overflow(-(block|inline|style|wrap|x|y))?)\b</string>
+              <key>name</key><string>support.type.property-name.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(padding(-((block|inline)(-(end|start))?|bottom|left|right|top))?|page(-break-(after|before|inside))?)\b</string>
+              <key>name</key><string>support.type.property-name.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(pause(-(after|before))|pitch(-range)?|place-(content|items|self)|rest(-(after|before))?)\b</string>
+              <key>name</key><string>support.type.property-name.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(opacity|order|orphans|play-during|position|presentation-level|quotes|region-fragment|resize|richness|right|row-gap|running)\b</string>
+              <key>name</key><string>support.type.property-name.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(rotation(-point)?|ruby-(align|merge|position)|shape-(image-threshold|inside|margin|outside))\b</string>
+              <key>name</key><string>support.type.property-name.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(scroll-(behavior|(margin|padding)(-((block|inline)(-(end|start))?|bottom|left|right|top))?|snap-(align|stop|type))|scrollbar-gutter)\b</string>
               <key>name</key><string>support.type.property-name.css</string>
             </dict>
             <dict>
