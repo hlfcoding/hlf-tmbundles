@@ -722,12 +722,6 @@
               <string>support.type.property-name.svg.css</string>
             </dict>
             <dict>
-              <key>match</key>
-              <string>\b(appearance|azimuth|zoom|z-index|y|x|wrap|word-wrap|word-spacing|word-break|word|width|widows|white-space-collapse|white-space|white|weight|volume|voice-volume|voice-stress|voice-rate|voice-pitch-range|voice-pitch|voice-family|voice-duration|voice-balance|voice|(backface-)?visibility|vertical-align|variant|user-select|up|unicode-bidi|unicode|trim|transition-timing-function|transition-property|transition-duration|transition-delay|transition|transform(-(origin|style))?|top-width|top-style|top-right-radius|top-left-radius|top-color|top|timing-function|text-wrap|text-transform|text-shadow|text-replace|text-outline|text-justify|text-indent|text-height|text-emphasis|text-decoration|text-align-last|text-align|text|target-position|target-new|target-name|target|table-layout|tab-side|style-type|style-position|style-image|style|string-set|stretch|stress|stacking-strategy|stacking-shift|stacking-ruby|stacking|speed|speech-rate|speech|speak-punctuation|speak-numeral|speak-header|speak|span|spacing|space-collapse|space|sizing|size-adjust|size)\b</string>
-              <key>name</key>
-              <string>support.type.property-name.css</string>
-            </dict>
-            <dict>
               <key>match</key><string>\b(align-(content|items|self)|alignment-baseline|appearance|azimuth|baseline-shift)\b</string>
               <key>name</key><string>support.type.property-name.css</string>
             </dict>
@@ -863,6 +857,26 @@
             </dict>
             <dict>
               <key>match</key><string>\b(scroll-(behavior|(margin|padding)(-((block|inline)(-(end|start))?|bottom|left|right|top))?|snap-(align|stop|type))|scrollbar-gutter)\b</string>
+              <key>name</key><string>support.type.property-name.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(size|stress|string-set|tab-size|table-layout|top|unicode-bidi|user-select|vertical-align|visibility|volume|white-space|widows|width|will-change|writing-mode|z-index)\b</string>
+              <key>name</key><string>support.type.property-name.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(speak(-(as|header|numeral|punctuation))?|speech-rate|voice-(balance|duration|family|pitch|range|rate|stress|volume))\b</string>
+              <key>name</key><string>support.type.property-name.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(stroke(-(align|alignment|break|color|dash-(corner|justify)|dash(adjust|array|corner|offset)|image|line(cap|join)|miterlimit|opacity|origin|position|repeat|size|width))?)\b</string>
+              <key>name</key><string>support.type.property-name.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(text-(align(-(all|last))?|decoration(-(color|line|skip(-ink)?|style|width))?|emphasis(-(color|position|skip|style))?|combine-upright|indent|justify|orientation|overflow|shadow|space-collapse|space-trim|spacing|transform|underline-(offset|position)|wrap))\b</string>
+              <key>name</key><string>support.type.property-name.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(transform(-(box|origin))?|transition(-(delay|duration|property|timing-function))?|word-(break|spacing|wrap)|wrap-(after|before|flow|inside|through))\b</string>
               <key>name</key><string>support.type.property-name.css</string>
             </dict>
             <dict>
