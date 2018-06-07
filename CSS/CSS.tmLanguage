@@ -880,6 +880,26 @@
               <key>name</key><string>support.type.property-name.css</string>
             </dict>
             <dict>
+              <key>match</key><string>\b(all-space-treatment|backface-visibility|bleed|block-progression|bookmark-target|caret-animation|clear-after|color-profile|content-order|crop)\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(background-(break|quantity|spacing)|border-(break|length)|column-break-(after|before))\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(box-(align|break|direction|flex(-group)?|height|lines|ordinal-group|orient|pack|suppress|width))\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(display-(box|extras|inside|list|model|outside|role)|filter-margin(-(bottom|left|right|top))?|fit(-position)?)\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(clipPath|fe(Blend|ColorMatrix|ComponentTransfer|Composite|ConvolveMatrix|Custom(Param|Source)?|DiffuseLighting|DisplacementMap|DistantLight|DropShadow|Flood|Func(A|B|G|R)|GaussianBlur|Image|Merge(Node)?|Morphology|Offset|PointLight|SpecularLighting|SpotLight|Tile|Turbulence|UnsharpMask))\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
               <key>include</key>
               <string>#custom-property</string>
             </dict>
