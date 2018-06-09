@@ -920,6 +920,34 @@
               <key>name</key><string>support.type.property-name.old-proposed.css</string>
             </dict>
             <dict>
+              <key>match</key><string>\b(motion(-(offset|path|rotation))?|perspective(-origin)?|polar-(anchor|angle|distance|origin)|target(-(name|new|position))?)\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(move-to|nav-index|orientation|overflow-clip|page-policy|phonemes|punctuation-trim|region-overflow|rendering-intent|resizer)\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(resolution|speakability|tab-side|transform-style|user-zoom|vertical-position|voice-pitch-range|zoom)\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(scroll-snap-(coordinate|destination|(margin|padding)(-((block|inline)(-(end|start))?|bottom|left|right|top))?|points-(x|y)))\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(text-(combine(-(horizontal|mode))?|(line-through|(over|under)line)(-(color|mode|style|width))?|overflow-(ellipsis|mode)))\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(text-(align-first|autospace|blink|block-indent|first-indent|justify-trim|kashida-space|outline|replace|script|trim))\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(white-space-(collapse|collapsing|treatment)|word-break-(cjk|inside)|wrap(-(margin|option|padding))?)\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
               <key>include</key>
               <string>#custom-property</string>
             </dict>
