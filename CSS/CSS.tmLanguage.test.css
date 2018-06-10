@@ -93,6 +93,10 @@ div:first-child:not(.some-modifier),
   transform-origin: 10px;
   transform-style: preserve-3d;
 
+  /* Text */
+  text-overflow: clip;
+  text-overflow-mode: clip;
+
   /* Vendor Prefix */
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;

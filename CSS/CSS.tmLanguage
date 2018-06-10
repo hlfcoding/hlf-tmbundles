@@ -722,6 +722,75 @@
               <string>support.type.property-name.svg.css</string>
             </dict>
             <dict>
+              <key>match</key><string>\b(all-space-treatment|backface-visibility|bleed|block-progression|bookmark-target|caret-animation|clear-after|color-profile|content-order|crop)\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(background-(break|quantity|spacing)|border-(break|length)|column-break-(after|before))\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(box-(align|break|direction|flex(-group)?|height|lines|ordinal-group|orient|pack|suppress|width))\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(display-(box|extras|inside|list|model|outside|role)|filter-margin(-(bottom|left|right|top))?|fit(-position)?)\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(clipPath|fe(Blend|ColorMatrix|ComponentTransfer|Composite|ConvolveMatrix|Custom(Param|Source)?|DiffuseLighting|DisplacementMap|DistantLight|DropShadow|Flood|Func(A|B|G|R)|GaussianBlur|Image|Merge(Node)?|Morphology|Offset|PointLight|SpecularLighting|SpotLight|Tile|Turbulence|UnsharpMask))\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(enable-background|float-displace|font-presentation|glyph-orientation-horizontal|icon|image-rendering|ime-mode|indent-edge-reset|key-equivalent)\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(flex-(align|item-align|line-pack|order|pack)|hyphenate(-(after|before|dictionary|limit-(after|before)|lines|resource))?|kerning-(mode|pair-threshold))\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(grid-(after|auto-position|before|cell|cell-stacking|column-(align|gap|position|sizing|span)|columns|definition-(columns|rows)|end|flow|gap|position|row-(align|gap|position|sizing|span)|rows|span|start))\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(line-(grid-(mode|progression)|slack)|linefeed-treatment|mark(-(after|before))?|marks|marquee(-(play-count|repetition))?)\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(mask-(box(-(image(-(outset|repeat|slice|source|width))?|outset|repeat|slice|source|width))?|source-type)|(max|min)-(font-size|zoom))\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(motion(-(offset|path|rotation))?|perspective(-origin)?|polar-(anchor|angle|distance|origin)|target(-(name|new|position))?)\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(move-to|nav-index|orientation|overflow-clip|page-policy|phonemes|punctuation-trim|region-overflow|rendering-intent|resizer)\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(resolution|speakability|tab-side|transform-style|user-zoom|vertical-position|voice-pitch-range|zoom)\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(scroll-snap-(coordinate|destination|(margin|padding)(-((block|inline)(-(end|start))?|bottom|left|right|top))?|points-(x|y)))\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(text-(combine(-(horizontal|mode))?|(line-through|(over|under)line)(-(color|mode|style|width))?|overflow-(ellipsis|mode)))\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(text-(align-first|autospace|blink|block-indent|first-indent|justify-trim|kashida-space|outline|replace|script|trim))\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <dict>
+              <key>match</key><string>\b(white-space-(collapse|collapsing|treatment)|word-break-(cjk|inside)|wrap(-(margin|option|padding))?)\b</string>
+              <key>name</key><string>support.type.property-name.old-proposed.css</string>
+            </dict>
+            <!-- Shorthands need to be at the end. -->
+            <dict>
               <key>match</key><string>\b(align-(content|items|self)|alignment-baseline|appearance|azimuth|baseline-shift)\b</string>
               <key>name</key><string>support.type.property-name.css</string>
             </dict>
@@ -878,74 +947,6 @@
             <dict>
               <key>match</key><string>\b(transform(-(box|origin))?|transition(-(delay|duration|property|timing-function))?|word-(break|spacing|wrap)|wrap-(after|before|flow|inside|through))\b</string>
               <key>name</key><string>support.type.property-name.css</string>
-            </dict>
-            <dict>
-              <key>match</key><string>\b(all-space-treatment|backface-visibility|bleed|block-progression|bookmark-target|caret-animation|clear-after|color-profile|content-order|crop)\b</string>
-              <key>name</key><string>support.type.property-name.old-proposed.css</string>
-            </dict>
-            <dict>
-              <key>match</key><string>\b(background-(break|quantity|spacing)|border-(break|length)|column-break-(after|before))\b</string>
-              <key>name</key><string>support.type.property-name.old-proposed.css</string>
-            </dict>
-            <dict>
-              <key>match</key><string>\b(box-(align|break|direction|flex(-group)?|height|lines|ordinal-group|orient|pack|suppress|width))\b</string>
-              <key>name</key><string>support.type.property-name.old-proposed.css</string>
-            </dict>
-            <dict>
-              <key>match</key><string>\b(display-(box|extras|inside|list|model|outside|role)|filter-margin(-(bottom|left|right|top))?|fit(-position)?)\b</string>
-              <key>name</key><string>support.type.property-name.old-proposed.css</string>
-            </dict>
-            <dict>
-              <key>match</key><string>\b(clipPath|fe(Blend|ColorMatrix|ComponentTransfer|Composite|ConvolveMatrix|Custom(Param|Source)?|DiffuseLighting|DisplacementMap|DistantLight|DropShadow|Flood|Func(A|B|G|R)|GaussianBlur|Image|Merge(Node)?|Morphology|Offset|PointLight|SpecularLighting|SpotLight|Tile|Turbulence|UnsharpMask))\b</string>
-              <key>name</key><string>support.type.property-name.old-proposed.css</string>
-            </dict>
-            <dict>
-              <key>match</key><string>\b(enable-background|float-displace|font-presentation|glyph-orientation-horizontal|icon|image-rendering|ime-mode|indent-edge-reset|key-equivalent)\b</string>
-              <key>name</key><string>support.type.property-name.old-proposed.css</string>
-            </dict>
-            <dict>
-              <key>match</key><string>\b(flex-(align|item-align|line-pack|order|pack)|hyphenate(-(after|before|dictionary|limit-(after|before)|lines|resource))?|kerning-(mode|pair-threshold))\b</string>
-              <key>name</key><string>support.type.property-name.old-proposed.css</string>
-            </dict>
-            <dict>
-              <key>match</key><string>\b(grid-(after|auto-position|before|cell|cell-stacking|column-(align|gap|position|sizing|span)|columns|definition-(columns|rows)|end|flow|gap|position|row-(align|gap|position|sizing|span)|rows|span|start))\b</string>
-              <key>name</key><string>support.type.property-name.old-proposed.css</string>
-            </dict>
-            <dict>
-              <key>match</key><string>\b(line-(grid-(mode|progression)|slack)|linefeed-treatment|mark(-(after|before))?|marks|marquee(-(play-count|repetition))?)\b</string>
-              <key>name</key><string>support.type.property-name.old-proposed.css</string>
-            </dict>
-            <dict>
-              <key>match</key><string>\b(mask-(box(-(image(-(outset|repeat|slice|source|width))?|outset|repeat|slice|source|width))?|source-type)|(max|min)-(font-size|zoom))\b</string>
-              <key>name</key><string>support.type.property-name.old-proposed.css</string>
-            </dict>
-            <dict>
-              <key>match</key><string>\b(motion(-(offset|path|rotation))?|perspective(-origin)?|polar-(anchor|angle|distance|origin)|target(-(name|new|position))?)\b</string>
-              <key>name</key><string>support.type.property-name.old-proposed.css</string>
-            </dict>
-            <dict>
-              <key>match</key><string>\b(move-to|nav-index|orientation|overflow-clip|page-policy|phonemes|punctuation-trim|region-overflow|rendering-intent|resizer)\b</string>
-              <key>name</key><string>support.type.property-name.old-proposed.css</string>
-            </dict>
-            <dict>
-              <key>match</key><string>\b(resolution|speakability|tab-side|transform-style|user-zoom|vertical-position|voice-pitch-range|zoom)\b</string>
-              <key>name</key><string>support.type.property-name.old-proposed.css</string>
-            </dict>
-            <dict>
-              <key>match</key><string>\b(scroll-snap-(coordinate|destination|(margin|padding)(-((block|inline)(-(end|start))?|bottom|left|right|top))?|points-(x|y)))\b</string>
-              <key>name</key><string>support.type.property-name.old-proposed.css</string>
-            </dict>
-            <dict>
-              <key>match</key><string>\b(text-(combine(-(horizontal|mode))?|(line-through|(over|under)line)(-(color|mode|style|width))?|overflow-(ellipsis|mode)))\b</string>
-              <key>name</key><string>support.type.property-name.old-proposed.css</string>
-            </dict>
-            <dict>
-              <key>match</key><string>\b(text-(align-first|autospace|blink|block-indent|first-indent|justify-trim|kashida-space|outline|replace|script|trim))\b</string>
-              <key>name</key><string>support.type.property-name.old-proposed.css</string>
-            </dict>
-            <dict>
-              <key>match</key><string>\b(white-space-(collapse|collapsing|treatment)|word-break-(cjk|inside)|wrap(-(margin|option|padding))?)\b</string>
-              <key>name</key><string>support.type.property-name.old-proposed.css</string>
             </dict>
             <dict>
               <key>include</key>
