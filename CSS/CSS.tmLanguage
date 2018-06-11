@@ -819,7 +819,7 @@
               <key>name</key><string>support.type.property-name.css</string>
             </dict>
             <dict>
-              <key>comment</key><string>last in group</string>
+              <!-- Shorthands need to be at the end. -->
               <key>match</key><string>\b(border(-(boundary|collapse|color|radius|spacing|style|width))?)\b</string>
               <key>name</key><string>support.type.property-name.css</string>
             </dict>
@@ -836,7 +836,7 @@
               <key>name</key><string>support.type.property-name.css</string>
             </dict>
             <dict>
-              <key>match</key><string>\b(column-(count|fill|gap|rule|rule-color|rule-style|rule-width|span|width)|columns)\b</string>
+              <key>match</key><string>\b(column-(count|fill|gap|rule(-(color|style|width))?|span|width)|columns)\b</string>
               <key>name</key><string>support.type.property-name.css</string>
             </dict>
             <dict>
@@ -864,7 +864,7 @@
               <key>name</key><string>support.type.property-name.css</string>
             </dict>
             <dict>
-              <key>comment</key><string>last in group</string>
+              <!-- Shorthands need to be at the end. -->
               <key>match</key><string>\b(font(-(family|feature-settings|kerning|language-override|(max|min)-size|optical-sizing|palette|size(-adjust)?|stretch|style|synthesis|weight))?)\b</string>
               <key>name</key><string>support.type.property-name.css</string>
             </dict>
