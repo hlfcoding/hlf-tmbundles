@@ -374,10 +374,18 @@
           <string>#custom-property</string>
         </dict>
         <dict>
+          <!-- After #custom-property. -->
+          <key>match</key>
+          <string>[+\-\*/]</string>
+          <key>name</key>
+          <string>keyword.operator.logic.calc.css</string>
+        </dict>
+        <dict>
           <key>include</key>
           <string>#function-values</string>
         </dict>
         <dict>
+          <!-- After #function-values. -->
           <key>match</key>
           <string>[^'")\, \t]+</string>
           <key>name</key>
