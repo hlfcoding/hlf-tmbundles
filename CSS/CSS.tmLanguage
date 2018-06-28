@@ -376,7 +376,7 @@
         <dict>
           <!-- After #custom-property. -->
           <key>match</key>
-          <string>[+\-\*/]</string>
+          <string>\s[+\*/]\s|-</string>
           <key>name</key>
           <string>keyword.operator.logic.calc.css</string>
         </dict>

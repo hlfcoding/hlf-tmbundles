@@ -22,7 +22,7 @@
 .some-class,
 div:first-child:not(.some-modifier),
 .some-parent > .some-child {
-  background: var(--shade);
+  background: var(--shade) url(/bg.png);
 
   /* Animation */
   animation: move_eye 4s linear 0s infinite alternate;
