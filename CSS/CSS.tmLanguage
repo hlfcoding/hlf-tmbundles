@@ -422,37 +422,6 @@
             </dict>
           </dict>
           <key>comment</key>
-          <string>Keyframes with Attributes</string>
-          <key>match</key>
-          <string>^\s*((@)(\-[\w\-]*\-)?keyframes\b)\s*([\w-]*)</string>
-          <key>name</key>
-          <string>meta.at-rule.keyframes.scss</string>
-        </dict>
-        <dict>
-          <key>captures</key>
-          <dict>
-            <key>1</key>
-            <dict>
-              <key>name</key>
-              <string>keyword.control.at-rule.keyframes.scss</string>
-            </dict>
-            <key>2</key>
-            <dict>
-              <key>name</key>
-              <string>punctuation.definition.keyword.scss</string>
-            </dict>
-            <key>3</key>
-            <dict>
-              <key>name</key>
-              <string>punctuation.definition.keyword.scss</string>
-            </dict>
-            <key>4</key>
-            <dict>
-              <key>name</key>
-              <string>entity.name.function.scss</string>
-            </dict>
-          </dict>
-          <key>comment</key>
           <string>Simple Keyframe</string>
           <key>match</key>
           <string>^\s*((@)(\-[\w\-]*\-)?keyframes\b)\s*([\w-]*)</string>
@@ -706,7 +675,7 @@
         </dict>
         <dict>
           <key>begin</key>
-          <string>(?&lt;![-a-z])(-(webkit|moz|o|ms)-)?(?=[-a-z])</string>
+          <string>(?&lt;![-a-z])(-(webkit|moz|o|ms)-)?(?=[-a-z\d])</string>
           <key>beginCaptures</key>
           <dict>
             <key>1</key>
@@ -960,6 +929,10 @@
               <key>include</key>
               <string>#custom-property</string>
             </dict>
+            <dict>
+              <key>include</key>
+              <string>#numeric-values</string>
+            </dict>
           </array>
         </dict>
         <dict>
@@ -998,7 +971,7 @@
     <key>selector</key>
     <dict>
       <key>begin</key>
-      <string>\s*(?=[:.*#a-zA-Z]|\[)</string>
+      <string>\s*(?=[:.*#\w]|\[)</string>
       <key>end</key>
       <string>(?=[/@{)])</string>
       <key>name</key>
@@ -1215,6 +1188,10 @@
           <string>(?i)(\[)\s*(-?[_a-z\\[[:^ascii:]]][_a-z0-9\-\\[[:^ascii:]]]*)(?:\s*([~|^$*]?=)\s*(?:(-?[_a-z\\[[:^ascii:]]][_a-z0-9\-\\[[:^ascii:]]]*)|((?&gt;(['"])(?:[^\\]|\\.)*?(\6)))))?\s*(\])</string>
           <key>name</key>
           <string>meta.attribute-selector.css</string>
+        </dict>
+        <dict>
+          <key>include</key>
+          <string>#numeric-values</string>
         </dict>
       </array>
     </dict>
