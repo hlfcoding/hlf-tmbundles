@@ -1,4 +1,5 @@
 *.cache
+*.pyc
 *.sublime-workspace
 reviews.txt
 alt/
