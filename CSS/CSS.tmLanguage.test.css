@@ -1,10 +1,10 @@
 @import url('will-be-slow.css') screen;
 
-@media screen, print, (min-width: 640px) { /* fails */
+@media screen, print, (min-width: 640px) {
   body { font-size: 13px; }
 }
 
-@media (hover: none) { /* fails */
+@media (hover: none) {
   button:hover { background: unset; }
 }
 
