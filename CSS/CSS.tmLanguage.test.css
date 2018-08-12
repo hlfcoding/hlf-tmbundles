@@ -8,7 +8,7 @@
   button:hover { background: unset; }
 }
 
-@supports not (display: flex) { /* fails */
+@supports not (display: flex) {
   .-bar-layout { display: block; }
 }
 

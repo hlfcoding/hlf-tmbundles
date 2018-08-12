@@ -250,6 +250,7 @@
         </dict>
       </array>
     </dict>
+    <dict><key>include</key><string>#support-query</string></dict>
     <dict>
       <key>begin</key>
       <string>(?=\{)</string>
@@ -697,6 +698,13 @@
       <string>meta.property-list.css</string>
       <key>patterns</key>
       <array>
+        <dict><key>include</key><string>#rule-list-body</string></dict>
+      </array>
+    </dict>
+    <key>rule-list-body</key>
+    <dict>
+      <key>patterns</key>
+      <array>
         <dict>
           <key>include</key>
           <string>#comment-block</string>
@@ -975,7 +983,7 @@
             </dict>
           </dict>
           <key>end</key>
-          <string>\s*(;|(?=\}))</string>
+          <string>\s*(;|(?=[\}\)]))</string>
           <key>endCaptures</key>
           <dict>
             <key>1</key>
@@ -1288,6 +1296,35 @@
           <string>\\.</string>
           <key>name</key>
           <string>constant.character.escape.css</string>
+        </dict>
+      </array>
+    </dict>
+    <key>support-query</key>
+    <dict>
+      <key>begin</key><string>((@)supports)</string>
+      <key>beginCaptures</key>
+      <dict>
+        <key>1</key>
+        <dict><key>name</key><string>keyword.control.at-rule.supports.css</string></dict>
+        <key>2</key>
+        <dict><key>name</key><string>punctuation.definition.keyword.css</string></dict>
+      </dict>
+      <key>end</key><string>(?:\{)</string>
+      <key>patterns</key>
+      <array>
+        <dict>
+          <key>begin</key><string>(?:\()</string>
+          <key>end</key><string>(?:\))</string>
+          <key>patterns</key>
+          <array>
+            <dict><key>include</key><string>#rule-list-body</string></dict>
+          </array>
+        </dict>
+        <dict>
+          <key>match</key>
+          <string>\b(?i:and|or|not)\b</string>
+          <key>name</key>
+          <string>keyword.operator.logic.css</string>
         </dict>
       </array>
     </dict>
