@@ -93,7 +93,6 @@ switch(id) {
     variant = Model.VARIANT_A;
     break;
 }
-
 model = new Model({
   id: id,
   variant: variant
@@ -117,22 +116,18 @@ clearTimeout(timeout);
 
 // DOM
 var element, elem, el, event, evt, e, date, view;
-
 element = elem = el = document.createElement('div');
 event = evt = e = new CustomEvent('custom');
 date = new Date();
-
 function handleEvent(event) {
   var el = event.target;
   event.preventDefault();
   event.stopPropagation();
   el.setAttribute('data-name', 'value');
 }
-
 el.addEventListener('click', handleEvent);
 el.removeEventListener('click', handleEvent);
 el.onchange = $.noop;
-
 view = new View();
 view.setAttribute('key', 'value');
 view.addEventListener('custom', $.noop);
@@ -163,21 +158,16 @@ module.exports = {
 };
 console.log(exports);
 
-// ES6
+// - ES6
 
-(function($) {
-
-'use strict';
-
-let fives;
-let odds = evens.map(v => v + 1);
-let nums = evens.map((v, i) => { return v + i; });
-nums.forEach(v => {
-  if (v % 5 === 0) { fives.push(v); }
+// Arrow Functions
+const nums = [1, 2, 3].map(n => Math.random() * n);
+let max = 0;
+nums.forEach(n => {
+  if (n > max) { max = n; }
 });
 
-const THREE = 3;
-
+// Class
 class SkinnedMesh extends THREE.Mesh {
   constructor(geometry, materials /* , options */) {
     super(geometry, materials);
@@ -215,11 +205,11 @@ class SkinnedMesh extends THREE.Mesh {
     return new THREE.Matrix4();
   }
 }
-
 let mesh = new SkinnedMesh();
 mesh.get('some-key');
 mesh.set('some-key', 1);
 
+// Splats
 let elements = document.querySelectorAll('div');
 elements = [...elements];
 
@@ -244,8 +234,6 @@ var { op: a, lhs: { op: b }, rhs: c } = getASTNode();
 // binds `op`, `lhs` and `rhs` in scope
 var {op, lhs, rhs} = getASTNode();
 
-}());
-
 let fibonacci = {
   [Symbol.iterator]() {
     'use strict';
@@ -266,31 +254,19 @@ for (var n of fibonacci) {
   console.log(n);
 }
 
-// -
-
-async function performIO() {}
-
-await performIO();
-
-// -
-
+// Module
 // lib/math.js
 export function sum(x, y) {
   'use strict';
   return x + y;
 }
 export var pi = 3.141593;
-
 // app.js
 import * as math from "lib/math";
 alert("2π = " + math.sum(math.pi, math.pi));
-
-transform.from({});
-
 // otherApp.js
 import {sum, pi} from "lib/math";
 alert("2π = " + sum(pi, pi));
-
 // lib/mathplusplus.js
 export * from "lib/math";
 export var e = 2.71828182846;
@@ -298,7 +274,11 @@ export default function(x) {
   'use strict';
   return Math.log(x);
 }
-
 // app.js
 import ln, {pi, e} from "lib/mathplusplus";
 alert("2π = " + ln(e) * pi * 2);
+
+// - ES7
+
+async function performIO() {}
+await performIO();
