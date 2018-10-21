@@ -600,11 +600,11 @@
 		<key>control-keywords</key>
 		<dict>
 			<key>comment</key><string>
-				[CORE][ES3][ES6]
+				[CORE][ES3][ES6][ES7]
 				See developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Reserved_word_usage
 			</string>
 			<key>match</key>
-			<string>(?&lt;![.$])\b(as|break|case|catch|continue|default|do|else|export|finally|for|from|goto|if|import|package|return|switch|throw|try|while)\b</string>
+			<string>(?&lt;![.$])\b(as|await|break|case|catch|continue|default|do|else|export|finally|for|from|goto|if|import|package|return|switch|throw|try|while)\b</string>
 			<key>name</key><string>keyword.control.js</string>
 		</dict>
 		<key>type-keywords</key>
@@ -626,11 +626,11 @@
 		<key>modifier-type-keywords</key>
 		<dict>
 			<key>comment</key><string>
-				[CORE][ES3][ES6]
+				[CORE][ES3][ES6][ES7]
 				See developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Reserved_word_usage
 			</string>
 			<key>match</key>
-			<string>(?&lt;![.$])\b(extends|final|get|implements|native|private|protected|public|set|static|synchronized|throws|transient|volatile)\b</string>
+			<string>(?&lt;![.$])\b(async|extends|final|get|implements|native|private|protected|public|set|static|synchronized|throws|transient|volatile)\b</string>
 			<key>name</key><string>storage.modifier.js</string>
 		</dict>
 		<key>operator-keywords</key>

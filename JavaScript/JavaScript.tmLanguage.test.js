@@ -266,6 +266,14 @@ for (var n of fibonacci) {
   console.log(n);
 }
 
+// -
+
+async function performIO() {}
+
+await performIO();
+
+// -
+
 // lib/math.js
 export function sum(x, y) {
   'use strict';
