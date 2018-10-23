@@ -282,3 +282,8 @@ alert("2π = " + ln(e) * pi * 2);
 
 async function performIO() {}
 await performIO();
+Object.assign(Model.prototype, {
+  async modernFetch() {
+    return fetch('https://example.com/data.json');
+  }
+});

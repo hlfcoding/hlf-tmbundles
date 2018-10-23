@@ -135,11 +135,11 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^\s+(?:(get|set|static)\s+)?(\$*[a-z0-9_]\w+(?=\([^\(\)]*\)\s*\{))</string>
+			<string>^\s+(?:(async|get|set|static)\s+)?(\$*[a-z0-9_]\w+(?=\([^\(\)]*\)\s*\{))</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
-				<dict><key>name</key><string>storage.modifier.class.js</string></dict>
+				<dict><key>name</key><string>storage.modifier.js</string></dict>
 				<key>2</key>
 				<dict><key>name</key><string>entity.name.declaration.function.method.js</string></dict>
 			</dict>
@@ -147,6 +147,7 @@
 			<string>
 				[ES6]
 				Matches: `([params]) {`
+				or `async ([params]) {`
 				or `get ([params]) {`
 				or `set ([params]) {`
 				or `static ([params]) {`.
