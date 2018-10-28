@@ -81,12 +81,13 @@ Model.VARIANT_B = 2;
 var id = true ? 1 : 2;
 
 // Switch
+var IDS = { two: 2 };
 var variant;
 switch(id) {
   case 1:
     variant = Model.VARIANT_A;
     break;
-  case 2:
+  case IDS.two:
     variant = Model.VARIANT_B;
     break;
   default:
