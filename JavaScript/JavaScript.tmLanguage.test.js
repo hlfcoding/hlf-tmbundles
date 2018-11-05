@@ -169,6 +169,9 @@ nums.forEach(n => {
 });
 
 // Class
+const defaults = {
+  camera: new THREE.Camera(),
+};
 class SkinnedMesh extends THREE.Mesh {
   constructor(geometry, materials /* , options */) {
     super(geometry, materials);
@@ -183,7 +186,7 @@ class SkinnedMesh extends THREE.Mesh {
   containsBones(...bones) {
     return _.every(bones, b => _.contains(this.bones, b));
   }
-  update(camera = null) {
+  update(camera = defaults.camera) {
     //...
     super.update();
   }
@@ -222,8 +225,11 @@ var multilineString = `In JavaScript this is
 not legal.`;
 
 // String interpolation
-var name = "Bob", time = "today";
-console.log(`Hello ${name}, how are you ${time}?`);
+const firstName = "Bob", lastName = "Ross", time = "today";
+function name(firstName, lastName) {
+  return `${firstName} ${lastName}`;
+}
+console.log(`Hello ${name(firstName, lastName)}, how are you ${time}?`);
 
 // list matching
 let [a, , b] = [1,2,3];
