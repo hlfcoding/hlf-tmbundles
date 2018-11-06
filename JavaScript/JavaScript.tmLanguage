@@ -228,17 +228,17 @@
 				<key>1</key>
 				<dict><key>name</key><string>entity.template.tag.name.js</string></dict>
 				<key>2</key>
-				<dict><key>name</key><string>punctuation.definition.template.begin.js</string></dict>
+				<dict><key>name</key><string>punctuation.definition.string.template.begin.js</string></dict>
 			</dict>
 			<key>comment</key>
-			<string>[ES6] Templates support, directly taken from JavaScriptNext.</string>
+			<string>[ES6] Templates support, adapted from JavaScriptNext.</string>
 			<key>end</key><string>`</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>0</key>
-				<dict><key>name</key><string>punctuation.definition.template.end.js</string></dict>
+				<dict><key>name</key><string>punctuation.definition.string.template.end.js</string></dict>
 			</dict>
-			<key>name</key><string>string.template.js</string>
+			<key>name</key><string>source.string.template.js</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -250,22 +250,26 @@
 					<key>name</key><string>constant.character.escape.js</string>
 				</dict>
 				<dict>
+					<key>match</key><string>[^`${}]+</string>
+					<key>name</key><string>string.template.js</string>
+				</dict>
+				<dict>
 					<key>begin</key><string>\${</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>0</key>
-						<dict><key>name</key><string>punctuation.template.element.begin.js</string></dict>
+						<dict><key>name</key><string>meta.brace.curly.js</string></dict>
 					</dict>
 					<key>end</key><string>}</string>
 					<key>endCaptures</key>
 					<dict>
 						<key>0</key>
-						<dict><key>name</key><string>punctuation.template.element.end.js</string></dict>
+						<dict><key>name</key><string>meta.brace.curly.js</string></dict>
 					</dict>
-					<key>name</key><string>entity.template.element.js</string>
+					<key>name</key><string>source.string.template.variable.js</string>
 					<key>patterns</key>
 					<array>
-						<dict><key>include</key><string>#expression</string></dict>
+						<dict><key>include</key><string>$self</string></dict>
 					</array>
 				</dict>
 			</array>
