@@ -4,7 +4,9 @@ These changesets improve upon existing functionality. I use and improve them mys
 
 ## CSS Package
 
-- CSS3 syntax highlighting
+- Marks boilerplate for dimming
+- Generally up-to-date CSS syntax highlighting (CSS4)
+- Compatible with ST2
 
 ## JavaScript Package
 
@@ -12,7 +14,7 @@ These changesets improve upon existing functionality. I use and improve them mys
 
 See [test file](https://github.com/hlfcoding/hlf-tmbundles/blob/master/JavaScript/JavaScript.tmLanguage.test.js) for more examples. Main features:
 
-More up to date support, including basic support for ES6.
+Generally up-to-date JS syntax highlighting (ES6, ES7). Compatible with ST2.
 
 ![image](https://cloud.githubusercontent.com/assets/100884/11114442/aabc7584-88d9-11e5-9516-7aa9651a944f.png)
 
@@ -35,7 +37,7 @@ class SkinnedMesh extends THREE.Mesh {
 }
 ```
 
-Accounts for JS boilerplate language. Assumes you are experienced with JS and are looking for a bundle that makes it less painful to write (ES5) all day, in lieu of CoffeeScript.
+Accounts for JS boilerplate language. Assumes you are experienced with JS and are looking for a bundle that makes it less painful to write JS all day, in lieu of CoffeeScript (RIP).
 
 ![image](https://cloud.githubusercontent.com/assets/100884/11114466/c8234580-88d9-11e5-9b16-7dfa9d5b58fb.png)
 
@@ -45,7 +47,7 @@ var obj = {};
 obj.method = function func() {};
 ```
 
-Assumes you follow conventions with naming instances: `element` `elem` `el`. Assumes you care about at least viewing the DOM api with proper highlighting
+Assumes you follow conventions with naming instances: `element` `elem` `el`. Assumes you care about at least viewing the DOM api with proper highlighting.
 
 ![image](https://cloud.githubusercontent.com/assets/100884/11114494/fea69684-88d9-11e5-829d-d33ceaf6679b.png)
 
