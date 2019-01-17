@@ -25,11 +25,14 @@
   --shade: #000;
 }
 
+/* Selectors */
 [data-some-attribute],
 #some-id,
 .some-class,
+div:nth-child(2n):nth-child(even):nth-child(odd),
 div:first-child:not(.some-modifier),
 .some-parent > .some-child {
+
   background: var(--shade) url(/bg.png);
 
   /* Animation */
