@@ -654,6 +654,11 @@
           <key>match</key><string>(?&lt;=animation-name:\s)[\w\-_]+</string>
           <key>name</key><string>entity.name.animation.css</string>
         </dict>
+        <dict>
+          <key>comment</key><string>Convention, otherwise too difficult</string>
+          <key>match</key><string>\bline[\w_]+\b</string>
+          <key>name</key><string>entity.name.grid-line.css</string>
+        </dict>
         <dict><key>include</key><string>#comment-block</string></dict>
       </array>
     </dict>
