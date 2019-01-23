@@ -188,7 +188,7 @@
     </dict>
     <key>function-values</key>
     <dict>
-      <key>begin</key><string>(attr|calc|counters?|cubic-bezier|format|hsla?|local|matrix(?:3d)?|minmax|rect|repeat|rgba?|rotate(?:3d|X|Y|Z)?|scale(?:3d|X|Y|Z)?|skew(?:X|Y)?|translate(?:3d|X|Y|Z)?|steps|url|var)\s*(\()</string>
+      <key>begin</key><string>(attr|calc|counters?|cubic-bezier|format|hsla?|local|matrix(?:3d)?|minmax|rect|repeat|rgba?|rotate(?:3d|X|Y|Z)?|scale(?:3d|X|Y|Z)?|skew(?:X|Y)?|translate(?:3d|X|Y|Z)?|steps|url|var)\s*(\(+)</string>
       <key>beginCaptures</key>
       <dict>
         <key>1</key>

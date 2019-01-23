@@ -34,6 +34,7 @@ div:first-child:not(.some-modifier),
 .some-parent > .some-child {
 
   background: var(--shade) url(/bg.png);
+  top: calc((var(--offset) + var(--gutter)) / 2);
 
   /* Animation */
   animation: move_eye 4s linear 0s infinite alternate;
