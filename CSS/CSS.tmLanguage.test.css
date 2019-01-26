@@ -31,7 +31,7 @@
 .some-class,
 div:nth-child(2n):nth-child(even):nth-child(odd),
 div:first-child:not(.some-modifier),
-.some-parent > .some-child {
+.some-parent > .some-child:first-child {
 
   background: var(--shade) url(/bg.png);
   top: calc((var(--offset) + var(--gutter)) / 2);

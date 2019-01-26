@@ -735,7 +735,7 @@
             <key>1</key>
             <dict><key>name</key><string>punctuation.definition.entity.css</string></dict>
           </dict>
-          <key>match</key><string>(\.)[a-zA-Z0-9_-]+</string>
+          <key>match</key><string>(\.)[\w-]+</string>
           <key>name</key><string>entity.other.attribute-name.class.css</string>
         </dict>
         <dict>
@@ -744,7 +744,7 @@
             <key>1</key>
             <dict><key>name</key><string>punctuation.definition.entity.css</string></dict>
           </dict>
-          <key>match</key><string>(#)[a-zA-Z][a-zA-Z0-9_-]*</string>
+          <key>match</key><string>(#)[a-zA-Z][\w-]*</string>
           <key>name</key><string>entity.other.attribute-name.id.css</string>
         </dict>
         <dict>
@@ -757,7 +757,7 @@
             <key>1</key>
             <dict><key>name</key><string>punctuation.definition.entity.css</string></dict>
           </dict>
-          <key>match</key><string>(:+)(after|before|first-letter|first-line|selection)\b</string>
+          <key>match</key><string>(:+)(after|before|first-(letter|line)|selection)\b</string>
           <key>name</key><string>entity.other.attribute-name.pseudo-element.css</string>
         </dict>
         <dict>
@@ -767,18 +767,8 @@
             <dict><key>name</key><string>punctuation.definition.entity.css</string></dict>
           </dict>
           <key>match</key>
-          <string>(:)\b(link|visited|hover|active|focus|target|lang|disabled|enabled|checked|indeterminate|root|first-child|last-child|first-of-type|last-of-type|only-child|only-of-type|empty|not|valid|invalid)\b</string>
+          <string>(:)((first|last|only)-(child|of-type)|(in)?valid|active|checked|default|disabled|empty|enabled|focus|hover|indeterminate|lang|link|not|optional|required|root|target|visited)\b</string>
           <key>name</key><string>entity.other.attribute-name.pseudo-class.css</string>
-        </dict>
-        <dict>
-          <key>captures</key>
-          <dict>
-            <key>1</key>
-            <dict><key>name</key><string>punctuation.definition.entity.css</string></dict>
-          </dict>
-          <key>match</key>
-          <string>(:)(checked|enabled|default|disabled|indeterminate|invalid|optional|required|valid)\b</string>
-          <key>name</key><string>entity.other.attribute-name.pseudo-class.ui-state.css</string>
         </dict>
         <dict>
           <key>begin</key><string>((:)not)(\()</string>
