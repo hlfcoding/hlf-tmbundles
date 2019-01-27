@@ -2,11 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-  <key>comment</key><string></string>
+  <key>comment</key>
+  <string>
+
+  # CSS Syntax: version 1.1
+
+  See readme for details.
+
+  </string>
   <key>fileTypes</key>
   <array>
     <string>css</string>
-    <string>css.erb</string>
   </array>
   <key>foldingStartMarker</key><string>/\*\*(?!\*)|\{\s*($|/\*(?!.*?\*/.*\S))</string>
   <key>foldingStopMarker</key><string>(?&lt;!\*)\*\*/|^\s*\}</string>
