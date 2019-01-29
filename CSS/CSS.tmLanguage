@@ -9,6 +9,14 @@
 
   See readme for details.
 
+  ## Fragments
+
+  (?x) Allow comments and whitespace in pattern
+  (?=…) Positive lookahead
+  (?!…) Negative lookahead
+  (?&lt;=…) Positive lookbehind
+  (?&lt;!…) Negative lookbehind
+
   </string>
   <key>fileTypes</key>
   <array>
@@ -750,7 +758,13 @@
             <key>1</key>
             <dict><key>name</key><string>punctuation.definition.entity.css</string></dict>
           </dict>
-          <key>match</key><string>(#)[a-zA-Z][\w-]*</string>
+          <key>match</key>
+          <string>(?x)
+            (\#)
+            # name must begin with letter
+            [a-zA-Z]
+            [\w-]*
+          </string>
           <key>name</key><string>entity.other.attribute-name.id.css</string>
         </dict>
         <dict>
