@@ -857,7 +857,11 @@
             <dict><key>name</key><string>punctuation.definition.string.end.css</string></dict>
           </dict>
           <key>match</key>
-          <string>(?i)(\[)\s*(-?[_a-z\\[[:^ascii:]]][_a-z0-9\-\\[[:^ascii:]]]*)(?:\s*([~|^$*]?=)\s*(?:(-?[_a-z\\[[:^ascii:]]][_a-z0-9\-\\[[:^ascii:]]]*)|((?&gt;(['"])(?:[^\\]|\\.)*?(\6)))))?\s*(\])</string>
+          <string>(?xi)
+            # TODO: this is complicated!
+            (\[)\s*(-?[_a-z\\[[:^ascii:]]][_a-z0-9\-\\[[:^ascii:]]]*)
+            (?:\s*([~|^$*]?=)\s*(?:(-?[_a-z\\[[:^ascii:]]][_a-z0-9\-\\[[:^ascii:]]]*)|((?&gt;(['"])(?:[^\\]|\\.)*?(\6)))))?\s*(\])
+          </string>
           <key>name</key><string>meta.attribute-selector.css</string>
         </dict>
         <dict><key>include</key><string>#numeric-values</string></dict>
