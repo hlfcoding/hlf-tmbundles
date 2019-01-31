@@ -221,8 +221,11 @@
         <dict>
           <key>match</key>
           <string>(?x)\b
+            # red, green: percent or integer
             (0*((1?\d{1,2})|(2([0-4]\d|5[0-5])))\s*,\s*){2}
+            # blue: percent or integer
             (0*((1?\d{1,2})|(2([0-4]\d|5[0-5])))\b)
+            # alpha: optional, percent or float
             (\s*,\s*((0?\.\d+)|[0-1]))?
           </string>
           <key>name</key><string>constant.other.color.rgb-value.css</string>

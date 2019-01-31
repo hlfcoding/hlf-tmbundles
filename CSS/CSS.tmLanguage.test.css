@@ -23,6 +23,14 @@
   --angle: 45deg;
   --expanded: translate(-50%,-50%) scale(1.1) rotate(calc(var(--angle) * 0.9));
   --shade: #000;
+  --rgb: rgb(255, 255, 255);
+  --rgb-percent: rgb(100%, 100%, 100%);
+  --rgba: rgba(255, 255, 255, .5);
+  --rgba-space: rgb(255 255 255 / .5);
+  --hsl: hsl(270, 60%, 50%);
+  --hsl-degree: hsl(270deg, 60%, 50%);
+  --hsla: hsla(270, 60%, 50%, .5);
+  --hsla-space: hsla(270 60% 50% / .5);
 }
 
 /* Selectors */
