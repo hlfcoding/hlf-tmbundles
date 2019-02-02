@@ -219,20 +219,24 @@
       <key>patterns</key>
       <array>
         <dict>
-          <key>match</key>
-          <string>(?x)\b
+          <key>comment</key><string>
+            developer.mozilla.org/en-US/docs/Web/CSS/color_value#rgb()
+            - supports validation
+          </string>
+          <key>match</key><string>(?x)\b
             # red, green: percent or integer
-            (0*((1?\d{1,2})|(2([0-4]\d|5[0-5])))\s*,\s*){2}
+            (((\d{1,2}|100)\s*%|
+            0*((1?\d{1,2})|(2([0-4]\d|5[0-5])))
+            )\s*,\s*){2}
             # blue: percent or integer
-            (0*((1?\d{1,2})|(2([0-4]\d|5[0-5])))\b)
+            ((\d{1,2}|100)\s*%|
+            0*((1?\d{1,2})|(2([0-4]\d|5[0-5])))
+            )\s*(,\s*)?
             # alpha: optional, percent or float
-            (\s*,\s*((0?\.\d+)|[0-1]))?
+            ((\d{1,2}|100)\s*%|
+            0?\.\d+|[0-1])?
           </string>
           <key>name</key><string>constant.other.color.rgb-value.css</string>
-        </dict>
-        <dict>
-          <key>match</key><string>\b(\d{1,2}|100)\s*%,\s*(\d{1,2}|100)\s*%,\s*(\d{1,2}|100)\s*%</string>
-          <key>name</key><string>constant.other.color.rgb-percentage.css</string>
         </dict>
         <dict><key>include</key><string>#numeric-values</string></dict>
         <dict><key>include</key><string>#string-single</string></dict>
