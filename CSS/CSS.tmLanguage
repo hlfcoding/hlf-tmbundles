@@ -197,14 +197,14 @@
             # red, green: percent or integer
             (((\d{1,2}|100)\s*%|
             0*((1?\d{1,2})|(2([0-4]\d|5[0-5])))
-            )\s*,\s*){2}
+            )\s*[,\s]\s*){2}
             # blue: percent or integer
             ((\d{1,2}|100)\s*%|
-            0*((1?\d{1,2})|(2([0-4]\d|5[0-5])))
-            )\s*(,\s*)?
+            0*((1?\d{1,2})|(2([0-4]\d|5[0-5]))))
             # alpha: optional, percent or float
-            ((\d{1,2}|100)\s*%|
-            0?\.\d+|[0-1])?
+            (\s*[,/]\s*(
+            (\d{1,2}|100)\s*%|
+            0?\.\d+|[0-1]))?
           </string>
           <key>name</key><string>constant.other.color.rgba-value.css</string>
         </dict>
