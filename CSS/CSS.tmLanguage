@@ -210,6 +210,31 @@
         </dict>
       </array>
     </dict>
+    <key>color-values-hsla</key>
+    <dict>
+      <key>patterns</key>
+      <array>
+        <dict>
+          <key>comment</key><string>
+            developer.mozilla.org/en-US/docs/Web/CSS/color_value#hsl()
+            - supports validation
+          </string>
+          <key>match</key><string>(?x)\b
+            # hue: degree or float
+            (0?\.\d+|[0-1](turn)?|
+            0*(([1-2]?\d{1,2})|(3([0-5]\d|60)))(deg)?)
+            # saturation, lightness: percent
+            (\s*[,\s]\s*(
+            \d{1,2}|100)\s*%){2}
+            # alpha: optional, percent or float
+            (\s*[,/]\s*(
+            (\d{1,2}|100)\s*%|
+            0?\.\d+|[0-1]))?
+          </string>
+          <key>name</key><string>constant.other.color.hsla-value.css</string>
+        </dict>
+      </array>
+    </dict>
     <key>comment-block</key>
     <dict>
       <key>begin</key><string>/\*</string>
@@ -245,6 +270,7 @@
       <key>patterns</key>
       <array>
         <dict><key>include</key><string>#color-values-rgba</string></dict>
+        <dict><key>include</key><string>#color-values-hsla</string></dict>
         <dict><key>include</key><string>#numeric-values</string></dict>
         <dict><key>include</key><string>#string-single</string></dict>
         <dict><key>include</key><string>#string-double</string></dict>
