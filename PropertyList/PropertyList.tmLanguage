@@ -48,6 +48,7 @@
         </dict>
         <key>patterns</key>
         <array>
+          <dict><key>include</key><string>source.oniregexp</string></dict>
           <dict><key>include</key><string>#cdata</string></dict>
           <dict>
             <key>match</key><string><![CDATA[<|>|(&(?!(gt|lt|amp|apos|quot);))]]></string>
