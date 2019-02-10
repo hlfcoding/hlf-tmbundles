@@ -132,17 +132,19 @@
       </dict>
       <dict>
         <key>comment</key><string>array</string>
-        <key>begin</key><string><![CDATA[<(array)>]]></string>
+        <key>begin</key><string><![CDATA[(<)(array)(>)]]></string>
         <key>beginCaptures</key>
         <dict>
-          <key>1</key>
-          <dict><key>name</key><string>storage.type.plist</string></dict>
+          <key>1</key><dict><key>name</key><string>meta.separator.plist</string></dict>
+          <key>2</key><dict><key>name</key><string>storage.type.common.plist</string></dict>
+          <key>3</key><dict><key>name</key><string>meta.separator.plist</string></dict>
         </dict>
-        <key>end</key><string><![CDATA[</(array)>]]></string>
+        <key>end</key><string><![CDATA[(</)(array)(>)]]></string>
         <key>endCaptures</key>
         <dict>
-          <key>1</key>
-          <dict><key>name</key><string>storage.type.plist</string></dict>
+          <key>1</key><dict><key>name</key><string>meta.separator.plist</string></dict>
+          <key>2</key><dict><key>name</key><string>storage.type.common.plist</string></dict>
+          <key>3</key><dict><key>name</key><string>meta.separator.plist</string></dict>
         </dict>
         <key>patterns</key>
         <array>
@@ -151,17 +153,19 @@
       </dict>
       <dict>
         <key>comment</key><string>dict</string>
-        <key>begin</key><string><![CDATA[<(dict)>]]></string>
+        <key>begin</key><string><![CDATA[(<)(dict)(>)]]></string>
         <key>beginCaptures</key>
         <dict>
-          <key>1</key>
-          <dict><key>name</key><string>storage.type.plist</string></dict>
+          <key>1</key><dict><key>name</key><string>meta.separator.plist</string></dict>
+          <key>2</key><dict><key>name</key><string>storage.type.common.plist</string></dict>
+          <key>3</key><dict><key>name</key><string>meta.separator.plist</string></dict>
         </dict>
-        <key>end</key><string><![CDATA[</(dict)>]]></string>
+        <key>end</key><string><![CDATA[(</)(dict)(>)]]></string>
         <key>endCaptures</key>
         <dict>
-          <key>1</key>
-          <dict><key>name</key><string>storage.type.plist</string></dict>
+          <key>1</key><dict><key>name</key><string>meta.separator.plist</string></dict>
+          <key>2</key><dict><key>name</key><string>storage.type.common.plist</string></dict>
+          <key>3</key><dict><key>name</key><string>meta.separator.plist</string></dict>
         </dict>
         <key>patterns</key>
         <array>
