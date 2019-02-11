@@ -38,22 +38,16 @@
         <key>begin</key><string><![CDATA[(<)(string)(>)]]></string>
         <key>beginCaptures</key>
         <dict>
-          <key>1</key>
-          <dict><key>name</key><string>meta.separator.plist</string></dict>
-          <key>2</key>
-          <dict><key>name</key><string>storage.type.common.plist</string></dict>
-          <key>3</key>
-          <dict><key>name</key><string>meta.separator.plist</string></dict>
+          <key>1</key><dict><key>name</key><string>meta.separator.plist</string></dict>
+          <key>2</key><dict><key>name</key><string>storage.type.common.plist</string></dict>
+          <key>3</key><dict><key>name</key><string>meta.separator.plist</string></dict>
         </dict>
         <key>end</key><string><![CDATA[(</)(string)(>)]]></string>
         <key>endCaptures</key>
         <dict>
-          <key>1</key>
-          <dict><key>name</key><string>meta.separator.plist</string></dict>
-          <key>2</key>
-          <dict><key>name</key><string>storage.type.common.plist</string></dict>
-          <key>3</key>
-          <dict><key>name</key><string>meta.separator.plist</string></dict>
+          <key>1</key><dict><key>name</key><string>meta.separator.plist</string></dict>
+          <key>2</key><dict><key>name</key><string>storage.type.common.plist</string></dict>
+          <key>3</key><dict><key>name</key><string>meta.separator.plist</string></dict>
         </dict>
         <key>patterns</key>
         <array>
@@ -74,8 +68,7 @@
         <key>match</key><string><![CDATA[<(true|false)/>]]></string>
         <key>captures</key>
         <dict>
-          <key>1</key>
-          <dict><key>name</key><string>storage.type.plist</string></dict>
+          <key>1</key><dict><key>name</key><string>storage.type.plist</string></dict>
         </dict>
       </dict>
       <dict>
@@ -83,12 +76,9 @@
         <key>match</key><string><![CDATA[<(integer)>(0|[1-9][0-9]*)</(integer)>]]></string>
         <key>captures</key>
         <dict>
-          <key>1</key>
-          <dict><key>name</key><string>storage.type.plist</string></dict>
-          <key>2</key>
-          <dict><key>name</key><string>constant.integer.plist</string></dict>
-          <key>3</key>
-          <dict><key>name</key><string>storage.type.plist</string></dict>
+          <key>1</key><dict><key>name</key><string>storage.type.plist</string></dict>
+          <key>2</key><dict><key>name</key><string>constant.integer.plist</string></dict>
+          <key>3</key><dict><key>name</key><string>storage.type.plist</string></dict>
         </dict>
       </dict>
       <dict>
@@ -96,12 +86,9 @@
         <key>match</key><string><![CDATA[<(real)>([-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?)</(real)>]]></string>
         <key>captures</key>
         <dict>
-          <key>1</key>
-          <dict><key>name</key><string>storage.type.plist</string></dict>
-          <key>2</key>
-          <dict><key>name</key><string>constant.real.plist</string></dict>
-          <key>4</key>
-          <dict><key>name</key><string>storage.type.plist</string></dict>
+          <key>1</key><dict><key>name</key><string>storage.type.plist</string></dict>
+          <key>2</key><dict><key>name</key><string>constant.real.plist</string></dict>
+          <key>4</key><dict><key>name</key><string>storage.type.plist</string></dict>
         </dict>
       </dict>
       <dict>
@@ -109,12 +96,9 @@
         <key>match</key><string><![CDATA[<(date)>(\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)</(date)>]]></string>
         <key>captures</key>
         <dict>
-          <key>1</key>
-          <dict><key>name</key><string>storage.type.plist</string></dict>
-          <key>2</key>
-          <dict><key>name</key><string>constant.date.plist</string></dict>
-          <key>3</key>
-          <dict><key>name</key><string>storage.type.plist</string></dict>
+          <key>1</key><dict><key>name</key><string>storage.type.plist</string></dict>
+          <key>2</key><dict><key>name</key><string>constant.date.plist</string></dict>
+          <key>3</key><dict><key>name</key><string>storage.type.plist</string></dict>
         </dict>
       </dict>
       <dict>
@@ -122,12 +106,9 @@
         <key>match</key><string><![CDATA[<(data)>([a-zA-Z0-9+/=]+)</(data)>]]></string>
         <key>captures</key>
         <dict>
-          <key>1</key>
-          <dict><key>name</key><string>storage.type.plist</string></dict>
-          <key>2</key>
-          <dict><key>name</key><string>constant.data.plist</string></dict>
-          <key>3</key>
-          <dict><key>name</key><string>storage.type.plist</string></dict>
+          <key>1</key><dict><key>name</key><string>storage.type.plist</string></dict>
+          <key>2</key><dict><key>name</key><string>constant.data.plist</string></dict>
+          <key>3</key><dict><key>name</key><string>storage.type.plist</string></dict>
         </dict>
       </dict>
       <dict>
@@ -181,14 +162,12 @@
         <key>begin</key><string>&lt;!\[CDATA\[</string>
         <key>beginCaptures</key>
         <dict>
-          <key>0</key>
-          <dict><key>name</key><string>punctuation.definition.string.begin.plist</string></dict>
+          <key>0</key><dict><key>name</key><string>punctuation.definition.string.begin.plist</string></dict>
         </dict>
         <key>end</key><string>]]&gt;</string>
         <key>endCaptures</key>
         <dict>
-          <key>0</key>
-          <dict><key>name</key><string>punctuation.definition.string.end.plist</string></dict>
+          <key>0</key><dict><key>name</key><string>punctuation.definition.string.end.plist</string></dict>
         </dict>
         <key>name</key><string>string.unquoted.cdata.plist</string>
       </dict>
