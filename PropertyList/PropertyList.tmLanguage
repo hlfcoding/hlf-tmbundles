@@ -73,42 +73,58 @@
       </dict>
       <dict>
         <key>comment</key><string>integer</string>
-        <key>match</key><string><![CDATA[<(integer)>(0|[1-9][0-9]*)</(integer)>]]></string>
+        <key>match</key><string><![CDATA[(<)(integer)(>)(0|[1-9][0-9]*)(</)(integer)(>)]]></string>
         <key>captures</key>
         <dict>
-          <key>1</key><dict><key>name</key><string>storage.type.plist</string></dict>
-          <key>2</key><dict><key>name</key><string>constant.integer.plist</string></dict>
-          <key>3</key><dict><key>name</key><string>storage.type.plist</string></dict>
+          <key>1</key><dict><key>name</key><string>meta.separator.plist</string></dict>
+          <key>2</key><dict><key>name</key><string>storage.type.common.plist</string></dict>
+          <key>3</key><dict><key>name</key><string>meta.separator.plist</string></dict>
+          <key>4</key><dict><key>name</key><string>constant.integer.plist</string></dict>
+          <key>5</key><dict><key>name</key><string>meta.separator.plist</string></dict>
+          <key>6</key><dict><key>name</key><string>storage.type.common.plist</string></dict>
+          <key>7</key><dict><key>name</key><string>meta.separator.plist</string></dict>
         </dict>
       </dict>
       <dict>
         <key>comment</key><string>real</string>
-        <key>match</key><string><![CDATA[<(real)>([-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?)</(real)>]]></string>
+        <key>match</key><string><![CDATA[(<)(real)(>)([-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?)(</)(real)(>)]]></string>
         <key>captures</key>
         <dict>
-          <key>1</key><dict><key>name</key><string>storage.type.plist</string></dict>
-          <key>2</key><dict><key>name</key><string>constant.real.plist</string></dict>
-          <key>4</key><dict><key>name</key><string>storage.type.plist</string></dict>
+          <key>1</key><dict><key>name</key><string>meta.separator.plist</string></dict>
+          <key>2</key><dict><key>name</key><string>storage.type.common.plist</string></dict>
+          <key>3</key><dict><key>name</key><string>meta.separator.plist</string></dict>
+          <key>4</key><dict><key>name</key><string>constant.real.plist</string></dict>
+          <key>5</key><dict><key>name</key><string>meta.separator.plist</string></dict>
+          <key>6</key><dict><key>name</key><string>storage.type.common.plist</string></dict>
+          <key>7</key><dict><key>name</key><string>meta.separator.plist</string></dict>
         </dict>
       </dict>
       <dict>
         <key>comment</key><string>date</string>
-        <key>match</key><string><![CDATA[<(date)>(\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)</(date)>]]></string>
+        <key>match</key><string><![CDATA[(<)(date)(>)(\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)(</)(date)(>)]]></string>
         <key>captures</key>
         <dict>
-          <key>1</key><dict><key>name</key><string>storage.type.plist</string></dict>
-          <key>2</key><dict><key>name</key><string>constant.date.plist</string></dict>
-          <key>3</key><dict><key>name</key><string>storage.type.plist</string></dict>
+          <key>1</key><dict><key>name</key><string>meta.separator.plist</string></dict>
+          <key>2</key><dict><key>name</key><string>storage.type.common.plist</string></dict>
+          <key>3</key><dict><key>name</key><string>meta.separator.plist</string></dict>
+          <key>4</key><dict><key>name</key><string>constant.date.plist</string></dict>
+          <key>5</key><dict><key>name</key><string>meta.separator.plist</string></dict>
+          <key>6</key><dict><key>name</key><string>storage.type.common.plist</string></dict>
+          <key>7</key><dict><key>name</key><string>meta.separator.plist</string></dict>
         </dict>
       </dict>
       <dict>
         <key>comment</key><string>data</string>
-        <key>match</key><string><![CDATA[<(data)>([a-zA-Z0-9+/=]+)</(data)>]]></string>
+        <key>match</key><string><![CDATA[(<)(data)(>)([a-zA-Z0-9+/=]+)(</)(data)(>)]]></string>
         <key>captures</key>
         <dict>
-          <key>1</key><dict><key>name</key><string>storage.type.plist</string></dict>
-          <key>2</key><dict><key>name</key><string>constant.data.plist</string></dict>
-          <key>3</key><dict><key>name</key><string>storage.type.plist</string></dict>
+          <key>1</key><dict><key>name</key><string>meta.separator.plist</string></dict>
+          <key>2</key><dict><key>name</key><string>storage.type.common.plist</string></dict>
+          <key>3</key><dict><key>name</key><string>meta.separator.plist</string></dict>
+          <key>4</key><dict><key>name</key><string>constant.data.plist</string></dict>
+          <key>5</key><dict><key>name</key><string>meta.separator.plist</string></dict>
+          <key>6</key><dict><key>name</key><string>storage.type.common.plist</string></dict>
+          <key>7</key><dict><key>name</key><string>meta.separator.plist</string></dict>
         </dict>
       </dict>
       <dict>
