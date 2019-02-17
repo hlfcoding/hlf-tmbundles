@@ -41,12 +41,9 @@
 		<string>htc</string>
 		<string>jsx</string>
 	</array>
-	<key>firstLineMatch</key>
-	<string>^#!/usr/bin/env node</string>
-	<key>foldingStartMarker</key>
-	<string>/\*\*(?!\*) [_a-zA-Z]|\{\s*($|/\*(?!.*\*/.*\S))</string>
-	<key>foldingStopMarker</key>
-	<string>(?&lt;!\*)\*\*/|^\s*\}</string>
+	<key>firstLineMatch</key><string>^#!/usr/bin/env node</string>
+	<key>foldingStartMarker</key><string>/\*\*(?!\*) [_a-zA-Z]|\{\s*($|/\*(?!.*\*/.*\S))</string>
+	<key>foldingStopMarker</key><string>(?&lt;!\*)\*\*/|^\s*\}</string>
 	<key>name</key>
 	<string>JavaScript (HLF)</string>
 	<key>patterns</key>
