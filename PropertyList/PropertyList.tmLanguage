@@ -56,10 +56,12 @@
             <key>comment</key><string>regexp</string>
             <key>begin</key><string><![CDATA[(?x)
               (?<=<key>begin</key><string>|
+              <key>decreaseIndentPattern</key><string>|
               <key>end</key><string>|
               <key>firstLineMatch</key><string>|
               <key>foldingStartMarker</key><string>|
               <key>foldingStopMarker</key><string>|
+              <key>increaseIndentPattern</key><string>|
               <key>match</key><string>)]]>
             </string>
             <key>end</key><string><![CDATA[(?=</string>)]]></string>
