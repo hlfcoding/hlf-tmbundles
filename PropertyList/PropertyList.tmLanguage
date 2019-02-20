@@ -14,7 +14,7 @@
     <key>foldingStartMarker</key><string>^\s*(&lt;[^!?%/](?!.+?(/&gt;|&lt;/.+?&gt;))|&lt;[!%]--(?!.+?--%?&gt;)|&lt;%[!]?(?!.+?%&gt;))</string>
     <key>foldingStopMarker</key><string>^\s*(&lt;/[^&gt;]+&gt;|[/%]&gt;|--&gt;)\s*$</string>
     <key>keyEquivalent</key><string>^~p</string>
-    <key>name</key><string>PropertyList</string>
+    <key>name</key><string>Property List (TextMate)</string>
     <key>scopeName</key><string>text.plist</string>
     <key>uuid</key><string>1CC093AD-1628-4433-909E-6B92B592C683</string>
     <key>patterns</key>
