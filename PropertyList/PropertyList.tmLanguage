@@ -38,12 +38,16 @@
         <key>patterns</key>
         <array>
           <dict>
-            <key>match</key><string>comment|scope(Name)?|uuid</string>
+            <key>match</key><string>comment|scope(Name)?|settings|uuid</string>
             <key>name</key><string>support.type.property-name.textmate.plist</string>
           </dict>
           <dict>
             <key>match</key><string>captures|(begin|end)(Captures)?|fileTypes|firstLineMatch|folding(Start|Stop)Marker|include|keyEquivalent|match|name|patterns|repository</string>
             <key>name</key><string>support.type.property-name.tm-language.plist</string>
+          </dict>
+          <dict>
+            <key>match</key><string>cancelCompletion|(de|in)creaseIndentPattern|highlightPairs|shellVariables|showInSymbolList|symbolTransformation|value</string>
+            <key>name</key><string>support.type.property-name.tm-preferences.plist</string>
           </dict>
           <dict>
             <key>match</key><string><![CDATA[[^<]+]]></string>
