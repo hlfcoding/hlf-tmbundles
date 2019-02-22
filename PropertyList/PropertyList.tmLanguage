@@ -6,9 +6,9 @@
     <array>
       <string>plist</string>
       <string>tmLanguage</string>
-      <string>tmTheme</string>
-      <string>tmSnippet</string>
       <string>tmPreferences</string>
+      <string>tmSnippet</string>
+      <string>tmTheme</string>
     </array>
     <key>firstLineMatch</key><string>^&lt;\?xml </string>
     <key>foldingStartMarker</key><string>^\s*(&lt;[^!?%/](?!.+?(/&gt;|&lt;/.+?&gt;))|&lt;[!%]--(?!.+?--%?&gt;)|&lt;%[!]?(?!.+?%&gt;))</string>
@@ -48,6 +48,14 @@
           <dict>
             <key>match</key><string>cancelCompletion|(de|in)creaseIndentPattern|highlightPairs|shellVariables|showInSymbolList|symbolTransformation|value</string>
             <key>name</key><string>support.type.property-name.tm-preferences.plist</string>
+          </dict>
+          <dict>
+            <key>match</key><string>content|tabTrigger</string>
+            <key>name</key><string>support.type.property-name.tm-snippet.plist</string>
+          </dict>
+          <dict>
+            <key>match</key><string>author|(back|(f|gutterF)ore)ground|caret|invisibles|lineHighlight|selection|(g|(active|stack)G)uide|fontStyle</string>
+            <key>name</key><string>support.type.property-name.tm-theme.plist</string>
           </dict>
           <dict>
             <key>match</key><string><![CDATA[[^<]+]]></string>
