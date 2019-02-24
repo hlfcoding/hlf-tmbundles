@@ -83,6 +83,26 @@
         <array>
           <dict><key>include</key><string>#cdata</string></dict>
           <dict>
+            <key>comment</key><string>scope-selector</string>
+            <key>begin</key><string><![CDATA[(?x)
+              (?<=<key>include</key><string>|
+              <key>name</key><string>|
+              <key>scopeName</key><string>)]]>
+            </string>
+            <key>end</key><string><![CDATA[(?=</string>)]]></string>
+            <key>patterns</key>
+            <array>
+              <dict>
+                <key>match</key><string>\.</string>
+                <key>name</key><string>keyword.operator.scope-selector.textmate.plist</string>
+              </dict>
+              <dict>
+                <key>match</key><string><![CDATA[[^<.]+]]></string>
+                <key>name</key><string>string.plist</string>
+              </dict>
+            </array>
+          </dict>
+          <dict>
             <key>comment</key><string>regexp</string>
             <key>begin</key><string><![CDATA[(?x)
               (?<=<key>begin</key><string>|
