@@ -87,6 +87,7 @@
             <key>begin</key><string><![CDATA[(?x)
               (?<=<key>include</key><string>|
               <key>name</key><string>|
+              <key>scope</key><string>|
               <key>scopeName</key><string>)]]>
             </string>
             <key>end</key><string><![CDATA[(?=</string>)]]></string>
