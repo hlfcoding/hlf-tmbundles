@@ -195,6 +195,16 @@
         </dict>
       </dict>
       <dict>
+        <key>comment</key><string>self-closing</string>
+        <key>match</key><string><![CDATA[(<)(data|date|integer|real|string)(/>)]]></string>
+        <key>captures</key>
+        <dict>
+          <key>1</key><dict><key>name</key><string>meta.separator.plist</string></dict>
+          <key>2</key><dict><key>name</key><string>storage.type.common.plist</string></dict>
+          <key>3</key><dict><key>name</key><string>meta.separator.plist</string></dict>
+        </dict>
+      </dict>
+      <dict>
         <key>comment</key><string>array</string>
         <key>begin</key><string><![CDATA[(<)(array)(>)]]></string>
         <key>beginCaptures</key>
