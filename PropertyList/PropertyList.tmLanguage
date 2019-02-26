@@ -83,6 +83,10 @@
         <array>
           <dict><key>include</key><string>#cdata</string></dict>
           <dict>
+            <key>match</key><string>TM_COMMENT_(?:START|END|DISABLE_INDENT)(?:_[2-9])?</string>
+            <key>name</key><string>constant.other.textmate.plist</string>
+          </dict>
+          <dict>
             <key>comment</key><string>scope-selector</string>
             <key>begin</key><string><![CDATA[(?x)
               (?<=<key>include</key><string>|
