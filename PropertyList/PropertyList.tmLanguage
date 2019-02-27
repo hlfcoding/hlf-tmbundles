@@ -260,12 +260,12 @@
         <key>begin</key><string>&lt;!\[CDATA\[</string>
         <key>beginCaptures</key>
         <dict>
-          <key>0</key><dict><key>name</key><string>punctuation.definition.string.begin.plist</string></dict>
+          <key>0</key><dict><key>name</key><string>storage.type.common.begin.plist</string></dict>
         </dict>
         <key>end</key><string>]]&gt;</string>
         <key>endCaptures</key>
         <dict>
-          <key>0</key><dict><key>name</key><string>punctuation.definition.string.end.plist</string></dict>
+          <key>0</key><dict><key>name</key><string>storage.type.common.end.plist</string></dict>
         </dict>
         <key>name</key><string>string.unquoted.cdata.plist</string>
       </dict>
