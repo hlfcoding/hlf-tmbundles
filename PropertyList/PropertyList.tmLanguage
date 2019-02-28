@@ -123,6 +123,10 @@
             <key>patterns</key>
             <array>
               <dict><key>include</key><string>source.oniregexp</string></dict>
+              <dict>
+                <key>match</key><string>^\s+#\s.+$</string>
+                <key>name</key><string>comment.line.oniregexp.textmate.plist</string>
+              </dict>
             </array>
           </dict>
           <dict>
