@@ -292,6 +292,10 @@
           <key>0</key><dict><key>name</key><string>storage.type.common.end.plist</string></dict>
         </dict>
         <key>name</key><string>string.unquoted.cdata.plist</string>
+        <key>patterns</key>
+        <array>
+          <dict><key>include</key><string>source.oniregexp</string></dict>
+        </array>
       </dict>
     </dict>
   </dict>
