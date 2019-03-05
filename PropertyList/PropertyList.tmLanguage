@@ -122,6 +122,22 @@
                 <key>name</key><string>keyword.operator.scope-name.textmate.plist</string>
               </dict>
               <dict>
+                <key>comment</key><string>https://macromates.com/manual/en/language_grammars#rule_keys</string>
+                <key>begin</key><string><![CDATA[(?<=<key>include</key><string>)]]></string>
+                <key>end</key><string><![CDATA[(?=</string>)]]></string>
+                <key>patterns</key>
+                <array>
+                  <dict>
+                    <key>match</key><string><![CDATA[#[^<.]+]]></string>
+                    <key>name</key><string>entity.name.rule.textmate.plist</string>
+                  </dict>
+                  <dict>
+                    <key>match</key><string>\$self</string>
+                    <key>name</key><string>support.variable.grammar.textmate.plist</string>
+                  </dict>
+                </array>
+              </dict>
+              <dict>
                 <key>match</key><string><![CDATA[[^<.]+]]></string>
                 <key>name</key><string>string.other.plist</string>
               </dict>
