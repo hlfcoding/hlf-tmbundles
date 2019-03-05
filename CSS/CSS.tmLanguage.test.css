@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 @import url('will-be-slow.css') screen;
 
 @media screen, print, (min-width: 640px) {

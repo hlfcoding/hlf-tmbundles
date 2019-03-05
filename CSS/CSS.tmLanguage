@@ -34,8 +34,8 @@
       <key>begin</key><string>\s*((@)charset\b)\s*</string>
       <key>captures</key>
       <dict>
-        <key>1</key><dict><key>name</key><string>keyword.control.at-rule.charset.css</string></dict>
-        <key>2</key><dict><key>name</key><string>punctuation.definition.keyword.css</string></dict>
+        <key>1</key><dict><key>name</key><string>storage.type.at-rule.charset.css</string></dict>
+        <key>2</key><dict><key>name</key><string>keyword.operator.at-rule.css</string></dict>
       </dict>
       <key>end</key><string>\s*((?=;|$))</string>
       <key>name</key><string>meta.at-rule.charset.css</string>
@@ -49,8 +49,8 @@
       <key>begin</key><string>\s*((@)import\b)\s*</string>
       <key>captures</key>
       <dict>
-        <key>1</key><dict><key>name</key><string>keyword.control.at-rule.import.css</string></dict>
-        <key>2</key><dict><key>name</key><string>punctuation.definition.keyword.css</string></dict>
+        <key>1</key><dict><key>name</key><string>storage.type.at-rule.import.css</string></dict>
+        <key>2</key><dict><key>name</key><string>keyword.operator.at-rule.css</string></dict>
       </dict>
       <key>end</key><string>\s*((?=;|\}))</string>
       <key>name</key><string>meta.at-rule.import.css</string>
@@ -87,8 +87,8 @@
       <key>begin</key><string>^\s*((@)font-face)\s*(?=\{)</string>
       <key>beginCaptures</key>
       <dict>
-        <key>1</key><dict><key>name</key><string>keyword.control.at-rule.font-face.css</string></dict>
-        <key>2</key><dict><key>name</key><string>punctuation.definition.keyword.css</string></dict>
+        <key>1</key><dict><key>name</key><string>storage.type.at-rule.font-face.css</string></dict>
+        <key>2</key><dict><key>name</key><string>keyword.operator.at-rule.css</string></dict>
       </dict>
       <key>end</key><string>\s*(\})</string>
       <key>endCaptures</key>
@@ -115,8 +115,8 @@
           <key>begin</key><string>^\s*((@)media)(?=.*?\{)</string>
           <key>beginCaptures</key>
           <dict>
-            <key>1</key><dict><key>name</key><string>keyword.control.at-rule.media.css</string></dict>
-            <key>2</key><dict><key>name</key><string>punctuation.definition.keyword.css</string></dict>
+            <key>1</key><dict><key>name</key><string>storage.type.at-rule.media.css</string></dict>
+            <key>2</key><dict><key>name</key><string>keyword.operator.at-rule.css</string></dict>
             <key>3</key><dict><key>name</key><string>support.constant.media.css</string></dict>
           </dict>
           <key>end</key><string>\s*(?=\{)</string>
@@ -274,14 +274,13 @@
         <dict>
           <key>captures</key>
           <dict>
-            <key>1</key><dict><key>name</key><string>keyword.control.at-rule.keyframes.scss</string></dict>
-            <key>2</key><dict><key>name</key><string>punctuation.definition.keyword.scss</string></dict>
-            <key>3</key><dict><key>name</key><string>punctuation.definition.keyword.scss</string></dict>
-            <key>4</key><dict><key>name</key><string>entity.name.function.scss</string></dict>
+            <key>1</key><dict><key>name</key><string>storage.type.at-rule.keyframes.css</string></dict>
+            <key>2</key><dict><key>name</key><string>keyword.operator.at-rule.css</string></dict>
+            <key>4</key><dict><key>name</key><string>entity.name.function.css</string></dict>
           </dict>
           <key>comment</key><string>Simple Keyframe</string>
           <key>match</key><string>^\s*((@)(\-[\w\-]*\-)?keyframes\b)\s*([\w-]*)</string>
-          <key>name</key><string>meta.at-rule.keyframes.scss</string>
+          <key>name</key><string>meta.at-rule.keyframes.css</string>
         </dict>
       </array>
     </dict>
@@ -881,8 +880,8 @@
       <key>begin</key><string>((@)supports)</string>
       <key>beginCaptures</key>
       <dict>
-        <key>1</key><dict><key>name</key><string>keyword.control.at-rule.supports.css</string></dict>
-        <key>2</key><dict><key>name</key><string>punctuation.definition.keyword.css</string></dict>
+        <key>1</key><dict><key>name</key><string>storage.type.at-rule.supports.css</string></dict>
+        <key>2</key><dict><key>name</key><string>keyword.operator.at-rule.css</string></dict>
       </dict>
       <key>comment</key><string>developer.mozilla.org/en-US/docs/Web/CSS/@supports</string>
       <key>end</key><string>(?:\{)</string>
