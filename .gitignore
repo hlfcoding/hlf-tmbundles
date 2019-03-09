@@ -4,4 +4,6 @@
 reviews.txt
 alt/
 PHP/
-User/
+User/*
+!User/SublimeLinter
+!User/*.tmTheme
