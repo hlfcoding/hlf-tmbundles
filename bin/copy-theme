@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+GREEN='\033[0;32m'
+NC='\033[0m'
+RED='\033[0;31m'
+
+if [[ ! -d User ]]; then echo -e "\nMust run in project root!\n"; exit 1; fi
+set -euo pipefail
+function finish {
+  if [[ "$?" -gt 0 ]]; then echo -e "\n${RED}Failed to copy theme!${NC}\n"; fi
+}
+trap finish EXIT
+
+for i in "$@"; do case $i in
+  -h|--help) cat <<EOD
+Copy BBIM (Blackboard Improved) to destination(s).
+ST won't follow symlinks.
+Must run in project root.
+EOD
+  echo; exit 0;;
+  *) cp -f User/BlackboardImproved.tmTheme "${i}/User"
+  cp -f User/SublimeLinter/BlackboardImproved\ \(SL\).tmTheme "${i}/User/SublimeLinter"
+  shift;;
+esac; done
+
+echo -e "\n${GREEN}Copied theme!${NC}\n"
