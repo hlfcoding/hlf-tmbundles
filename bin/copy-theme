@@ -18,6 +18,8 @@ ST won't follow symlinks.
 Must run in project root.
 EOD
   echo; exit 0;;
+  -l|--linter-copy) cp -f User/BlackboardImproved.tmTheme User/SublimeLinter/BlackboardImproved\ \(SL\).tmTheme
+  shift;;
   *) cp -f User/BlackboardImproved.tmTheme "${i}/User"
   cp -f User/SublimeLinter/BlackboardImproved\ \(SL\).tmTheme "${i}/User/SublimeLinter"
   shift;;
