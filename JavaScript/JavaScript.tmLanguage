@@ -2,8 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>comment</key>
-	<string>
+	<key>comment</key><string>
 
 	# JavaScript Syntax: version 2.1
 
@@ -44,8 +43,7 @@
 	<key>firstLineMatch</key><string>^#!/usr/bin/env node</string>
 	<key>foldingStartMarker</key><string>/\*\*(?!\*) [_a-zA-Z]|\{\s*($|/\*(?!.*\*/.*\S))</string>
 	<key>foldingStopMarker</key><string>(?&lt;!\*)\*\*/|^\s*\}</string>
-	<key>name</key>
-	<string>JavaScript (HLF)</string>
+	<key>name</key><string>JavaScript (HLF)</string>
 	<key>patterns</key>
 	<array>
 		<dict>
@@ -55,8 +53,7 @@
 				<key>1</key>
 				<dict><key>name</key><string>storage.type.common.js</string></dict>
 			</dict>
-			<key>comment</key>
-			<string>
+			<key>comment</key><string>
 				[FRAGILE]
 				Match var statements that aren't destructuring or assignment from the
 				results of a function call.
@@ -67,15 +64,13 @@
 				<key>1</key>
 				<dict><key>name</key><string>punctuation.terminator.statement.js</string></dict>
 			</dict>
-			<key>name</key>
-			<string>meta.declaration.variables.js</string>
+			<key>name</key><string>meta.declaration.variables.js</string>
 			<key>patterns</key>
 			<array>
 				<dict><key>include</key><string>#core</string></dict>
 				<dict><key>include</key><string>#core-2</string></dict>
 				<dict>
-					<key>comment</key>
-					<string>
+					<key>comment</key><string>
 						[INSANE]
 						This matches undefined var declaration statements, most commonly to
 						visually mute them. It's closer at the top b/c I believe order
@@ -88,12 +83,10 @@
 			</array>
 		</dict>
 		<dict>
-			<key>include</key>
-			<string>#core</string>
+			<key>include</key><string>#core</string>
 		</dict>
 		<dict>
-			<key>begin</key>
-			<string>(\.)?(['"]?\$*[a-z0-9_][a-zA-Z0-9_:]*\w['"]?\s*([=:]))?\s*[,]?\s*(\s+\()?\b(function)\b\s*(\$*[a-z0-9_]\w*)?\b\s*(?=\()</string>
+			<key>begin</key><string>(\.)?(['"]?\$*[a-z0-9_][a-zA-Z0-9_:]*\w['"]?\s*([=:]))?\s*[,]?\s*(\s+\()?\b(function)\b\s*(\$*[a-z0-9_]\w*)?\b\s*(?=\()</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -109,8 +102,7 @@
 				<key>6</key>
 				<dict><key>name</key><string>entity.name.declaration.function.js</string></dict>
 			</dict>
-			<key>comment</key>
-			<string>
+			<key>comment</key><string>
 				[FRAGILE]
 				Matches: `foo: function`
 				or `foo: function ([params]) {`
@@ -131,8 +123,7 @@
 			</array>
 		</dict>
 		<dict>
-			<key>begin</key>
-			<string>^\s+(?:(async|get|set|static)\s+)?(\$*[a-z0-9_]\w+(?=\([^\(\)]*\)\s*\{))</string>
+			<key>begin</key><string>^\s+(?:(async|get|set|static)\s+)?(\$*[a-z0-9_]\w+(?=\([^\(\)]*\)\s*\{))</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -140,8 +131,7 @@
 				<key>2</key>
 				<dict><key>name</key><string>entity.name.declaration.function.method.js</string></dict>
 			</dict>
-			<key>comment</key>
-			<string>
+			<key>comment</key><string>
 				[ES6]
 				Matches: `([params]) {`
 				or `async ([params]) {`
@@ -169,8 +159,7 @@
 				<key>1</key>
 				<dict><key>name</key><string>storage.type.function.arrow.js</string></dict>
 			</dict>
-			<key>comment</key>
-			<string>
+			<key>comment</key><string>
 				[ES6][FAILING]
 				Matches: `([params]) =&gt; {`
 			</string>
@@ -188,12 +177,10 @@
 			</array>
 		</dict>
 		<dict>
-			<key>include</key>
-			<string>#core-2</string>
+			<key>include</key><string>#core-2</string>
 		</dict>
 		<dict>
-			<key>comment</key>
-			<string>[ES5] Since this needs to override string, this needs to go before it.</string>
+			<key>comment</key><string>[ES5] Since this needs to override string, this needs to go before it.</string>
 			<key>match</key><string>^\s*"use strict"\s*$</string>
 			<key>name</key><string>keyword.other.directive.js</string>
 		</dict>
@@ -204,8 +191,7 @@
 				<key>0</key>
 				<dict><key>name</key><string>punctuation.definition.comment.html.js</string></dict>
 			</dict>
-			<key>comment</key>
-			<string>
+			<key>comment</key><string>
 				[CONFLICT]
 				Only highlight the start and end markers.
 				For CDATA? Make sure to include in your theme!
@@ -227,8 +213,7 @@
 				<key>2</key>
 				<dict><key>name</key><string>punctuation.definition.string.template.begin.js</string></dict>
 			</dict>
-			<key>comment</key>
-			<string>[ES6] Templates support, adapted from JavaScriptNext.</string>
+			<key>comment</key><string>[ES6] Templates support, adapted from JavaScriptNext.</string>
 			<key>end</key><string>`</string>
 			<key>endCaptures</key>
 			<dict>
@@ -282,8 +267,7 @@
 				<key>0</key>
 				<dict><key>name</key><string>punctuation.definition.comment.js</string></dict>
 			</dict>
-			<key>comment</key>
-			<string>
+			<key>comment</key><string>
 				[CORE]
 				Documentation comment blocks very similar to regular ones.
 				Simple ranged search, where `/**/` is exempt.
@@ -292,15 +276,13 @@
 			<key>name</key><string>comment.block.documentation.js</string>
 		</dict>
 		<dict>
-			<key>begin</key>
-			<string>(?&lt;=[=(:]|^|return|&amp;&amp;|\|\||!)\s*\(?(/)(?![/*+{}?])</string>
+			<key>begin</key><string>(?&lt;=[=(:]|^|return|&amp;&amp;|\|\||!)\s*\(?(/)(?![/*+{}?])</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
 				<dict><key>name</key><string>punctuation.definition.string.begin.js</string></dict>
 			</dict>
-			<key>comment</key>
-			<string>
+			<key>comment</key><string>
 				[FRAGILE]
 				Only match if preceded by certain things. Follows linting
 				advice and wraps an optional `()`.
@@ -318,21 +300,17 @@
 			</array>
 		</dict>
 		<dict>
-			<key>comment</key>
-			<string>[LIST][ES6] Language constructors only.</string>
-			<key>match</key>
-			<string>\b(Array|Boolean|Date|Function|Iterator|Number|Object|RegExp|String|ArrayBuffer|Float32Array|Float64Array|Int16Array|Int32Array|Int8Array|Uint16Array|Uint32Array|Uint8Array|Uint8ClampedArray|Error|EvalError|InternalError|RangeError|ReferenceError|StopIteration|SyntaxError|TypeError|URIError|DataView|(Map|Promise|Proxy|Reflect|Set|Symbol|WeakMap|WeakSet))\b</string>
+			<key>comment</key><string>[LIST][ES6] Language constructors only.</string>
+			<key>match</key><string>\b(Array|Boolean|Date|Function|Iterator|Number|Object|RegExp|String|ArrayBuffer|Float32Array|Float64Array|Int16Array|Int32Array|Int8Array|Uint16Array|Uint32Array|Uint8Array|Uint8ClampedArray|Error|EvalError|InternalError|RangeError|ReferenceError|StopIteration|SyntaxError|TypeError|URIError|DataView|(Map|Promise|Proxy|Reflect|Set|Symbol|WeakMap|WeakSet))\b</string>
 			<key>name</key><string>support.type.class.language.js</string>
 		</dict>
 		<dict>
-			<key>comment</key>
-			<string>
+			<key>comment</key><string>
 				[LIST]
 				Language non-constructor functions only. Includes Date instances.
 				Includes Harmony features and base function methods.
 			</string>
-			<key>match</key>
-			<string>\b(((de|en)codeURI(Component)?)|(un)?eval|is(Finite|NaN)|parse(Float|Int)|(?&lt;=\.|\.prototype\.)((to((Locale)?String|Source))|(value|isPrototype)Of|hasOwnProperty|propertyIsEnumerable|bind|call|apply|assign|reduce(Right)?|concat|every|filter|find|forEach|indexOf|join|lastIndexOf|map|pop|push|reverse|(un)?shift|slice|some|sort|splice|trim(Left|Right)?|anchor|big|blink|bold|char(Code)?At|concat|fixed|font(color|size)|fromCharCode|italics|link|localeCompare|match|quote|replace|search|small|split|strike|sub|substr(ing)?|sup|to(Locale)?(Lower|Upper)Case)|(?&lt;=Date\.)UTC|(?&lt;=Date\.prototype\.|date\.)((g|s)et(Date|Day|FullYear|Hours|Milliseconds|Minutes|Month|Seconds|Time|TimezoneOffset|UTC(Date|Day|FullYear|Hours|Milliseconds|Minutes|Month|Seconds)|Year)|now|parse|to((Date|GMT|ISO|Locale(Date|Time)|Time|UTC)String|LocaleFormat|JSON)))\b|(?&lt;=JSON\.)(parse|stringify)\b|(?&lt;=Math\.)(abs|a?(cos|sin|tan)h?2?|ceil|exp|floor|hypot|log(10|2)?|max|min|pow|random|round|(cb|sq)rt|trunc)\b</string>
+			<key>match</key><string>\b(((de|en)codeURI(Component)?)|(un)?eval|is(Finite|NaN)|parse(Float|Int)|(?&lt;=\.|\.prototype\.)((to((Locale)?String|Source))|(value|isPrototype)Of|hasOwnProperty|propertyIsEnumerable|bind|call|apply|assign|reduce(Right)?|concat|every|filter|find|forEach|indexOf|join|lastIndexOf|map|pop|push|reverse|(un)?shift|slice|some|sort|splice|trim(Left|Right)?|anchor|big|blink|bold|char(Code)?At|concat|fixed|font(color|size)|fromCharCode|italics|link|localeCompare|match|quote|replace|search|small|split|strike|sub|substr(ing)?|sup|to(Locale)?(Lower|Upper)Case)|(?&lt;=Date\.)UTC|(?&lt;=Date\.prototype\.|date\.)((g|s)et(Date|Day|FullYear|Hours|Milliseconds|Minutes|Month|Seconds|Time|TimezoneOffset|UTC(Date|Day|FullYear|Hours|Milliseconds|Minutes|Month|Seconds)|Year)|now|parse|to((Date|GMT|ISO|Locale(Date|Time)|Time|UTC)String|LocaleFormat|JSON)))\b|(?&lt;=JSON\.)(parse|stringify)\b|(?&lt;=Math\.)(abs|a?(cos|sin|tan)h?2?|ceil|exp|floor|hypot|log(10|2)?|max|min|pow|random|round|(cb|sq)rt|trunc)\b</string>
 			<key>name</key><string>support.function.language.js</string>
 		</dict>
 		<dict>
@@ -352,78 +330,62 @@
 				<key>3</key>
 				<dict><key>name</key><string>support.type.object.module.js</string></dict>
 			</dict>
-			<key>match</key>
-			<string>(?&lt;![.$])\b(exports|module(?:(\.)(children|exports|filename|id|loaded|parent)))?\b</string>
+			<key>match</key><string>(?&lt;![.$])\b(exports|module(?:(\.)(children|exports|filename|id|loaded|parent)))?\b</string>
 			<key>name</key><string>support.variable.global.common.js</string>
 		</dict>
 		<dict>
-			<key>comment</key>
-			<string>[LIST][BROWSER] Constructors only. Includes all DOM, SVG, etc.</string>
-			<key>match</key>
-			<string>\b(Attr|Audio(ProcessingEvent)?|BeforeLoadEvent|Blob|CDATASection|CharacterData|Comment|CustomEvent|Document(Fragment|Type)|DomConfiguration|DOM(Error|ErrorHandler|Exception|Implementation(List|Registry|Source)?|Locator|Object|String(List)?|TimeStamp|UserData|(Settable)?TokenList|StringMap)|Entity(Reference)?|MediaQueryList(Listener)?|NameList|NamedNodeMap|Node(Filter|Iterator|List)?|Notation|Plugin(Array)?|ProcessingInstruction|SharedWorker|Text|TimeRanges|Treewalker|TypeInfo|UserDataHandler|Worker(GlobalScope)?|HTML(Document|Element|(Anchor|Applet|Audio|Area|Base|BaseFont|Body|BR|Button|Canvas|Directory|Div|DList|Embed|FieldSet|Font|Form|Frame|FrameSet|Head|Heading|Html|HR|IFrame|Image|Input|Keygen|Label|LI|Link|Map|Menu|Meta|Mod|Object|OList|OptGroup|Option|Output|Paragraph|Param|Pre|Quote|Script|Select|Source|Span|Style|Table(Caption|(Data|Header)?Cell|Col|Row|Section)?|TextArea|Time|Title|Track|UList|Unknown|Video)Element|(All|FormControls|Options|Properties)?Collection)|ElementTimeControl|TimeEvent|Canvas(RenderingContext2D|Gradient|Pattern|PixelArray)|TextMetrics|ImageData|NotifyAudioAvailableEvent|RadioNodeList|SVG(Document|Element|(A|AltGlyph(Def|Item)?|Animation|Animate(Color|Motion|Transform)?|Set|Circle|ClipPath|ColorProfile|Cursor|Defs|Desc|Ellipse|Filter|FE(Blend|ColorMatrix|ComponentTransfer|Composite|ConvolveMatrix|DiffuseLighting|DisplacementMap|DistantLight|Flood|GaussianBlur|Image|Merge(Node)?|Morphology|Offset|(Point|Spot)Light|SpecularLighting|Tile|Turbulence|Func(R|G|B|A))|ComponentTransferFunction|Font(Face(Format|Name|Src|Uri)?)?|ForeignObject|G|Glyph|GlyphRef|(Linear|Radial)?Gradient|HKern|Image|Line|Marker|Mask|Metadata|MissingGlyph|(M|)Path|Pattern|Polyline|Polygon|Rect|Script|Stop|Style|Switch|Symbol|Text|TextPath|Title|TRef|TSpan|Use|View|VKern)Element|Angle|Color|ICCColor|Element(Instance(List)?)|Length(List)?|Matrix|Number(List)?|Paint|Point(List)?|PreserveAspectRatio|Rect|StringList|Transform(List)?|Animated(Angle|Boolean|Enumeration|Integer|Length(List)?|Number(List)?|PreserveAspectRatio|Rect|String|TransformList)|Path(Seg(List|ArcAbs|ArcRel|ClosePath|Curve(to(Cubic((Smooth)?(Abs|Rel))|Quadratic((Smooth)?(Abs|Rel))))|Line(to((Horizontal|Vertical)?(Abs|Rel)))|Moveto(Abs|Rel))?)|FilterPrimitiveStandardAttributes|AnimatedPathData)|CSS((Charset|FontFace|Import|Media|Page)Rule|PrimitiveValue|Rule(List)?|Style(Declaration|Rule|Sheet))|DOM(Parser|DateInput)|Document|Element|(Error)?Event|Event(Exception|Source)?|File(Error|List|Reader)?|FormData|HashChangeEvent|Image|Intent|KeyboardEvent|Media(Controller|Error|List|StreamEvent)|Message(Channel|Event|Port)|MimeType(Array)?|(Mouse|Mutation|OfflineAudioCompletion|Overflow|PageTransition|PopState|Progress|Text|Touch|UI|Wheel)Event|Option|RGBColor|Range(Exception)?|Rect|SQLException|SVG(ZoomEvent|UnitTypes)|WebSocket|WebGL(ActiveInfo|Buffer|ContextEvent|FrameBuffer|Program|Render(Buffer|ingContext)|Shader|Texture|UniformLocation)|WebKit(AnimationEvent|BlobBuilder|CSS((Filter|Transform)Value|(Keyframes?|Region)Rule|Matrix)|Mutation(Observer|Point|TransitionEvent))|XMLHttpRequest|ActiveXObject|Device(Mo|Orienta)tionEvent)\b</string>
+			<key>comment</key><string>[LIST][BROWSER] Constructors only. Includes all DOM, SVG, etc.</string>
+			<key>match</key><string>\b(Attr|Audio(ProcessingEvent)?|BeforeLoadEvent|Blob|CDATASection|CharacterData|Comment|CustomEvent|Document(Fragment|Type)|DomConfiguration|DOM(Error|ErrorHandler|Exception|Implementation(List|Registry|Source)?|Locator|Object|String(List)?|TimeStamp|UserData|(Settable)?TokenList|StringMap)|Entity(Reference)?|MediaQueryList(Listener)?|NameList|NamedNodeMap|Node(Filter|Iterator|List)?|Notation|Plugin(Array)?|ProcessingInstruction|SharedWorker|Text|TimeRanges|Treewalker|TypeInfo|UserDataHandler|Worker(GlobalScope)?|HTML(Document|Element|(Anchor|Applet|Audio|Area|Base|BaseFont|Body|BR|Button|Canvas|Directory|Div|DList|Embed|FieldSet|Font|Form|Frame|FrameSet|Head|Heading|Html|HR|IFrame|Image|Input|Keygen|Label|LI|Link|Map|Menu|Meta|Mod|Object|OList|OptGroup|Option|Output|Paragraph|Param|Pre|Quote|Script|Select|Source|Span|Style|Table(Caption|(Data|Header)?Cell|Col|Row|Section)?|TextArea|Time|Title|Track|UList|Unknown|Video)Element|(All|FormControls|Options|Properties)?Collection)|ElementTimeControl|TimeEvent|Canvas(RenderingContext2D|Gradient|Pattern|PixelArray)|TextMetrics|ImageData|NotifyAudioAvailableEvent|RadioNodeList|SVG(Document|Element|(A|AltGlyph(Def|Item)?|Animation|Animate(Color|Motion|Transform)?|Set|Circle|ClipPath|ColorProfile|Cursor|Defs|Desc|Ellipse|Filter|FE(Blend|ColorMatrix|ComponentTransfer|Composite|ConvolveMatrix|DiffuseLighting|DisplacementMap|DistantLight|Flood|GaussianBlur|Image|Merge(Node)?|Morphology|Offset|(Point|Spot)Light|SpecularLighting|Tile|Turbulence|Func(R|G|B|A))|ComponentTransferFunction|Font(Face(Format|Name|Src|Uri)?)?|ForeignObject|G|Glyph|GlyphRef|(Linear|Radial)?Gradient|HKern|Image|Line|Marker|Mask|Metadata|MissingGlyph|(M|)Path|Pattern|Polyline|Polygon|Rect|Script|Stop|Style|Switch|Symbol|Text|TextPath|Title|TRef|TSpan|Use|View|VKern)Element|Angle|Color|ICCColor|Element(Instance(List)?)|Length(List)?|Matrix|Number(List)?|Paint|Point(List)?|PreserveAspectRatio|Rect|StringList|Transform(List)?|Animated(Angle|Boolean|Enumeration|Integer|Length(List)?|Number(List)?|PreserveAspectRatio|Rect|String|TransformList)|Path(Seg(List|ArcAbs|ArcRel|ClosePath|Curve(to(Cubic((Smooth)?(Abs|Rel))|Quadratic((Smooth)?(Abs|Rel))))|Line(to((Horizontal|Vertical)?(Abs|Rel)))|Moveto(Abs|Rel))?)|FilterPrimitiveStandardAttributes|AnimatedPathData)|CSS((Charset|FontFace|Import|Media|Page)Rule|PrimitiveValue|Rule(List)?|Style(Declaration|Rule|Sheet))|DOM(Parser|DateInput)|Document|Element|(Error)?Event|Event(Exception|Source)?|File(Error|List|Reader)?|FormData|HashChangeEvent|Image|Intent|KeyboardEvent|Media(Controller|Error|List|StreamEvent)|Message(Channel|Event|Port)|MimeType(Array)?|(Mouse|Mutation|OfflineAudioCompletion|Overflow|PageTransition|PopState|Progress|Text|Touch|UI|Wheel)Event|Option|RGBColor|Range(Exception)?|Rect|SQLException|SVG(ZoomEvent|UnitTypes)|WebSocket|WebGL(ActiveInfo|Buffer|ContextEvent|FrameBuffer|Program|Render(Buffer|ingContext)|Shader|Texture|UniformLocation)|WebKit(AnimationEvent|BlobBuilder|CSS((Filter|Transform)Value|(Keyframes?|Region)Rule|Matrix)|Mutation(Observer|Point|TransitionEvent))|XMLHttpRequest|ActiveXObject|Device(Mo|Orienta)tionEvent)\b</string>
 			<key>name</key><string>support.type.class.dom.js</string>
 		</dict>
 		<dict>
 			<key>comment</key><string>[LIST][BROWSER]</string>
-			<key>match</key>
-			<string>\b(ELEMENT_NODE|ATTRIBUTE_NODE|TEXT_NODE|CDATA_SECTION_NODE|ENTITY_REFERENCE_NODE|ENTITY_NODE|PROCESSING_INSTRUCTION_NODE|COMMENT_NODE|DOCUMENT_NODE|DOCUMENT_TYPE_NODE|DOCUMENT_FRAGMENT_NODE|NOTATION_NODE|INDEX_SIZE_ERR|DOMSTRING_SIZE_ERR|HIERARCHY_REQUEST_ERR|WRONG_DOCUMENT_ERR|INVALID_CHARACTER_ERR|NO_DATA_ALLOWED_ERR|NO_MODIFICATION_ALLOWED_ERR|NOT_FOUND_ERR|NOT_SUPPORTED_ERR|INUSE_ATTRIBUTE_ERR)\b</string>
+			<key>match</key><string>\b(ELEMENT_NODE|ATTRIBUTE_NODE|TEXT_NODE|CDATA_SECTION_NODE|ENTITY_REFERENCE_NODE|ENTITY_NODE|PROCESSING_INSTRUCTION_NODE|COMMENT_NODE|DOCUMENT_NODE|DOCUMENT_TYPE_NODE|DOCUMENT_FRAGMENT_NODE|NOTATION_NODE|INDEX_SIZE_ERR|DOMSTRING_SIZE_ERR|HIERARCHY_REQUEST_ERR|WRONG_DOCUMENT_ERR|INVALID_CHARACTER_ERR|NO_DATA_ALLOWED_ERR|NO_MODIFICATION_ALLOWED_ERR|NOT_FOUND_ERR|NOT_SUPPORTED_ERR|INUSE_ATTRIBUTE_ERR)\b</string>
 			<key>name</key><string>support.constant.dom.js</string>
 		</dict>
 		<dict>
-			<key>comment</key>
-			<string>[LIST]</string>
-			<key>match</key>
-			<string>\b(?&lt;=console\.)(warn|info|log|error|time|timeEnd|assert|dir(xml)?|group(Collapsed|End)?|markTimeline|memory|profile(End|s)?|time(End|Stamp)?|trace)\b</string>
+			<key>comment</key><string>[LIST]</string>
+			<key>match</key><string>\b(?&lt;=console\.)(warn|info|log|error|time|timeEnd|assert|dir(xml)?|group(Collapsed|End)?|markTimeline|memory|profile(End|s)?|time(End|Stamp)?|trace)\b</string>
 			<key>name</key><string>support.function.debug.js</string>
 		</dict>
 		<dict>
-			<key>comment</key>
-			<string>[LIST][BROWSER] `window.[prop]` or `[prop]`. Includes navigator, screen, URL, bars.</string>
-			<key>match</key>
-			<string>\b(?&lt;=window\.|^|[^.])(document|screen|JSON|Math|console|applicationCache|controllers|crypto|defaultStatus|dialogArguments|closed|content|directories|document|frame(Element|s)|fullScreen|history|inner(Height|Width)|length|location(bar)?(\.visible)?|menubar(\.visible)?|messageManager|navigator|opener|outer(Height|Width)|parent|personalbar|pkcs11|(screen|scroll)(X|Y)|top|toolbar(\.visible)?|status(bar)?|sidebar|scrollbars|self|scrollMax(X|Y)|URL|window|page(X|Y)Offset|offscreenBuffering|localStorage)\b|(?&lt;=navigator\.)((app(CodeName|Name|Version)|buildID|(cookie|java)Enabled|language|mimeTypes|onLine|oscpu|platform|plugins|product(Sub)?)|registerContentHandler|userAgent|vendor(Sub)?|geolocation)\b|(?&lt;=screen\.)(avail(Height|Left|Top|Width)|colorDepth|height|left|pixelDepth|top|width)\b</string>
+			<key>comment</key><string>[LIST][BROWSER] `window.[prop]` or `[prop]`. Includes navigator, screen, URL, bars.</string>
+			<key>match</key><string>\b(?&lt;=window\.|^|[^.])(document|screen|JSON|Math|console|applicationCache|controllers|crypto|defaultStatus|dialogArguments|closed|content|directories|document|frame(Element|s)|fullScreen|history|inner(Height|Width)|length|location(bar)?(\.visible)?|menubar(\.visible)?|messageManager|navigator|opener|outer(Height|Width)|parent|personalbar|pkcs11|(screen|scroll)(X|Y)|top|toolbar(\.visible)?|status(bar)?|sidebar|scrollbars|self|scrollMax(X|Y)|URL|window|page(X|Y)Offset|offscreenBuffering|localStorage)\b|(?&lt;=navigator\.)((app(CodeName|Name|Version)|buildID|(cookie|java)Enabled|language|mimeTypes|onLine|oscpu|platform|plugins|product(Sub)?)|registerContentHandler|userAgent|vendor(Sub)?|geolocation)\b|(?&lt;=screen\.)(avail(Height|Left|Top|Width)|colorDepth|height|left|pixelDepth|top|width)\b</string>
 			<key>name</key><string>support.variable.global.dom.js</string>
 		</dict>
 		<dict>
-			<key>comment</key>
-			<string>
+			<key>comment</key><string>
 				[LIST][BROWSER]
 				`window.[fn]()` or `[fn]()`.
 				Includes URL, location, localStorage, document, navigator.history, geolocation, crypto
 			</string>
-			<key>match</key>
-			<string>\b(?&lt;=^|[^.])(atob|btoa|clear(Interval|Timeout)|set(Interval|Timeout))\b|(?&lt;=window\.)(alert|back|blur|close|confirm|focus|forward|get(Attention|ComputedStyle|Selection)|home|matchMedia|move(By|To)|open|postMessage|print|prompt|requestAnimationFrame|resize(By|To)|scroll(By|To)?|stop)\b|(?&lt;=URL\.)((create|revoke)ObjectURL)\b|(?&lt;=localStorage\.)(clear|(get|set|remove)Item|key)\b|(?&lt;=location\.|document\.location\.)(assign|hash|host(name)?|href|origin|pathname|port|protocol|search|reload|replace)\b|(?&lt;=navigator\.geolocation\.)((getCurrent|watch)Position)\b|(?&lt;=history\.)(back|forward|go|(push|replace)State)\b|(?&lt;=crypto\.)(getRandomValues)\b|(?&lt;=doc\.|document\.)(URL|activeElement|adoptNode|alinkColor|anchors|applets|async|baseURIObject|bgColor|body|characterSet|clear|close|compatMode|contentType|cookie|create(Attribute|CDATASection|Comment|DocumentFragment|Element|ElementNS|EntityReference|Event|Expression|NSResolver|ProcessingInstruction|Range|TextNode|TreeWalker)|currentScript|defaultView|doctype|document(Element|URI(Object)?)|domain|elementFromPoint|embeds|enableStyleSheetsForSet|evaluate|fgColor|forms|fullScreen(Element|Enabled)|get(BoxObjectFor|Elements?By(Id|ClassName|Name|TagName(NS)?))|hasFocus|height|images|implementation|importNode|inputEncoding|last(Modified|StyleSheetSet)|link(Color|s)|load(Overlay)?|location|onreadystatechange|open|plugins|popupNode|preferredStyleSheetSet|query(CommandSupported|Selector(All)?)|readyState|referrer|releaseCapture|scripts|selectedStyleSheetSet|styleSheet(Set)?s|title|tooltipNode|vlinkColor|width|write(ln)?|xmlVersion)\b</string>
+			<key>match</key><string>\b(?&lt;=^|[^.])(atob|btoa|clear(Interval|Timeout)|set(Interval|Timeout))\b|(?&lt;=window\.)(alert|back|blur|close|confirm|focus|forward|get(Attention|ComputedStyle|Selection)|home|matchMedia|move(By|To)|open|postMessage|print|prompt|requestAnimationFrame|resize(By|To)|scroll(By|To)?|stop)\b|(?&lt;=URL\.)((create|revoke)ObjectURL)\b|(?&lt;=localStorage\.)(clear|(get|set|remove)Item|key)\b|(?&lt;=location\.|document\.location\.)(assign|hash|host(name)?|href|origin|pathname|port|protocol|search|reload|replace)\b|(?&lt;=navigator\.geolocation\.)((getCurrent|watch)Position)\b|(?&lt;=history\.)(back|forward|go|(push|replace)State)\b|(?&lt;=crypto\.)(getRandomValues)\b|(?&lt;=doc\.|document\.)(URL|activeElement|adoptNode|alinkColor|anchors|applets|async|baseURIObject|bgColor|body|characterSet|clear|close|compatMode|contentType|cookie|create(Attribute|CDATASection|Comment|DocumentFragment|Element|ElementNS|EntityReference|Event|Expression|NSResolver|ProcessingInstruction|Range|TextNode|TreeWalker)|currentScript|defaultView|doctype|document(Element|URI(Object)?)|domain|elementFromPoint|embeds|enableStyleSheetsForSet|evaluate|fgColor|forms|fullScreen(Element|Enabled)|get(BoxObjectFor|Elements?By(Id|ClassName|Name|TagName(NS)?))|hasFocus|height|images|implementation|importNode|inputEncoding|last(Modified|StyleSheetSet)|link(Color|s)|load(Overlay)?|location|onreadystatechange|open|plugins|popupNode|preferredStyleSheetSet|query(CommandSupported|Selector(All)?)|readyState|referrer|releaseCapture|scripts|selectedStyleSheetSet|styleSheet(Set)?s|title|tooltipNode|vlinkColor|width|write(ln)?|xmlVersion)\b</string>
 			<key>name</key><string>support.function.global.dom.js</string>
 		</dict>
 		<dict>
-			<key>comment</key>
-			<string>
+			<key>comment</key><string>
 				[LIST][BROWSER]
 				Assumes the var is named a certain way. This includes functions and variables.
 				Includes animation, element, event, form, range, table, document, worker.
 			</string>
-			<key>match</key>
-			<string>\b(?&lt;=animation\.)(cancel|currentTime|effect|finish(ed)?|id|pause|pending|play(State|backRate)?|ready|reverse|startTime|timeline|updatePlaybackRate)\b|(?&lt;=el\.|elem\.|element\.|Element\.|fragment\.)(addEventListener|animate|appendChild|baseURIObject|blur|childElementCount|children|class(List|Name)|click|client(Height|Left|Top|Width)|(c|isC)ontentEditable|cloneNode|dataset|dir|dispatchEvent|first(Element)?Child|focus|get(Attribute(NS|Node(NS)?)?|BoundingClientRect|ClientRects|ElementsByTagName(NS)?)|hasAttribute(NS)?|id|(inner|insertAdjacent)HTML|insertBefore|item|lang|last(Element)?Child|matches|name|nextElementSibling|offset(Height|Left|Parent|Top|Width)|on((after|before)scriptexecute|blur|change|click|copy|cut|dblclick|focus|key(down|press|up)|mouse(down|move|out|over|up)|paste|resize|scroll)|outerHTML|parentElement|previousElementSibling|querySelector(All)?|remove(Attribute(NS|Node)?|Child|EventListener)|requestFullScreen|scroll(Height|IntoView|Left|Top|Width)|set(Attribute(NS|Node(NS)?)?|Capture)|style|tabIndex|tagName|textContent|title|type|(addTextTrack|audioTracks|autoplay|buffered|canPlayType|control(ler|s|sList)|crossOrigin|current(Src|Time)|default(Muted|PlaybackRate)|disableRemotePlayback|duration|ended|error|fastSeek|load|loop|media(Group|Keys)|muted|networkState|paused?|play(ed|backRate)?|preload|readyState|seek(able|ing)|src(Object)?|(text|video)Tracks|volume))\b|(?&lt;=worker\.)(postMessage|terminate)\b|(?&lt;=e\.|evt\.|event\.)(cancel(Bubble|able)|client(X|Y)|ctrlKey|currentTarget|defaultPrevented|detail|eventPhase|explicitOriginalTarget|init(Key|Mouse|UI)?Event|metaKey|originalTarget|preventDefault|relatedTarget|screen(X|Y)|shiftKey|stop(Immediate)?Propagation|target|timeStamp|type|view|acceleration(IncludingGravity)?|interval|rotationRate|absolute|alpha|beta|gamma)\b|(?&lt;=frm\.|form\.)(acceptCharset|action|elements|enctype|length|method|name|reset|submit|target)\b|(?&lt;=range\.)(clone(Contents|Range)|collapsed?|commonAncestorContainer|compare(BoundaryPoints|Node|Point)|createContextualFragment|deleteContents|detach|end(Container|Offset)|extractContents|get(Bounding)?ClientRects?|(insert|intersects)Node|isPointInRange|selectNode(Contents)?|set(End(After|Before)?|Start(After|Before)?)|start(Container|Offset)|surroundContents)\b|(?&lt;=tbl\.|table\.)(align|bgColor|border|caption|cell(Padding|Spacing)|create(Caption|TFoot|THead)|delete(Caption|Row|TFoot|THead)|frame|insertRow|rows|rules|summary|tBodies|tFoot|tHead|width)\b|(?&lt;=classList\.)(add|contains|remove|toggle)\b</string>
+			<key>match</key><string>\b(?&lt;=animation\.)(cancel|currentTime|effect|finish(ed)?|id|pause|pending|play(State|backRate)?|ready|reverse|startTime|timeline|updatePlaybackRate)\b|(?&lt;=el\.|elem\.|element\.|Element\.|fragment\.)(addEventListener|animate|appendChild|baseURIObject|blur|childElementCount|children|class(List|Name)|click|client(Height|Left|Top|Width)|(c|isC)ontentEditable|cloneNode|dataset|dir|dispatchEvent|first(Element)?Child|focus|get(Attribute(NS|Node(NS)?)?|BoundingClientRect|ClientRects|ElementsByTagName(NS)?)|hasAttribute(NS)?|id|(inner|insertAdjacent)HTML|insertBefore|item|lang|last(Element)?Child|matches|name|nextElementSibling|offset(Height|Left|Parent|Top|Width)|on((after|before)scriptexecute|blur|change|click|copy|cut|dblclick|focus|key(down|press|up)|mouse(down|move|out|over|up)|paste|resize|scroll)|outerHTML|parentElement|previousElementSibling|querySelector(All)?|remove(Attribute(NS|Node)?|Child|EventListener)|requestFullScreen|scroll(Height|IntoView|Left|Top|Width)|set(Attribute(NS|Node(NS)?)?|Capture)|style|tabIndex|tagName|textContent|title|type|(addTextTrack|audioTracks|autoplay|buffered|canPlayType|control(ler|s|sList)|crossOrigin|current(Src|Time)|default(Muted|PlaybackRate)|disableRemotePlayback|duration|ended|error|fastSeek|load|loop|media(Group|Keys)|muted|networkState|paused?|play(ed|backRate)?|preload|readyState|seek(able|ing)|src(Object)?|(text|video)Tracks|volume))\b|(?&lt;=worker\.)(postMessage|terminate)\b|(?&lt;=e\.|evt\.|event\.)(cancel(Bubble|able)|client(X|Y)|ctrlKey|currentTarget|defaultPrevented|detail|eventPhase|explicitOriginalTarget|init(Key|Mouse|UI)?Event|metaKey|originalTarget|preventDefault|relatedTarget|screen(X|Y)|shiftKey|stop(Immediate)?Propagation|target|timeStamp|type|view|acceleration(IncludingGravity)?|interval|rotationRate|absolute|alpha|beta|gamma)\b|(?&lt;=frm\.|form\.)(acceptCharset|action|elements|enctype|length|method|name|reset|submit|target)\b|(?&lt;=range\.)(clone(Contents|Range)|collapsed?|commonAncestorContainer|compare(BoundaryPoints|Node|Point)|createContextualFragment|deleteContents|detach|end(Container|Offset)|extractContents|get(Bounding)?ClientRects?|(insert|intersects)Node|isPointInRange|selectNode(Contents)?|set(End(After|Before)?|Start(After|Before)?)|start(Container|Offset)|surroundContents)\b|(?&lt;=tbl\.|table\.)(align|bgColor|border|caption|cell(Padding|Spacing)|create(Caption|TFoot|THead)|delete(Caption|Row|TFoot|THead)|frame|insertRow|rows|rules|summary|tBodies|tFoot|tHead|width)\b|(?&lt;=classList\.)(add|contains|remove|toggle)\b</string>
 			<key>name</key><string>support.function.instance.dom.js</string>
 		</dict>
 		<dict>
-			<key>comment</key>
-			<string>
+			<key>comment</key><string>
 				[LIST][BROWSER]
 				Assumes the var is named a certain way.
 				Includes element, event, form, range, table, document, worker.
 			</string>
-			<key>match</key>
-			<string>\b(el(em(ent)?)?s?|\w+Elements?|e(v(en)?t)?|fo?rm|range|ta?ble?|doc(ument)?|worker|date)\b</string>
+			<key>match</key><string>\b(el(em(ent)?)?s?|\w+Elements?|e(v(en)?t)?|fo?rm|range|ta?ble?|doc(ument)?|worker|date)\b</string>
 			<key>name</key><string>meta.variable.instance.dom.js</string>
 		</dict>
 		<dict>
-			<key>comment</key>
-			<string>
+			<key>comment</key><string>
 				[LIST][BROWSER]
 				Matches either `window.on[foo]` or `on[foo]` or `"onfoo"`. Case insensitive.
 			</string>
-			<key>match</key>
-			<string>\b(?&lt;=window\.|^|[^.])(on(?i:r(ow(s(inserted|delete)|e(nter|xit))|e(s(ize(start|end)?|et)|adystatechange))|mouse(o(ut|ver)|down|up|move)|b(efore(cut|deactivate|u(nload|pdate)|p(aste|rint)|editfocus|activate)|lur)|s(croll|top|ubmit|elect(start|ionchange)?)|h(ashchange|over|elp)|c(hange|ont(extmenu|rolselect)|ut|ellchange|l(ick|ose))|d(evice((mo|orienta)tion)|eactivate|ata(setc(hanged|omplete)|available)|r(op|ag(start|over|drop|en(ter|d)|leave)?)|blclick)|unload|p(opstate|aste|ropertychange)|error(update)?|key(down|up|press)|focus|load|a(ctivate|fter(update|print)|bort)))\b</string>
+			<key>match</key><string>\b(?&lt;=window\.|^|[^.])(on(?i:r(ow(s(inserted|delete)|e(nter|xit))|e(s(ize(start|end)?|et)|adystatechange))|mouse(o(ut|ver)|down|up|move)|b(efore(cut|deactivate|u(nload|pdate)|p(aste|rint)|editfocus|activate)|lur)|s(croll|top|ubmit|elect(start|ionchange)?)|h(ashchange|over|elp)|c(hange|ont(extmenu|rolselect)|ut|ellchange|l(ick|ose))|d(evice((mo|orienta)tion)|eactivate|ata(setc(hanged|omplete)|available)|r(op|ag(start|over|drop|en(ter|d)|leave)?)|blclick)|unload|p(opstate|aste|ropertychange)|error(update)?|key(down|up|press)|focus|load|a(ctivate|fter(update|print)|bort)))\b</string>
 			<key>name</key><string>support.function.event-handler.js</string>
 		</dict>
 		<dict>
@@ -439,8 +401,7 @@
 				<key>2</key>
 				<dict><key>name</key><string>meta.brace.round.js</string></dict>
 			</dict>
-			<key>comment</key>
-			<string>
+			<key>comment</key><string>
 				Make reading long multi-line jQuery statements easier.
 				Basic implementation, just matches `$fooBar...(`.
 			</string>
@@ -455,8 +416,7 @@
 				<key>2</key>
 				<dict><key>name</key><string>keyword.operator.js</string></dict>
 			</dict>
-			<key>comment</key>
-			<string>
+			<key>comment</key><string>
 				Matches `Foo.Bar = [...]`.
 				TODO - Not showing on symbol list.
 			</string>
@@ -483,8 +443,7 @@
 			<key>name</key><string>meta.property.js</string>
 		</dict>
 		<dict>
-			<key>include</key>
-			<string>#class-name</string>
+			<key>include</key><string>#class-name</string>
 		</dict>
 	</array>
 	<!-- SECTION -->
@@ -492,8 +451,7 @@
 	<dict>
 		<key>core</key>
 		<dict>
-			<key>comment</key>
-			<string>
+			<key>comment</key><string>
 				Pattern group for the core language constructs.
 			</string>
 			<key>patterns</key>
@@ -511,8 +469,7 @@
 		</dict>
 		<key>core-2</key>
 		<dict>
-			<key>comment</key>
-			<string>
+			<key>comment</key><string>
 				Pattern group for the secondary core language constructs.
 				These are included after other major (and fragile) patterns.
 			</string>
@@ -586,12 +543,9 @@
 		</dict>
 		<key>numeric-constants</key>
 		<dict>
-			<key>comment</key>
-			<string>[CORE] Needs to support other base numbers besides 10.</string>
-			<key>match</key>
-			<string>\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\.[0-9]+)?))\b</string>
-			<key>name</key>
-			<string>constant.numeric.js</string>
+			<key>comment</key><string>[CORE] Needs to support other base numbers besides 10.</string>
+			<key>match</key><string>\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\.[0-9]+)?))\b</string>
+			<key>name</key><string>constant.numeric.js</string>
 		</dict>
 		<key>other-constants</key>
 		<dict>
@@ -605,8 +559,7 @@
 				[CORE][ES3][ES6][ES7]
 				See developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Reserved_word_usage
 			</string>
-			<key>match</key>
-			<string>(?&lt;![.$])\b(as|await|break|case|catch|continue|default|do|else|export|finally|for|from|goto|if|import|package|return|switch|throw|try|while)\b</string>
+			<key>match</key><string>(?&lt;![.$])\b(as|await|break|case|catch|continue|default|do|else|export|finally|for|from|goto|if|import|package|return|switch|throw|try|while)\b</string>
 			<key>name</key><string>keyword.control.js</string>
 		</dict>
 		<key>type-keywords</key>
@@ -615,8 +568,7 @@
 				[CORE][ES3][ES6]
 				See developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Reserved_word_usage
 			</string>
-			<key>match</key>
-			<string>(?&lt;![.$])\b(boolean|byte|char|class|const|double|enum|float|int|interface|long|short|void)\b</string>
+			<key>match</key><string>(?&lt;![.$])\b(boolean|byte|char|class|const|double|enum|float|int|interface|long|short|void)\b</string>
 			<key>name</key><string>storage.type.js</string>
 		</dict>
 		<key>common-type-keywords</key>
@@ -631,23 +583,19 @@
 				[CORE][ES3][ES6][ES7]
 				See developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Reserved_word_usage
 			</string>
-			<key>match</key>
-			<string>(?&lt;![.$])\b(async|extends|final|get|implements|native|private|protected|public|set|static|synchronized|throws|transient|volatile)\b</string>
+			<key>match</key><string>(?&lt;![.$])\b(async|extends|final|get|implements|native|private|protected|public|set|static|synchronized|throws|transient|volatile)\b</string>
 			<key>name</key><string>storage.modifier.js</string>
 		</dict>
 		<key>operator-keywords</key>
 		<dict>
 			<key>comment</key><string>[CORE] Note each match is exact. A better way?</string>
-			<key>match</key>
-			<string>(?&lt;![.$])\b(delete|in|instanceof|of|new|typeof|with)\b|!|%|&amp;|\*|\-\-|\-|\+\+|\+|~|===|==|=|!=|!==|&lt;=|&gt;=|&lt;&lt;=|&gt;&gt;=|&gt;&gt;&gt;=|&lt;&gt;|&lt;|&gt;|&amp;&amp;|\|\||\?\:|\?|\:|\*=|(?&lt;!\()/=|%=|\+=|\-=|&amp;=|\^=</string>
+			<key>match</key><string>(?&lt;![.$])\b(delete|in|instanceof|of|new|typeof|with)\b|!|%|&amp;|\*|\-\-|\-|\+\+|\+|~|===|==|=|!=|!==|&lt;=|&gt;=|&lt;&lt;=|&gt;&gt;=|&gt;&gt;&gt;=|&lt;&gt;|&lt;|&gt;|&amp;&amp;|\|\||\?\:|\?|\:|\*=|(?&lt;!\()/=|%=|\+=|\-=|&amp;=|\^=</string>
 			<key>name</key><string>keyword.operator.js</string>
 		</dict>
 		<key>variable-keywords</key>
 		<dict>
-			<key>comment</key>
-			<string>[CORE] These are technically variables, but they are more magical.</string>
-			<key>match</key>
-			<string>(?&lt;![.$])\b(this|super|arguments|(?&lt;=\.)(prototype|constructor|caller))\b</string>
+			<key>comment</key><string>[CORE] These are technically variables, but they are more magical.</string>
+			<key>match</key><string>(?&lt;![.$])\b(this|super|arguments|(?&lt;=\.)(prototype|constructor|caller))\b</string>
 			<key>name</key><string>variable.language.common.js</string>
 		</dict>
 		<key>comment</key>
@@ -656,8 +604,7 @@
 			<dict><key>1</key>
 				<dict><key>name</key><string>punctuation.definition.comment.js</string></dict>
 			</dict>
-			<key>comment</key>
-			<string>[CORE] Simple search from end of line using wildcard.</string>
+			<key>comment</key><string>[CORE] Simple search from end of line using wildcard.</string>
 			<key>match</key><string>(//).*$\n?</string>
 			<key>name</key><string>comment.line.double-slash.js</string>
 		</dict>
@@ -719,16 +666,13 @@
 				<key>2</key>
 				<dict><key>name</key><string>keyword.operator.js</string></dict>
 			</dict>
-			<key>comment</key>
-			<string>
+			<key>comment</key><string>
 				[HACK]
 				Accounts for ternaries, regex, selectors, other weirdness.
 				String keys also count.
 			</string>
-			<key>match</key>
-			<string>[^?/{'"$,.]*(?&lt;!case\s)\b(['"]?\$*[a-z0-9_]\w*['"]?)(?&lt;!default)(:)</string>
-			<key>name</key>
-			<string>meta.declaration.property.js</string>
+			<key>match</key><string>[^?/{'"$,.]*(?&lt;!case\s)\b(['"]?\$*[a-z0-9_]\w*['"]?)(?&lt;!default)(:)</string>
+			<key>name</key><string>meta.declaration.property.js</string>
 		</dict>
 		<key>class-name</key>
 		<dict>
@@ -739,20 +683,16 @@
 		<key>escaped-char</key>
 		<dict>
 			<key>comment</key><string>Complex regex for utf escape.</string>
-			<key>match</key>
-			<string>\\(x\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)</string>
+			<key>match</key><string>\\(x\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)</string>
 			<key>name</key><string>constant.character.escape.js</string>
 		</dict>
 		<key>simple-escaped-char</key>
 		<dict>
-			<key>match</key>
-			<string>\\.</string>
-			<key>name</key>
-			<string>constant.character.escape.js</string>
+			<key>match</key><string>\\.</string>
+			<key>name</key><string>constant.character.escape.js</string>
 		</dict>
 	</dict>
-	<key>scopeName</key>
-	<string>source.js</string>
+	<key>scopeName</key><string>source.js</string>
 	<key>uuid</key>
 	<string>8A840B1F-D6D2-488E-9085-E783110CFFB6</string>
 </dict>
