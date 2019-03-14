@@ -186,22 +186,12 @@
 		</dict>
 		<dict>
 			<key>begin</key><string>&lt;\!--</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict><key>name</key><string>punctuation.definition.comment.html.js</string></dict>
-			</dict>
 			<key>comment</key><string>
 				[CONFLICT]
 				Only highlight the start and end markers.
 				For CDATA? Make sure to include in your theme!
 			</string>
 			<key>end</key><string>--&gt;</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict><key>name</key><string>punctuation.definition.comment.html.js</string></dict>
-			</dict>
 			<key>name</key><string>comment.block.html.js</string>
 		</dict>
 		<dict>
@@ -262,11 +252,6 @@
 		</dict>
 		<dict>
 			<key>begin</key><string>/\*\*(?!/)</string>
-			<key>captures</key>
-			<dict>
-				<key>0</key>
-				<dict><key>name</key><string>punctuation.definition.comment.js</string></dict>
-			</dict>
 			<key>comment</key><string>
 				[CORE]
 				Documentation comment blocks very similar to regular ones.
@@ -600,21 +585,13 @@
 		</dict>
 		<key>comment</key>
 		<dict>
-			<key>captures</key>
-			<dict><key>1</key>
-				<dict><key>name</key><string>punctuation.definition.comment.js</string></dict>
-			</dict>
 			<key>comment</key><string>[CORE] Simple search from end of line using wildcard.</string>
-			<key>match</key><string>(//).*$\n?</string>
+			<key>match</key><string>//.*$\n?</string>
 			<key>name</key><string>comment.line.double-slash.js</string>
 		</dict>
 		<key>block-comment</key>
 		<dict>
 			<key>begin</key><string>/\*</string>
-			<key>captures</key>
-			<dict><key>0</key>
-				<dict><key>name</key><string>punctuation.definition.comment.js</string></dict>
-			</dict>
 			<key>comment</key><string>[CORE]</string>
 			<key>end</key><string>\*/</string>
 			<key>name</key><string>comment.block.js</string>
