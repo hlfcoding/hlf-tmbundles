@@ -2,8 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>fileTypes</key>
-	<array>
+	<key>fileTypes</key><array>
 		<string>json</string>
 		<string>sublime-settings</string>
 		<string>sublime-menu</string>
@@ -14,58 +13,30 @@
 		<string>sublime-project</string>
 		<string>sublime-completions</string>
 	</array>
-	<key>name</key>
-	<string>JSON (HLF)</string>
-	<key>patterns</key>
-	<array>
-		<dict>
-			<key>include</key>
-			<string>#value</string>
-		</dict>
+	<key>name</key><string>JSON (HLF)</string>
+	<key>patterns</key><array>
+		<dict><key>include</key><string>#value</string></dict>
 	</array>
-	<key>repository</key>
-	<dict>
-		<key>array</key>
-		<dict>
-			<key>begin</key>
-			<string>\[</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.array.begin.json</string>
-				</dict>
+	<key>repository</key><dict>
+		<key>array</key><dict>
+			<key>begin</key><string>\[</string>
+			<key>beginCaptures</key><dict>
+				<key>0</key><dict><key>name</key><string>storage.type.common.array.begin.json</string></dict>
 			</dict>
-			<key>end</key>
-			<string>\]</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.array.end.json</string>
-				</dict>
+			<key>end</key><string>\]</string>
+			<key>endCaptures</key><dict>
+				<key>0</key><dict><key>name</key><string>storage.type.common.array.end.json</string></dict>
 			</dict>
-			<key>name</key>
-			<string>meta.structure.array.json</string>
-			<key>patterns</key>
-			<array>
+			<key>name</key><string>meta.type.array.json</string>
+			<key>patterns</key><array>
+				<dict><key>include</key><string>#value</string></dict>
 				<dict>
-					<key>include</key>
-					<string>#value</string>
+					<key>match</key><string>,</string>
+					<key>name</key><string>keyword.operator.separator.array.json</string>
 				</dict>
 				<dict>
-					<key>match</key>
-					<string>,</string>
-					<key>name</key>
-					<string>punctuation.separator.array.json</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>[^\s\]]</string>
-					<key>name</key>
-					<string>invalid.illegal.expected-array-separator.json</string>
+					<key>match</key><string>[^\s\]]</string>
+					<key>name</key><string>invalid.illegal.expected-separator.array.json</string>
 				</dict>
 			</array>
 		</dict>
