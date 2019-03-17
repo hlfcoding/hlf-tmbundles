@@ -40,89 +40,39 @@
 				</dict>
 			</array>
 		</dict>
-		<key>comments</key>
-		<dict>
-			<key>patterns</key>
-			<array>
+		<key>comments</key><dict>
+			<key>patterns</key><array>
 				<dict>
-					<key>begin</key>
-					<string>/\*\*</string>
-					<key>captures</key>
-					<dict>
-						<key>0</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.comment.json</string>
-						</dict>
-					</dict>
-					<key>end</key>
-					<string>\*/</string>
-					<key>name</key>
-					<string>comment.block.documentation.json</string>
+					<key>begin</key><string>/\*\*</string>
+					<key>end</key><string>\*/</string>
+					<key>name</key><string>comment.block.documentation.json</string>
 				</dict>
 				<dict>
-					<key>begin</key>
-					<string>/\*</string>
-					<key>captures</key>
-					<dict>
-						<key>0</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.comment.json</string>
-						</dict>
-					</dict>
-					<key>end</key>
-					<string>\*/</string>
-					<key>name</key>
-					<string>comment.block.json</string>
+					<key>begin</key><string>/\*</string>
+					<key>end</key><string>\*/</string>
+					<key>name</key><string>comment.block.json</string>
 				</dict>
 				<dict>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.comment.json</string>
-						</dict>
-					</dict>
-					<key>match</key>
-					<string>(//).*$\n?</string>
-					<key>name</key>
-					<string>comment.line.double-slash.js</string>
+					<key>match</key><string>(//).*$\n?</string>
+					<key>name</key><string>comment.line.double-slash.json</string>
 				</dict>
 			</array>
 		</dict>
-		<key>constant</key>
-		<dict>
-			<key>match</key>
-			<string>\b(?:true|false|null)\b</string>
-			<key>name</key>
-			<string>constant.language.json</string>
+		<key>constant</key><dict>
+			<key>match</key><string>\b(?:true|false|null)\b</string>
+			<key>name</key><string>constant.language.json</string>
 		</dict>
-		<key>number</key>
-		<dict>
-			<key>match</key>
-			<string>(?x)        # turn on extended mode
-  -?        # an optional minus
-  (?:
-    0       # a zero
-    |       # ...or...
-    [1-9]   # a 1-9 character
-    \d*     # followed by zero or more digits
-  )
-  (?:
-    (?:
-      \.    # a period
-      \d+   # followed by one or more digits
-    )?
-    (?:
-      [eE]  # an e character
-      [+-]? # followed by an option +/-
-      \d+   # followed by one or more digits
-    )?      # make exponent optional
-  )?        # make decimal portion optional</string>
-			<key>name</key>
-			<string>constant.numeric.json</string>
+		<key>number</key><dict>
+			<key>match</key><string>(?x)
+				# an optional minus
+  			-?
+			  # a zero or a 1-9 character followed by zero or more digits
+  			(?:0|[1-9]\d*)
+  			# an optional period followed by one or more digits
+  			# an optional e character followed by an optional +/-, one or more digits
+  			(?:(?:\.\d+)?(?:[eE][+-]?\d+)?)?
+  		</string>
+			<key>name</key><string>constant.numeric.json</string>
 		</dict>
 		<key>object</key>
 		<dict>
