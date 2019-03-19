@@ -74,86 +74,48 @@
       </string>
       <key>name</key><string>constant.numeric.json</string>
     </dict>
-    <key>object</key>
-    <dict>
-      <key>begin</key>
-      <string>\{</string>
-      <key>beginCaptures</key>
-      <dict>
-        <key>0</key>
-        <dict>
-          <key>name</key>
-          <string>punctuation.definition.dictionary.begin.json</string>
-        </dict>
+    <key>object</key><dict>
+      <key>begin</key><string>\{</string>
+      <key>beginCaptures</key><dict>
+        <key>0</key><dict><key>name</key><string>storage.type.common.dictionary.begin.json</string></dict>
       </dict>
-      <key>end</key>
-      <string>\}</string>
-      <key>endCaptures</key>
-      <dict>
-        <key>0</key>
-        <dict>
-          <key>name</key>
-          <string>punctuation.definition.dictionary.end.json</string>
-        </dict>
+      <key>end</key><string>\}</string>
+      <key>endCaptures</key><dict>
+        <key>0</key><dict><key>name</key><string>storage.type.common.dictionary.end.json</string></dict>
       </dict>
-      <key>name</key>
-      <string>meta.structure.dictionary.json</string>
-      <key>patterns</key>
-      <array>
+      <key>name</key><string>meta.type.dictionary.json</string>
+      <key>patterns</key><array>
         <dict>
-          <key>comment</key>
-          <string>the JSON object key</string>
-          <key>include</key>
-          <string>#string</string>
+          <key>comment</key><string>the JSON object key</string>
+          <key>include</key><string>#string</string>
         </dict>
         <dict>
-          <key>include</key>
-          <string>#comments</string>
+          <key>include</key><string>#comments</string>
         </dict>
         <dict>
-          <key>begin</key>
-          <string>:</string>
-          <key>beginCaptures</key>
-          <dict>
-            <key>0</key>
-            <dict>
-              <key>name</key>
-              <string>punctuation.separator.dictionary.key-value.json</string>
-            </dict>
+          <key>begin</key><string>:</string>
+          <key>beginCaptures</key><dict>
+            <key>0</key><dict><key>name</key><string>keyword.operator.separator.dictionary.key-value.json</string></dict>
           </dict>
-          <key>end</key>
-          <string>(,)|(?=\})</string>
-          <key>endCaptures</key>
-          <dict>
-            <key>1</key>
-            <dict>
-              <key>name</key>
-              <string>punctuation.separator.dictionary.pair.json</string>
-            </dict>
+          <key>end</key><string>(,)|(?=\})</string>
+          <key>endCaptures</key><dict>
+            <key>1</key><dict><key>name</key><string>keyword.operator.separator.dictionary.pair.json</string></dict>
           </dict>
-          <key>name</key>
-          <string>meta.structure.dictionary.value.json</string>
-          <key>patterns</key>
-          <array>
+          <key>name</key><string>meta.type.dictionary.value.json</string>
+          <key>patterns</key><array>
             <dict>
-              <key>comment</key>
-              <string>the JSON object value</string>
-              <key>include</key>
-              <string>#value</string>
+              <key>comment</key><string>the JSON object value</string>
+              <key>include</key><string>#value</string>
             </dict>
             <dict>
-              <key>match</key>
-              <string>[^\s,]</string>
-              <key>name</key>
-              <string>invalid.illegal.expected-dictionary-separator.json</string>
+              <key>match</key><string>[^\s,]</string>
+              <key>name</key><string>invalid.illegal.expected-separator.dictionary.json</string>
             </dict>
           </array>
         </dict>
         <dict>
-          <key>match</key>
-          <string>[^\s\}]</string>
-          <key>name</key>
-          <string>invalid.illegal.expected-dictionary-separator.json</string>
+          <key>match</key><string>[^\s\}]</string>
+          <key>name</key><string>invalid.illegal.expected-separator.dictionary.json</string>
         </dict>
       </array>
     </dict>
