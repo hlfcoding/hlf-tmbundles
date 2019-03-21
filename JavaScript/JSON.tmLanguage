@@ -140,34 +140,14 @@
         </dict>
       </array>
     </dict>
-    <key>value</key>
-    <dict>
-      <key>patterns</key>
-      <array>
-        <dict>
-          <key>include</key>
-          <string>#constant</string>
-        </dict>
-        <dict>
-          <key>include</key>
-          <string>#number</string>
-        </dict>
-        <dict>
-          <key>include</key>
-          <string>#string</string>
-        </dict>
-        <dict>
-          <key>include</key>
-          <string>#array</string>
-        </dict>
-        <dict>
-          <key>include</key>
-          <string>#object</string>
-        </dict>
-        <dict>
-          <key>include</key>
-          <string>#comments</string>
-        </dict>
+    <key>value</key><dict>
+      <key>patterns</key><array>
+        <dict><key>include</key><string>#constant</string></dict>
+        <dict><key>include</key><string>#number</string></dict>
+        <dict><key>include</key><string>#string</string></dict>
+        <dict><key>include</key><string>#array</string></dict>
+        <dict><key>include</key><string>#object</string></dict>
+        <dict><key>include</key><string>#comments</string></dict>
       </array>
     </dict>
   </dict>
