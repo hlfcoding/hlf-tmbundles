@@ -106,17 +106,17 @@
               <dict>
                 <key>comment</key><string>https://macromates.com/manual/en/language_grammars#naming-conventions</string>
                 <key>match</key><string>(?x)
-                  \b(comment\.(line|block)|
-                  constant\.(numeric|character|language|other)|
-                  entity\.(name|other)|
-                  invalid\.(illegal|deprecated)|
-                  keyword\.(control|operator|other)|
-                  markup\.(underline|bold|heading|italic|list|quote|raw|other)|
-                  (meta|source|text)\.|
-                  storage\.(type|modifier)|
-                  string\.(quoted|unquoted|interpolated|regexp|other)|
-                  support\.(function|class|type|constant|variable|other)|
-                  variable\.(parameter|language|other))\b
+                  \b(comment(\.(line|block))?|
+                  constant(\.(numeric|character|language|other))?|
+                  entity(\.(name|other))?|
+                  invalid(\.(illegal|deprecated))?|
+                  keyword(\.(control|operator|other))?|
+                  markup(\.(underline|bold|heading|italic|list|quote|raw|other))?|
+                  (meta|source|text)\.?|
+                  storage(\.(type|modifier))?|
+                  string(\.(quoted|unquoted|interpolated|regexp|other))?|
+                  support(\.(function|class|type|constant|variable|other))?|
+                  variable(\.(parameter|language|other))?)\b
                 </string>
                 <key>captures</key>
                 <dict>
