@@ -22,7 +22,7 @@
       </dict>
       <dict>
         <key>name</key><string>Comment</string>
-        <key>scope</key><string>comment, punctuation.definition.comment</string>
+        <key>scope</key><string>comment</string>
         <key>settings</key><dict>
           <key>fontStyle</key><string/>
           <key>foreground</key><string>#5F656B</string>
