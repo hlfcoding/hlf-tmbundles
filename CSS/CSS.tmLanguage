@@ -92,12 +92,12 @@
       <key>end</key><string>\s*(\})</string>
       <key>endCaptures</key>
       <dict>
-        <key>1</key><dict><key>name</key><string>punctuation.section.property-list.css</string></dict>
+        <key>1</key><dict><key>name</key><string>keyword.operator.common.declaration-block.css</string></dict>
       </dict>
       <key>name</key><string>meta.at-rule.font-face.css</string>
       <key>patterns</key>
       <array>
-        <dict><key>include</key><string>#rule-list</string></dict>
+        <dict><key>include</key><string>#declaration-block</string></dict>
       </array>
     </dict>
     <dict><key>include</key><string>#keyframes</string></dict>
@@ -106,7 +106,7 @@
       <key>end</key><string>\s*(\})</string>
       <key>endCaptures</key>
       <dict>
-        <key>1</key><dict><key>name</key><string>punctuation.section.property-list.css</string></dict>
+        <key>1</key><dict><key>name</key><string>keyword.operator.common.declaration-block.css</string></dict>
       </dict>
       <key>patterns</key>
       <array>
@@ -129,7 +129,7 @@
           <key>begin</key><string>\s*(\{)</string>
           <key>beginCaptures</key>
           <dict>
-            <key>1</key><dict><key>name</key><string>punctuation.section.property-list.css</string></dict>
+            <key>1</key><dict><key>name</key><string>keyword.operator.common.declaration-block.css</string></dict>
           </dict>
           <key>end</key><string>(?=\})</string>
           <key>patterns</key>
@@ -145,11 +145,11 @@
       <key>end</key><string>\}</string>
       <key>endCaptures</key>
       <dict>
-        <key>1</key><dict><key>name</key><string>punctuation.section.property-list.css</string></dict>
+        <key>1</key><dict><key>name</key><string>keyword.operator.common.declaration-block.css</string></dict>
       </dict>
       <key>patterns</key>
       <array>
-        <dict><key>include</key><string>#rule-list</string></dict>
+        <dict><key>include</key><string>#declaration-block</string></dict>
       </array>
     </dict>
   </array>
@@ -671,21 +671,21 @@
         <dict><key>include</key><string>#comment-block</string></dict>
       </array>
     </dict>
-    <key>rule-list</key>
+    <key>declaration-block</key>
     <dict>
       <key>begin</key><string>\{</string>
       <key>beginCaptures</key>
       <dict>
-        <key>0</key><dict><key>name</key><string>punctuation.section.property-list.css</string></dict>
+        <key>0</key><dict><key>name</key><string>keyword.operator.common.declaration-block.css</string></dict>
       </dict>
       <key>end</key><string>(?=\s*\})</string>
-      <key>name</key><string>meta.property-list.css</string>
+      <key>name</key><string>meta.declaration-block.css</string>
       <key>patterns</key>
       <array>
-        <dict><key>include</key><string>#rule-list-body</string></dict>
+        <dict><key>include</key><string>#declaration-block-body</string></dict>
       </array>
     </dict>
-    <key>rule-list-body</key>
+    <key>declaration-block-body</key>
     <dict>
       <key>patterns</key>
       <array>
@@ -892,7 +892,7 @@
           <key>end</key><string>(?:\))</string>
           <key>patterns</key>
           <array>
-            <dict><key>include</key><string>#rule-list-body</string></dict>
+            <dict><key>include</key><string>#declaration-block-body</string></dict>
           </array>
         </dict>
         <dict>
