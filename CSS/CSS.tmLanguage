@@ -368,12 +368,8 @@
       <key>patterns</key>
       <array>
         <dict>
-          <key>captures</key>
-          <dict>
-            <key>1</key><dict><key>name</key><string>punctuation.definition.constant.css</string></dict>
-          </dict>
-          <key>match</key><string>(#)([0-9a-fA-F]{3}|[0-9a-fA-F]{6})\b</string>
-          <key>name</key><string>constant.other.color.rgb-value.css</string>
+          <key>match</key><string>#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})\b</string>
+          <key>name</key><string>constant.other.color.hex-value.css</string>
         </dict>
         <dict>
           <key>captures</key>
@@ -760,7 +756,7 @@
             <key>1</key><dict><key>name</key><string>keyword.operator.selector.pseudo-element.css</string></dict>
           </dict>
           <key>match</key><string>(:+)(after|before|first-(letter|line)|selection)\b</string>
-          <key>name</key><string>entity.other.attribute-name.pseudo-element.css</string>
+          <key>name</key><string>entity.other.selector.pseudo-element.css</string>
         </dict>
         <dict>
           <key>captures</key>
@@ -768,13 +764,13 @@
             <key>1</key><dict><key>name</key><string>keyword.operator.selector.pseudo-class.css</string></dict>
           </dict>
           <key>match</key><string>(:)((first|last|only)-(child|of-type)|(in)?valid|active|checked|default|disabled|empty|enabled|focus|hover|indeterminate|lang|link|not|optional|required|root|target|visited)\b</string>
-          <key>name</key><string>entity.other.attribute-name.pseudo-class.css</string>
+          <key>name</key><string>entity.other.selector.pseudo-class.css</string>
         </dict>
         <dict>
           <key>begin</key><string>((:)not)(\()</string>
           <key>beginCaptures</key>
           <dict>
-            <key>1</key><dict><key>name</key><string>entity.other.attribute-name.pseudo-class.css</string></dict>
+            <key>1</key><dict><key>name</key><string>entity.other.selector.pseudo-class.css</string></dict>
             <key>2</key><dict><key>name</key><string>keyword.operator.selector.pseudo-class.css</string></dict>
             <key>3</key><dict><key>name</key><string>keyword.operator.common.function.css</string></dict>
           </dict>
@@ -791,7 +787,7 @@
         <dict>
           <key>captures</key>
           <dict>
-            <key>1</key><dict><key>name</key><string>entity.other.attribute-name.pseudo-class.css</string></dict>
+            <key>1</key><dict><key>name</key><string>entity.other.selector.pseudo-class.css</string></dict>
             <key>2</key><dict><key>name</key><string>keyword.operator.selector.pseudo-class.css</string></dict>
             <key>3</key><dict><key>name</key><string>keyword.operator.common.function.css</string></dict>
             <key>4</key><dict><key>name</key><string>constant.numeric.css</string></dict>
@@ -805,7 +801,7 @@
             <key>1</key><dict><key>name</key><string>keyword.operator.selector.pseudo-class.css</string></dict>
           </dict>
           <key>match</key><string>(:)(active|hover|link|visited|focus)\b</string>
-          <key>name</key><string>entity.other.attribute-name.pseudo-class.css</string>
+          <key>name</key><string>entity.other.selector.pseudo-class.css</string>
         </dict>
         <dict>
           <key>captures</key>
