@@ -220,10 +220,6 @@
     <key>comment-block</key>
     <dict>
       <key>begin</key><string>/\*</string>
-      <key>captures</key>
-      <dict>
-        <key>0</key><dict><key>name</key><string>punctuation.definition.comment.css</string></dict>
-      </dict>
       <key>end</key><string>\*/</string>
       <key>name</key><string>comment.block.css</string>
     </dict>
@@ -332,7 +328,7 @@
               </string>
               <key>endCaptures</key>
               <dict>
-                <key>1</key><dict><key>name</key><string>punctuation.separator.key-value.css</string></dict>
+                <key>1</key><dict><key>name</key><string>keyword.operator.common.property-separator.css</string></dict>
                 <key>2</key><dict><key>name</key><string>support.type.property-value.media.css</string></dict>
               </dict>
               <key>patterns</key>
@@ -707,12 +703,12 @@
           <key>begin</key><string>(:)\s*</string>
           <key>beginCaptures</key>
           <dict>
-            <key>1</key><dict><key>name</key><string>punctuation.separator.key-value.css</string></dict>
+            <key>1</key><dict><key>name</key><string>keyword.operator.common.property-separator.css</string></dict>
           </dict>
           <key>end</key><string>\s*(;|(?=\}|\)\s\{))</string>
           <key>endCaptures</key>
           <dict>
-            <key>1</key><dict><key>name</key><string>punctuation.terminator.rule.css</string></dict>
+            <key>1</key><dict><key>name</key><string>keyword.operator.common.declaration-separator.css</string></dict>
           </dict>
           <key>name</key><string>meta.property-value.css</string>
           <key>patterns</key>
@@ -761,7 +757,7 @@
         <dict>
           <key>captures</key>
           <dict>
-            <key>1</key><dict><key>name</key><string>punctuation.definition.entity.css</string></dict>
+            <key>1</key><dict><key>name</key><string>keyword.operator.selector.pseudo-element.css</string></dict>
           </dict>
           <key>match</key><string>(:+)(after|before|first-(letter|line)|selection)\b</string>
           <key>name</key><string>entity.other.attribute-name.pseudo-element.css</string>
@@ -769,7 +765,7 @@
         <dict>
           <key>captures</key>
           <dict>
-            <key>1</key><dict><key>name</key><string>punctuation.definition.entity.css</string></dict>
+            <key>1</key><dict><key>name</key><string>keyword.operator.selector.pseudo-class.css</string></dict>
           </dict>
           <key>match</key><string>(:)((first|last|only)-(child|of-type)|(in)?valid|active|checked|default|disabled|empty|enabled|focus|hover|indeterminate|lang|link|not|optional|required|root|target|visited)\b</string>
           <key>name</key><string>entity.other.attribute-name.pseudo-class.css</string>
@@ -779,7 +775,7 @@
           <key>beginCaptures</key>
           <dict>
             <key>1</key><dict><key>name</key><string>entity.other.attribute-name.pseudo-class.css</string></dict>
-            <key>2</key><dict><key>name</key><string>punctuation.definition.entity.css</string></dict>
+            <key>2</key><dict><key>name</key><string>keyword.operator.selector.pseudo-class.css</string></dict>
             <key>3</key><dict><key>name</key><string>keyword.operator.common.function.css</string></dict>
           </dict>
           <key>end</key><string>\)</string>
@@ -796,7 +792,7 @@
           <key>captures</key>
           <dict>
             <key>1</key><dict><key>name</key><string>entity.other.attribute-name.pseudo-class.css</string></dict>
-            <key>2</key><dict><key>name</key><string>punctuation.definition.entity.css</string></dict>
+            <key>2</key><dict><key>name</key><string>keyword.operator.selector.pseudo-class.css</string></dict>
             <key>3</key><dict><key>name</key><string>keyword.operator.common.function.css</string></dict>
             <key>4</key><dict><key>name</key><string>constant.numeric.css</string></dict>
             <key>5</key><dict><key>name</key><string>keyword.operator.common.function.css</string></dict>
@@ -806,7 +802,7 @@
         <dict>
           <key>captures</key>
           <dict>
-            <key>1</key><dict><key>name</key><string>punctuation.definition.entity.css</string></dict>
+            <key>1</key><dict><key>name</key><string>keyword.operator.selector.pseudo-class.css</string></dict>
           </dict>
           <key>match</key><string>(:)(active|hover|link|visited|focus)\b</string>
           <key>name</key><string>entity.other.attribute-name.pseudo-class.css</string>
@@ -814,9 +810,9 @@
         <dict>
           <key>captures</key>
           <dict>
-            <key>1</key><dict><key>name</key><string>punctuation.definition.entity.css</string></dict>
+            <key>1</key><dict><key>name</key><string>keyword.operator.selector.attribute.css</string></dict>
             <key>2</key><dict><key>name</key><string>entity.other.attribute-name.attribute.css</string></dict>
-            <key>3</key><dict><key>name</key><string>punctuation.separator.operator.css</string></dict>
+            <key>3</key><dict><key>name</key><string>keyword.operator.selector.attribute.css</string></dict>
             <key>4</key><dict><key>name</key><string>string.unquoted.attribute-value.css</string></dict>
             <key>5</key><dict><key>name</key><string>string.quoted.double.attribute-value.css</string></dict>
             <key>6</key><dict><key>name</key><string>string.quoted.begin.css</string></dict>
