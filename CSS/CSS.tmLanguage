@@ -728,15 +728,15 @@
         <dict>
           <key>captures</key>
           <dict>
-            <key>1</key><dict><key>name</key><string>punctuation.definition.entity.css</string></dict>
+            <key>1</key><dict><key>name</key><string>keyword.operator.selector.class.css</string></dict>
           </dict>
           <key>match</key><string>(\.)[\w-]+</string>
-          <key>name</key><string>entity.other.attribute-name.class.css</string>
+          <key>name</key><string>entity.other.selector.class.css</string>
         </dict>
         <dict>
           <key>captures</key>
           <dict>
-            <key>1</key><dict><key>name</key><string>punctuation.definition.entity.css</string></dict>
+            <key>1</key><dict><key>name</key><string>keyword.operator.selector.id.css</string></dict>
           </dict>
           <key>match</key><string>(?x)
             (\#)
@@ -744,7 +744,7 @@
             [a-zA-Z]
             [\w-]*
           </string>
-          <key>name</key><string>entity.other.attribute-name.id.css</string>
+          <key>name</key><string>entity.other.selector.id.css</string>
         </dict>
         <dict>
           <key>match</key><string>\*</string>
@@ -813,6 +813,7 @@
             <key>5</key><dict><key>name</key><string>string.quoted.double.attribute-value.css</string></dict>
             <key>6</key><dict><key>name</key><string>string.quoted.begin.css</string></dict>
             <key>7</key><dict><key>name</key><string>string.quoted.end.css</string></dict>
+            <key>8</key><dict><key>name</key><string>keyword.operator.selector.attribute.css</string></dict>
           </dict>
           <key>match</key><string>(?xi)
             # TODO: this is complicated!
