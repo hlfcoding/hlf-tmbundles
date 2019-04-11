@@ -62,7 +62,7 @@
 			<key>endCaptures</key>
 			<dict>
 				<key>1</key>
-				<dict><key>name</key><string>punctuation.terminator.statement.js</string></dict>
+				<dict><key>name</key><string>keyword.operator.common.statement.js</string></dict>
 			</dict>
 			<key>name</key><string>meta.declaration.variables.js</string>
 			<key>patterns</key>
@@ -493,7 +493,7 @@
 		<dict>
 			<key>comment</key><string>[CORE]</string>
 			<key>match</key><string>\;</string>
-			<key>name</key><string>punctuation.terminator.statement.js</string>
+			<key>name</key><string>keyword.operator.common.statement.js</string>
 		</dict>
 		<key>curly-braces</key>
 		<dict>
