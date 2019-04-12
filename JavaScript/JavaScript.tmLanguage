@@ -601,13 +601,13 @@
 			<key>begin</key><string>"</string>
 			<key>beginCaptures</key>
 			<dict><key>0</key>
-				<dict><key>name</key><string>punctuation.definition.string.begin.js</string></dict>
+				<dict><key>name</key><string>string.quoted.double.begin.js</string></dict>
 			</dict>
 			<key>comment</key><string>[CORE]</string>
 			<key>end</key><string>"</string>
 			<key>endCaptures</key>
 			<dict><key>0</key>
-				<dict><key>name</key><string>punctuation.definition.string.end.js</string></dict>
+				<dict><key>name</key><string>string.quoted.double.end.js</string></dict>
 			</dict>
 			<key>name</key><string>string.quoted.double.js</string>
 			<key>patterns</key>
@@ -620,13 +620,13 @@
 			<key>begin</key><string>'</string>
 			<key>beginCaptures</key>
 			<dict><key>0</key>
-				<dict><key>name</key><string>punctuation.definition.string.begin.js</string></dict>
+				<dict><key>name</key><string>string.quoted.single.begin.js</string></dict>
 			</dict>
 			<key>comment</key><string>[CORE]</string>
 			<key>end</key><string>'</string>
 			<key>endCaptures</key>
 			<dict><key>0</key>
-				<dict><key>name</key><string>punctuation.definition.string.end.js</string></dict>
+				<dict><key>name</key><string>string.quoted.single.end.js</string></dict>
 			</dict>
 			<key>name</key><string>string.quoted.single.js</string>
 			<key>patterns</key>
