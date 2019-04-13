@@ -201,14 +201,14 @@
 				<key>1</key>
 				<dict><key>name</key><string>entity.template.tag.name.js</string></dict>
 				<key>2</key>
-				<dict><key>name</key><string>punctuation.definition.string.template.begin.js</string></dict>
+				<dict><key>name</key><string>source.string.template.begin.js</string></dict>
 			</dict>
 			<key>comment</key><string>[ES6] Templates support, adapted from JavaScriptNext.</string>
 			<key>end</key><string>`</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>0</key>
-				<dict><key>name</key><string>punctuation.definition.string.template.end.js</string></dict>
+				<dict><key>name</key><string>source.string.template.end.js</string></dict>
 			</dict>
 			<key>name</key><string>source.string.template.js</string>
 			<key>patterns</key>
@@ -265,7 +265,7 @@
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
-				<dict><key>name</key><string>punctuation.definition.string.begin.js</string></dict>
+				<dict><key>name</key><string>string.regexp.begin.js</string></dict>
 			</dict>
 			<key>comment</key><string>
 				[FRAGILE]
@@ -276,7 +276,7 @@
 			<key>endCaptures</key>
 			<dict>
 				<key>1</key>
-				<dict><key>name</key><string>punctuation.definition.string.end.js</string></dict>
+				<dict><key>name</key><string>string.regexp.end.js</string></dict>
 			</dict>
 			<key>name</key><string>string.regexp.js</string>
 			<key>patterns</key>
