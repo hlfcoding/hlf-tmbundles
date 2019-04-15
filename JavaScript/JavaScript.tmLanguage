@@ -96,7 +96,7 @@
 				<key>3</key>
 				<dict><key>name</key><string>keyword.operator.js</string></dict>
 				<key>4</key>
-				<dict><key>name</key><string>meta.brace.round.js</string></dict>
+				<dict><key>name</key><string>keyword.operator.common.function.js</string></dict>
 				<key>5</key>
 				<dict><key>name</key><string>storage.type.common.js</string></dict>
 				<key>6</key>
@@ -113,7 +113,7 @@
 			<key>endCaptures</key>
 			<dict>
 				<key>0</key>
-				<dict><key>name</key><string>meta.brace.curly.js</string></dict>
+				<dict><key>name</key><string>keyword.operator.common.scope.js</string></dict>
 			</dict>
 			<key>name</key><string>meta.declaration.function.js</string>
 			<key>patterns</key>
@@ -143,7 +143,7 @@
 			<key>endCaptures</key>
 			<dict>
 				<key>0</key>
-				<dict><key>name</key><string>meta.brace.curly.js</string></dict>
+				<dict><key>name</key><string>keyword.operator.common.scope.js</string></dict>
 			</dict>
 			<key>name</key><string>meta.declaration.function.method.js</string>
 			<key>patterns</key>
@@ -167,7 +167,7 @@
 			<key>endCaptures</key>
 			<dict>
 				<key>0</key>
-				<dict><key>name</key><string>meta.brace.curly.js</string></dict>
+				<dict><key>name</key><string>keyword.operator.common.scope.js</string></dict>
 			</dict>
 			<key>name</key><string>meta.declaration.function.arrow.js</string>
 			<key>patterns</key>
@@ -230,13 +230,13 @@
 					<key>beginCaptures</key>
 					<dict>
 						<key>0</key>
-						<dict><key>name</key><string>meta.brace.curly.js</string></dict>
+						<dict><key>name</key><string>keyword.operator.common.scope.js</string></dict>
 					</dict>
 					<key>end</key><string>}</string>
 					<key>endCaptures</key>
 					<dict>
 						<key>0</key>
-						<dict><key>name</key><string>meta.brace.curly.js</string></dict>
+						<dict><key>name</key><string>keyword.operator.common.scope.js</string></dict>
 					</dict>
 					<key>name</key><string>source.string.template.variable.js</string>
 					<key>patterns</key>
@@ -384,7 +384,7 @@
 				<key>1</key>
 				<dict><key>name</key><string>support.other.application.function.js</string></dict>
 				<key>2</key>
-				<dict><key>name</key><string>meta.brace.round.js</string></dict>
+				<dict><key>name</key><string>keyword.operator.common.function.js</string></dict>
 			</dict>
 			<key>comment</key><string>
 				Make reading long multi-line jQuery statements easier.
@@ -499,13 +499,13 @@
 		<dict>
 			<key>comment</key><string>[CORE][MUTED]</string>
 			<key>match</key><string>\{|\}</string>
-			<key>name</key><string>meta.brace.curly.js</string>
+			<key>name</key><string>keyword.operator.common.scope.js</string>
 		</dict>
 		<key>round-braces</key>
 		<dict>
 			<key>comment</key><string>[CORE][MUTED]</string>
 			<key>match</key><string>\(|\)</string>
-			<key>name</key><string>meta.brace.round.js</string>
+			<key>name</key><string>keyword.operator.common.function.js</string>
 		</dict>
 		<key>square-braces</key>
 		<dict>
