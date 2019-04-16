@@ -76,7 +76,7 @@
 						visually mute them. It's closer at the top b/c I believe order
 						matters here and the priority cascades.
 					</string>
-					<key>name</key><string>meta.declaration.variables.undefined.js</string>
+					<key>name</key><string>meta.declaration.common.js</string>
 					<key>match</key><string>(?&lt;=,\s|\s\s|let\s|var\s)\$*[a-z0-9_]\w*(?=,|;)</string>
 				</dict>
 				<dict><key>include</key><string>$self</string></dict>
