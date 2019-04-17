@@ -30,7 +30,7 @@
       </dict>
       <dict>
         <key>name</key><string>Local Entity</string>
-        <key>scope</key><string>entity.other.application, constant.other.symbol.ruby</string>
+        <key>scope</key><string>entity.other.application</string>
         <key>settings</key><dict>
           <key>foreground</key><string>#AFFF9B</string>
         </dict>
@@ -149,7 +149,7 @@
       </dict>
       <dict>
         <key>name</key><string>Boilerplate</string>
-        <key>scope</key><string>keyword.operator.common, meta.declaration.common, storage.type.common, source.css, punctuation.definition.parameters.ruby, punctuation.section.function.ruby, meta.separator</string>
+        <key>scope</key><string>keyword.operator.common, meta.declaration.common, storage.type.common, source.css, meta.separator</string>
         <key>settings</key><dict>
           <key>fontStyle</key><string/>
           <key>foreground</key><string>#45596E</string>
