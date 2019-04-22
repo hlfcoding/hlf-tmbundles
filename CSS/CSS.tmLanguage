@@ -683,11 +683,7 @@
       <array>
         <dict><key>include</key><string>#comment-block</string></dict>
         <dict>
-          <key>begin</key><string>(?&lt;![-a-z])(-(webkit|moz|o|ms)-)?(?=[-a-z\d])</string>
-          <key>beginCaptures</key>
-          <dict>
-            <key>1</key><dict><key>name</key><string>support.type.property-name.vendor-prefix.css</string></dict>
-          </dict>
+          <key>begin</key><string>(?&lt;![-a-z])(?:-(?:[a-z]+)-)?(?=[-a-z\d])</string>
           <key>end</key><string>$|(?![-a-z])</string>
           <key>name</key><string>meta.property-name.css</string>
           <key>patterns</key>

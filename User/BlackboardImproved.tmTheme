@@ -96,7 +96,7 @@
       </dict>
       <dict>
         <key>name</key><string>Local or Alternate Support</string>
-        <key>scope</key><string>support.other.application, support.type.property-name.vendor-prefix.css, markup.raw.inline</string>
+        <key>scope</key><string>support.other.application, markup.raw.inline</string>
         <key>settings</key><dict>
           <key>foreground</key><string>#8FE5FF</string>
         </dict>
