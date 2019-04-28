@@ -172,42 +172,42 @@
         </dict>
       </dict>
       <dict>
-        <key>name</key><string>diff.deleted</string>
+        <key>name</key><string>Diff - Deleted</string>
         <key>scope</key><string>markup.deleted</string>
         <key>settings</key><dict>
           <key>foreground</key><string>#BE0000</string>
         </dict>
       </dict>
       <dict>
-        <key>name</key><string>diff.inserted</string>
+        <key>name</key><string>Diff - Inserted</string>
         <key>scope</key><string>markup.inserted</string>
         <key>settings</key><dict>
           <key>foreground</key><string>#15A403</string>
         </dict>
       </dict>
       <dict>
-        <key>name</key><string>diff.changed</string>
+        <key>name</key><string>Diff - Changed</string>
         <key>scope</key><string>markup.changed</string>
         <key>settings</key><dict>
           <key>foreground</key><string>#FFCC33</string>
         </dict>
       </dict>
       <dict>
-        <key>name</key><string>SublimeLinter Error</string>
+        <key>name</key><string>SublimeLinter - Error</string>
         <key>scope</key><string>sublimelinter.mark.error, markup.failure</string>
         <key>settings</key><dict>
           <key>foreground</key><string>#D02000</string>
         </dict>
       </dict>
       <dict>
-        <key>name</key><string>SublimeLinter Gutter Mark</string>
+        <key>name</key><string>SublimeLinter - Gutter Mark</string>
         <key>scope</key><string>sublimelinter.gutter-mark</string>
         <key>settings</key><dict>
           <key>foreground</key><string>#FFFFFF</string>
         </dict>
       </dict>
       <dict>
-        <key>name</key><string>SublimeLinter Warning</string>
+        <key>name</key><string>SublimeLinter - Warning</string>
         <key>scope</key><string>sublimelinter.mark.warning</string>
         <key>settings</key><dict>
           <key>foreground</key><string>#DDB700</string>
