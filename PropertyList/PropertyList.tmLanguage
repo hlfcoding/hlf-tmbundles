@@ -106,21 +106,24 @@
               <dict>
                 <key>comment</key><string>https://macromates.com/manual/en/language_grammars#naming-conventions</string>
                 <key>match</key><string>(?x)
-                  \b(comment(\.(line|block))?|
-                  constant(\.(numeric|character|language|other))?|
-                  entity(\.(name|other))?|
-                  invalid(\.(illegal|deprecated))?|
-                  keyword(\.(control|operator|other))?|
-                  markup(\.(underline|bold|heading|italic|list|quote|raw|other))?|
-                  (meta|source|text)\.?|
-                  storage(\.(type|modifier))?|
-                  string(\.(quoted|unquoted|interpolated|regexp|other))?|
-                  support(\.(function|class|type|constant|variable|other))?|
-                  variable(\.(parameter|language|other))?)\b
+                  \b(comment(?:\.(?:line|block))?|
+                  constant(?:\.(?:numeric|character|language|other))?|
+                  entity(?:\.(?:name|other))?|
+                  invalid(?:\.(?:illegal|deprecated))?|
+                  keyword(?:\.(?:control|operator|other))?|
+                  markup(?:\.(?:underline|bold|heading|italic|list|quote|raw|other))?|
+                  (?:meta|source|text)\.?|
+                  storage(?:\.(?:type|modifier))?|
+                  string(?:\.(?:quoted|unquoted|interpolated|regexp|other))?|
+                  support(?:\.(?:function|class|type|constant|variable|other))?|
+                  variable(?:\.(?:parameter|language|other))?)\b
+                  ([\.\-a-z]*)(,?)\s?
                 </string>
                 <key>captures</key>
                 <dict>
                   <key>1</key><dict><key>name</key><string>storage.type.scope-name.textmate.plist</string></dict>
+                  <key>2</key><dict><key>name</key><string>string.scope-name.textmate.plist</string></dict>
+                  <key>3</key><dict><key>name</key><string>keyword.operator.scope-names.textmate.plist</string></dict>
                 </dict>
               </dict>
               <dict>
