@@ -1,5 +1,9 @@
 # SublimeText Package Overrides
 
+__I've decided to switch to VS Code and adopt a more minimal workflow philosophy. It's been a fun decade or so, TM & ST. -- PW__
+
+---
+
 These changesets improve upon existing functionality. I use and improve them myself every day. Previews rendered in [BlackboardImproved theme](https://gist.github.com/hlfcoding/1786860).
 
 ## CSS Package
